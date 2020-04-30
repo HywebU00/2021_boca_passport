@@ -1,0 +1,14 @@
+@mixin make-fatfooter($fatFooterliLength, $fatFooterMaxWidth) {
+    nav {
+        max-width: $fatFooterMaxWidth;
+        >ul>li {
+            $fatFooterWidth: 100%;
+            @include box-sizing(border-box);
+            width: $fatFooterWidth / $fatFooterliLength;
+            @include screen("mobile") {
+                width: 95%;
+                margin: 0px auto 3px;
+            }
+        }
+    }
+}

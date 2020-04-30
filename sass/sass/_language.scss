@@ -1,0 +1,66 @@
+.language {
+    width: 140px;
+    font-weight: bold;
+    font-size: .75em;
+    text-shadow: 1px 1px 2px RGBA(0, 0, 0, .8);
+    position: relative;
+    >a {
+        display: block;
+        background: #555;
+        box-sizing: border-box;
+        color: #FFF;
+        padding: .2em 1em;
+        position: relative;
+        transition: .3s ease-out;
+        &:after {
+            position: absolute;
+            right: .8em;
+            top: 1em;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 3px 0 3px;
+            border-color: #ffffff transparent transparent transparent;
+        }
+        &:before {
+            position: absolute;
+            width: 1px;
+            height: 1.6em;
+            right: 2em;
+            top: .4em;
+            content: "";
+            border-left: 1px solid #DDD;
+        }
+        &:focus {
+            box-shadow: none;
+            background: #444;
+        }
+    }
+    ul {
+        background: #555;
+        padding: 1em 1.5em;
+        position: absolute;
+        top: 2.35em;
+        left: 0;
+        width: 140px;
+        height: auto;
+        z-index: 9999;
+        @include li-reset;
+        li {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 !important;
+            a {
+                display: block !important;
+                color: #FFF !important;
+                padding: .5em .5em .5em 1em !important;
+                transition: .3s ease-out;
+                &:hover, &:focus {
+                    background: RGBA(0, 0, 0, .3);
+                }
+            }
+        }
+    }
+}

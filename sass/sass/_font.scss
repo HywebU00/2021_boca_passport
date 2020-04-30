@@ -1,0 +1,57 @@
+@mixin fontSetting($FONT-SIZE:$font-size, $WEIGHT:normal) {
+    font-size: $FONT-SIZE;
+    font-weight: $WEIGHT;
+    color: $color-word;
+}
+
+@mixin aSetting($COLOR:$aColor, $NOLINE:none) {
+    color: $COLOR;
+    text-decoration: $NOLINE;
+    &:hover,
+    &:focus {
+        color: $aHover;
+        cursor: pointer;
+    }
+}
+@mixin aSetting_nocolor($COLOR:$color-word, $NOLINE:none) {
+    color: $COLOR;
+    text-decoration: $NOLINE;
+    &:hover,
+    &:focus {
+        color: $aHover;
+        cursor: pointer;
+    }
+}
+body {
+    @include fontSetting(1em);
+    line-height: 1.45em;
+    font-family:$font-family;
+    -webkit-text-size-adjust: none;
+}
+a {
+    @include aSetting();
+}
+// kbd
+kbd{
+    background: #FFF;
+    border-radius:.2em;
+    color:#555;
+    font-weight: bold;
+    display:inline-block;
+    padding:.1em .6em;
+    font-size: .938em;
+    font-family: sans-serif;
+    margin-right: .4em;
+    margin-bottom: .1em;
+    vertical-align:middle;
+    border-top: 1px solid #BBB;
+    border-bottom: 3px solid #BBB;
+    border-left: 2px solid #BBB;
+    border-right: 2px solid #BBB;
+    ~kbd{
+        margin-left: .4em;
+    }
+    kbd{
+        border:none;
+    }
+}

@@ -1,0 +1,91 @@
+.marquee {
+    height: 45px;
+    display: block;
+    overflow: hidden;
+    background: #FFF;
+    margin: 2em 4em;
+    text-align: left;
+    padding: 0 3em 0 2em;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dadada;
+    @media(max-width:991px) {
+        margin: 1.5em 0em;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+    .slick-prev {
+        width: 10px;
+        height: 10px;
+        transform: rotate(90deg);
+        right: 0px !important;
+        top: 1px !important;
+        left: auto;
+        opacity: .5;
+        background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
+        background-size: 16px;
+        width: 20px !important;
+        height: 20px !important;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            opacity: 1
+        }
+        &:before {
+            width: 10px !important;
+            height: 10px !important
+        }
+    }
+    .slick-next {
+        width: 10px;
+        height: 10px;
+        transform: rotate(-90deg);
+        right: 0px !important;
+        top: 22px !important;
+        left: auto;
+        opacity: .5;
+        width: 20px !important;
+        height: 20px !important;
+        background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
+        background-size: 16px;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            opacity: 1
+        }
+        &:before {
+            width: 10px !important;
+            height: 10px !important
+        }
+    }
+    >div {
+        padding: 0;
+        margin: 0
+    }
+    a {
+        display: block;
+        line-height: 40px;
+        margin-right: 3em;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #000;
+      text-decoration: none;
+        span {
+            color:#7cb52f;
+            margin-right: 15px;
+        }
+        &:hover {
+            color: #7cb52f  ;
+        }
+    }
+}

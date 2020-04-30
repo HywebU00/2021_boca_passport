@@ -1,0 +1,163 @@
+[class^="i_"] {
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 1em;
+        width: 1em; 
+        vertical-align: middle;
+        speak: none;
+    }
+}
+@mixin hyui_icon($icon_img) {
+    &:before {
+        background-image: url(../images/icon/#{$icon_img}.svg);
+        background-size: cover;
+        margin-top: -0.1em;
+        margin-bottom: .1em;
+    }
+}
+// 反轉
+.invert {
+    &:before {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+}
+.i_add {
+    @include hyui_icon('icon_add');
+}
+.i_apple {
+    @include hyui_icon('icon_apple');
+}
+.i_arrow_left {
+    @include hyui_icon('icon_arrow_left');
+}
+.i_arrow_right {
+    @include hyui_icon('icon_arrow_right');
+}
+.i_arrow_up {
+    @include hyui_icon('icon_arrow_up');
+}
+.i_arrow_down {
+    @include hyui_icon('icon_arrow_down');
+}
+.i_bookmark {
+    @include hyui_icon('icon_bookmark');
+}
+.i_chat {
+    @include hyui_icon('icon_chat');
+}
+.i_check {
+    @include hyui_icon('icon_check');
+}
+.i_clock {
+    @include hyui_icon('icon_clock');
+}
+.i_close {
+    @include hyui_icon('icon_close');
+}
+.i_edit {
+    @include hyui_icon('icon_edit');
+}
+.i_facebook {
+    @include hyui_icon('icon_facebook');
+}
+.i_googleplus {
+    @include hyui_icon('icon_googleplus');
+}
+.i_grid {
+    @include hyui_icon('icon_grid');
+}
+.i_heart {
+    @include hyui_icon('icon_heart');
+}
+.i_home {
+    @include hyui_icon('icon_home');
+}
+.i_info {
+    @include hyui_icon('icon_info');
+}
+.i_link {
+    @include hyui_icon('icon_link');
+}
+.i_linkedin {
+    @include hyui_icon('icon_linkedin');
+}
+.i_lock {
+    @include hyui_icon('icon_lock');
+}
+.i_mail {
+    @include hyui_icon('icon_mail');
+}
+.i_rss {
+    @include hyui_icon('icon_rss');
+}
+.i_setting {
+    @include hyui_icon('icon_setting');
+}
+.i_star {
+    @include hyui_icon('icon_star');
+}
+.i_twitter {
+    @include hyui_icon('icon_twitter');
+}
+.i_video {
+    @include hyui_icon('icon_video');
+}
+.i_vimeo {
+    @include hyui_icon('icon_vimeo');
+}
+.i_youtube {
+    @include hyui_icon('icon_youtube');
+}
+.i_global {
+    @include hyui_icon('icon_global');
+}
+.i_trash {
+    @include hyui_icon('icon_trash');
+}
+.i_sort {
+    @include hyui_icon('icon_sort');
+}
+.i_move {
+    @include hyui_icon('icon_move');
+}
+.i_layout {
+    @include hyui_icon('icon_layout');
+}
+.i_copy {
+    @include hyui_icon('icon_copy');
+}
+.i_view {
+    @include hyui_icon('icon_view');
+}
+.i_man {
+    @include hyui_icon('icon_man');
+}
+.i_calendar {
+    @include hyui_icon('icon_calendar');
+}
+.i_search {
+    @include hyui_icon('icon_search');
+}
+.i_pick {
+    @include hyui_icon('icon_pick');
+}
+.i_calendar_color {
+    @include hyui_icon('icon_calendar_color');
+}
+.i_dot{
+    @include hyui_icon('icon_dot');
+}
+.i_photo{
+    @include hyui_icon('icon_photo');
+}
+.i_order{
+    @include hyui_icon('icon_order');
+}
+.i_top{
+    @include hyui_icon('icon_top');
+}
+.i_minus{
+    @include hyui_icon('icon_minus');
+}

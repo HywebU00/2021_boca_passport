@@ -1,0 +1,90 @@
+// 相簿列表
+.album {
+    .lightbox {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1000000;
+        display: none;
+        .galler_overlay {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            display: block;
+        }
+        .caption {
+            color: #FFF;
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+            z-index: 999999;
+            width: 60%;
+            height: 8%;
+            left: 50%;
+            margin-left: -30%;
+            line-height: 1.3em;
+        }
+        .light_prev,
+        .light_next {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            left: 0px;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: .938em;
+            color: #FFF;
+            z-index: 999;
+            text-align: center;
+            background: rgba(0, 0, 0, .8);
+            transition: .3s ease-out;
+        }
+        .light_next {
+            right: 0px;
+            left: auto;
+        }
+        .light_prev:hover,
+        .light_next:hover {
+            background: #FFF;
+            color: #000;
+            cursor: pointer;
+        }
+        .light_close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 80px;
+            height: 30px;
+            color: #FFF;
+            line-height: 30px;
+            font-size: .938em;
+            z-index: 999;
+            background: rgba(0, 0, 0, .8);
+            transition: .3s ease-out;
+            text-align: center;
+            &:hover {
+                background: #FFF;
+                color: #000;
+                cursor: pointer;
+            }
+        }
+        img {
+            max-width: 80vw;
+            max-height: 80vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+/* @include transition(all,2s,ease-out); */
+@mixin transition($what: all, $time: 0.2s, $how: ease-out) {
+    transition: $what $time $how;
+}
+//範例：
+// a.button {
+// /* button styles */
+// @include transition (all, 0.5s, ease)
+// }

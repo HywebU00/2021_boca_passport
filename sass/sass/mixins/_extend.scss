@@ -1,0 +1,38 @@
+// 斜線
+%slash {
+    content: " / ";
+    display: inline-block;
+    padding: 0px 4px;
+    margin: 0px 5px 0px 5px;
+    color: #CCC;
+}
+// 箭頭
+%arrow_setting {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5em;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+%arrow_down {
+    @extend %arrow_setting;
+    border-width: 6px 3px 0 3px;
+    border-color: #555 transparent transparent transparent;
+}
+%arrow_right {
+    @extend %arrow_setting;
+    border-width: 3px 0 3px 6px;
+    border-color: transparent transparent transparent #555;
+}
+%arrow_up {
+    @extend %arrow_setting;
+    border-width: 0 3px 6px 3px;
+    border-color: transparent transparent #555 transparent;
+}
+%arrow_left {
+    @extend %arrow_setting;
+    border-width: 3px 6px 3px 0;
+    border-color: transparent #555 transparent transparent;
+}

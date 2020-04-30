@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>單位名稱切版檔案</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui.css">
+<style>
+.demo_wrap {
+    max-width: 1000px;
+    margin: 0em auto 1em;
+    padding: 15px 15px 3em;
+    clear: both;
+    background: #FFF
+}
+.demo_wrap h1 {
+    display: block;
+    margin: 0px auto;
+    max-width: 300px;
+    float: left;
+    margin-right: 1em
+}
+@media screen and (max-width:545px) {
+    .demo_wrap h1 {
+        max-width: 100%;
+        float: none;
+        text-align: center
+    }
+}
+.demo_wrap h1 img {
+    width: 300px
+}
+.num {
+    width: 12%
+}
+body {
+    counter-reset: num
+}
+table {
+    margin-bottom: 1em
+}
+table caption {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: .5em 0;
+    color: #ff5050
+}
+tbody tr td:first-child:before {
+    counter-increment: num;
+    display: block;
+    text-align: center;
+    content: counters(num, ".") " "
+}
+tbody tr td:nth-child(2) {
+    width: 35%
+}
+.btn_grp{
+    text-align: right;
+}
+@media screen and (max-width:545px) {
+   .btn_grp{
+    text-align: center;
+} 
+}
+</style>
+</head>
+<body>
+    <div class="demo_wrap">
+        <h1><img src="images/logo.png" alt=""></h1>
+        <div class="btn_grp">
+            <a href="#" class="btn">切版檔案請按此下載</a>
+        </div>
+        <hr>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>首頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="mp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁</td>
+                        <td><a href="lp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁-表格</td>
+                        <td><a href="lp_table_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>列表頁-相簿</td>
+                        <td><a href="lp_album_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>內容頁</td>
+                        <td><a href="cp_template.htm"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>內容頁-照片</td>
+                        <td><a href="cp_photo_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>節點頁</td>
+                        <td><a href="np_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>轉寄友人</td>
+                        <td><a href="fp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>意見信箱</td>
+                        <td><a href="qp_template.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>網站地圖</td>
+                        <td><a href="sitemap_template.htm"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>404 網站錯誤</td>
+                        <td><a href="404.htm"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 專案客製化頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>電子報</td>
+                        <td><a href="epaper_template.htm"></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>...</td>
+                        <td><a href="..."></a></td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td>...</td>
+                        <td><a href="..."></a></td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop" >回頁首</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+    $(function() {
+        $('tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+        });
+    })
+    </script>
+</body>
+
+</html>

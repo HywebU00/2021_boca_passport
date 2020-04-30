@@ -1,0 +1,237 @@
+//http://lab.25sprout.com/responsive_table/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    @include screen('xs_mobile') {
+        width: 100%;
+    }
+    th,
+    td {
+        padding: .5em;
+        text-align: left;
+    }
+    td {
+        border: #ddd 1px solid;
+        word-break: break-all;
+        a {
+            word-break: break-all;
+        }
+    }
+    th {
+        background-color: #F3F3F3;
+        color: #333;
+        border: #DDD 1px solid;
+        text-align: center;
+        white-space: nowrap;
+    }
+    &.table_hover {
+        tr:hover {
+            background: #F3F3F3;
+        }
+    }
+    &.table_sprite {
+        tr:nth-child(even) {
+            background: #F5F5F5;
+        }
+    }
+}
+.table_list {
+    @include screen('xs_mobile') {
+        background-color: transparent !important; //Force table to not be like tables anymore
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px; // background-color: #333;
+        }
+        td {
+            // Behave  like a "row"
+            border: none !important;
+            border-bottom: 1px solid #eee !important;
+            position: relative;
+            padding-left: 35% !important;
+            white-space: normal;
+            text-align: left;
+            &:before {
+                content: attr(data-title);
+                position: absolute;
+                top: .5em;
+                left: .5em;
+                width: 30%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #000;
+            }
+        }
+    }
+}
+// fix_th_table
+.fix_th_table {
+    margin: 1em 0;
+    @include screen('mobile') {
+        position: relative;
+        width: 100%;
+        overflow: hidden !important;
+    }
+    table {
+        @include screen('mobile') {
+            display: block;
+            width: 100%;
+            // overflow:hidden;
+            overflow-x: scroll;
+            // -webkit-overflow-scrolling: touch;
+            // -webkit-transform: translate3d(0, 0, 0);
+            padding-bottom: 1em; //padding-bottom 是為預留水平捲軸的位置
+        }
+    }
+    th,
+    td {
+        width: 10em;
+        padding: .8em 0;
+        text-align: center;
+        line-height: 1.2;
+        @include screen('mobile') {
+            display: inline-block;
+            margin-right: -6px;
+            margin-left: 0;
+            margin-top: -1px;
+        }
+    }
+    th {
+        &:first-child {
+            width: 8em;
+            white-space: normal;
+            @include screen('mobile') {
+                position: absolute !important;
+                left: 0;
+                top: auto;
+            }
+        }
+    }
+    tr {
+        @include screen('mobile') {
+            display: block;
+            clear: both;
+            white-space: nowrap;
+            width: auto;
+            padding-left: 8em;
+            &:first-child {
+                border-top: #ddd 1px solid;
+            }
+        }
+    }
+}
+.table_wrapper {
+    @include screen('mobile') {
+        width: 100%;
+        display: block;
+        @include clearfix;
+        overflow: hidden;
+        overflow-x: auto;
+        padding-bottom: 1em;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translate3d(0, 0, 0);
+        table {
+            width: 100%;
+            // display:none;
+            min-width: 600px;
+        }
+    }
+}
+.scroltable{
+    min-width:600px !important;
+}
+.scroltable-wrapper {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    overflow-y: hidden;
+}
+.scroltable-container {
+    overflow: auto;
+}
+.scroltable-nav {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 9;
+}
+.scroltable-nav.scroltable-nav-left {
+    left: 0;
+    @include gradient(rgba(255,255,255,1),rgba(255,255,255,0),horizontal);
+    .tablearrow_left {
+        position: fixed;
+        left: 0em;
+        top: 0em;
+        display: none;
+        z-index: 9;
+        @include screen('mobile') {
+            display: block;
+        }
+        &:before {
+            position: absolute;
+            top: 0em;
+            left: -.2em;
+            width: 30px;
+            height: 30px;
+            background: url(../vendor/scrolltable/images/arrow-left.png) no-repeat 10px center;
+            content: "";
+            z-index: 2;
+            // animation: arrow_left .3s linear infinite alternate;
+        }
+    }
+}
+.scroltable-nav.scroltable-nav-right {
+    right: 0;
+    @include gradient(rgba(255,255,255,0),rgba(255,255,255,1),horizontal);
+    .tablearrow_right {
+        position: fixed;
+        top: 0em;
+        right: 0em;
+        display: none;
+        z-index: 9;
+        @include screen('mobile') {
+            display: block;
+        }
+        &:before {
+            position: absolute;
+            top: 0em;
+            right: -.2em;
+            width: 30px;
+            height: 30px;
+            background: url(../vendor/scrolltable/images/arrow-right.png) no-repeat right 10px center;
+            content: "";
+            z-index: 2;
+        }
+    }
+}
+@keyframes arrow_left {
+    from {
+        left: -.2em;
+    }
+    to {
+        left: .3em;
+    }
+}
+@keyframes arrow_right {
+    from {
+        right: -.2em;
+    }
+    to {
+        right: .3em;
+    }
+}

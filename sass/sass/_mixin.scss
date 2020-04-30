@@ -1,0 +1,18 @@
+//  MIXIN
+@import "mixins/_clearfix"; 			//清除浮動
+@import "mixins/_mediaquery"; 			//mediaquery
+@import "mixins/_transition"; 			//動畫
+@import "mixins/_opacity"; 				//透明度
+@import "mixins/_box-sizing"; 			//box-sizing
+@import "mixins/_border-radius"; 		//導角
+@import "mixins/_gradient"; 			//漸層
+@import "mixins/_center-block"; 		//置中
+@import "mixins/_text-overflow"; 		//ellipsis 字多點點
+@import "mixins/_box-shadow"; 			//陰影
+@import "mixins/_li-reset"; 			//清除li格式
+@import "mixins/_bootstrap-grid"; 		//格線系統
+// @import "mixins/_make-column"; 		//原生bs格線系統(沒有必要用不用匯入)
+// 客製化
+@import "mixins/_extend"; 				//客製化繼承
+@import "mixins/_fatfooter"; 			//fatfooter
+@import "mixins/_image"; 				//img設定

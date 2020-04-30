@@ -1,0 +1,83 @@
+ /* sitemap */
+ .sitemap {
+     margin: 0px auto 1em;
+     @extend %clearfix;
+     p {
+         font-size: .813em;
+         kbd {
+             border: 1px solid #AAA;
+             background: transparent;
+             color: $color-word;
+             padding:0 .3em;
+             margin: 0 .2em .1em;
+             kbd {
+                 border: none;
+             }
+         }
+     }
+     .accesskeyDefine {
+         padding: 1em 2em;
+         background: #EEE;
+         @include border-radius(6px);
+         li {
+             margin-bottom: .2em;
+         }
+     }
+ }
+ $sitemapLength : 4;
+ $sitemapWidth:100%/ $sitemapLength;
+ .cascading {
+     border-top: 1px solid #CCC;
+     @include gutter;
+     @include box-sizing;
+     ul {
+         @include li-reset;
+     }
+     li {
+         line-height: 1.5;
+         width: $sitemapWidth;
+         display: inline-block;
+         vertical-align: top;
+         margin: 0 -5px 1em 0; // margin-right:改為負5;
+         @include box-sizing;
+         padding: 0px .5em;
+         a {
+             margin: .2em 0;
+             color: #222;
+             padding: .5em;
+             display: block;
+             font-size: 1.25em;
+             font-weight: bold;
+             border-bottom: 2px solid $primaryColor;
+             &:hover,
+             &:focus {
+                 color: $primaryColor !important;
+                 text-decoration: none;
+             }
+         }
+         ul {
+             padding-left: 1em;
+             li {
+                 width: 100%;
+                 display: block;
+                 margin-bottom: 0;
+                 padding: 0;
+                 a {
+                     display: block;
+                     font-size: 1em;
+                     padding: .2em 0;
+                     border-bottom: 1px dotted #ccc;
+                     background-color: transparent;
+                     font-weight: normal;
+                 }
+             }
+         }
+     }
+     @include screen('mobile') {
+         width: 95%;
+         margin: 0px auto;
+         li {
+             width: 100%;
+         }
+     }
+ }

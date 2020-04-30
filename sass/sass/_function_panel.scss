@@ -1,0 +1,50 @@
+// function_panel setting
+.function_panel {
+    text-align: right;
+    margin: .2em 0;
+    padding: .5em 0 .5em;
+    min-height: 35px;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    @include screen('mobile') {
+        margin: .6em 0;
+        padding: .5em 0 .5em;
+    }
+    .share {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .function {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .publish_time {
+        float: left;
+        min-width: 100px;
+        display: block;
+        margin-top: .6em;
+        color:#666;
+        span{
+            font-size:.938em;
+            @include screen('mobile') {
+                display:none;
+            }
+        }
+        time{
+            font-family:georgia;
+            font-size:1.125em;
+            @include screen('mobile') {
+                font-size:.938em;
+            }
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            top:.3em;
+            background: url(../images/basic/icon_time.png) no-repeat center center;
+            background-size: 12px;
+        }
+    }
+}
