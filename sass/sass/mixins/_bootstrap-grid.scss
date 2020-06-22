@@ -170,3 +170,61 @@ $container-lg: $container-large-desktop !default;
     position: relative;
     @include container-fixed;
 }
+
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////   flex grid 設定    ///////////////////// 
+//////////////////////////////////////////////////////////////
+
+// flex gutter 設定是 『margin』
+// 預設值（ 在 _variable.scss 可以找到 ）
+// ------
+// $grid-gutter-width-margin：30px
+// $grid-columns: 12
+// $columns 是變數
+
+%grid_flex_setting {
+    margin-left: ($grid-gutter-width-margin / 2);
+    margin-right: ($grid-gutter-width-margin / 2);
+}
+
+// 欄寬
+@mixin flex-xs-column($columns) {
+    // 自動計算的欄寬
+    $column-width: #{($columns / $grid-columns)};
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-xs-min) {
+        // px 計算
+        // 全部 *（佔位數 / 欄數）- margin gutter
+        flex-basis: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+        max-width: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+    }
+}
+@mixin flex-sm-column($columns) {
+    $column-width: #{($columns / $grid-columns)};
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-sm-min) {
+        flex-basis: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+        max-width: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+    }
+}
+@mixin flex-md-column($columns) {
+    $column-width: #{($columns / $grid-columns)};
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-md-min) {
+        flex-basis: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+        max-width: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+    }
+}
+
+@mixin flex-lg-column($columns) {
+    $column-width: #{($columns / $grid-columns)};
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-lg-min) {
+        flex-basis: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+        max-width: calc(100% * #{$column-width} - #{$grid-gutter-width-margin});
+    }
+}
+
+

@@ -237,3 +237,44 @@
 @media (min-width: $screen-lg-min) {
     @include make-grid(lg);
 }
+
+
+
+// -----------------   flex grid 設定   -----------------
+
+// flex gutter 設定是 margin
+%grid_flex_setting {
+    // min-height: 1px;
+    margin-left: ($grid-gutter-width-margin / 2);
+    margin-right: ($grid-gutter-width-margin / 2);
+}
+
+@mixin flex-xs-column($columns) {
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-xs-min) {
+        -ms-flex: 1 1 calc($columns / $grid-columns);
+        flex: 1 1 calc($columns / $grid-columns);
+    }
+}
+@mixin flex-sm-column($columns) {
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-sm-min) {
+        -ms-flex: 1 1 calc($columns / $grid-columns);
+        flex: 1 1 calc($columns / $grid-columns);
+    }
+}
+@mixin flex-md-column($columns) {
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-md-min) {
+        -ms-flex: 1 1 calc($columns / $grid-columns);
+        flex: 1 1 calc($columns / $grid-columns);
+    }
+}
+
+@mixin flex-lg-column($columns) {
+    @extend %grid_flex_setting;
+    @media (min-width: $screen-lg-min) {
+        -ms-flex: 1 1 calc($columns / $grid-columns);
+        flex: 1 1 calc($columns / $grid-columns);
+    }
+}

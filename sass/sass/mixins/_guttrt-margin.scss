@@ -1,0 +1,28 @@
+//http://w3bits.com/sass-mixins/
+
+
+// margin 版的 gutter
+@mixin gutter-margin($gutter: $grid-gutter-width-margin) {
+	position: relative;
+    min-height: 1px;
+    margin-left: ($gutter / 2);
+    margin-right: ($gutter / 2);
+    @include box-sizing(border-box);
+}
+
+// 左邊不要 margin gutter
+@mixin gutter-no-left($gutter: $grid-gutter-width-margin) {
+	position: relative;
+    min-height: 1px;
+    margin-left: 0;
+    margin-right: ($gutter / 2);
+    @include box-sizing(border-box);
+}
+// 右邊不要 margin gutter
+@mixin gutter-no-right($gutter: $grid-gutter-width-margin) {
+	position: relative;
+    min-height: 1px;
+    margin-left: ($gutter / 2);
+    margin-right: 0;
+    @include box-sizing(border-box);
+}

@@ -146,3 +146,122 @@
         }
     }
 }
+
+
+
+.Flex{
+    >.container{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-flow: row wrap;
+
+        background: #ddd;
+        margin-bottom: 1em;
+
+        > div{
+            box-sizing: border-box;
+            word-wrap:break-word;
+        }
+
+        .col{
+            @include flex-xs-column(12);
+            @include flex-sm-column(12);
+            @include flex-md-column(6);
+            @include flex-lg-column(6);
+
+            background: #8bc34a;
+            @include gutter(60px);
+            // @include gutter-margin(80px);
+        }
+
+        .left{
+            @include flex-xs-column(12);
+            @include flex-sm-column(12);
+            @include flex-md-column(4);
+            @include flex-lg-column(4);
+            background: pink;
+            @include gutter(120px);
+            // @include gutter-margin(0);
+        }
+        .right{
+            @include flex-xs-column(12);
+            @include flex-sm-column(12);
+            @include flex-md-column(8);
+            @include flex-lg-column(8);
+
+            background: deeppink;
+            @include gutter(120px);
+            // @include gutter-margin(30px);
+        }
+
+        .thumbnail{
+            @include flex-xs-column(12);
+            @include flex-sm-column(12);
+            @include flex-md-column(4);
+            @include flex-lg-column(4);
+
+            @include gutter(0);
+            
+            margin-top: .75em;
+            margin-bottom: .75em;
+        }
+    }
+
+    &.Reverse{
+        >.container{
+            flex-flow: row-reverse wrap;
+        }
+    }
+
+    &.spacial{
+        >.container{
+            .col{
+                flex-basis: calc(100% / 5 - #{$grid-gutter-width-margin} );
+                // max-width: calc(100% / 5 - #{$grid-gutter-width-margin} );
+                background: #af2333;
+                @include gutter(60px);
+                // @include gutter-margin(80px);
+            }
+
+            @include screen('tablet') {
+                .col{
+                    flex: 1 1 auto;
+                    flex-basis: calc(100% / 3 - #{$grid-gutter-width-margin} );
+                    margin-bottom: .9em;
+                }
+            }
+        }
+    }
+    &.spacial2{
+        >.container{
+            .col{
+                @include flex-xs-column(12);
+                @include flex-sm-column(12);
+                @include flex-md-column(4);
+                @include flex-lg-column(4);
+                // flex-basis: calc(100% / 3 - #{$grid-gutter-width-margin} );
+                background: #009688;
+                margin-top: .5em;  
+                margin-bottom: .5em;
+                @include gutter(60px);
+            }
+
+            @include screen('tablet') {
+                .col{
+                    flex: 1 1 auto;
+                    // ㄈ
+                }
+            }
+        }
+    }
+
+    @include screen('notebook') {}
+    @include screen('mobile') {
+        >.container{
+            flex-direction: column;
+        }
+    }
+}
