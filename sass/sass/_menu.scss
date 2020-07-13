@@ -6,6 +6,9 @@
     z-index: 99;
     // 預設選單 ul
     clear: both;
+    @include screen('mobile') {
+        display:none;
+    }
     >ul {
         text-align: left;
         margin: 0;
@@ -131,6 +134,9 @@
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     @include box-sizing;
+    .menu{
+        display:block;
+    }
     >.menu_overlay {
         background: RGBA(0, 0, 0, .5);
         position: fixed;

@@ -54,16 +54,16 @@
                 position: absolute;
                 background: $primaryColor;
                 width: 50%;
-                height: 4px;
-                top: 35%;
+                height: 3px;
+                top: 20px;
                 left: 50%;
                 margin-left: -25%;
                 display: block;
                 &:nth-child(2) {
-                    top: 50%;
+                    top: 28px;
                 }
                 &:nth-child(3) {
-                    top: 65%;
+                    top: 36px;
                 }
             }
         }
@@ -118,6 +118,9 @@
     }
     // 導覽列
     .navigation {
+        @include screen('mobile') {
+            display: none;
+        }
         &.have_language {
             padding-right: 160px;
         }
@@ -164,6 +167,9 @@
     padding: 0em .3em 0em;
     overflow: hidden;
     @include box-sizing;
+    @include screen('mobile') {
+        display: none;
+    }
     label {
         font-size: 0em;
         height: 0;
@@ -175,7 +181,8 @@
         float: left;
         margin-right: .3em;
         width: 70%;
-        position:relative;
+        height:2em;
+        position: relative;
         input {
             margin: -0.2em 0 0;
             padding: .2em 35px .2em .5em;
@@ -195,13 +202,13 @@
                 background: url(../images/basic/icon_search.png) no-repeat center center;
                 background-size: 20px;
                 outline: 1px solid transparent;
-                border:none;
-                display:block;
+                border: none;
+                display: block;
                 opacity: .8;
                 min-width: 0em !important;
-                position:absolute;
-                right:.2em;
-                top:8%;
+                position: absolute;
+                right: .2em;
+                top: 8%;
                 @include box-sizing;
                 &:hover,
                 &:focus {
@@ -265,6 +272,7 @@
         left: 0;
         z-index: 98;
         background: #333;
+        display: none;
         label {
             font-size: 0em;
             line-height: 0;

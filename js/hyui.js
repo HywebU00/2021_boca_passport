@@ -32,13 +32,11 @@ $(function() {
     /*-----------------------------------*/
     /////// header選單 tab及 fix設定////////
     /*-----------------------------------*/
+
     var _menu = $('.menu');
     _menu.find('li').has('ul').addClass('hasChild');
-    var liHasChild = _menu.find('li.hasChild'),
-        liHasChild_level1 = $('.menu ul').children('li.hasChild'),
-        liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
-        liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
-        subMenuWidth = liHasChild.first().children('ul').outerWidth();
+    var liHasChild = _menu.find('li.hasChild');
+
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
@@ -99,6 +97,14 @@ $(function() {
     _menu.find('li:last>a').focusout(function() {
         _menu.find('li ul').hide();
     });
+    // 先複製過去
+    _nav.clone().prependTo(_mArea);
+    _menu.clone().prependTo(_mArea);
+    _search.clone().prependTo(_body).addClass('m_search');
+    var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
+        liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
+        liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
+        subMenuWidth = liHasChild.first().children('ul').outerWidth();
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();
@@ -109,10 +115,6 @@ $(function() {
             menu_status = false;
             _sidebar.hide();
             _overlay.hide();
-            _nav.prependTo(_mArea);
-            _menu.prependTo(_mArea);
-            _search.prependTo(_body);
-            _search.addClass('m_search');
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
@@ -214,10 +216,10 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    hh = Math.floor($('.header').outerHeight(true));
-    if ($('header').has('menu')) {
-        var stickyMenuTop = Math.floor($('.header .menu').offset().top);
-        // console.log(stickyMenuTop);
+     hh = Math.floor($('.header').outerHeight(true));
+    if ($('header .menu').length > 0) {
+        var stickyMenuTop = Math.floor($('header .menu').offset().top);
+        console.log(stickyMenuTop);
         hh = Math.floor($('.header').outerHeight(true));
         menuH = Math.floor(_menu.outerHeight(true));
         $(window).bind("load scroll resize", function(e) {
@@ -351,7 +353,7 @@ $(function() {
             //取縮圖 img src
             THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container picture source:first').attr('data-srcset');
             // 沒寫picture
-            // THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('src');  
+            // THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('src');
             THUMB_H3 = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('alt');
             $('.album .lightbox .caption').html(THUMB_H3);
             $('.album .lightbox img').hide();
