@@ -1,23 +1,23 @@
 .font_size {
     overflow: hidden;
-    display: inline-block;
     text-align: center;
+    display: flex;
+    align-items: center;
     span {
-        display: inline-block;
-        vertical-align: middle;
+        flex: 0 0 auto;
         font-size: .938em;
         color: #666;
     }
     ul {
-        display: inline-block;
-        vertical-align: middle;
+       flex: 0 0 auto;
         @include li-reset;
+        display: flex;
+    align-items: center;
         li {
             width: 40px;
             height: 40px;
             font-size: 1em;
-            float: left;
-            display: block;
+           
             margin: 0 .2em;
             a {
                 display: block;

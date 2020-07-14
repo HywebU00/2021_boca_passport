@@ -1,6 +1,7 @@
 .thumbnail {
     box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.5);
     background: #FFF;
+     width: 100%;
     a {
         display: block;
         @include aSetting(#555);

@@ -6,19 +6,21 @@ $function_color:#888;
     content: "";
     width: 1.2em;
     height: 1.2em;
-    margin-right: .2em;
+    margin-right: .5em;
     display: inline-block;
 }
-div.function {
+div.function{
     @include box-sizing;
     @extend %clearfix;
     margin: .5em 0;
     ul {
         @include li-reset;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style-type: none;
         li {
-            display: block;
-            float: left;
-            margin: 0 3px 3px 0;
+            margin: 0 0px 0px 3px;
             button,
             a {
                 font-size: .813em;
@@ -39,7 +41,8 @@ div.function {
                 a:before {
                     @extend %function_before;
                     background: url(../images/basic/icon_back.svg) no-repeat center center;
-                    background-size: cover;
+                    background-size: 16px;
+                   
                 }
             }
             // 友善列印
@@ -47,15 +50,17 @@ div.function {
                 a:before {
                     @extend %function_before;
                     background: url(../images/basic/icon_print.svg) no-repeat center center;
-                    background-size: cover;
+                    background-size: 20px;
+                    
                 }
             }
             // 轉寄友人
             &.icon_forward {
                 a:before {
                     @extend %function_before;
-                    background: url(../images/basic/icon_forward.svg) no-repeat center center;
-                    background-size: cover;
+                    background: url(../images/basic/icon_forward.svg) no-repeat center bottom;
+                    background-size: 20px;
+                    
                 }
             }
         }
@@ -88,12 +93,11 @@ div.function {
         height: 40px;
         margin: 0;
         ul {
+            display: flex;
             li {
                 width: 40px;
                 height: 40px;
                 font-size: 1em;
-                float: left;
-                display: block;
                 margin: 0 .2em;
                 a {
                     display: block;
