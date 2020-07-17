@@ -8,7 +8,7 @@ $form_title_width :150px;       // 表單title寬度
     padding: .5em;
     background: #fff;
     vertical-align: middle;
-    margin-bottom: .3em;
+    margin:0 5px 5px;
     @include box-sizing;
     @include border-radius($f_radius);
     @include transition(border, .2s, ease-out);
@@ -26,6 +26,9 @@ select::-ms-expand {
         border-bottom: 1px dashed #DDD;
         overflow: hidden;
         padding: .2em 0;
+        // @include screen('mobile'){
+        //     flex-wrap:wrap;
+        // }
         // 閱讀條文
         &.agree {
             border-bottom: none;
@@ -39,6 +42,7 @@ select::-ms-expand {
     .form_title {
         float: left;
         width: $form_title_width;
+        //flex:0 0 $form_title_width;
         @include gutter();
         padding-top: 5px;
         @include screen('mobile') {
@@ -48,7 +52,10 @@ select::-ms-expand {
     .form_content {
         float: left;
         padding-top: 3px;
-        width: calc(100% - #{$form_title_width});
+        width: calc(100% - 150px);
+        position: relative;
+        min-height: 1px;
+        overflow: hidden;
         @include gutter();
         overflow: hidden;
         @include screen('mobile') {
@@ -59,12 +66,15 @@ select::-ms-expand {
             min-height: 2.5em;
             .form_content {
                 float: none;
-                display: block;
+                // display: flex;
+                // flex-wrap:wrap;
+                // align-items: center;
+                vertical-align:center;
                 @include gutter();
                 &.form_inline {
-                    input[type="text"], select {
+                    input[type="text"], select, .checkbox {
                         width: auto;
-                        min-width: 100px;
+                        min-width:100px;
                         display: inline-block;
                         @include screen('xs_mobile') {
                             width: 100%;
@@ -132,7 +142,7 @@ select::-ms-expand {
                 }
             }
             input[type="text"] {
-                width: calc(100% - 211px) !important;
+                width: calc(100% - 231px) !important;
                 @include screen('mobile') {
                     display: block !important;
                     width: 100% !important;
@@ -147,6 +157,7 @@ select::-ms-expand {
             @include screen('xs_mobile') {
                 width: 100%;
                 display: block;
+                padding-right:0;
             }
             &+.datepick {
                 margin-left: .3em;
@@ -163,13 +174,14 @@ select::-ms-expand {
                 }
                 @include screen('xs_mobile') {
                     margin-left: 0em;
+                    //padding-right:.5em;
                     &:before {
                         display: none;
                     }
                 }
-                i {
-                    right: .5em;
-                }
+                // i {
+                //     right: .5em;
+                // }
             }
             i {
                 position: absolute;
@@ -196,6 +208,7 @@ select::-ms-expand {
         }
     }
 }
+
 //---------------------------------------------form setting--------//
 form {
     .form_grp,
@@ -203,7 +216,7 @@ form {
     .radio_grp,
     .btn_grp,
     .upload_grp {
-        margin-bottom: .2em;
+        margin: 0 5px 5px;
     }
     .check_grp,
     .radio_grp {
@@ -235,6 +248,9 @@ form {
     }
     // form 全域行內設定
     &.form_inline {
+        // display:flex;
+        // flex-wrap:wrap;
+        // align-items: center;
         label {
             display: inline-block;
             vertical-align: middle;
@@ -496,4 +512,50 @@ img.captcha {
 abbr[title] {
     border-bottom: none;
     text-decoration: none;
+}
+
+.flex-form{
+    .form_grp{
+        display:flex;
+        align-items: center;
+        @include screen('mobile'){
+            flex-wrap:wrap;
+        }
+    }
+
+    .form_title{
+        flex:0 0 $form_title_width;
+    }
+    .form_content{
+        flex-basis: calc(100% - #{$form_title_width});
+        @include screen('mobile'){
+            flex-basis: 100%;
+        }
+
+        //第二層設定
+        .form_grp{
+            .form_content{
+                display: flex;
+                flex-wrap:wrap;
+                align-items: center;
+                &.form_inline{
+                    input[type="text"], select{
+                        margin:0 5px 5px;
+                    }
+                }
+                input{
+                    margin:0 5px 5px;
+                }
+            }
+        }
+        .datepick{
+            padding-right:0;
+            &+.datepick{
+                padding-left: .5em;
+                &:before{
+                    left: -.2em;
+                }
+            }
+        }
+    }
 }
