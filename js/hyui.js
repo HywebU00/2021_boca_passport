@@ -460,7 +460,7 @@ $(function() {
         e.preventDefault();
     });
     $('.scrollToTop').keydown(function(e) {
-        _body.find('a:first').focus();
+        _body.find('a.goCenter').focus();
         e.preventDefault();
     });
     /*--------------------------------------------------------*/
@@ -487,9 +487,9 @@ $(function() {
     /*-----------------------------*/
     /////form表單 placeholder隱藏/////
     /*-----------------------------*/
-    $('input,textarea').focus(function() {
-        $(this).removeAttr('placeholder');
-    });
+    // $('input,textarea').focus(function() {
+    //     $(this).removeAttr('placeholder');
+    // });
     $('input[type="checkbox"]').off().click(function(e) {
         $(this).blur();
     });
@@ -706,13 +706,11 @@ $(function() {
     /*-----------------------------------*/
     ////////////// lazy load //////////////
     /*-----------------------------------*/
-    if ($('img.lazy').length > 0) {
-        var lazyLoadInstance = new LazyLoad({
-            elements_selector: "img.lazy",
-            placeholder: '/images/basic/placeholder.gif',
-            effect: "fadeIn",
-            fadeTime: 200,
-            threshold: 0
-        });
-    }
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: "img.lazy",
+        placeholder: '/images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 600,
+        threshold: 0
+    });
 });

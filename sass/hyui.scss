@@ -37,15 +37,15 @@
 @import "sass/_lightbox";				//燈箱
 @import "sass/_share";					//社群分享
 @import "sass/_tag";					//文章標籤
-@import "sass/_fontsize";				//控制文章字體大小
+@import "sass/_fontsize_flex";			//控制文章字體大小
 @import "sass/_notice";					//提示
-@import "sass/_function_panel";			//內頁功能面板
+@import "sass/_function_panel_flex";	//內頁功能面板
 
 // 頁面
 @import "page/_template";				//版型初始設定
 @import "page/_mp";						//首頁
-@import "page/_lp";						//LP
-@import "page/_np";						//NP
+@import "page/_lp_flex";				//LP
+@import "page/_np_flex";				//NP
 @import "page/_cp";						//CP
 @import "page/_fp";						//Forward
 @import "page/_qp";						//QP

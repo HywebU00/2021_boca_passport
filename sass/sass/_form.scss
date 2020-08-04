@@ -1,6 +1,4 @@
-
-$form_title_width :150px;       // 表單title寬度
-
+$form_title_width :150px; // 表單title寬度
 @mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:$btn-radius) {
     color: $f_color;
     font-size: 1em;
@@ -8,7 +6,7 @@ $form_title_width :150px;       // 表單title寬度
     padding: .5em;
     background: #fff;
     vertical-align: middle;
-    margin:0 5px 5px;
+    margin: 0 5px 5px;
     @include box-sizing;
     @include border-radius($f_radius);
     @include transition(border, .2s, ease-out);
@@ -17,7 +15,6 @@ $form_title_width :150px;       // 表單title寬度
 select::-ms-expand {
     display: none;
 }
-
 .form_grid {
     font-size: .938em;
     margin: .5em;
@@ -69,12 +66,12 @@ select::-ms-expand {
                 // display: flex;
                 // flex-wrap:wrap;
                 // align-items: center;
-                vertical-align:center;
+                vertical-align: center;
                 @include gutter();
                 &.form_inline {
                     input[type="text"], select, .checkbox {
                         width: auto;
-                        min-width:100px;
+                        min-width: 100px;
                         display: inline-block;
                         @include screen('xs_mobile') {
                             width: 100%;
@@ -157,7 +154,7 @@ select::-ms-expand {
             @include screen('xs_mobile') {
                 width: 100%;
                 display: block;
-                padding-right:0;
+                padding-right: 0;
             }
             &+.datepick {
                 margin-left: .3em;
@@ -199,7 +196,7 @@ select::-ms-expand {
                 }
             }
             >input[type="text"] {
-                width:10em;
+                width: 10em;
                 padding-right: 2em;
                 @include screen('xs_mobile') {
                     width: 100%;
@@ -208,7 +205,6 @@ select::-ms-expand {
         }
     }
 }
-
 //---------------------------------------------form setting--------//
 form {
     .form_grp,
@@ -437,6 +433,16 @@ input[type="checkbox"]:checked {
 input[type="radio"]:checked {
     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
 }
+input[type="radio"]:focus{
+   border-color:$color-orange;
+   background-color: $color-orange;
+     box-shadow: #fff 0 0 0 3px inset, $color-orange 0 0 0 1px;
+}
+input[type="checkbox"]:focus{
+    border-color:$color-orange;
+   background-color: $color-orange;
+   box-shadow: $color-orange 0 0 0 1px;
+}
 //---------------------------------------------readonly disable -------//
 input[readonly],
 input[disable] {
@@ -513,46 +519,43 @@ abbr[title] {
     border-bottom: none;
     text-decoration: none;
 }
-
-.flex-form{
-    .form_grp{
-        display:flex;
+.flex-form {
+    .form_grp {
+        display: flex;
         align-items: center;
-        @include screen('mobile'){
-            flex-wrap:wrap;
+        @include screen('mobile') {
+            flex-wrap: wrap;
         }
     }
-
-    .form_title{
-        flex:0 0 $form_title_width;
+    .form_title {
+        flex: 0 0 $form_title_width;
     }
-    .form_content{
+    .form_content {
         flex-basis: calc(100% - #{$form_title_width});
-        @include screen('mobile'){
+        @include screen('mobile') {
             flex-basis: 100%;
         }
-
         //第二層設定
-        .form_grp{
-            .form_content{
+        .form_grp {
+            .form_content {
                 display: flex;
-                flex-wrap:wrap;
+                flex-wrap: wrap;
                 align-items: center;
-                &.form_inline{
-                    input[type="text"], select{
-                        margin:0 5px 5px;
+                &.form_inline {
+                    input[type="text"], select {
+                        margin: 0 5px 5px;
                     }
                 }
-                input{
-                    margin:0 5px 5px;
+                input {
+                    margin: 0 5px 5px;
                 }
             }
         }
-        .datepick{
-            padding-right:0;
-            &+.datepick{
+        .datepick {
+            padding-right: 0;
+            &+.datepick {
                 padding-left: .5em;
-                &:before{
+                &:before {
                     left: -.2em;
                 }
             }
