@@ -147,121 +147,443 @@
     }
 }
 
+//測試、可塞主標題
+.customize-1,
+.customize-2,
+.customize-3,
+.customize-4,
+.customize-5,
+.customize-6,
+.customize-7,
+.customize-8,
+.customize-9,
+.customize-10,
+.customize-11,
+.customize-12,
+.customize-free,
+.customize-free2,
+.customize-free3{
+    margin: 1em 0;
 
+    h2{ text-align: center; }
+    .Flex-set{
+        // -webkit-box-sizing: border-box;
+        // box-sizing: border-box;
+        // display: -webkit-box;
+        // display: -ms-flexbox;
+        // display: flex;
 
-.Flex{
-    >.container{
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex-flow: row wrap;
+        // 啟動flex
+        @extend %flex_setting;
 
         background: #ddd;
-        margin-bottom: 1em;
+    }
+}
 
-        > div{
-            box-sizing: border-box;
-            word-wrap:break-word;
-        }
+
+.customize-2{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+        // justify-content: flex-start;
+
+        // @include gutter(60px);
 
         .col{
-            @include flex-xs-column(12);
-            @include flex-sm-column(12);
-            @include flex-md-column(6);
-            @include flex-lg-column(6);
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(2, 10px);
 
-            background: #8bc34a;
+            // 自定義 ----------------- start
+            background: #485b8a;
+            color: #fff;
+            margin-top: .5em;
+            margin-bottom: .5em;
             @include gutter(60px);
-            // @include gutter-margin(80px);
+            // ---------------------- end
         }
+
+        @include screen('tablet') {
+            .col{
+                @include flex-layout(2, 10px);
+            }
+        }
+    }
+}
+
+.customize-3{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(3, 5px);
+
+            // 自定義 ----------------- start
+            background: #af2333;
+            color: #fff;
+            margin-top: .5em;
+            margin-bottom: .5em;
+            @include gutter(60px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(60px);
+            .col{
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(2, 1%);
+            }
+        }
+    }
+}
+
+.customize-4{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(4, 20px);
+
+            // 自定義 ----------------- start
+            background: #795548;
+            color: #fff;
+            margin-top: .5em;
+            margin-bottom: .5em;
+            @include gutter(60px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            .col{
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(2, 10px);
+            }
+        }
+    }
+}
+
+.customize-5{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(5, 5px);
+
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(60px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 10px);
+            }
+        }
+    }
+}
+
+.customize-6{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(6, 10px);
+
+            // 自定義 ----------------- start
+            background: #09a20f;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 10px);
+            }
+        }
+    }
+}
+
+.customize-7{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(7, 10px);
+
+            // 自定義 ----------------- start
+            background: #d47630;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 10px);
+            }
+        }
+    }
+}
+
+.customize-8{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(8, 10px);
+
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 10px);
+            }
+        }
+    }
+}
+
+.customize-9{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(9, 10px);
+
+            // 自定義 ----------------- start
+            background: #00988B;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 10px);
+            }
+        }
+    }
+}
+
+.customize-10{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(10, 10px);
+
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            p{ word-break: break-all; }
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(4, 10px);
+            }
+        }
+    }
+}
+
+.customize-11{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(11, 10px);
+
+            // 自定義 ----------------- start
+            background: #9e9e9e;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 16px);
+            }
+        }
+    }
+}
+
+.customize-12{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
+
+        .col{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(12, 10px);
+
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            @include gutter(20px);
+            // ---------------------- end
+        }
+
+        @include screen('tablet') {
+            @include gutter(20px);
+            .col{
+                margin-top: .25em;
+                margin-bottom: .25em;
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(3, 10px);
+            }
+        }
+    }
+}
+
+.customize-free,
+.customize-free2,
+.customize-free3{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row nowrap;
+        background: #eee;
 
         .left{
-            @include flex-xs-column(12);
-            @include flex-sm-column(12);
-            @include flex-md-column(4);
-            @include flex-lg-column(4);
-            background: pink;
-            @include gutter(120px);
-            // @include gutter-margin(0);
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout-free(5, 2px);
+
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            @include gutter(40px);
+            // ---------------------- end
         }
         .right{
-            @include flex-xs-column(12);
-            @include flex-sm-column(12);
-            @include flex-md-column(8);
-            @include flex-lg-column(8);
-
+            @include flex-layout-free(7, 2px);
+            // 自定義 ----------------- start
             background: deeppink;
+            color: #fff;
             @include gutter(120px);
-            // @include gutter-margin(30px);
+            // ---------------------- end
         }
+
+    }
+}
+.customize-free2{
+    .Flex-set{
+        justify-content: flex-end;
+        .left{
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout-free(6, 0px);
+        }
+    }
+}
+.customize-free3{
+    .Flex-set{
+        justify-content: center;
+        .box{
+
+            @include flex-layout-free(4, 0px);
+
+            // 自定義 ----------------- start
+            background: #009688;
+            color: #fff;
+            @include gutter(60px);
+            // ---------------------- end
+        }
+    }
+}
+
+.customize-3{
+    .Flex-set{
+        // 方向、是否斷點
+        flex-flow: row wrap;
 
         .thumbnail{
-            @include flex-xs-column(12);
-            @include flex-sm-column(12);
-            @include flex-md-column(4);
-            @include flex-lg-column(4);
+            // 欄數, 欄寬（margin-gutter）
+            @include flex-layout(3, 20px);
 
-            @include gutter(0);
-            
-            margin-top: .75em;
-            margin-bottom: .75em;
+            // 自定義 ----------------- start
+            background: #fff;
+            color: #222;
+            margin-top: .5em;
+            margin-bottom: .5em;
+            @include gutter(0px);
+            // ---------------------- end
         }
-    }
 
-    &.Reverse{
-        >.container{
-            flex-flow: row-reverse wrap;
-        }
-    }
-
-    &.spacial{
-        >.container{
+        @include screen('tablet') {
+            @include gutter(60px);
             .col{
-                flex-basis: calc(100% / 5 - #{$grid-gutter-width-margin} );
-                // max-width: calc(100% / 5 - #{$grid-gutter-width-margin} );
-                background: #af2333;
-                @include gutter(60px);
-                // @include gutter-margin(80px);
+                // 欄數, 欄寬（margin-gutter）
+                @include flex-layout(2, 1%);
             }
-
-            @include screen('tablet') {
-                .col{
-                    flex: 1 1 auto;
-                    flex-basis: calc(100% / 3 - #{$grid-gutter-width-margin} );
-                    margin-bottom: .9em;
-                }
-            }
-        }
-    }
-    &.spacial2{
-        >.container{
-            .col{
-                @include flex-xs-column(12);
-                @include flex-sm-column(12);
-                @include flex-md-column(4);
-                @include flex-lg-column(4);
-                // flex-basis: calc(100% / 3 - #{$grid-gutter-width-margin} );
-                background: #009688;
-                margin-top: .5em;  
-                margin-bottom: .5em;
-                @include gutter(60px);
-            }
-
-            @include screen('tablet') {
-                .col{
-                    flex: 1 1 auto;
-                    // ㄈ
-                }
-            }
-        }
-    }
-
-    @include screen('notebook') {}
-    @include screen('mobile') {
-        >.container{
-            flex-direction: column;
         }
     }
 }
