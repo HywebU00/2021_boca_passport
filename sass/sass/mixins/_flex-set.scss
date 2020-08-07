@@ -10,10 +10,17 @@
   flex-basis: calc(100% / #{$columns} - #{$margin-gutter});
   max-width: calc(100% / #{$columns} - #{$margin-gutter});
 
-  @if $columns == 2 {
+  @if $columns == 1 {
     &:last-child{
-      &:nth-child(2n){ margin-right: 0; }
-      &:nth-child(4n-3){ margin-right: calc( (100% / #{$columns} - #{$margin-gutter}) + #{$margin-gutter}*#{$columns} / (#{$columns} - 1) ); }
+      &:nth-child(3n-1), &:nth-child(3n-2),
+      &:nth-child(4n-1), &:nth-child(4n-2){ margin-right: 0; }
+    }
+  } @else if $columns == 2 {
+    &:last-child{
+      &:nth-child(2n),
+      &:nth-child(3n-1),
+      &:nth-child(4n-3){ margin-right: 0; }
+      // &:nth-child(4n-3){ margin-right: calc( (100% / #{$columns} - #{$margin-gutter}) + #{$margin-gutter}*#{$columns} / (#{$columns} - 1) ); }
     }
   } @else if $columns == 3 {
     &:last-child{
@@ -130,22 +137,29 @@
       &:nth-child(12n+11){ margin-right: calc( (100% / #{$columns} - #{$margin-gutter}) + #{$margin-gutter}*#{$columns} / (#{$columns} - 1) - 4px ); }
     }
   }
-  
 }
 
 // 子層 - 自訂欄寬
-@mixin flex-layout-free($columns, $margin-gutter) {
-  flex-basis: calc(100% / 12 * #{$columns} - #{$margin-gutter});
-  max-width: calc(100% / 12 * #{$columns} - #{$margin-gutter});
+@mixin flex-layout-free($columns-free, $margin-gutter) {
+  // 啟動計算公式 ------
+  // 佔欄數（$columns）、欄距（$margin-gutter）
+  // width ＝ 100% / 12 * 佔幾欄 - 欄距
+  flex-basis: calc(100% / 12 * #{$columns-free} - #{$margin-gutter});
+  max-width: calc(100% / 12 * #{$columns-free} - #{$margin-gutter});
+  margin-left: calc(#{$margin-gutter} / 2);
+  margin-right: calc(#{$margin-gutter} / 2);
 }
 
 // 範例：
+// // 子層 - 平均欄寬
 // .col{
 //   @include flex-layout(欄數, 間距);
-//   @include last-child-fix; 
 // }
-
-
+// 
+// // 子層 - 自訂欄寬
+// .col{
+//   @include flex-layout(欄數, 間距);
+// }
 
 
 // 未補滿的情況時，剩餘欄位靠左
