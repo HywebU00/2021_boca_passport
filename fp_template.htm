@@ -58,14 +58,14 @@
                 </h1>
                 <!-- Search Start -->
                 <div class="search">
-                        <div class="form_grp">
-                            <label for="mustSameAsId">搜尋</label>
-                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
-                            <input name="" type="submit" title="查詢" value="查詢" />
-                        </div>
-                        <div class="btn_grp">
-                            <input name="" type="submit" value="進階搜尋" />
-                        </div>
+                    <div class="form_grp">
+                        <label for="mustSameAsId">搜尋</label>
+                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
+                        <input name="" type="submit" title="查詢" value="查詢" />
+                    </div>
+                    <div class="btn_grp">
+                        <input name="" type="submit" value="進階搜尋" />
+                    </div>
                     <div class="keywordHot">
                         <ul>
                             <li><a href="#">熱門熱門</a></li>
@@ -148,66 +148,78 @@
             <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
             <div class="container">
-                <!-- breadcrumb路徑 -->
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="#">首頁</a></li>
-                        <li><a href="#">節點</a></li>
-                        <li>節點</li>
-                    </ul>
+                <!-- 左側 -->
+                <div class="left_block">
+                    <div class="leftblock_banner">
+                        <div class="item">Banner</div>
+                        <div class="item">Banner</div>
+                        <div class="item">Banner</div>
+                        <div class="item">Banner</div>
+                    </div>
                 </div>
-                <!-- h2節點 -->
-                <h2 class="title">轉寄友人</h2>
-                <!-- function功能區塊 -->
-                <div class="function">
-                    <ul>
-                        <li class="icon_back"><a href="#">回上一頁</a></li>
-                        <li class="icon_print"><a href="#">友善列印</a></li>
-                        <li class="icon_forward"><a href="#">轉寄友人</a></li>
-                    </ul>
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                            <li>節點</li>
+                        </ul>
+                    </div>
+                    <!-- h2節點 -->
+                    <h2 class="title">轉寄友人</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                    <!-- FP Start -->
+                    <section class="fp">
+                        <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p>
+                        <form action="" class="form_grid">
+                            <div class="form_grp">
+                                <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>您的電子信箱：</label>
+                                <div class="form_content">
+                                    <input type="text" id="" value="">
+                                    <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>收件者電子信箱：</label>
+                                <div class="form_content">
+                                    <input name="" id="" type="text">
+                                    <div class="notice_info">請輸入Email，多個帳號請用 ; 隔開。 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>內容：</label>
+                                <div class="form_content">
+                                    <textarea name="" id="" cols="30" rows="70"></textarea>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>驗證碼：</label>
+                                <div class="form_content">
+                                    <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                    <input type="text" id="" value="">
+                                    <div class="notice_error">您輸入的驗證碼錯誤 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <input name="" type="reset" value="清除">
+                                <input name="" type="submit" value="送出">
+                            </div>
+                        </form>
+                    </section>
+                    <!-- FP End -->
                 </div>
-                <!-- FP Start -->
-                <section class="fp">
-                    <p>註:<abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>為必填(選)欄位, 不能為空白。</p>
-                    <form action="" class="form_grid">
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>您的電子信箱：</label>
-                            <div class="form_content">
-                                <input type="text" id="" value="">
-                                <div class="notice_warning">這似乎不是一個正常的格式 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>收件者電子信箱：</label>
-                            <div class="form_content">
-                                <input name="" id="" type="text">
-                                <div class="notice_info">請輸入Email，多個帳號請用 ; 隔開。 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>內容：</label>
-                            <div class="form_content">
-                                <textarea name="" id="" cols="30" rows="70"></textarea>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label class="form_title"><abbr class="necessary" title=“為必填(選)欄位,不能為空白。“>*</abbr>驗證碼：</label>
-                            <div class="form_content">
-                                <img src="images/basic/captcha.gif" alt="" class="captcha">
-                                <input type="text" id="" value="">
-                                <div class="notice_error">您輸入的驗證碼錯誤 <a href="javascript:;" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn_grp">
-                            <input name="" type="reset" value="清除">
-                            <input name="" type="submit" value="送出">
-                        </div>
-                    </form>
-                </section>
-                <!-- FP End -->
             </div>
         </div>
         <!-- fatfooter Start -->

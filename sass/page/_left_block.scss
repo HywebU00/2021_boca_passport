@@ -1,0 +1,56 @@
+.leftblock_banner {
+    margin-bottom: 20px;
+    .item {
+        min-height: 100px;
+        color: #888;
+        text-align: center;
+        line-height: 100px;
+        font-size: 1.5em;
+        font-weight: bold;
+        background-color: #DEDEDE;
+        margin-bottom: 10px;
+    }
+}
+.leftblock_list {
+    margin-bottom: 20px;
+    h2 {
+        margin: 0 0 1em;
+        padding: .5em;
+        text-align: center;
+        color: #fff;
+        background-color: #666;
+        font-size: 1.25em;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            margin: 0 0 5px;
+            padding: 0 0 5px;
+            border-bottom: 1px solid #ccc;
+            time {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .dept {
+                display: inline-block;
+                padding: 0px 10px;
+                background-color: #999;
+                color: #fff;
+                font-size: .813em;
+                border-radius: 4px;
+            }
+            a {
+                display: block;
+                padding: 5px 0;
+                line-height: 1.4em;
+                font-size: .938em;
+                color: #333;
+                &:hover {
+                    color: $aHover;
+                }
+            }
+        }
+    }
+}
