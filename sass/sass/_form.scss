@@ -12,6 +12,13 @@ $form_title_width :150px; // 表單title寬度
     @include transition(border, .2s, ease-out);
     @include transition(box-shadow, .2s, ease-out);
 }
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(3.5)
+    }
+}
+
 select::-ms-expand {
     display: none;
 }
@@ -21,7 +28,7 @@ select::-ms-expand {
     border-top: 1px solid #DDD;
     .form_grp {
         border-bottom: 1px dashed #DDD;
-        overflow: hidden;
+        //overflow: hidden;
         padding: .2em 0;
         // @include screen('mobile'){
         //     flex-wrap:wrap;
@@ -52,9 +59,8 @@ select::-ms-expand {
         width: calc(100% - 150px);
         position: relative;
         min-height: 1px;
-        overflow: hidden;
+        //overflow: hidden;
         @include gutter();
-        overflow: hidden;
         @include screen('mobile') {
             width: 100%;
         }
@@ -205,6 +211,7 @@ select::-ms-expand {
         }
     }
 }
+
 //---------------------------------------------form setting--------//
 form {
     .form_grp,
@@ -217,13 +224,37 @@ form {
     .check_grp,
     .radio_grp {
         label {
+            position: relative;
             display: block;
+            z-index: 1;
+            input{
+                &:checked{
+                    &~span{
+                        &:after{
+                            position: absolute;
+                            width: 1em;
+                            height: 1em;
+                            border-radius: 50%;
+                            background: #54caff;
+                            content: "";
+                            left: .35em;
+                            top: .1em;
+                            z-index: -1;
+                            animation: ripple 0.35s linear;
+                        }
+                    }
+                }
+            }
         }
         // radio與check個別行內設定
         &.form_inline {
             label {
-                display: inline-block;
+                //display: inline-block;
                 margin: .2em .5em 0 0;
+                flex: 0 1 auto;
+                margin-right: 1em;
+                display: inline-flex;
+                align-items: center;
             }
         }
     }
@@ -251,6 +282,10 @@ form {
             display: inline-block;
             vertical-align: middle;
             margin-right: .5em;
+            flex: 0 1 auto;
+            margin-right: 1em;
+            display: flex;
+            align-items: center;
             &~input,
             &~textarea {
                 display: inline-block;
@@ -434,14 +469,14 @@ input[type="radio"]:checked {
     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
 }
 input[type="radio"]:focus{
-   border-color:$color-orange;
-   background-color: $color-orange;
-     box-shadow: #fff 0 0 0 3px inset, $color-orange 0 0 0 1px;
+   border-color:$form-focus;
+   background-color: $form-focus;
+     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
 }
 input[type="checkbox"]:focus{
-    border-color:$color-orange;
-   background-color: $color-orange;
-   box-shadow: $color-orange 0 0 0 1px;
+    border-color:$form-focus;
+   background-color: $form-focus;
+   box-shadow: $form-focus 0 0 0 1px;
 }
 //---------------------------------------------readonly disable -------//
 input[readonly],
@@ -562,3 +597,4 @@ abbr[title] {
         }
     }
 }
+
