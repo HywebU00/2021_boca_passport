@@ -1,8 +1,6 @@
 // 父層啟動flex： @extend %flex_setting;
 
-
-
-// 子層 - 平均欄寬
+// 子層 - 平均欄寬(有 margin gutter)
 @mixin flex-layout($columns, $margin-gutter) {
   // 啟動計算公式 ------
   // 欄數（$columns）、欄距（$margin-gutter）
