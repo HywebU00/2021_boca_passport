@@ -28,7 +28,7 @@ select::-ms-expand {
     border-top: 1px solid #DDD;
     .form_grp {
         border-bottom: 1px dashed #DDD;
-        //overflow: hidden;
+        overflow: hidden;
         padding: .2em 0;
         // @include screen('mobile'){
         //     flex-wrap:wrap;
@@ -49,6 +49,7 @@ select::-ms-expand {
         //flex:0 0 $form_title_width;
         @include gutter();
         padding-top: 5px;
+        white-space: nowrap;
         @include screen('mobile') {
             width: 100%;
         }
@@ -59,7 +60,7 @@ select::-ms-expand {
         width: calc(100% - 150px);
         position: relative;
         min-height: 1px;
-        //overflow: hidden;
+        overflow: hidden;
         @include gutter();
         @include screen('mobile') {
             width: 100%;
