@@ -3,22 +3,26 @@ div.tag{
     @extend %clearfix;
     padding: .5em 0;
     margin-bottom: .5em;
+    position:relative;
+
     &:before{
-        display:inline-block;
         content:"";
         width:16px;
         height: 16px;
-        position:relative;
-        top:.2em;
+        position:absolute;
+        left:0;
+        top:1em;
         background:url(../images/basic/icon_tag.png) no-repeat center center;
         background-size:16px;
     }
     ul{
-        display:inline-block;
         @include li-reset;
+        display: flex;
+        flex-wrap:wrap;
+        margin-left: 20px;
         li{
-            display:inline-block;
             margin: 0 .2em .2em 0;
+            flex:0 0 auto;
             a{
                 display:block;
                 font-size:.813em;

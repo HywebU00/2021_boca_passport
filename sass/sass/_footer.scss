@@ -9,6 +9,10 @@ footer {
         >div {
             padding-bottom: 1em;
         }
+        display: flex;
+        @include screen('tablet') {
+            flex-wrap:wrap;
+        }
     }
     a {
         text-decoration: none;
@@ -19,81 +23,80 @@ footer {
         }
     }
     .footer_logo {
-        @include make-xs-column(8);
-        @include make-sm-column(3);
-        @include make-md-column(3);
-        @include make-lg-column(3);
-        @include gutter();
+        flex:0 1 240px;
     }
     .footer_info {
-        @include make-xs-column(12);
-        @include make-sm-column(6);
-        @include make-md-column(6);
-        @include make-lg-column(6);
-        @include gutter();
+        flex:1 1 auto;
     }
     .footer_icon {
-        @include make-xs-column(12);
-        @include make-sm-column(3);
-        @include make-md-column(3);
-        @include make-lg-column(3);
-        @include gutter();
-    }
+        flex:0 1 200px;
+        @include screen('tablet') {
+           flex:1 1 100%; 
+           text-align: right;
+       }
+   }
     // 版權連結
     .footer_link {
         @include li-reset();
         @include clearfix();
+        display: flex;
+        @include screen('mobile') {
+            flex-direction: column;
+        }
         li {
-            float: left;
-            display: block;
+            flex:0 1 auto;
             margin: 0px 5px 5px 0px;
-            a {
-                display: block;
-                padding: .5em 1em;
-                background: $primaryColor;
-                color: #FFF;
-                border-radius:4px;
-                @include transition(all, .3s, ease-out);
-                &:hover,
-                &:focus {
-                    background: darken($primaryColor, 10);
-                }
+            @include screen('mobile') {
+             flex:1 1 100%; 
+         }
+         a {
+            display: block;
+            padding: .5em 1em;
+            background: $primaryColor;
+            color: #FFF;
+            border-radius:4px;
+            text-align: center;
+            @include transition(all, .3s, ease-out);
+            &:hover,
+            &:focus {
+                background: darken($primaryColor, 10);
             }
         }
     }
-    p {
-        line-height: 1.65em;
+}
+p {
+    line-height: 1.65em;
+}
+.update,
+.counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+        font-style: normal;
+        color: $primaryColor;
+        padding: 0 .5em;
     }
-    .update,
-    .counter {
+}
+.footer_icon {
+    a {
         display: inline-block;
-        margin-right: 5px;
-        em {
-            font-style: normal;
-            color: $primaryColor;
-            padding: 0 .5em;
-        }
-    }
-    .footer_icon {
-        a {
-            display: inline-block;
-            vertical-align: top;
-            position:relative;
-             &:focus {
-                &:after {
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    box-shadow: 0px 0px 0px 1px $aHover inset;
-                    z-index: 99;
-                }
+        vertical-align: top;
+        position:relative;
+        &:focus {
+            &:after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-shadow: 0px 0px 0px 1px $aHover inset;
+                z-index: 99;
             }
         }
-        img {
-            max-width: 120px;
-        }
     }
+    img {
+        max-width: 120px;
+    }
+}
 }

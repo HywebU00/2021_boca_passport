@@ -16,11 +16,11 @@ div.function{
     ul {
         @include li-reset;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        justify-content: flex-end;
         list-style-type: none;
         li {
             margin: 0 0px 0px 3px;
+            flex:0 0 auto;
             button,
             a {
                 font-size: .813em;
@@ -42,7 +42,7 @@ div.function{
                     @extend %function_before;
                     background: url(../images/basic/icon_back.svg) no-repeat center center;
                     background-size: 16px;
-                   
+
                 }
             }
             // 友善列印
@@ -95,10 +95,9 @@ div.function{
         ul {
             display: flex;
             li {
-                width: 40px;
-                height: 40px;
                 font-size: 1em;
                 margin: 0 .2em;
+                flex:0 0 40px;
                 a {
                     display: block;
                     @include box-sizing;

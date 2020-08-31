@@ -1,9 +1,13 @@
 .language {
-    width: 140px;
     font-weight: bold;
     font-size: .75em;
     text-shadow: 1px 1px 2px RGBA(0, 0, 0, .8);
-    position: relative;
+    flex:0 0 140px;
+    width: 140px;
+    padding-top: .2em;
+    z-index: 9999;
+
+
     >a {
         display: block;
         background: #555;
@@ -31,6 +35,7 @@
             top: .4em;
             content: "";
             border-left: 1px solid #DDD;
+
         }
         &:focus {
             box-shadow: none;
@@ -40,22 +45,17 @@
     ul {
         background: #555;
         padding: 1em 1.5em;
-        position: absolute;
-        top: 2.35em;
-        left: 0;
-        width: 140px;
-        height: auto;
-        z-index: 9999;
+        display:flex;
+        flex-direction:column;
         @include li-reset;
         li {
-            display: block;
-            width: 100%;
+            flex:1;
             box-sizing: border-box;
-            margin: 0 !important;
+            margin: 0;
             a {
-                display: block !important;
-                color: #FFF !important;
-                padding: .5em .5em .5em 1em !important;
+                display: block;
+                color: #FFF;
+                padding: .5em .5em .5em 1em;
                 transition: .3s ease-out;
                 &:hover, &:focus {
                     background: RGBA(0, 0, 0, .3);

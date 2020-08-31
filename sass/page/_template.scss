@@ -34,8 +34,11 @@ body {
 .main {
     position: relative;
     margin: 0 auto;
-    padding: 0;
+    padding: 10em 0 0 0;
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    @include screen('tablet') {
+        padding: 12em 0 0 0;
+    }
     @include screen('mobile') {
         padding-top: 55px;
     }
@@ -46,27 +49,25 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-top: 2em;
+    padding-top: 12em;
     @include screen('mobile') {
         padding-top: 5em;
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
-        // display: flex;
-        
+        display: flex;
+        box-sizing: border-box;
     }
     .left_block {
-        // flex:0 0 260px;
-        // max-width: 260px;
-        float: left;
-        width: 260px;
-        margin-right: 40px;
+        flex:0 0 260px;
+        box-sizing: border-box;
         @include screen('tablet') {
             display: none;
         }
     }
     .center_block {
-        // flex:auto;
-        overflow: hidden;
+        flex: 1 1 0%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }

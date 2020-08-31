@@ -9,14 +9,14 @@
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <!-- slick css-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-    <!-- hyUI css -->
-    <link rel="stylesheet" href="css/hyui.css">
-    <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+<![endif]-->
+<!-- slick css-->
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+<!-- hyUI css -->
+<link rel="stylesheet" href="css/hyui.css">
+<!-- favicon -->
+<link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
 
 <body>
@@ -30,19 +30,26 @@
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
                 <!-- navigation Start -->
                 <nav class="navigation">
-                    <!-- 一組ul預設靠右 -->
-                    <!-- 兩組ul已寫JQ靠左靠右 -->
-                    <ul>
-                        <li><a href="#">回首頁</a></li>
-                        <li><a href="#">網站導覽</a></li>
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">常見問答</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">第二組導覽</a></li>
-                        <li><a href="#">第二組導覽</a></li>
-                        <li><a href="#">第二組導覽</a></li>
-                    </ul>
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">常見問答</a></li>
+                        </ul>
+                    </div>
+                    <!-- font_size -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
                     <div class="language">
                         <a href="#">語言選擇</a>
                         <ul>
@@ -51,6 +58,7 @@
                             <li><a href="#">ENGLISH</a></li>
                         </ul>
                     </div>
+
                 </nav>
                 <!-- navigation End -->
                 <h1>

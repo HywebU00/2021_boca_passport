@@ -1,27 +1,25 @@
 //header
 .header {
-    position: relative;
-    z-index: 99;
-    background: #FFF;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background: #fff;
     box-shadow: 0px 2px 5px RGBA(0, 0, 0, .3);
-    @extend %clearfix;
-    @include screen('mobile') {
-        position: fixed;
-        width: 100%;
-    }
     // 虛擬底色 - navigation bg
-    &:before {
-        content: "";
-        width: 100%;
-        height: 2.4em;
-        background: #F2F2F2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        @include screen('mobile') {
-            display: none;
-        }
-    }
+    // &:before {
+    //     content: "";
+    //     width: 100%;
+    //     height: 2.4em;
+    //     background: #F2F2F2;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     @include screen('mobile') {
+    //         display: none;
+    //     }
+    // }
     // mobile btn for extend
     %mobileCtrlBtn {
         width: 60px !important;
@@ -118,6 +116,7 @@
     }
     // 導覽列
     .navigation {
+
         @include screen('mobile') {
             display: none;
         }
@@ -126,30 +125,34 @@
         }
         @extend %clearfix;
         overflow: hidden;
-        width: 100%;
-        margin-bottom: .5em;
+        // width: 100%;
+        // margin-bottom: .5em;
         box-sizing:border-box;
-        ul {
-            float: right;
-            padding: 0;
-            margin: 0;
-            font-size: .938em;
-            list-style: none;
-            &.left_nav {
-                float: left;
-                margin-left: 2em;
+        display: flex;
+        //shuya 1090826
+        .navlist{
+            flex:1 1 auto;
+            margin: .1em .5em 0 0;
+            ul {
+                padding: 0;
+                margin: 0;
+                font-size: .875em;
+                list-style: none;
+                display: flex;
+                justify-content: flex-end;
+            }
+            li {
+                flex:0 0 auto;
+
+                a {
+                    display: block;
+                    padding: .5em;
+                    text-decoration: none;
+                    @include aSetting_nocolor;
+                }
             }
         }
-        li {
-            float: left;
-            margin: 0 .2em;
-            a {
-                display: inline-block;
-                padding: .5em;
-                text-decoration: none;
-                @include aSetting_nocolor;
-            }
-        }
+
         .language {
             position: absolute;
             right: 15px;
@@ -160,99 +163,60 @@
 }
 //search
 .search {
-    min-width: 30%;
-    max-width: 50%;
-    float: right;
-    vertical-align: middle;
-    padding: 0em .3em 0em;
-    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap:wrap;
+    vertical-align: top;
+    font-size: .938em;
+    margin: 1em .5em;
     @include box-sizing;
+
     @include screen('mobile') {
         display: none;
     }
     label {
         font-size: 0em;
-        height: 0;
-        padding: 0;
-        margin: 0;
     }
     .form_grp {
-        margin-bottom: 0;
-        float: left;
-        margin-right: .3em;
-        width: 70%;
-        height:2em;
-        position: relative;
+        flex:0 0 auto;
         input {
-            margin: -0.2em 0 0;
-            padding: .2em 35px .2em .5em;
+            margin: 0;
+            padding: .2em;
             box-shadow: none;
-            &[type="text"] {
-                margin-top: -2.1em;
-                &:focus {
-                    box-shadow: 0px 0px 0px 3px $aHover;
-                    outline: none;
-                    border: none;
-                }
-            }
+            width:auto;
+
             &[type="submit"] {
-                font-size: 0em;
-                width: 30px !important;
-                height: 30px;
-                background: url(../images/basic/icon_search.png) no-repeat center center;
-                background-size: 20px;
-                outline: 1px solid transparent;
-                border: none;
-                display: block;
-                opacity: .8;
-                min-width: 0em !important;
-                position: absolute;
-                right: .2em;
-                top: 8%;
-                @include box-sizing;
-                &:hover,
-                &:focus {
-                    opacity: 1;
-                    box-shadow: 0px 0px 0px 2px $aHover;
-                }
-                &:focus {
-                    outline: 1px solid $form-focus;
-                }
+                min-width: auto;
+                padding: .2em .8em;
             }
         }
     }
     .btn_grp {
-        padding: .2em;
-        margin-bottom: 0;
-        float: right;
+        flex:0 0 auto;
+        padding:0 .5em 0;
+        margin: 0;
         input, input[type="submit"] {
+            min-width: auto;
+            padding: .2em .8em;
             margin: 0;
-            padding: .4em 1em .4em !important;
-            font-size: .813em;
         }
     }
     .keywordHot {
-        display: block;
-        vertical-align: middle;
-        margin-left: .5em;
-        padding: .1em 0 .3em;
-        clear: both;
+        flex:1 1 100%;
         ul {
-            display: inline-block;
             font-size: .813em;
             line-height: 1.65em;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
             &:before {
-                display: inline-block;
-                content: "";
-                color: #999;
-                float: left;
             }
             li {
-                margin: 0 .6em 0 0;
-                padding: 0;
-                display: inline-block;
+                margin: 0;
+                padding: .5em;
+                flex:0 0 auto;
             }
             a {
                 @include aSetting_nocolor;
@@ -273,55 +237,40 @@
         z-index: 98;
         background: #333;
         display: none;
+        margin: 0;
+
         label {
             font-size: 0em;
             line-height: 0;
         }
         .form_grp {
-            width: 70%;
-            height: auto;
-            padding: 0 0 0 5% !important;
-            margin-top: 0;
-            text-align: right;
-            float: left;
-            height: 50px;
-            position: relative;
-            @include box-sizing();
+            display: flex;
+
             label {
                 display: none;
+                flex:0 0 0%;
+
             }
             input {
-                width: 100%;
-                margin: 0;
-                padding: .5em 45px .4em .5em;
+                margin: .5em;
+                padding: .5em;
+                flex:1 1 50%;
+
                 &[type="submit"] {
-                    font-size: 0em;
-                    width: 36px !important;
-                    height: 36px;
-                    padding: 0;
-                    // max-width:none;
-                    // min-width:none;
-                    background: url(../images/basic/icon_search.png) no-repeat center center;
-                    background-size: 24px;
-                    border: none;
-                    display: inline-block;
-                    // margin-left: -50px !important;
-                    position: absolute;
-                    right: 5px;
-                    top: 0px;
-                    opacity: .8;
-                    // outline:1px solid red;
+                    flex:0 1 15%;
+                    margin: .5em;
+
                     &:hover, &:focus {
-                        opacity: 1;
                     }
                 }
             }
         }
         .btn_grp {
-            padding: .1em 5% .1em 0;
-            margin-bottom: 0;
-            width: 26%;
-            text-align: left;
+            flex:1 1 auto;
+            padding:.5em;
+            margin-top: .5em;
+            border-top: dotted 1px #999;
+
             @include box-sizing();
             input {
                 width: 100% !important;
@@ -330,36 +279,15 @@
             }
         }
         .keywordHot {
-            padding-left: 5%;
-            margin-top: 10px;
             @extend %clearfix;
+            ul{
+                justify-content:flex-start;
+            }
             a {
                 color: #FFF;
                 &:hover,
                 &:focus {
                     color: $primaryColor;
-                }
-            }
-        }
-    }
-}
-// header fix
-.header.fixed {
-    position: fixed;
-    width: 100%;
-    right: 0;
-    top: 0;
-    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
-    background: rgba(0, 0, 0, .75);
-    z-index: 999;
-    @include screen('mobile') {
-        background: #FFF;
-    }
-    .menu {
-        >ul {
-            >li {
-                >a {
-                    color: #FFF;
                 }
             }
         }

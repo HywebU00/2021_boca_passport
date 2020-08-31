@@ -9,14 +9,14 @@
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <!-- slick css-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-    <!-- hyUI css -->
-    <link rel="stylesheet" href="css/hyui.css">
-    <!-- favicon -->
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+<![endif]-->
+<!-- slick css-->
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+<!-- hyUI css -->
+<link rel="stylesheet" href="css/hyui.css">
+<!-- favicon -->
+<link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
 
 <body>
@@ -30,19 +30,26 @@
                 <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
                 <!-- navigation Start -->
                 <nav class="navigation">
-                    <!-- 一組ul預設靠右 -->
-                    <!-- 兩組ul已寫JQ靠左靠右 -->
-                    <ul>
-                        <li><a href="#">回首頁</a></li>
-                        <li><a href="#">網站導覽</a></li>
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">常見問答</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">第二組導覽</a></li>
-                        <li><a href="#">第二組導覽</a></li>
-                        <li><a href="#">第二組導覽</a></li>
-                    </ul>
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">常見問答</a></li>
+                        </ul>
+                    </div>
+                    <!-- font_size -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
                     <div class="language">
                         <a href="#">語言選擇</a>
                         <ul>
@@ -51,6 +58,7 @@
                             <li><a href="#">ENGLISH</a></li>
                         </ul>
                     </div>
+
                 </nav>
                 <!-- navigation End -->
                 <h1>
@@ -337,51 +345,52 @@
                             </div>
                             <!-- slider-nav end-->
                         </div>
-                        <!-- weblink 外部連結 -->
-                        <div class="web_link">
-                            <h3>外部連結</h3>
-                            <ol>
-                                <li><a href="javscript:;">外部連結1</a></li>
-                                <li><a href="javscript:;">外部連結2</a></li>
-                                <li><a href="javscript:;">外部連結3</a></li>
-                                <li><a href="javscript:;">外部連結4</a></li>
-                                <li><a href="javscript:;">外部連結5</a></li>
-                            </ol>
-                        </div>
-                        <!-- file download 檔案下載 -->
-                        <div class="file_download">
-                            <h3>檔案下載</h3>
-                            <ul>
-                                <li> <span>檔案名稱</span>
-                                    <a href="xxxx.doc">檔案名稱.doc</a>
-                                    <a href="xxxx.docx">檔案名稱.docx</a>
-                                    <a href="xxxx.odt">檔案名稱.odt</a>
-                                </li>
-                                <li><span>檔案名稱</span>
-                                    <a href="xxxx.xls">檔案名稱.xls</a>
-                                    <a href="xxxx.xlsx">檔案名稱.xlsx</a>
-                                    <a href="xxxx.csv">檔案名稱.csv</a>
-                                    <a href="xxxx.ods">檔案名稱.ods</a>
-                                </li>
-                                <li><span>檔案名稱</span>
-                                    <a href="xxxx.ppt">檔案名稱.ppt</a>
-                                    <a href="xxxx.pptx">檔案名稱.pptx</a>
-                                    <a href="xxxx.odp">檔案名稱.odp</a>
-                                    <a href="xxxx.pdf">檔案名稱.odp</a>
-                                </li>
-                                <li><span>檔案名稱</span>
-                                    <a href="xxxx.zip">檔案名稱.zip</a>
-                                    <a href="xxxx.txt">檔案名稱.txt</a>
-                                    <a href="xxxx.mov">檔案名稱.mov</a>
-                                    <a href="xxxx.mp3">檔案名稱.mp3</a>
-                                    <a href="xxxx.jpg">檔案名稱.jpg</a>
-                                    <a href="xxxx.wmv">檔案名稱.wmv</a>
-                                    <a href="xxxx.mp4">檔案名稱.mp4</a>
-                                    <a href="xxxx.xxxxx">檔案名稱.mp4</a>
-                                </li>
-                            </ul>
-                        </div>
                     </section>
+
+                    <!-- weblink 外部連結 -->
+                    <div class="web_link">
+                        <h3>外部連結</h3>
+                        <ol>
+                            <li><a href="javscript:;">外部連結1</a></li>
+                            <li><a href="javscript:;">外部連結2</a></li>
+                            <li><a href="javscript:;">外部連結3</a></li>
+                            <li><a href="javscript:;">外部連結4</a></li>
+                            <li><a href="javscript:;">外部連結5</a></li>
+                        </ol>
+                    </div>
+                    <!-- file download 檔案下載 -->
+                    <div class="file_download">
+                        <h3>檔案下載</h3>
+                        <ul>
+                            <li><span class="file-name">檔案名稱</span>
+                                <span class="doc"><a href="xxxx.doc">doc</a></span>
+                                <span class="docx"><a href="xxx.docx">docx</a></span>
+                                <span class="odt"><a href="xxxx.odt">odt</a></span>
+                            </li>
+                            <li><span class="file-name">檔案名稱檔案名稱</span>
+                                <span class="xls"><a href="xxxx.xls">xls</a></span>
+                                <span class="xlsx"><a href="xxxx.xlsx">xlsx</a></span>
+                                <span class="csv"><a href="xxxx.csv">csv</a></span>
+                                <span class="ods"><a href="xxxx.ods">ods</a></span>
+                            </li>
+                            <li><span class="file-name">檔案名稱</span>
+                                <span class="ppt"><a href="xxxx.ppt">ppt</a></span>
+                                <span class="pptx"><a href="xxxx.pptx">pptx</a></span>
+                                <span class="odp"><a href="xxxx.odp">odp</a></span>
+
+                            </li>
+                            <li><span class="file-name">檔案名稱</span>
+                                <span class="pdf"><a href="xxxx.pdf">pdf</a></span>
+                                <span class="zip"><a href="xxxx.zip">zip</a></span>
+                                <span class="txt"><a href="xxxx.txt">txt</a></span>
+                                <span class="mov"><a href="xxxx.mov">mov</a></span>
+                                <span class="mp3"><a href="xxxx.mp3">mp3</a></span>
+                                <span class="jpg"><a href="xxxx.jpg">jpg</a></span>
+                                <span class="wmv"><a href="xxxx.wmv">wmv</a></span>
+                                <span class="mp4"><a href="xxxx.mp4">mp4</a></span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
