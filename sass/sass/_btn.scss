@@ -47,8 +47,8 @@ $btn-radius:.2em;
     margin: .25em .1em;
     
     i {
-        margin-right: .3em;
-        margin-left: .3em;
+        margin-right: .2em;
+        margin-left: -.3em;
     }
 }
 // 按鈕基本樣式
@@ -97,8 +97,97 @@ $btn-radius:.2em;
     @extend %btn;
     color:lighten($color-word,15);
 }
-.btn-primary {
-    @extend .btn-orange;
+// 主要按鈕
+.btn-primary{
+    background: $primaryColor !important;
+    color: #fff !important;
+    &:hover,
+    &:focus {
+        background: darken($primaryColor, 10) !important;
+    }
+}
+// 次要按鈕
+.btn-secondary{
+    background: #fff !important;
+    color: darken($primaryColor, 15) !important;
+    border: 2px solid $primaryColor !important;
+    text-shadow: none !important;
+    &:hover,
+    &:focus {
+        color: darken($primaryColor, 30) !important;
+        background: #b5deff !important;
+        border: 2px solid #b5deff !important;
+    }
+}
+// 一般按鈕
+.btn-normal{
+    background: #f1f1f1 !important;
+    color: #65656E !important;
+    border: 2px solid #c3c3c3 !important;
+    text-shadow: none !important;
+    &:hover,
+    &:focus{
+        color: darken(#65656E, 15) !important;
+        background: #c3c3c3 !important;
+    }
+}
+
+// 返回
+.btn-back{
+    background: #555 !important;
+    color: #fff !important;
+    border: 1px solid #ddd !important;
+    &:hover,
+    &:focus {
+        background: darken($primaryColor, 10) !important;
+    }
+}
+
+
+
+input[readonly], input[disabled]{
+    &.btn-primary, &.btn-secondary, &.btn-normal, &.btn-addition{
+        text-shadow: none;
+        cursor: not-allowed !important;
+        opacity: 50%;
+        &:hover, &:focus {}
+    }
+    &.btn-primary{
+        &:hover, &:focus { background: $primaryColor !important; }
+    }
+    &.btn-secondary{
+        &:hover, &:focus {
+            background: #fff !important;
+            color: darken($primaryColor, 15) !important;
+            border: 2px solid $primaryColor !important;
+        }
+    }
+    &.btn-normal{
+        &:hover, &:focus {
+            background: #f1f1f1 !important;
+            color: #65656E !important;
+        }
+    }
+
+    &.btn-addition{}
+}
+
+
+
+table td{
+    .btn_grp{ padding: 0 0; }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-normal{}
+
+    .btn, .btn-green, .btn-blue, .btn-yellow, .btn-orange, .btn-red, .btn-purple, 
+    .btn-submit, .btn-reset, .btn-primary, .btn-secondary, .btn-normal, 
+    button, input[type="button"], input[type="submit"], input[type="reset"], 
+    .upload_grp .upload_btn, .upload_grp .delet_btn, .upload_delet_grp .upload_btn, .upload_delet_grp .delet_btn{
+        min-width: auto;
+        padding: 0.25em 1em;
+    }
 }
 // 按鈕大小
 .btn-xl {
