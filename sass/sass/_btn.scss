@@ -99,36 +99,41 @@ $btn-radius:.2em;
 }
 // 主要按鈕
 .btn-primary{
-    background: $primaryColor !important;
+    background: $primaryColor!important;
     color: #fff !important;
+    border: solid 1px $primaryColor!important;
+
     &:hover,
     &:focus {
-        background: darken($primaryColor, 10) !important;
+        background: darken($primaryColor, 10)!important;
+        border: solid 1px $primaryColor!important;
+
     }
 }
 // 次要按鈕
 .btn-secondary{
     background: #fff !important;
-    color: darken($primaryColor, 15) !important;
-    border: 2px solid $primaryColor !important;
+    color: darken($primaryColor, 15)!important;
+    border: solid 1px $primaryColor!important;
     text-shadow: none !important;
     &:hover,
     &:focus {
-        color: darken($primaryColor, 30) !important;
-        background: #b5deff !important;
-        border: 2px solid #b5deff !important;
+        color: darken($primaryColor, 30)!important;
+        background: #b5deff!important;
+        border: solid 1px #b5deff!important;
     }
 }
 // 一般按鈕
 .btn-normal{
-    background: #f1f1f1 !important;
+    background: #f1f1f1!important;
     color: #65656E !important;
-    border: 2px solid #c3c3c3 !important;
-    text-shadow: none !important;
+    border: solid 1px #c3c3c3!important;
+    text-shadow: none!important;
     &:hover,
     &:focus{
-        color: darken(#65656E, 15) !important;
-        background: #c3c3c3 !important;
+        color: darken(#65656E, 15)!important;
+        background: #c3c3c3!important;
+        border: solid 1px #c3c3c3!important;
     }
 }
 
@@ -140,6 +145,7 @@ $btn-radius:.2em;
     &:hover,
     &:focus {
         background: darken($primaryColor, 10) !important;
+        border: 1px solid #ddd !important;
     }
 }
 
@@ -153,19 +159,23 @@ input[readonly], input[disabled]{
         &:hover, &:focus {}
     }
     &.btn-primary{
-        &:hover, &:focus { background: $primaryColor !important; }
+        &:hover, &:focus { 
+            background: $primaryColor !important;
+            border: solid 1px $primaryColor!important;
+        }
     }
     &.btn-secondary{
         &:hover, &:focus {
             background: #fff !important;
             color: darken($primaryColor, 15) !important;
-            border: 2px solid $primaryColor !important;
+            border: 1px solid $primaryColor !important;
         }
     }
     &.btn-normal{
         &:hover, &:focus {
             background: #f1f1f1 !important;
             color: #65656E !important;
+            border: solid 1px #c3c3c3!important;
         }
     }
 
