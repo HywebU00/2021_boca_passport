@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -352,7 +354,7 @@
                             </tr>
                         </table>
                         <!-- cp_slider+slick_lightbox -->
-                        <div class="lightbox_slider">
+                        <!-- <div class="lightbox_slider">
                             <h3>燈箱照片</h3>
                             <div class="cp_slider">
                                 <div class="img-container">
@@ -386,6 +388,48 @@
                                 <div class="img-container">
                                     <a href="images/demo/12.jpg" data-caption="第5張圖說">
                                         <img data-lazy="images/demo/12.jpg" alt="">
+                                        <noscript><img src="images/demo/12.jpg" alt=""></noscript>
+                                        <span class="caption">第5張圖說</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- fanybox cppic_slider lightbox_slider-->
+                        <div class="lightbox_slider_block">
+                            <h3>燈箱照片</h3>
+                            <div class="cppic_slider">
+                                <div class="img-container">
+                                    <a href="images/demo/06.jpg" data-fancybox="images"  data-caption="第1張圖說">
+                                        <img src="images/demo/06.jpg" alt="">
+                                        <noscript><img src="images/demo/06.jpg" alt=""></noscript>
+                                        <span class="caption">第1張圖說</span>
+                                    </a>
+                                </div>
+                                <div class="img-container">
+                                    <a href="images/demo/07.jpg" data-fancybox="images"  data-caption="第2張圖說">
+                                        <img src="images/demo/07.jpg" alt="">
+                                        <noscript><img src="images/demo/07.jpg" alt=""></noscript>
+                                        <span class="caption">第2張圖說</span>
+                                    </a>
+                                </div>
+                                <div class="img-container">
+                                    <a href="images/demo/08.jpg" data-fancybox="images"  data-caption="第3張圖說">
+                                        <img src="images/demo/08.jpg" alt="">
+                                        <noscript><img src="images/demo/08.jpg" alt=""></noscript>
+                                        <span class="caption">第3張圖說</span>
+                                    </a>
+                                </div>
+                                <div class="img-container">
+                                    <a href="images/demo/10.jpg" data-fancybox="images"  data-caption="第4張圖說">
+                                        <img src="images/demo/10.jpg" alt="">
+                                        <noscript><img src="images/demo/10.jpg" alt=""></noscript>
+                                        <span class="caption">第4張圖說</span>
+                                    </a>
+                                </div>
+                                <div class="img-container">
+                                    <a href="images/demo/12.jpg" data-fancybox="images"  data-caption="第5張圖說">
+                                        <img src="images/demo/12.jpg" alt="">
                                         <noscript><img src="images/demo/12.jpg" alt=""></noscript>
                                         <span class="caption">第5張圖說</span>
                                     </a>
@@ -548,6 +592,8 @@
     <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
     <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+     <!-- 燈箱facybox -->
+    <script src="vendor/facybox/dist/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
