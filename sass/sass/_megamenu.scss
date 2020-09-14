@@ -1,4 +1,4 @@
-.menu {
+.megamenu {
     @include box-sizing;
     position: relative;
     z-index: 99;
@@ -56,33 +56,39 @@
     }
     ul {
         li {
-            position: relative;
             a {
                 display: block;
                 outline: none;
                 text-decoration: none;
+
             }
             ul {
-                display: none;
+                // display: none;
+                display: flex;
                 overflow: visible;
-                width: 99%;
-                background: rgba(0, 0, 0, .8);
-                padding: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                padding: 20px;
                 z-index: 999999;
                 position: absolute;
                 top: auto;
                 left: 0;
+                right: 0;
                 list-style: none;
                 text-align: left;
-                animation: showMenu .3s ease-out;
-                font-size: .875em;
+                align-items: flex-start;
+                flex-wrap: wrap;
                 // 第二層選單樣式
                 li {
-                    float: none;
+                    flex: none;
+                    flex-basis: 23%;
+                    margin:0 1%;
+
                     a {
                         padding: .6em 1.2em;
                         color: #FFF;
                         font-weight: bold;
+                        @include box-sizing;
                         &:hover, &:focus {
                             background: $aHover;
                         }
@@ -90,34 +96,30 @@
                 }
                 li.hasChild {
                     >ul {
+                        position: relative;
                         z-index: 999;
-                    }
-                    >a {
-                        padding-right: 2em;
-                        &:hover,
-                        &:focus {
-                            background: $primaryColor;
-                        }
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            right: 10px;
-                            top: 1.3em;
-                            width: 6px;
-                            height: 6px;
-                            border: 2px solid #FFF;
-                            transform: rotate(45deg);
-                            border-bottom: none;
-                            border-left: none;
+                        top: 0;
+                        left: 0;
+                        animation: none;
+                        display: block;
+                        li {
+                            display: block;
+                            width: 100%;
+                            >a {
+                                &:hover,
+                                &:focus {
+                                    background: $primaryColor;
+                                }
+                            }
                         }
                     }
                 }
-                // ul {
-                //     top: 0;
-                //     left: 100%;
-                //     animation: none;
-                //     font-size: 1em;
-                // }
+                ul {
+                    top: 0;
+                    left: 100%;
+                    animation: none;
+                    font-size: 1em;
+                }
             }
         }
     }
@@ -136,7 +138,7 @@
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     @include box-sizing;
-    .menu {
+    .megamenu  {
         display: block;
     }
     >.menu_overlay {
@@ -182,7 +184,7 @@
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
         @include box-sizing;
-        .menu {
+        .megamenu {
             width: 100%;
             @include box-shadow(0px 0px 4px RGBA(0, 0, 0, .4));
             margin-bottom: 1em;
@@ -233,8 +235,10 @@
                         display: none;
                         position: relative;
                         width: 100%;
+                        padding:0;
                         background-color: transparent;
                         font-size: 0.938em;
+
                         li {
                             a {
                                 display: block;

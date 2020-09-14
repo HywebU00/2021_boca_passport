@@ -55,21 +55,25 @@ body {
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
-        // display: flex;
+        display: flex;
         
     }
     .left_block {
-        // flex:0 0 260px;
-        // max-width: 260px;
-        float: left;
-        width: 260px;
+        flex:0 0 260px;
+        max-width: 260px;
+        // float: left;
+        // width: 260px;
         margin-right: 40px;
         @include screen('tablet') {
             display: none;
         }
     }
     .center_block {
-        // flex:auto;
+       flex:auto;
+        max-width: 100%;
         overflow: hidden;
     }
+}
+.hidden{
+    display: none;
 }
