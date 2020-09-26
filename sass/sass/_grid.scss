@@ -159,88 +159,93 @@
     }
 }
 
-//測試、可塞主標題
-.customize-1,
-.customize-2,
-.customize-3,
-.customize-4,
-.customize-5,
-.customize-6,
-.customize-7,
-.customize-8,
-.customize-9,
-.customize-10,
-.customize-11,
-.customize-12,
-.customize-free,
-.customize-free2,
-.customize-free3,
-.customize-free4,
-.customize-free5{
+
+////////////////////////////////////////////////
+////////////////////  flex  ////////////////////
+////////////////////////////////////////////////
+
+// flex 欄位均分
+// 父層啟動 flex : @extend %flex_setting;
+// 子層欄寬（均分）: @include flex-col-equal(欄數, margin , padding);
+// 子層欄寬（自由）: @include flex-col(欄數, margin , padding);
+
+// .customize-1 ~ 12 : 算式：100% / 欄數，        這裡的『欄數』是『分母』的概念。
+// .customize-free   : 算式： (100% / 12) * 欄數，這裡的『欄數』是『 12 格內佔幾欄 』。
+
+
+// step 1、啟動 flex
+.flex-equal-2,
+.flex-equal-3,
+.flex-equal-4,
+.flex-equal-5,
+.flex-equal-6,
+.flex-equal-7,
+.flex-equal-8,
+.flex-equal-9,
+.flex-equal-10,
+.flex-equal-11,
+.flex-equal-12,
+.flex-5,
+.flex-6,
+.flex-7,
+.flex-8,
+.flex-9,
+.flex-10,
+.flex-11,
+.flex-3-3,
+.flex-4-4,
+.flex-5-5,
+.flex-5-7,
+.flex-6-6,
+.flex-8-4,
+.flex-4-8,
+.flex-4-4-4,
+.flex-3-3-3-3{
     margin: 1em 0;
 
     h2{ text-align: center; }
-    .Flex-set{
-        // -webkit-box-sizing: border-box;
-        // box-sizing: border-box;
-        // display: -webkit-box;
-        // display: -ms-flexbox;
-        // display: flex;
 
+    .Flex-set{
         // 啟動flex
         @extend %flex_setting;
-
-        background: #ddd;
-    }
-}
-
-.customize-1{
-    .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
-        // justify-content: flex-start;
-
-        // @include gutter(60px);
-
+        background: #eee;
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(1, 0px);
-
+            p{ color: rgba(255,255,255,.5); }
+        }
+        .left{
+            @include flex-col(5, 2px, 40px);
             // 自定義 ----------------- start
-            background: #009688;
+            background: #00bcd4;
             color: #fff;
-            margin-top: .5em;
-            margin-bottom: .5em;
-            @include gutter(60px);
             // ---------------------- end
         }
-
-        @include screen('tablet') {
-            .col{
-                // @include flex-layout(2, 10px);
-            }
+        .right{
+            @include flex-col(7, 10px, 120px);
+            // 自定義 ----------------- start
+            background: deeppink;
+            color: #fff;
+            // ---------------------- end
         }
     }
 }
 
-.customize-2{
+// step 2、子層設定欄寬
+// A - 均分（ equal ＝ 均等）
+
+.flex-equal-2{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
         // justify-content: flex-start;
 
-        // @include gutter(60px);
-
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(2, 10px);
-
+            @include flex-col-equal(2, 4px, 30px);
             // 自定義 ----------------- start
             background: #485b8a;
             color: #fff;
-            margin-top: .5em;
-            margin-bottom: .5em;
-            @include gutter(60px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -248,40 +253,33 @@
         .Flex-set{
             @include gutter(30px);
             .col{
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 16px);
             }
         }
     }
 }
 
-.customize-3{
+.flex-equal-3{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
 
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(3, 5px);
-
+            @include flex-col-equal(3, 10px, 30px);
             // 自定義 ----------------- start
             background: #af2333;
             color: #fff;
-            margin-top: .5em;
-            margin-bottom: .5em;
-            @include gutter(60px);
+            margin: 4px 0;
             // ---------------------- end
         }
 
         .thumbnail{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(3, 20px);
-
+            @include flex-col-equal(3, 10px, 0px);
             // 自定義 ----------------- start
             background: #fff;
             color: #222;
             margin-top: .5em;
             margin-bottom: .5em;
-            @include gutter(0px);
             // ---------------------- end
         }
     }
@@ -289,13 +287,11 @@
         .Flex-set{
             @include gutter(60px);
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(2, 1%);
+                @include flex-col-equal(2, 1%, 0px);
             }
 
             .thumbnail{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(2, 1%);
+                @include flex-col-equal(2, 1%, 0px);
             }
         }
     }
@@ -303,39 +299,32 @@
         .Flex-set{
             @include gutter(30px);
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 10px);
             }
             .thumbnail{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 10px);
+                @include flex-col-equal(1, 10px, 10px);
             }
         }
     }
 }
 
-.customize-4{
+.flex-equal-4{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(4, 20px);
-
+            @include flex-col-equal(4, 10px, 30px);
             // 自定義 ----------------- start
             background: #795548;
             color: #fff;
-            margin-top: .5em;
-            margin-bottom: .5em;
-            @include gutter(60px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
     @include screen('tablet') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(2, 10px);
+                @include flex-col-equal(2, 6px, 1em);
             }
         }
     }
@@ -343,28 +332,23 @@
         .Flex-set{
             @include gutter(30px);
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 1em);
             }
         }
     }
 }
 
-.customize-5{
+.flex-equal-5{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
 
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(5, 5px);
-
+            @include flex-col-equal(5, 5px, 20px);
             // 自定義 ----------------- start
             background: #00bcd4;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -374,36 +358,30 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 10px);
+                @include flex-col-equal(3, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 10px);
             }
         }
     }
 }
 
-.customize-6{
+.flex-equal-6{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
 
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(6, 10px);
-
+            @include flex-col-equal(6, 10px, 20px);
             // 自定義 ----------------- start
             background: #09a20f;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -413,35 +391,29 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 10px);
+                @include flex-col-equal(3, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 20px);
             }
         }
     }
 }
 
-.customize-7{
+.flex-equal-7{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(7, 10px);
-
+            @include flex-col-equal(7, 10px, 20px);
             // 自定義 ----------------- start
             background: #d47630;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -451,36 +423,30 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 10px);
+                @include flex-col-equal(3, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 20px);
             }
         }
     }
 }
 
-.customize-8{
+.flex-equal-8{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
 
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(8, 10px);
-
+            @include flex-col-equal(8, 5px, 20px);
             // 自定義 ----------------- start
             background: #00bcd4;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -490,36 +456,30 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 10px);
+                @include flex-col-equal(3, 5px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 20px);
             }
         }
     }
 }
 
-.customize-9{
+.flex-equal-9{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
-
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(9, 10px);
+            @include flex-col-equal(9, 5px, 20px);
 
             // 自定義 ----------------- start
             background: #00988B;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -529,36 +489,29 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 10px);
+                @include flex-col-equal(3, 5px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 10px);
             }
         }
     }
 }
 
-.customize-10{
+.flex-equal-10{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
-
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(10, 10px);
-
+            @include flex-col-equal(10, 5px, 10px);
             // 自定義 ----------------- start
             background: #00bcd4;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             p{ word-break: break-all; }
             // ---------------------- end
         }
@@ -569,36 +522,31 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(4, 10px);
+                @include flex-col-equal(4, 5px, 10px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 10px);
             }
         }
     }
 }
 
-.customize-11{
+.flex-equal-11{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
 
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(11, 10px);
+            @include flex-col-equal(11, 3px, 20px);
 
             // 自定義 ----------------- start
             background: #9e9e9e;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -608,36 +556,30 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 16px);
+                @include flex-col-equal(3, 3px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 20px);
             }
         }
     }
 }
 
-.customize-12{
+.flex-equal-12{
     .Flex-set{
         // 方向、是否斷點
         flex-flow: row wrap;
-
         .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout(12, 10px);
+            @include flex-col-equal(12, 3px, 20px);
 
             // 自定義 ----------------- start
             background: #00bcd4;
             color: #fff;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            @include gutter(20px);
+            margin: 4px 0;
             // ---------------------- end
         }
     }
@@ -647,161 +589,145 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(3, 10px);
+                @include flex-col-equal(3, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout(1, 0px);
+                @include flex-col-equal(1, 0px, 20px);
             }
         }
     }
 }
 
-.customize-free,
-.customize-free2,
-.customize-free3,
-.customize-free4,
-.customize-free5{
-    .Flex-set{
-        // 方向、是否斷點
-        flex-flow: row wrap;
-        background: #eee;
 
-        .left{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout-free(5, 2px);
-
-            // 自定義 ----------------- start
+// B - 自行設定
+// 多欄 = 12
+.flex-6-6{
+    .col{
+        @include flex-col(6, 4px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        // &:nth-child(2){ background: #00bcd4; }
+    }
+}
+.flex-8-4{
+    .col{
+        @include flex-col(8, 4px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        &:nth-child(2){
+            // background: #00bcd4;
+            @include flex-col(4, 4px, 40px);
+        }
+    }
+}
+.flex-4-8{
+    .col{
+        @include flex-col(4, 4px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        &:nth-child(2){
+            // background: #00bcd4;
+            @include flex-col(8, 4px, 40px);
+        }
+    }
+}
+.flex-4-4-4{
+    .col{
+        @include flex-col(4, 4px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        // &:nth-child(even){
+        //     background: #00bcd4;
+        // }
+    }
+}
+.flex-3-3-3-3{
+    .col{
+        @include flex-col(3, 4px, 40px);
+        background: #485b8a;
+        color: #fff;
+        &:nth-child(even){
             background: #00bcd4;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-        }
-        .right{
-            @include flex-layout-free(7, 10px);
-            // 自定義 ----------------- start
-            background: deeppink;
-            color: #fff;
-            @include gutter(120px);
-            // ---------------------- end
-        }
-    }
-}
-.customize-free2{
-    .Flex-set{
-        justify-content: flex-end;
-        .left{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout-free(6, 0px);
-        }
-    }
-}
-.customize-free3{
-    .Flex-set{
-        // justify-content: flex-start;
-        justify-content: center;
-        .box{
-
-            @include flex-layout-free(8, 0px);
-
-            // 自定義 ----------------- start
-            background: #009688;
-            color: #fff;
-            @include gutter(60px);
-            // ---------------------- end
         }
     }
 }
 
-.customize-free4{
-    .Flex-set{
-        // justify-content: center;
-        justify-content: flex-start;
-        background: #eee;
-
-        .left{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout-free(6, 0px);
-
-            // 自定義 ----------------- start
-            background: #00bcd4;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-        }
-        .right{
-            @include flex-layout-free(6, 0px);
-            // 自定義 ----------------- start
-            background: #607d8b;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-        }
-        .col{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout-free(3, 4px);
-
-            // 自定義 ----------------- start
-            background: #009688;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-
-            @include screen('mobile') {
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout-free(6, 10px);
-            }
-        }
-        .col2{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout-free(2, 4px);
-
-            // 自定義 ----------------- start
-            background: #009688;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-
-            @include screen('mobile') {
-                // 欄數, 欄寬（margin-gutter）
-                @include flex-layout-free(6, 10px);
-            }
-        }
+// 多欄 < 12
+.flex-3-3{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(3, 0px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        margin: 4px;
     }
 }
-.customize-free5{
-    .Flex-set{
-        background: #eee;
-
-        .left{
-            // 欄數, 欄寬（margin-gutter）
-            @include flex-layout-free(7, 0px);
-
-            // 自定義 ----------------- start
-            background: #00bcd4;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-        }
-        .right{
-            @include flex-layout-free(7, 0px);
-            // 自定義 ----------------- start
-            background: deeppink;
-            color: #fff;
-            @include gutter(40px);
-            // ---------------------- end
-        }
-        .col{
-            @include flex-layout-free(4, 0px);
-        }
+.flex-4-4{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(4, 0px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        margin: 4px;
     }
 }
+.flex-5-5{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(5, 0px, 40px);
+        background: #00bcd4;
+        color: #fff;
+        margin: 4px;
+    }
+}
+
+// 單欄 < 12
+.flex-7{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(7, 0px, 40px);   
+        background: #00bcd4;
+        color: #fff;
+    }
+}
+.flex-8{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(8, 0px, 40px);   
+        background: #00bcd4;
+        color: #fff;
+    }
+}
+.flex-9{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(9, 0px, 40px);   
+        background: #00bcd4;
+        color: #fff;
+    }
+}
+.flex-10{
+    .Flex-set{ justify-content: center; }
+    .col{
+        @include flex-col(10, 0px, 40px);   
+        background: #00bcd4;
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
