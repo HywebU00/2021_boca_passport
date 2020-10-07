@@ -28,17 +28,18 @@ $form_title_width :150px; // 表單title寬度
         max-width: calc(100% - .6em);
         flex-basis: calc(100% - .6em);
         @include gutter(0);
-        margin:0 .3em .5em;
+        margin: 0 .3em .5em;
     }
 
     input {
-        flex: 1 1 auto; 
+        flex: 1 1 auto;
     }
 
     .form_grp {
         border-bottom: 0;
         align-items: center;
-        @include screen('xs_mobile'){
+
+        @include screen('xs_mobile') {
             flex-basis: 100%;
         }
     }
@@ -47,16 +48,20 @@ $form_title_width :150px; // 表單title寬度
 select::-ms-expand {
     display: none;
 }
-.form_grid{
+
+.form_grid {
     border-top: 1px solid #DDD;
-    .form_grp{
+
+    .form_grp {
         border-bottom: 1px dashed #DDD;
         padding: .5em 0;
     }
 }
-.flex_form{
+
+.flex_form {
     font-size: .938em;
     margin: .5em;
+
     .form_grp {
         display: flex;
         overflow: hidden;
@@ -105,7 +110,11 @@ select::-ms-expand {
             flex-basis: 100%;
         }
 
-        
+        *[class^="notice"] {
+                margin: 0 .3em .3em .3em;
+        }
+
+
 
         // 第二層的設定
         .form_grp {
@@ -141,9 +150,9 @@ select::-ms-expand {
                     }
                 }
 
-                &.mix-2-col, 
-                &.mix-3-col, 
-                &.mix-4-col{
+                &.mix-2-col,
+                &.mix-3-col,
+                &.mix-4-col {
                     @extend %mix-col;
                 }
             }
@@ -153,9 +162,7 @@ select::-ms-expand {
                 margin-bottom: 0;
             }
 
-            *[class^="notice"] {
-                margin: 0 .3em .3em .3em;
-            }
+            
         }
 
         // 電話專屬
@@ -304,129 +311,137 @@ select::-ms-expand {
             }
         }
     }
-}
 
-//---------------------------------------------form setting--------//
-.form_grp,
-.check_grp,
-.radio_grp,
-.btn_grp,
-.upload_grp {
-    display: flex;
-    align-items: center;
-    margin: 0 5px 5px;
+    .btn_grp {
+        justify-content: center;
+    }
 
-    @include screen('mobile') {
+    .btn,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="search"] {
+        flex: 1 1 auto;
+    }
+
+    //---------------------------------------------form setting--------//
+    .form_grp,
+    .check_grp,
+    .radio_grp,
+    .btn_grp,
+    .upload_grp {
+        display: flex;
+        align-items: center;
+        margin: 0 5px 5px;
         flex-wrap: wrap;
-    }
-    .form_content{
-        &.mix-2-col {
-            @extend %mix-col;
 
-            .form_grp {
-                flex: 1 1 50%;
-            }
+        @include screen('mobile') {
+            flex-wrap: wrap;
         }
 
-        &.mix-3-col {
-            @extend %mix-col;
+        .form_content {
+            &.mix-2-col {
+                @extend %mix-col;
 
-            .form_grp {
-                flex: 1 1 calc(100% / 3);
-                @include screen('mobile') {
-                    flex-basis: calc(100% / 3 - .6em);
-                    margin:0 .3em;
+                .form_grp {
+                    flex: 1 1 50%;
                 }
             }
-        }
 
-        &.mix-4-col {
-            @extend %mix-col;
+            &.mix-3-col {
+                @extend %mix-col;
 
-            .form_grp {
-                flex: 1 1 calc(100% / 4);
+                .form_grp {
+                    flex: 1 1 calc(100% / 3);
 
-                @include screen('mobile') {
-                    flex-basis: calc(100% / 2 - .6em);
-                    margin:0 .3em;
+                    @include screen('mobile') {
+                        flex-basis: calc(100% / 3 - .6em);
+                        margin: 0 .3em;
+                    }
                 }
             }
-        }
-    }
 
-}
+            &.mix-4-col {
+                @extend %mix-col;
 
-.check_grp,
-.radio_grp {
-    flex-wrap: wrap;
+                .form_grp {
+                    flex: 1 1 calc(100% / 4);
 
-    label {
-        position: relative;
-        display: block;
-        z-index: 1;
-        flex: 0 0 100%;
-
-        input {
-            &:checked {
-                &~span {
-                    &:after {
-                        position: absolute;
-                        width: 1em;
-                        height: 1em;
-                        border-radius: 50%;
-                        background: #54caff;
-                        content: "";
-                        left: .35em;
-                        top: .3em;
-                        z-index: -1;
-                        animation: ripple 0.35s linear;
+                    @include screen('mobile') {
+                        flex-basis: calc(100% / 2 - .6em);
+                        margin: 0 .3em;
                     }
                 }
             }
         }
+
     }
 
-    // radio與check個別行內設定
-    &.form_inline {
+    .check_grp,
+    .radio_grp {
+        flex-wrap: wrap;
+
         label {
-            //display: inline-block;
-            margin: .2em .5em 0 0;
-            flex: 0 1 auto;
-            margin-right: 1em;
-            display: inline-flex;
-            align-items: center;
+            position: relative;
+            display: block;
+            z-index: 1;
+            flex: 0 0 100%;
+
+            input {
+                &:checked {
+                    &~span {
+                        &:after {
+                            position: absolute;
+                            width: 1em;
+                            height: 1em;
+                            border-radius: 50%;
+                            background: #54caff;
+                            content: "";
+                            left: .35em;
+                            top: .3em;
+                            z-index: -1;
+                            animation: ripple 0.35s linear;
+                        }
+                    }
+                }
+            }
+        }
+
+        // radio與check個別行內設定
+        &.form_inline {
+            label {
+                //display: inline-block;
+                margin: .2em .5em 0 0;
+                flex: 0 1 auto;
+                margin-right: 1em;
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    }
+
+
+
+    .form_grp,
+    .upload_grp {
+
+        // 文字表單個別行內設定
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin-right: .5em;
+            }
+
+            input,
+            textarea,
+            select {
+                width: auto;
+            }
         }
     }
 }
 
-.btn_grp {
-    justify-content: center;
-    .btn,
-        input[type="submit"],
-        input[type="reset"],
-        input[type="button"],
-        input[type="search"]{
-            flex:1 1 auto;
-        }
-}
 
-.form_grp,
-.upload_grp {
-
-    // 文字表單個別行內設定
-    &.form_inline {
-        label {
-            display: inline-block;
-            margin-right: .5em;
-        }
-
-        input,
-        textarea,
-        select {
-            width: auto;
-        }
-    }
-}
 
 // form 全域行內設定
 .form_inline {
@@ -454,9 +469,13 @@ select::-ms-expand {
     select,
     textarea,
     button,
-    .btn {
+    .btn,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="search"] {
         width: auto;
-        flex:0 0 auto;
+        flex: 0 0 auto;
     }
 
     .form_grp,
@@ -523,7 +542,8 @@ textarea {
     -webkit-appearance: none; //清除 safari 的預設樣式
     -moz-appearance: none;
     appearance: none;
-    @include screen('mobile'){
+
+    @include screen('mobile') {
         width: 100%;
     }
 }
@@ -731,7 +751,7 @@ img.captcha {
     display: inline-block;
     vertical-align: middle;
     max-height: 2.5em;
-    margin: 0 .5em .3em 0;
+    margin: 0 .5em .3em .3em;
 
     &+input {
         display: inline-block;
