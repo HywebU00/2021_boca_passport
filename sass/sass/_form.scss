@@ -98,7 +98,9 @@ select::-ms-expand {
         display: flex;
         padding-top: 3px;
         max-width: calc(100% - #{$form_title_width});
-        flex:1 1 calc(100% - #{$form_title_width});
+        // flex:1 1 calc(100% - #{$form_title_width});
+        flex:auto;
+        flex-basis: calc(100% - #{$form_title_width});
         position: relative;
         min-height: 1px;
         overflow: hidden;
@@ -111,7 +113,7 @@ select::-ms-expand {
         }
 
         *[class^="notice"] {
-                margin: 0 .3em .3em .3em;
+            margin: 0 .3em .3em .3em;
         }
 
 
@@ -578,7 +580,7 @@ input[type="number"] {
 
 button,
 input[type="button"],
-    {
+{
     // @extend %btn;
     // @include btn_setting($form-focus, #FFF);
 }
