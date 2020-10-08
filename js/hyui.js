@@ -220,6 +220,7 @@ $(function() {
             _menu.appendTo('.header .container');
             _megamenu.appendTo('.header .container');
             _search.removeClass('m_search');
+             $('.m_search').hide();
             _search.show();
             search_mode = false;
             $('.language').find('ul').hide();
