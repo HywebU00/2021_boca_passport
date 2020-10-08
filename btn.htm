@@ -69,10 +69,10 @@
                     <div class="form_grp">
                         <label for="mustSameAsId">搜尋</label>
                         <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S">
-                        <input name="" type="submit" title="查詢" value="查詢" />
+                        <input name="" type="submit" value="查詢" class="btn btn-search" />
                     </div>
                     <div class="btn_grp">
-                        <input name="" type="submit" value="進階搜尋" />
+                        <input name="" type="submit" value="進階搜尋" class="btn" />
                     </div>
                     <div class="keywordHot">
                         <ul>
@@ -400,12 +400,59 @@
                             </div>
 
                             <div class="btn_grp">
+                                a連結按鈕
+                                <br>
+                                <a class="btn">連結按鈕</a>
+                                <a class="btn btn-blue">連結按鈕</a>
+                                <a class="btn btn-green">連結按鈕</a>
+                                <a class="btn btn-orange">連結按鈕</a>
+                                <a class="btn btn-yellow">連結按鈕</a>
+                                <a class="btn btn-purple">連結按鈕</a>
+                                <a class="btn btn-red">連結按鈕</a>
+                                <br>   
+                                <a class="btn disabled">連結按鈕disabled</a>
+                                <a class="btn readonly">連結按鈕readonly</a>
+                            </div>
+
+
+                            <div class="btn_grp">
+                                按鈕
+                                <br>
+                                <button type="button" class="btn">button按鈕</button>
+                                <input type="button" class="btn btn-green" value="Input 按鈕">
+                                <input type="submit" class="btn btn-orange" value="Submit 按鈕">
+                                <br>
+                                disabled
+                                <br>
+                                <button type="button" class="btn disabled" disabled>button按鈕</button>
+                                <input type="button" class="btn btn-green disabled" disabled value="Input 按鈕">
+                                <input type="submit" class="btn btn-orange disabled" disabled value="Submit 按鈕">
+                                <br>
+                                readonly
+                                <br>
+                                <button type="button" class="btn readonly" readonly>button按鈕</button>
+                                <input type="button" class="btn btn-green readonly" readonly value="Input 按鈕">
+                                <input type="submit" class="btn btn-orange readonly" readonly value="Submit 按鈕">
+                            </div>
+
+                            <div class="btn_grp">
+                                input按鈕
+                                <br> 
                                 <input type="button" class="btn btn-primary" value="主要按鈕">
                                 <input type="button" class="btn btn-secondary" value="次要按鈕">
                                 <input type="button" class="btn btn-normal" value="一般按鈕">
-                                <input type="button" class="btn btn-primary" value="主要按鈕" readonly="">
-                                <input type="button" class="btn btn-secondary" value="次要按鈕" readonly="">
-                                <input type="button" class="btn btn-normal" value="一般按鈕" readonly="">
+                                <br>
+                                disabled
+                                <br>
+                                <input type="button" class="btn btn-primary disabled" value="主要按鈕" disabled>
+                                <input type="button" class="btn btn-secondary disabled" value="次要按鈕" disabled>
+                                <input type="button" class="btn btn-normal disabled" value="一般按鈕" disabled>
+                                <br>
+                                readonly
+                                <br>
+                                <input type="button" class="btn btn-primary readonly" value="主要按鈕" readonly>
+                                <input type="button" class="btn btn-secondary readonly" value="次要按鈕" readonly>
+                                <input type="button" class="btn btn-normal readonly" value="一般按鈕" readonly>
                             </div>
 
                         </form>

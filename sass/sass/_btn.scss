@@ -19,7 +19,7 @@ $btn-radius:.2em;
     @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
     &:hover, &:focus {
         background-color: darken($btn-bg, 10); // Old browsers
-        border: 1px solid darken($btn-bg, 20) !important;
+        border: 1px solid darken($btn-bg, 20);
         cursor: pointer;
         color: #FFF;
         outline:none;
@@ -66,36 +66,40 @@ $btn-radius:.2em;
 //按鈕顏色
 //@include btn_setting(按鈕顏色,字的顏色);
 .btn-green {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting($color-green, #FFF);
 }
 .btn-blue {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting($color-blue, #FFF);
 }
 .btn-yellow {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting(lighten($color-yellow, 5), #FFF);
 }
 .btn-orange {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting(lighten($color-orange, 10), #FFF);
 }
 .btn-red {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting($color-red, #FFF);
 }
 .btn-purple {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting(lighten($color-purple, 5), #FFF);
 }
 .btn-submit {
-    @extend %btn;
+    // @extend %btn;
     @include btn_setting(lighten($primaryColor, 5), #FFF);
 }
 .btn-reset {
-    @extend %btn;
+    // @extend %btn;
     color:lighten($color-word,15);
+}
+.btn-search {
+    // @extend %btn;
+    @include btn_setting(lighten($primaryColor, 5), #FFF);
 }
 // 主要按鈕
 .btn-primary{
@@ -149,55 +153,20 @@ $btn-radius:.2em;
     }
 }
 
-
-
-input[readonly], input[disabled]{
-    &.btn-primary, &.btn-secondary, &.btn-normal, &.btn-addition{
-        text-shadow: none;
-        cursor: not-allowed !important;
-        opacity: 50%;
-        &:hover, &:focus {}
-    }
-    &.btn-primary{
-        &:hover, &:focus { 
-            background: $primaryColor !important;
-            border: solid 1px $primaryColor!important;
-        }
-    }
-    &.btn-secondary{
-        &:hover, &:focus {
-            background: #fff !important;
-            color: darken($primaryColor, 15) !important;
-            border: 1px solid $primaryColor !important;
-        }
-    }
-    &.btn-normal{
-        &:hover, &:focus {
-            background: #f1f1f1 !important;
-            color: #65656E !important;
-            border: solid 1px #c3c3c3!important;
-        }
-    }
-
-    &.btn-addition{}
+.disabled, [disabled] {
+    pointer-events: none;
+    opacity: .5;
+    cursor: not-allowed;
+    text-shadow:none;
+}
+.readonly, [readonly] {
+    pointer-events: none;
+    opacity: .5;
+    cursor: not-allowed;
+    text-shadow:none;
 }
 
 
-table td{
-    .btn_grp{ padding: 0 0; }
-
-    .btn-primary,
-    .btn-secondary,
-    .btn-normal{}
-
-    .btn, .btn-green, .btn-blue, .btn-yellow, .btn-orange, .btn-red, .btn-purple, 
-    .btn-submit, .btn-reset, .btn-primary, .btn-secondary, .btn-normal, 
-    button, input[type="button"], input[type="submit"], input[type="reset"], 
-    .upload_grp .upload_btn, .upload_grp .delet_btn, .upload_delet_grp .upload_btn, .upload_delet_grp .delet_btn{
-        min-width: auto;
-        padding: 0.25em 1em;
-    }
-}
 // 按鈕大小
 .btn-xl {
     font-size: $font-size * 1.5; //24px

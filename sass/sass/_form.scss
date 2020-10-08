@@ -579,13 +579,13 @@ input[type="number"] {
 button,
 input[type="button"],
     {
-    @extend %btn;
-    @include btn_setting($form-focus, #FFF);
+    // @extend %btn;
+    // @include btn_setting($form-focus, #FFF);
 }
 
 input[type="submit"] {
-    @extend %btn;
-    @include btn_setting($form-focus, #FFF);
+    // @extend %btn;
+    // @include btn_setting($form-focus, #FFF);
 }
 
 textarea {
@@ -634,9 +634,9 @@ select {
 
 //---------------------------------------------reset--------//
 input[type="reset"] {
-    @extend %btn;
-    @include btn_setting(darken($color-gray, 20), #FFF);
-    text-shadow: none;
+    // @extend %btn;
+    // @include btn_setting(darken($color-gray, 20), #FFF);
+    // text-shadow: none;
 }
 
 //---------------------------------------------checkbox & radio--------//
@@ -689,22 +689,22 @@ input[type="checkbox"]:focus {
 }
 
 //---------------------------------------------readonly disable -------//
-input[readonly],
-input[disable] {
-    background: lighten($color-gray, 15);
-    color: darken($color-gray, 10);
-    border-color: darken($color-gray, 10);
+// input[readonly],
+// input[disable] {
+//     background: lighten($color-gray, 15);
+//     color: darken($color-gray, 10);
+//     border-color: darken($color-gray, 10);
 
-    &~label {
-        color: darken($color-gray, 10);
-    }
+//     &~label {
+//         color: darken($color-gray, 10);
+//     }
 
-    &:hover,
-    &:focus {
-        border-color: darken($color-gray, 10);
-        box-shadow: none; // cursor: not-allowed;
-    }
-}
+//     &:hover,
+//     &:focus {
+//         border-color: darken($color-gray, 10);
+//         box-shadow: none; // cursor: not-allowed;
+//     }
+// }
 
 // 檔案上傳
 // https://codepen.io/shubhamc_007/pen/oZyodd

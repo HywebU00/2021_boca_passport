@@ -16,7 +16,7 @@
         background: #eee;
         // 第一層選單樣式
         >li {
-            flex: 0 1 calc(100% / 6);
+            flex: 0 1 16%;
             >a {
                 display: block;
                 padding: 0 1em;
@@ -112,12 +112,12 @@
                         }
                     }
                 }
-                // ul {
-                //     top: 0;
-                //     left: 100%;
-                //     animation: none;
-                //     font-size: 1em;
-                // }
+                ul {
+                    top: 0;
+                    left: 100%;
+                    animation: none;
+                    font-size: 1em;
+                }
             }
         }
     }
@@ -234,7 +234,7 @@
                         position: relative;
                         width: 100%;
                         background-color: transparent;
-                        font-size: 0.938em;
+                        font-size: 1em;
                         li {
                             a {
                                 display: block;
@@ -253,17 +253,22 @@
                                     background: #eee;
                                 }
                             }
-                            li {
-                                a {
-                                    background: rgba(0, 0, 0, .15) !important;
-                                    padding: .5em 1em .5em 4em !important;
-                                    border-bottom: 1px solid #BBB;
-                                    &:hover,
-                                    &:focus {
-                                        background: rgba(0, 0, 0, .25) !important;
-                                    }
-                                    &:after {
-                                        display: none !important;
+                            ul{
+                                left:0;
+
+                                li {
+                                    a {
+                                        background: rgba(0, 0, 0, .15) !important;
+                                        padding: .5em 1em .5em 4em !important;
+                                        border-bottom: 1px solid #BBB;
+                                        &:hover,
+                                        &:focus {
+                                            background: rgba(0, 0, 0, .25) !important;
+                                        }
+                                        &:after {
+                                            display: none !important;
+                                        }
+
                                     }
                                 }
                             }

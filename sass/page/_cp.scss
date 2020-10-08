@@ -101,13 +101,16 @@ h1.title, h2.title {
             width: 1em;
             height: 1em;
             position: absolute;
-            top:.45em;
+            top:.32em;
             left:.1em;
             color:#666;
         }
         span{
             flex:0 0 auto;
             margin:.2em;
+            line-height: 1.5em;
+            vertical-align: middle;
+
         }
         .file-name{
             line-height: 1.8em;

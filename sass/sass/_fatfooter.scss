@@ -71,7 +71,7 @@
             @include li-reset;
 
             li {
-                flex:1 1 calc(100% / 6);
+                flex:1 1 16%;
                 @include box-sizing;
 
                 a {

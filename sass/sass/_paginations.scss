@@ -125,23 +125,27 @@
                 margin: 0px;
             }
         }
-        input[type="button"] {
-            @include gradient(#F7F7F7, #EAEAEA, vertical);
-            border: 1px solid #CCC;
-            color: #222;
+        .btn{
+            min-width: auto;
             padding: .4em 1em !important;
-            min-width: 3em;
-            display: inline-block;
-            vertical-align: middle;
-            box-shadow: none;
-            text-shadow: none;
-            &:hover, &:focus {
-                color: #fff !important;
-                background: $form-focus;
-                border: darken($form-focus, 5) solid 1px;
-                box-shadow: none !important;
-            }
         }
+        // input[type="button"] {
+        //     @include gradient(#F7F7F7, #EAEAEA, vertical);
+        //     border: 1px solid #CCC;
+        //     color: #222;
+        //     padding: .4em 1em !important;
+        //     min-width: 3em;
+        //     display: inline-block;
+        //     vertical-align: middle;
+        //     box-shadow: none;
+        //     text-shadow: none;
+        //     &:hover, &:focus {
+        //         color: #fff !important;
+        //         background: $form-focus;
+        //         border: darken($form-focus, 5) solid 1px;
+        //         box-shadow: none !important;
+        //     }
+        // }
     }
     .items {
         display: inline-block;
