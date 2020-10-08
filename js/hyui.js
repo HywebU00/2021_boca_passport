@@ -286,7 +286,7 @@ $(function() {
     _window.bind("load resize", function(event) {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            search_mode = true;
+            // search_mode = true;
             mobileMenu();
         }, 50);
     });
