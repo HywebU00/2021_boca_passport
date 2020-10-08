@@ -85,17 +85,18 @@
                     }
                 }
                 ul {
-                    display: flex;
-                    flex-direction:column;
-                    flex-wrap:wrap;
+                    // display: flex;
+                    // flex-direction:column;
+                    // flex-wrap:wrap;
+                    display: block;
                     margin: 0;
                     padding:0 1em 0 0;                  
                     @include screen('mobile') {
                         width: auto;
                     }
                     li {
-                        flex: 0 0 100%;
-                        
+                        // flex: 0 0 100%;
+
                         a {
                             display: block;
                             @include aSetting_nocolor;
