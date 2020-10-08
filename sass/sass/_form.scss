@@ -387,7 +387,6 @@ select::-ms-expand {
             position: relative;
             display: block;
             z-index: 1;
-            flex: 0 0 100%;
 
             input {
                 &:checked {
