@@ -1,325 +1,282 @@
 @charset "utf-8";
 // 文章標題
 h1.title, h2.title {
-    line-height: 1.25em;
-    margin: .4em 0;
+  line-height: 1.25em;
+  margin: .4em 0;
 }
 .cp {
-    .pic {
-        float: left;
-        margin: 0px 1em 1em 0;
-        width: auto;
-        width: 45%;
-        max-width: 400px;
-        background: #F1F1F1;
-        overflow: hidden;
-        padding: .5em .5em .2em;
-        img {
-            float: none;
-            width: 100%;
-            margin: 0;
-            display:block;
-        }
-        span {
-            text-align: center;
-            display: block;
-            font-size: .938em;
-        }
-        @include screen('mobile') {
-            float: none;
-            max-width: 100%;
-            width: auto;
-            margin: 0px auto;
-            display: block;
-            margin-bottom: .5em;
-        }
-    }
-    &.small_size {
-        font-size: .938em;
-    }
-    &.large_size {
-        font-size: 1.125em;
-    }
-    table {
-        background: #FFF;
-    }
+  .pic {
+    float: left;
+    margin: 0px 1em 1em 0;
+    width: auto;
+    width: 45%;
+    max-width: 400px;
+    background: #F1F1F1;
+    overflow: hidden;
+    padding: .5em .5em .2em;
     img {
-        &.float_left {
-            float: left;
-            margin: 0px 1em 1em 0;
-            width: auto;
-            max-width: 55%;
-            @include screen('mobile') {
-                float: none;
-                max-width: 100%;
-                margin: 0px auto;
-            }
-        }
-        &.float_right {
-            float: right;
-            margin: 0px 0 1em 1em;
-            width: auto;
-            max-width: 55%;
-            @include screen('mobile') {
-                float: none;
-                max-width: 100%;
-                margin: 0px auto;
-            }
-        }
+      float: none;
+      width: 100%;
+      margin: 0;
+      display:block;
     }
-    a {
-        @include aSetting;
+    span {
+      text-align: center;
+      display: block;
+      font-size: .938em;
     }
+    @include screen('mobile') {
+      float: none;
+      max-width: 100%;
+      width: auto;
+      margin: 0px auto;
+      display: block;
+      margin-bottom: .5em;
+    }
+  }
+  table {
+    background: #FFF;
+  }
+  img {
+    &.float_left {
+      float: left;
+      margin: 0px 1em 1em 0;
+      width: auto;
+      max-width: 55%;
+      @include screen('mobile') {
+        float: none;
+        max-width: 100%;
+        margin: 0px auto;
+      }
+    }
+    &.float_right {
+      float: right;
+      margin: 0px 0 1em 1em;
+      width: auto;
+      max-width: 55%;
+      @include screen('mobile') {
+        float: none;
+        max-width: 100%;
+        margin: 0px auto;
+      }
+    }
+  }
+  a {
+    @include aSetting;
+  }
 }
 
 // 檔案下載
 .file_download {
-    width: 100%;
-    margin: 0 auto 2em;
-    @include clearfix();
-    h3 {
-        font-size: 1.5em;
-        padding: 12px 0px 15px 0px;
-        margin: 0.5em 0px 0.2em;
-        border-bottom: 1px solid $primaryColor;
+  width: 100%;
+  margin: 0 auto 2em;
+  @include clearfix();
+  h3 {
+    font-size: 1.5em;
+    padding: 12px 0px 15px 0px;
+    margin: 0.5em 0px 0.2em;
+    border-bottom: 1px solid $primaryColor;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: flex;
+    flex-wrap:wrap;
+    position: relative;
+    padding: .5em 0 .5em 1.5em;
+    border-bottom: solid 1px #eee;
+    &:before{
+      content:'·';
+      font-size: 2em;
+      font-weight: bold;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top:.32em;
+      left:.1em;
+      color:#666;
     }
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    li {
-        display: flex;
-        flex-wrap:wrap;
-        position: relative;
-        padding: .5em 0 .5em 1.5em;
-        border-bottom: solid 1px #eee;
-        &:before{
-            content:'·';
-            font-size: 2em;
-            font-weight: bold;
-            width: 1em;
-            height: 1em;
-            position: absolute;
-            top:.32em;
-            left:.1em;
-            color:#666;
-        }
-        span{
-            flex:0 0 auto;
-            margin:.2em;
-            line-height: 1.5em;
-            vertical-align: middle;
 
+    .file_name{
+      line-height: 1.8em;
+      margin:.2em .5em .2em 0;
+      color: #222;
+      ~span{
+        flex:0 0 auto;
+        margin:.2em;
+        font-size: .875em;
+        line-height: 1.5em;
+        vertical-align: middle;
+        color: #888;
+        a{
+          color: #fff;
+          display: inline-block;
+          margin-right: 8px;
         }
-        .file-name{
-            line-height: 1.8em;
-            margin:.2em .2em .2em 0;
-        }
-        .doc, .docx, .odt{
-            font-size: .875em;
-            a{
-                background: #275cb7;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#275cb7, 5%);
-                }
-            }
-        }
-        .xls, .xlsx, .csv, .ods{
-            font-size: .875em;
-            a{
-                background: #387947;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#387947, 5%);
-                }
-            }
-        }
-        .ppt, .pptx, .odp, .pdf{
-            font-size: .875em;
-            a{
-                background: #c55a3b;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#c55a3b, 5%);
-                }
-            }
-        }
-        .pdf{
-            font-size: .875em;
-            a{
-                background: #c00;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#c00, 5%);
-                }
-            }
-        }
-        .zip{
-            font-size: .875em;
-            a{
-                background: #eb712e;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#eb712e, 5%);
-                }
-            }
-        }
-        .txt{
-            font-size: .875em;
-            a{
-                background: #555;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#555, 5%);
-                }
-            }
-        }
-        .mov{
-            font-size: .875em;
-            a{
-                background: #009999;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#009999, 5%);
-                }
-            }
-        }
-        .mp3, .mp4{
-            font-size: .875em;
-            a{
-                background: #088ecc;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#088ecc, 5%);
-                }
-            }
-        }
-        .jpg{
-            font-size: .875em;
-            a{
-                background: #6c29a4;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#6c29a4, 5%);
-                }
-            }
-        }
-        .wmv{
-            font-size: .875em;
-            a{
-                background: #430a1f;
-                color:#fff;
-                font-weight: bold;
-                padding: .2em .8em;
-                border-radius: 3px;
-                display: block;
-                &:hover, &:focus{
-                    background: darken(#430a1f, 5%);
-                }
-            }
-        }
-
+      }
     }
+    $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other ;
+    @each $fileType in $fileType {
+      span.file_#{$fileType} {
+        a{
+          color:#fff;
+          font-weight: bold;
+          padding: .2em .8em;
+          border-radius: 3px;
+          &:hover, &:focus{
+            color:#fff;
+          }
+        }
+      }
+    }
+    span{
+      &.file_doc, &.file_docx, &.file_odt{
+        a{
+          background: #275cb7;
+          &:hover, &:focus{
+            background: darken(#275cb7, 5%);
+          }
+        }
+      }
+      &.file_xls, &.file_xlsx, &.file_csv, &.file_ods{
+        a{
+          background: #387947;
+          &:hover, &:focus{
+            background: darken(#387947, 5%);
+          }
+        }
+      }
+      &.file_ppt, &.file_pptx, &.file_odp, &.file_pdf{
+        a{
+          background: #c55a3b;
+          &:hover, &:focus{
+            background: darken(#c55a3b, 5%);
+          }
+        }
+      }
+      &.file_pdf{
+        a{
+          background: #c00;
+          &:hover, &:focus{
+            background: darken(#c00, 5%);
+          }
+        }
+      }
+      &.file_zip{
+        a{
+          background: #eb712e;
+          &:hover, &:focus{
+            background: darken(#eb712e, 5%);
+          }
+        }
+      }
+      &.file_txt,&.file_other{
+        a{
+          background: #555;
+          &:hover, &:focus{
+            background: darken(#555, 5%);
+          }
+        }
+      }
+      &.file_mov{
+        a{
+          background: #009999;
+          &:hover, &:focus{
+            background: darken(#009999, 5%);
+          }
+        }
+      }
+      &.file_mp3, &.file_mp4{
+        a{
+          background: #088ecc;
+          &:hover, &:focus{
+            background: darken(#088ecc, 5%);
+          }
+        }
+      }
+      &.file_jpg{
+        a{
+          background: #6c29a4;
+          &:hover, &:focus{
+            background: darken(#6c29a4, 5%);
+          }
+        }
+      }
+      &.file_wmv{
+        a{
+          background: #430a1f;
+          &:hover, &:focus{
+            background: darken(#430a1f, 5%);
+          }
+        }
+      }
+    }
+  }
 }
 // 外部連結
 .web_link {
-    margin: 1em 0;
-    @extend %clearfix;
-    h3 {
-        font-size: 1.5em;
-        padding: 12px 0px 15px 0px;
-        margin: 0.5em 0px 0.2em;
-        border-bottom: 1px solid $primaryColor;
+  margin: 1em 0;
+  @extend %clearfix;
+  h3 {
+    font-size: 1.5em;
+    padding: 12px 0px 15px 0px;
+    margin: 0.5em 0px 0.2em;
+    border-bottom: 1px solid $primaryColor;
+  }
+  ol,
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    position: relative;
+    padding: .5em 0;
+    border-bottom: solid 1px #eee;
+    padding-left: 1.5em;
+    &:before{
+      content:'·';
+      font-size: 2em;
+      font-weight: bold;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top:.35em;
+      left:.1em;
+      color:#666;
     }
-    ol,
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+    a {
+      padding: .2em 0px;
+      display: block;
+      @include aSetting_nocolor;
     }
-    li {
-        position: relative;
-        padding: .5em 0;
-        border-bottom: solid 1px #eee;
-        padding-left: 1.5em;
-        &:before{
-            content:'·';
-            font-size: 2em;
-            font-weight: bold;
-            width: 1em;
-            height: 1em;
-            position: absolute;
-            top:.35em;
-            left:.1em;
-            color:#666;
-        }
-        a {
-            padding: .2em 0px;
-            display: block;
-            @include aSetting_nocolor;
-        }
-    }
+  }
 }
 .publish_info {
-    font-size: 0.875em;
-    line-height: 1.5em;
-    list-style: none;
-    margin: 0 0 .7em 0;
-    border-left: solid 5px $primaryColor;
-    padding: 0.8em 1.5em 0.8em;
-    background: #F2F2F2;
-    display: flex;
-    flex-wrap:wrap;
-    @extend %clearfix;
-    @include box-sizing;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  list-style: none;
+  margin: 0 0 .7em 0;
+  border-left: solid 5px $primaryColor;
+  padding: 0.8em 1.5em 0.8em;
+  background: #F2F2F2;
+  display: flex;
+  flex-wrap:wrap;
+  @extend %clearfix;
+  @include box-sizing;
 
-    li {
-        flex:1 1 calc(100% / 3);
-        margin-bottom: .5em;
+  li {
+    flex:1 1 calc(100% / 3);
+    margin-bottom: .5em;
 
-        @include screen('tablet') {
-            flex:1 1 calc(100% / 2);
-        }
-        @include screen('mobile') {
-            flex:1 1 calc(100% / 1);
-        }
+    @include screen('tablet') {
+      flex:1 1 calc(100% / 2);
     }
+    @include screen('mobile') {
+      flex:1 1 calc(100% / 1);
+    }
+  }
 }

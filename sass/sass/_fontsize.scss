@@ -9,11 +9,11 @@
     }
     ul {
 
-       @include li-reset;
-       display: flex;
-       flex: 0 0 6em;
+     @include li-reset;
+     display: flex;
+     flex: 0 0 6em;
 
-       li {
+     li {
 
         font-size: 1em;
         flex:0 0 auto;
@@ -34,7 +34,8 @@
                 color: #FFF;
             }
             &.active {
-                background: #F1F1F1;
+                background: $aHover;
+                color: #FFF;
                 &:hover, &:focus {
                     background: $aHover;
                     color: #FFF;
