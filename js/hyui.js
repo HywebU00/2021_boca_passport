@@ -32,19 +32,19 @@ $(function() {
     /*-----------------------------------*/
     /////// header選單 tab及 fix設定////////
     /*-----------------------------------*/
-    var _menu = $('.menu');
-    var _megamenu = $('.megamenu');
+    var _menu = $('.menu'),
+        _megamenu = $('.megamenu');
     _menu.find('li').has('ul').addClass('hasChild');
     _megamenu.find('li').has('ul').addClass('hasChild');
-    var liHasChild = _menu.find('li.hasChild');
-    var liHasChild2 = _megamenu.children('ul').children('li.hasChild');
+    var liHasChild = _menu.find('li.hasChild'),
+        liHasChild2 = _megamenu.children('ul').children('li.hasChild');
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
     _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
     $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="searchCtrl">查詢</button>');
-    var menu_status = false;
-    var _sidebar = $('.sidebar'),
+    var menu_status = false,
+        _sidebar = $('.sidebar'),
         _search = $('.search'),
         _nav = $('.navigation'),
         _sidebarClose = $('.sidebarClose'),
@@ -57,9 +57,7 @@ $(function() {
     function showSidebar() {
         _sidebar.show();
         _mArea.show();
-        _mArea.animate({
-            'margin-left': 0
-        }, 400, 'easeOutQuint');
+        _mArea.animate({ 'margin-left': 0 }, 400, 'easeOutQuint');
         _body.addClass('noscroll');
         _overlay.fadeIn();
         $('.m_search').hide();
@@ -205,7 +203,7 @@ $(function() {
             $('.sidebar .megamenu .hasChild').children('a').off().on('click', function(e) {
                 e.preventDefault();
             });
-            // 
+            //
             _body.off('touchmove');
             $('.m_search').hide();
             $('.language').find('ul').hide();
@@ -220,7 +218,7 @@ $(function() {
             _menu.appendTo('.header .container');
             _megamenu.appendTo('.header .container');
             _search.removeClass('m_search');
-             $('.m_search').hide();
+            $('.m_search').hide();
             _search.show();
             search_mode = false;
             $('.language').find('ul').hide();
@@ -311,18 +309,19 @@ $(function() {
         search_mode = false;
     });
     // 固定版頭
-    hh = Math.floor($('.header').outerHeight(true));
+    var headerHeight = Math.floor($('.header').outerHeight(true)),
+        customHeight = 176 - 40; // header高度 - menu高度，每個專案不同，請另外填寫。
     if ($('header .menu').length > 0) {
         var stickyMenuTop = Math.floor($('header .menu').offset().top);
         // console.log(stickyMenuTop);
-        hh = Math.floor($('.header').outerHeight(true));
+        headerHeight = Math.floor($('.header').outerHeight(true));
         menuH = Math.floor(_menu.outerHeight(true));
         $(window).bind("load scroll resize", function(e) {
             ww = _window.outerWidth();
-            if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
+            if (ww >= wwSmall && $(this).scrollTop() > 0) {
                 $('.header').addClass('fixed');
-                $('.header').css('margin-top', menuH - hh);
-                // $('.main').css('margin-top', hh);
+                $('.header').css('margin-top', -1 * customHeight);
+                // $('.main').css('margin-top', headerHeight);
                 // $('.main').css('margin-top', 0);
             } else {
                 $('.header').removeClass('fixed');
@@ -334,14 +333,14 @@ $(function() {
     if ($('header .megamenu').length > 0) {
         var stickyMenuTop2 = Math.floor($('header .megamenu').offset().top);
         // console.log(stickyMenuTop);
-        hh = Math.floor($('.header').outerHeight(true));
+        headerHeight = Math.floor($('.header').outerHeight(true));
         megamenuH = Math.floor(_megamenu.outerHeight(true));
         $(window).bind("load scroll resize", function(e) {
             ww = _window.outerWidth();
             if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop2) {
                 $('.header').addClass('fixed');
-                $('.header').css('margin-top', megamenuH - hh);
-                // $('.main').css('margin-top', hh);
+                $('.header').css('margin-top', megamenuH - headerHeight);
+                // $('.main').css('margin-top', headerHeight);
                 // $('.main').css('margin-top', 0);
             } else {
                 $('.header').removeClass('fixed');
@@ -538,7 +537,7 @@ $(function() {
                 var _tabItemNow = $(this).parent(),
                     tvp = _tab.offset().top,
                     tabIndex = _tabItemNow.index() / 2,
-                    scollDistance = tvp + tabItemHeight * tabIndex - hh;
+                    scollDistance = tvp + tabItemHeight * tabIndex - headerHeight;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
                 if (ww <= wwSmall) {
