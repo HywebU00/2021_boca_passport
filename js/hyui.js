@@ -652,21 +652,21 @@ $(function() {
     /*------------------------------------*/
     $('.font_size').find('.small').click(function(e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('large_size').addClass('small_size');
+      $('#center').removeClass('large_size').addClass('small_size');
       $(this).addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'small', 356);
     });
     $('.font_size').find('.medium').click(function(e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('large_size small_size');
+      $('#center').removeClass('large_size small_size');
       $(this).addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'medium', 356);
     });
     $('.font_size').find('.large').click(function(e) {
       $(this).parent('li').siblings('li').find('a').removeClass('active');
-      $('.innerpage').removeClass('small_size').addClass('large_size');
+      $('#center').removeClass('small_size').addClass('large_size');
       $(this).addClass('active');
       e.preventDefault();
       createCookie('FontSize', 'large', 356);
@@ -698,7 +698,7 @@ $(function() {
     if (cookie == 'small') {
         //$('.font_size').find('.small').click();
         $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
+        $('#center').removeClass('large_size medium_size').addClass('small_size');
         $('.font_size').find('.small').addClass('active');
         e.preventDefault();
       }
@@ -706,14 +706,14 @@ $(function() {
         if (cookie == 'large') {
             //$('.font_size').find('.large').click();
             $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+            $('#center').removeClass('small_size medium_size').addClass('large_size');
             $('.font_size').find('.large').addClass('active');
             e.preventDefault();
           }
           else {
             //$('.font_size').find('.medium').click();
             $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('large_size small_size');
+            $('#center').removeClass('large_size small_size');
             $('.font_size').find('.medium').addClass('active');
             e.preventDefault();
           }

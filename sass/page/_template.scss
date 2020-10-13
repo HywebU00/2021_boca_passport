@@ -73,14 +73,19 @@ body {
        max-width: 100%;
        overflow: hidden;
      }
-     &.small_size {
+     
+   }
+
+   .hidden{
+    display: none;
+  }
+
+
+  #center{
+    &.small_size {
       font-size: .938em;
     }
     &.large_size {
       font-size: 1.125em;
     }
-  }
-
-  .hidden{
-    display: none;
   }
