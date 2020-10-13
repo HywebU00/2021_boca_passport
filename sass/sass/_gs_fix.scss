@@ -1,22 +1,6 @@
 .gsc-control-cse {
 	padding: 1rem 0!important;
 }
-.gsc-control-cse.gsc-control-cse-zh-TW{
-	table{
-		td{
-			padding: 0 .5em!important;
-			// &.gsib_b,&.gsc-search-button{
-			// 	padding: 0!important;
-			// }
-			&.gsib_a,&.gsib_b,&.gsc-search-button{
-				border:0!important;
-			}
-		}
-	}
-}
-.gsc-input-box{
-	border:0!important;
-}
 .gsc-search-box.gsc-search-box-tools{
 	margin-bottom: 2rem!important;
 }
@@ -46,10 +30,4 @@
 }
 .gsc-search-button-v2 svg {
 	vertical-align: middle;
-}
-.gsc-result-info-container,.gsc-orderby-container{
-	border:0!important;
-}
-.gsc-selected-option{
-	white-space: nowrap;
 }
