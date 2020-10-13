@@ -1,6 +1,6 @@
 // 按鈕設定
 $btn-font-color:$color-word;
-$btn-border:darken($color-word, 5);
+$btn-border:darken($btn-font-color, 5);
 $btn-padding:.5em 1.5em;
 $btn-radius:.2em;
 // 按鈕外框
@@ -11,19 +11,19 @@ $btn-radius:.2em;
 
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg:#f5f5f5, $btn-font-color:$btn-font-color) {
-    background-color: $btn-bg;
-    border: 1px solid darken($btn-bg, 15);
+    background: $btn-bg;
+    border: 1px solid $btn-bg;
     color: $btn-font-color;
-    text-shadow:1px 1px 1px RGBA(0,0,0,.3);
-    @include border-radius($btn-radius);
-    @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
+    // text-shadow:1px 1px 1px RGBA(0,0,0,.3);
+    // @include border-radius($btn-radius);
+    // @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
     &:hover, &:focus {
-        background-color: darken($btn-bg, 10); // Old browsers
+        background: darken($btn-bg, 10); // Old browsers
         border: 1px solid darken($btn-bg, 20);
         cursor: pointer;
         color: #FFF;
         outline:none;
-        @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
+        // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
     &.active {
         background: lighten($btn-bg, 5);
@@ -54,7 +54,7 @@ $btn-radius:.2em;
 // 按鈕基本樣式
 .btn {
     @extend %btn;
-    @include box-sizing;
+    // @include box-sizing;
     @include btn_setting;
     text-shadow:none;
     &:hover,

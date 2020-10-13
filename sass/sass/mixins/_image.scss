@@ -25,37 +25,37 @@
     }
 }
 // 圖片列表mixin
-@mixin make_img_outer() {
-    text-align: left;
-    overflow: hidden;
-}
-@mixin make_col($pic_length,$m_pic_length) {
-    $outer_W: 100%;
-    $pic_col: $pic_length;
-    $pic_Margin: 1%;
-    $pic_W: ($outer_W/$pic_col)-($pic_Margin*2);
-    position: relative;
-    margin: $pic_Margin;
-    display: block;
-    padding: 0;
-    float: left;
-    width: $pic_W;
-    overflow: hidden;
-    @include box-sizing(border-box);
-    @include screen('mobile') {
-        float:none;
-        display: inline-block;
-        $outer_W: 100%;
-        $pic_col: $m_pic_length;
-        $pic_Margin: 1%;
-        $pic_W: ($outer_W/$pic_col)-($pic_Margin*2);
-        width: $pic_W;
-        margin:$pic_Margin auto;
-    }
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
+// @mixin make_img_outer() {
+//     text-align: left;
+//     overflow: hidden;
+// }
+// @mixin make_col($pic_length,$m_pic_length) {
+//     $outer_W: 100%;
+//     $pic_col: $pic_length;
+//     $pic_Margin: 1%;
+//     $pic_W: ($outer_W/$pic_col)-($pic_Margin*2);
+//     position: relative;
+//     margin: $pic_Margin;
+//     display: block;
+//     padding: 0;
+//     float: left;
+//     width: $pic_W;
+//     overflow: hidden;
+//     @include box-sizing(border-box);
+//     @include screen('mobile') {
+//         float:none;
+//         display: inline-block;
+//         $outer_W: 100%;
+//         $pic_col: $m_pic_length;
+//         $pic_Margin: 1%;
+//         $pic_W: ($outer_W/$pic_col)-($pic_Margin*2);
+//         width: $pic_W;
+//         margin:$pic_Margin auto;
+//     }
+//     img {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+// }
 
