@@ -6,11 +6,22 @@ table {
         width: 100%;
     }
     th,
-    td:not(.gsib_b,.gsc-search-button) {
+    // td:not(.gsib_b,.gsc-search-button) {
+    //     padding: .5em;
+    //     text-align: left;
+    // }
+    // td:not(.gsib_a,.gsc-search-button){
+    //     border: #ddd 1px solid;
+    //     word-break: break-all;
+    //     a {
+    //         word-break: break-all;
+    //     }
+    // }
+    td {
         padding: .5em;
         text-align: left;
     }
-    td:not(.gsib_a,.gsc-search-button){
+    td{
         border: #ddd 1px solid;
         word-break: break-all;
         a {
