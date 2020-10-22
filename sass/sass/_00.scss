@@ -1,0 +1,92 @@
+// -----------------------------------------------------------------------
+// -----   extend   ------------------------------------------------------
+// -----------------------------------------------------------------------
+
+// 繼承（ ../sass/mixins/_extend.scss）
+@extend %slash; 			 // 斜線
+@extend %arrow_setting;      // 箭頭
+@extend %arrow_down;		 // 箭頭：下
+@extend %arrow_right;		 // 箭頭：右
+@extend %arrow_up;			 // 箭頭：上
+@extend %arrow_left;		 // 箭頭：左
+@extend %clearfix;			 // 清除浮動
+@extend %flex_set;			 // 啟動 display:flex
+
+
+// ----------------------------------------------------------------------
+// -----   mixin   ------------------------------------------------------
+// ----------------------------------------------------------------------
+
+// 1、瀏覽器斷點（ ../sass/mixins/_mediaquery.scss）
+@include screen('desktop'){}				// min-width: 1400px
+@include screen('notebook'){}				// max-width: 1399px
+@include screen('tablet'){}					// max-width: 991px
+@include screen('mobile'){}					// max-width: 767px
+@include screen('xs_mobile'){}				// max-width: 575px
+
+
+// 2、漸層（ ../sass/mixins/_gradient.scss）
+@include gradient(#07c, #06f, vertical);	// 水平
+@include gradient(#07c, #06f, horizontal);	// 垂直
+@include gradient(#07c, #06f, diagonal);	// 對角線
+@include gradient(#07c, #06f, circle);		// 圓形
+
+
+// 3、文字刪節號（ ../sass/mixins/_text-overflow.scss）
+@include text-overflow;						// 單行
+@include text-line(2,23px);					// 多行（行數、行高）
+
+
+// 4、清除li格式（ ../sass/mixins/_li-reset.scss）
+@include li-reset;							// 清除li預設
+
+
+// 5、格線系統（ ../sass/mixins/_bootstrap-grid.scss）
+// 5-1 bootstrap 格線系統
+.col{
+	@include make-xs-column(12);				// xs_mobile
+	@include make-sm-column(6);					// mobile
+	@include make-md-column(3);					// tablet
+	@include make-lg-column(3);					// desktop
+	@include gutter();							// 容器內距 padding
+}
+
+// 5-2 flex 格線系統（ ../sass/mixins/_flex-set.scss）
+.papa{
+	// 父層預設：
+	// 1. display: flex;
+	// 2. flex-flow: row wrap;
+	// 3. justify-content: space-between;
+	@extend %flex_set;
+
+	// 子層設定：欄數、margin、padding
+	// margin、padding，務必加上『單位』才能計算！
+	// 搞不懂『均分』、『自由搭配』的算式嗎？
+	// 複習請由此去：https://hackmd.io/@lizewu/r1eU6MPBw
+	.col{
+		@include flex-col-equal(6, 10px, 30px);		 // 均分 2 - 12 欄
+		@include flex-col(6, 10px, 30px);			 // 自由搭配
+	}
+	@include screen('tablet'){
+		.col{
+			@include flex-col-equal(3, 10px, 30px);  // 均分 2 - 12 欄
+			@include flex-col(3, 10px, 30px);		 // 自由搭配
+		}
+	}
+	@include screen('mobile'){
+		.col{
+			@include flex-col-equal(1, 10px, 30px);  // 均分 2 - 12 欄
+			@include flex-col(1, 10px, 30px);		 // 自由搭配
+		}
+	}
+}
+
+
+// 6、圖片比例
+@include aspect-ratio(4,3);							 // 圖片比例，4:3
+
+
+
+
+
+
