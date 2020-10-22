@@ -640,7 +640,11 @@
         // }
 
         &:nth-child(2){
-            p{ @include text-line(2); }
+            background: #ab005c;
+            p{
+                @include text-line(2,24px);
+                color: #fff;
+            }
         }
     }
 }

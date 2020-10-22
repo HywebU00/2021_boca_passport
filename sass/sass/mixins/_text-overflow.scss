@@ -12,13 +12,15 @@
     text-overflow: ellipsis;
 }
 
-@mixin text-line($value) {
+@mixin text-line($value,$line-hight) {
 	overflow: hidden;
 	text-overflow: -o-ellipsis-lastline;
-	text-overflow: ellipsis;   // ellipsis＝省略
+	text-overflow: ellipsis;					// ellipsis＝省略
 	display: -webkit-box;
 	-webkit-line-clamp: $value;
 	-webkit-box-orient: vertical;
+	line-height: $line-hight;					// X 填入行高 px 值
+	height: calc( #{$line-hight} * #{$value}); 	// 限定高度為 X * N 的 px 值
 }
 
 //範例：
