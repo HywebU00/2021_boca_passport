@@ -1,5 +1,4 @@
 .fatfooter {
-    @include make-fatfooter($fatfooter-length, 100%);
     @extend %clearfix;
     overflow: hidden;
     padding-bottom: 1em;

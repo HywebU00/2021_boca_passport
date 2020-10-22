@@ -10,7 +10,7 @@
   }@else if $orientation == 'diagonal' {
     background: -webkit-linear-gradient(to bottom right, $start-color, $end-color);
     background: linear-gradient(to bottom right, $start-color, $end-color);
-  }@else {
+  }@else if $orientation == 'circle' {
     background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
     background: radial-gradient(ellipse at center, $start-color, $end-color);
   }

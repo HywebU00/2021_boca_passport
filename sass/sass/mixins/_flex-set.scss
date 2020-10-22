@@ -29,13 +29,13 @@
   } @else if $col == 4 {
     &:last-child{
       &:nth-child(4n-4){ margin-right: 0; }
-      // &:nth-child(4n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
-      // &:nth-child(4n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
-      // &:nth-child(4n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+      &:nth-child(4n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(4n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(4n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
 
-      &:nth-child(4n-3){ margin-right: calc( (100% / #{$col})*3 ); }
-      &:nth-child(4n-2){ margin-right: calc( (100% / #{$col})*2 ); }
-      &:nth-child(4n-1){ margin-right: calc( (100% / #{$col})*1 ); }
+      // &:nth-child(4n-3){ margin-right: calc( (100% / #{$col})*3 ); }
+      // &:nth-child(4n-2){ margin-right: calc( (100% / #{$col})*2 ); }
+      // &:nth-child(4n-1){ margin-right: calc( (100% / #{$col})*1 ); }
     }
   } @else if $col == 5 {
     &:last-child{

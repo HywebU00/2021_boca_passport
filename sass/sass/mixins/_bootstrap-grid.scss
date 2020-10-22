@@ -65,20 +65,20 @@ $container-lg: $container-large-desktop !default;
     margin-left: auto;
     padding-left: floor(($gutter / 2));
     padding-right: ceil(($gutter / 2));
-    @include clearfix;
+    @extend %clearfix;
 }
 /* Creates a wrapper for a series of columns*/
 @mixin make-row($gutter: $grid-gutter-width) {
     margin-left: ceil(($gutter / -2));
     margin-right: floor(($gutter / -2));
-    @include clearfix;
+    @extend %clearfix;
 }
 @mixin gutter($gutter: $grid-gutter-width) {
     position: relative;
     min-height: 1px;
     padding-left: ($gutter / 2);
     padding-right: ($gutter / 2);
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 /* Generate the extra small columns*/
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
@@ -163,7 +163,7 @@ $container-lg: $container-large-desktop !default;
 .row {
     @include make-row();
     &>div {
-        @include box-sizing;
+        box-sizing: border-box;
     }
 }
 .container {

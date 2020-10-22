@@ -165,7 +165,7 @@
 ////////////////////////////////////////////////
 
 // flex 欄位均分
-// 父層啟動 flex : @extend %flex_setting;
+// 父層啟動 flex : @extend %flex_set;
 // 子層欄寬（均分）: @include flex-col-equal(欄數, margin , padding);
 // 子層欄寬（自由）: @include flex-col(欄數, margin , padding);
 
@@ -207,9 +207,7 @@
 
     .Flex-set{
         // 啟動flex
-        @extend %flex_setting;
-        // 方向、是否斷點
-        flex-flow: row wrap;
+        @extend %flex_set;
         background: #eee;
         .col{
             p{ color: rgba(255,255,255,.5); }
@@ -236,10 +234,6 @@
 
 .flex-equal-2{
     .Flex-set{
-        // 方向、是否斷點
-        flex-flow: row wrap;
-        // justify-content: flex-start;
-
         .col{
             @include flex-col-equal(2, 4px, 30px);
             // 自定義 ----------------- start
@@ -629,6 +623,7 @@
         @include flex-col(4, 4px, 40px);
         background: #00bcd4;
         color: #fff;
+
         &:nth-child(2){
             // background: #00bcd4;
             @include flex-col(8, 4px, 40px);
@@ -643,6 +638,10 @@
         // &:nth-child(even){
         //     background: #00bcd4;
         // }
+
+        &:nth-child(2){
+            p{ @include text-line(2); }
+        }
     }
 }
 .flex-3-3-3-3{
