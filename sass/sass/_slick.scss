@@ -444,7 +444,7 @@
         text-align: center;
         color: #FFF;
         padding: .5em;
-        @include box-sizing;
+        box-sizing: border-box;
         @include text-overflow;
         bottom: 0px;
         width: 100%;

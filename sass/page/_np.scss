@@ -32,7 +32,7 @@
             vertical-align: top;
             position: relative;
             height: 100%;  
-            @include box-sizing;
+            box-sizing: border-box;
             @include aSetting_nocolor;
             // @include text-overflow;
             .num {

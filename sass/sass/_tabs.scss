@@ -39,7 +39,7 @@
             font-weight: bold;
             text-decoration: none;
             @include text-overflow;
-            @include box-sizing;
+            box-sizing: border-box;
             &:hover {
                 background: $primaryColor;
             }

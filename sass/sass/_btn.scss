@@ -54,7 +54,7 @@ $btn-radius:.2em;
 // 按鈕基本樣式
 .btn {
     @extend %btn;
-    // @include box-sizing;
+    // box-sizing: border-box;
     @include btn_setting;
     text-shadow:none;
     &:hover,

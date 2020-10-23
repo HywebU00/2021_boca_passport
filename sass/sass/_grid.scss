@@ -26,6 +26,9 @@
         }
     }
 }
+.tt{
+    color: #222;
+}
 // 可用class個別命名
 // 單欄滿版
 .full {
@@ -147,19 +150,6 @@
     }
 }
 
-// 測試 display: grid
-.grid-test{}
-
-.Grid-set{
-    -ms-display: grid;
-    display: grid;
-    justify-content: center;
-    .col{
-
-    }
-}
-
-
 ////////////////////////////////////////////////
 ////////////////////  flex  ////////////////////
 ////////////////////////////////////////////////
@@ -169,19 +159,25 @@
 // 子層欄寬（均分）: @include flex-col-equal(欄數, margin , padding);
 // 子層欄寬（自由）: @include flex-col(欄數, margin , padding);
 
-// .customize-1 ~ 12 : 算式：100% / 欄數，        這裡的『欄數』是『分母』的概念。
-// .customize-free   : 算式： (100% / 12) * 欄數，這裡的『欄數』是『 12 格內佔幾欄 』。
-
-
 // step 1、啟動 flex
 .flex-equal-2,
 .flex-equal-3,
 .flex-equal-4,
 .flex-equal-5,
+.flex-equal-5-3-1,
 .flex-equal-6,
+.flex-equal-6-4-2,
+.flex-equal-6-3-1,
+.flex-equal-6-2,
 .flex-equal-7,
 .flex-equal-8,
+.flex-equal-8-6-4,
+.flex-equal-8-5-3,
+.flex-equal-8-5-2,
 .flex-equal-9,
+.flex-equal-9-6-3,
+.flex-equal-9-5-4,
+.flex-equal-9-4-2,
 .flex-equal-10,
 .flex-equal-11,
 .flex-equal-12,
@@ -365,6 +361,30 @@
     }
 }
 
+.flex-equal-5-3-1{
+    .Flex-set{
+        @include gutter();
+        .col{
+            @include flex-col-equal(5, 5px, 20px);
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            margin: 4px 0;
+            // ---------------------- end
+        }
+    }
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(3, 4px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(1, 4px, 20px); }
+        }
+    }
+}
+
 .flex-equal-6{
     .Flex-set{
         // 方向、是否斷點
@@ -394,6 +414,53 @@
             .col{
                 @include flex-col-equal(1, 0px, 20px);
             }
+        }
+    }
+}
+.flex-equal-6-4-2,
+.flex-equal-6-3-1,
+.flex-equal-6-2{
+    .Flex-set{
+        @include gutter();
+        .col{
+            @include flex-col-equal(6, 10px, 20px);
+            // 自定義 ----------------- start
+            background: #09a20f;
+            color: #fff;
+            margin: 4px 0;
+            // ---------------------- end
+        }
+    }
+}
+.flex-equal-6-4-2{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(4, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(2, 10px, 20px); }
+        }
+    }
+}
+.flex-equal-6-3-1{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(3, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            @include gutter(0);
+            .col{ @include flex-col-equal(1, 0px, 20px); }
+        }
+    }
+}
+.flex-equal-6-2{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(2, 10px, 20px); }
         }
     }
 }
@@ -463,6 +530,57 @@
     }
 }
 
+.flex-equal-8-6-4,
+.flex-equal-8-5-3,
+.flex-equal-8-5-2{
+    .Flex-set{
+        .col{
+            @include flex-col-equal(8, 5px, 20px);
+            // 自定義 ----------------- start
+            background: #00bcd4;
+            color: #fff;
+            margin: 4px 0;
+            // ---------------------- end
+        }
+    }
+}
+.flex-equal-8-6-4{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(6, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(4, 10px, 20px); }
+        }
+    }
+}
+.flex-equal-8-5-3{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(5, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(3, 10px, 20px); }
+        }
+    }
+}
+.flex-equal-8-5-2{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(5, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(2, 10px, 20px); }
+        }
+    }
+}
+
 .flex-equal-9{
     .Flex-set{
         // 方向、是否斷點
@@ -495,6 +613,58 @@
         }
     }
 }
+.flex-equal-9-6-3,
+.flex-equal-9-5-4,
+.flex-equal-9-4-2{
+    .Flex-set{
+        .col{
+            @include flex-col-equal(9, 5px, 20px);
+            // 自定義 ----------------- start
+            background: #485b8a;
+            color: #fff;
+            margin: 4px 0;
+            // ---------------------- end
+        }
+    }
+}
+
+.flex-equal-9-6-3{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(6, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(3, 10px, 20px); }
+        }
+    }
+}
+.flex-equal-9-5-4{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(5, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(4, 10px, 20px); }
+        }
+    }
+}
+.flex-equal-9-4-2{
+    @include screen('tablet') {
+        .Flex-set{
+            .col{ @include flex-col-equal(4, 10px, 20px); }
+        }
+    }
+    @include screen('mobile') {
+        .Flex-set{
+            .col{ @include flex-col-equal(2, 10px, 20px); }
+        }
+    }
+}
+
 
 .flex-equal-10{
     .Flex-set{

@@ -4,6 +4,7 @@ h1.title, h2.title {
   line-height: 1.25em;
   margin: .4em 0;
 }
+// .tt{ color: #222; }
 .cp {
   .pic {
     float: left;
@@ -266,7 +267,7 @@ h1.title, h2.title {
   display: flex;
   flex-wrap:wrap;
   @extend %clearfix;
-  @include box-sizing;
+  box-sizing: border-box;
 
   li {
     flex:1 1 calc(100% / 3);

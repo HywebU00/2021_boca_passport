@@ -37,7 +37,7 @@ a.goCenter {
         font-size: .813em;
         margin: 0 .5em .5em;
         border-radius: 4px;
-        @include box-sizing;
+        box-sizing: border-box;
         a {
             color: $primaryColor;
             &:hover, &:focus {

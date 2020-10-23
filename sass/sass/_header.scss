@@ -36,7 +36,7 @@
         background: transparent;
         border: none;
         box-shadow: none;
-        @include box-sizing;
+        box-sizing: border-box;
         @include screen('mobile') {
             display: block !important;
         }
@@ -92,7 +92,7 @@
         height: 75px;
         margin: 0;
         padding: 0;
-        @include box-sizing;
+        box-sizing: border-box;
         a {
             display: inline-block;
         }
@@ -170,7 +170,7 @@
     vertical-align: top;
     font-size: .938em;
     margin: 1em .5em;
-    @include box-sizing;
+    box-sizing: border-box;
 
     @include screen('mobile') {
         display: none;

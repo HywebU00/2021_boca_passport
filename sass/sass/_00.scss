@@ -39,6 +39,7 @@
 
 // 4、清除li格式（ ../sass/mixins/_li-reset.scss）
 @include li-reset;							// 清除li預設
+@include img-responsive;					// 圖片
 
 
 // 5、格線系統（ ../sass/mixins/_bootstrap-grid.scss）

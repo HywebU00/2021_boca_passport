@@ -8,10 +8,11 @@ $form_title_width :150px; // 表單title寬度
     background: #fff;
     vertical-align: middle;
     margin: 0 .3em .3em;
-    @include box-sizing;
+    box-sizing: border-box;
     @include border-radius($f_radius);
-    @include transition(border, .2s, ease-out);
-    @include transition(box-shadow, .2s, ease-out);
+    // @include transition(border, .2s, ease-out);
+    // @include transition(box-shadow, .2s, ease-out);
+    transition: all .3s ease-out;
 
     // @include screen('mobile') {
     //     margin: 0 0 .3em 0;

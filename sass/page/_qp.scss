@@ -1,5 +1,5 @@
 .qp{
 	margin: 1em auto;
-	@include box-sizing;
+	box-sizing: border-box;	
 	padding:1em;
 }

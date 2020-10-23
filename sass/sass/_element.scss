@@ -110,7 +110,9 @@ a.more {
 }
 
 // img
-img.img-responsive {}
+img.img-responsive {
+  @include img-responsive;
+}
 // 表單必填
 .necessary {
   color: red;

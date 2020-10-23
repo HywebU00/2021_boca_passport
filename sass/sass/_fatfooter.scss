@@ -9,7 +9,7 @@
     }
     .container {
         overflow: hidden;
-        @include box-sizing;
+        box-sizing: border-box;
         @include gutter;
     }
     // 按鈕
@@ -63,7 +63,7 @@
         display: block;
         position: relative;
         padding: 3em 0 0 2em;
-        @include box-sizing;
+        box-sizing: border-box;
 
         ul {
             display: flex;
@@ -71,14 +71,14 @@
 
             li {
                 flex:1 1 16%;
-                @include box-sizing;
+                box-sizing: border-box;
 
                 a {
                     line-height: 1.5;
                     display: block;
                     font-weight: bold;
                     padding: .5em 0px;
-                    @include box-sizing;
+                    box-sizing: border-box;
                     &:hover{
                         box-shadow: none;
                     }

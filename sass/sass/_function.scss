@@ -10,7 +10,7 @@ $function_color:#888;
     display: inline-block;
 }
 div.function{
-    @include box-sizing;
+    box-sizing: border-box;
     @extend %clearfix;
     margin: .5em 0;
     ul {
@@ -100,7 +100,7 @@ div.function{
                 flex:0 0 40px;
                 a {
                     display: block;
-                    @include box-sizing;
+                    box-sizing: border-box;
                     width: 40px;
                     height: 40px;
                     text-align: center;

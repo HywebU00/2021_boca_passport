@@ -28,7 +28,7 @@
         // width: 20%;
         @media (max-width: 991px) {}
     }
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     @media print {
         display: none;
     }
@@ -81,7 +81,7 @@
                 span{
                     font-weight: normal;
                 }
-                @include box-sizing(border-box);
+                box-sizing: border-box;
                 &:before {
                     content: "";
                     position: absolute;
@@ -238,7 +238,7 @@
                         font-weight: bold;
                         position: relative;
                         border-bottom: 1px solid RGBA(255, 255, 255, .4);
-                        @include box-sizing(border-box);
+                        box-sizing: border-box;
                         &:before {
                             content: "";
                             position: absolute;

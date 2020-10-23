@@ -1,5 +1,5 @@
 .menu {
-    @include box-sizing;
+    box-sizing: border-box;
     position: relative;
     z-index: 99;
     // 預設選單 ul
@@ -135,7 +135,7 @@
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
-    @include box-sizing;
+    box-sizing: border-box;
     .menu {
         display: block;
     }
@@ -167,7 +167,7 @@
             background: $primaryColor;
             padding: 0 1em;
             line-height: 3em;
-            @include box-sizing;
+            box-sizing: border-box;
         }
         width:280px;
         padding: 3em 0;
@@ -181,7 +181,7 @@
         z-index: 9999;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
-        @include box-sizing;
+        box-sizing: border-box;
         .menu {
             width: 100%;
             @include box-shadow(0px 0px 4px RGBA(0, 0, 0, .4));
@@ -296,7 +296,7 @@
                 width: 50%;
                 margin: 0;
                 padding: 0;
-                @include box-sizing;
+                box-sizing: border-box;
                 &:nth-child(odd):last-child {
                     width: 100%;
                 }
@@ -310,7 +310,7 @@
                     font-weight: bold;
                     text-decoration: none;
                     border: 1px solid rgba(255, 255, 255, .5);
-                    @include box-sizing;
+                    box-sizing: border-box;
                     &:nth-child(odd) {
                         border-left: none;
                         border-top: none;

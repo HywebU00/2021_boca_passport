@@ -29,7 +29,7 @@
  .cascading {
      border-top: 1px solid #CCC;
      @include gutter;
-     @include box-sizing;
+     box-sizing: border-box;
      ul {
          @include li-reset;
      }
@@ -39,7 +39,7 @@
          display: inline-block;
          vertical-align: top;
          margin: 0 -5px 1em 0; // margin-right:改為負5;
-         @include box-sizing;
+         box-sizing: border-box;
          padding: 0px .5em;
          a {
              margin: .2em 0;

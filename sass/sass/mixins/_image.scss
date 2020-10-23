@@ -1,3 +1,10 @@
+// https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_image.scss
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
 //https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
 @mixin aspect-ratio($width, $height) {
     overflow: hidden;

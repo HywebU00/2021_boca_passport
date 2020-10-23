@@ -3,7 +3,7 @@
         max-width: $fatFooterMaxWidth;
         >ul>li {
             $fatFooterWidth: 100%;
-            @include box-sizing(border-box);
+            box-sizing: border-box;
             width: $fatFooterWidth / $fatFooterliLength;
             @include screen("mobile") {
                 width: 95%;
