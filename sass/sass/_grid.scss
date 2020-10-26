@@ -12,7 +12,7 @@
         line-height: 200px;
         font-size: 1.5em;
         font-weight: bold;
-        @include box-sizing();
+        box-sizing: border-box;
     }
     &+.demosection {
         padding-top: 2em;

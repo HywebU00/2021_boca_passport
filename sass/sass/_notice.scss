@@ -32,9 +32,9 @@
         top: .8em;
         right: 1em;
         display: block;
-        @include opacity(.5);
+        opacity: .5;
         &:hover, &:focus {
-            @include opacity(1);
+            opacity: 1;
         }
         img {
             display: block;

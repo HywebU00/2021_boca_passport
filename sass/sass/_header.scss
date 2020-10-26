@@ -273,7 +273,7 @@
             margin-top: .5em;
             border-top: dotted 1px #999;
 
-            @include box-sizing();
+            box-sizing: border-box;
             input {
                 width: 100% !important;
                 padding: .6em .5em !important;

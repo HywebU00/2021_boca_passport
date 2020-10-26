@@ -1,6 +1,6 @@
 // 基本樣式
 .share {
-    @include box-sizing();
+    box-sizing: border-box;
     margin: .5em 0;
     ul {
         @include li-reset;
@@ -27,7 +27,7 @@
 // 放進function_panel樣式
 .function_panel {
     .share {
-        @include box-sizing();
+        box-sizing: border-box;
         text-align: center;
         height: 40px;
         margin: 0;

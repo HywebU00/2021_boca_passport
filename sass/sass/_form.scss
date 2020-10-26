@@ -9,9 +9,7 @@ $form_title_width :150px; // 表單title寬度
     vertical-align: middle;
     margin: 0 .3em .3em;
     box-sizing: border-box;
-    @include border-radius($f_radius);
-    // @include transition(border, .2s, ease-out);
-    // @include transition(box-shadow, .2s, ease-out);
+    border-radius: $f_radius;
     transition: all .3s ease-out;
 
     // @include screen('mobile') {
@@ -671,7 +669,7 @@ input[type="checkbox"]:checked {
     background-position: center center;
     background-size: 98%;
     box-shadow: $form-focus 0 0 0 1px;
-    @include border-radius(2px);
+    border-radius: 2px;
 }
 
 input[type="radio"]:checked {
@@ -727,7 +725,7 @@ input[type="checkbox"]:focus {
         @extend %btn;
         @include btn_setting($form-focus, #FFF);
         padding: .2em 1em !important;
-        @include border-radius(4px);
+        border-radius: 4px;
 
         &:hover,
         &:focus {

@@ -16,7 +16,7 @@
         padding: .4em 1em;
         display: block;
         color: #333;
-        @include box-sizing();
+        box-sizing: border-box;
         border-radius:4px;
         &:hover,
         &:focus {

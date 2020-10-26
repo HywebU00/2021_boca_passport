@@ -22,7 +22,7 @@
             list-style: none;
             flex:0 0 40px;
 
-            @include box-sizing();
+            box-sizing: border-box;
             a {
                 border-radius: 5px;
                 padding: 6px 10px;

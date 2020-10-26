@@ -1,11 +1,11 @@
 img {
     &.img_rounded {
         //導角，可自訂
-        @include border-radius($rounded-angle);
+        border-radius: $rounded-angle;
     }
     &.img_circle {
         //圓形
-        @include border-radius(50%);
+        border-radius: 50%;
     }
     &:not([src]) {
         visibility: hidden;
