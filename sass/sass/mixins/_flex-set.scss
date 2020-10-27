@@ -14,17 +14,22 @@
     &:last-child{ margin-right: 0 !important; }
   } @else if $col == 2 {
     &:last-child{
-      &:nth-child(2n),
-      &:nth-child(3n-1),
-      &:nth-child(4n-3){ margin-right: 0; }
+      &:nth-child(2n-1),
+      &:nth-child(4n-3),
+      &:nth-child(5n-3){ margin-right: 0 !important; }
     }
   } @else if $col == 3 {
-    @for $i from 1 through 2 {
-      &:last-child{
-        &:nth-child(3n-3){ margin-right: 0 !important; }
-        &:nth-child(3n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+    &:last-child{
+        &:nth-child(3n-3),
+        &:nth-child(6n-3), &:nth-child(6n-5){ margin-right: 0 !important; }
+        &:nth-child(3n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
       }
-    }
+    // @for $i from 1 through 2 {
+    //   &:last-child{
+    //     // &:nth-child(3n-3){ margin-right: 0 !important; }
+    //     &:nth-child(3n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+    //   }
+    // }
   } @else if $col == 4 {
     @for $i from 1 through 3 {
       &:last-child{
@@ -77,7 +82,7 @@
   } @else if $col == 11 {
     @for $i from 1 through 10 {
       &:last-child{
-        &:nth-child(11n-11){ margin-right: 0; }
+        &:nth-child(11n){ margin-right: 0; }
         &:nth-child(11n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
       }
     }

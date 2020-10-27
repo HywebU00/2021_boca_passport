@@ -5,7 +5,8 @@
 @import "mixins/_text-overflow"; 		//ellipsis 文字刪節號
 @import "mixins/_li-reset"; 			//清除li格式
 @import "mixins/_bootstrap-grid"; 		//格線系統
-@import "mixins/_flex-set"; 		    //flex格線系統 for迴圈
+// @import "mixins/_flex-set"; 		    //flex格線系統 for迴圈
+@import "mixins/_flex-set_origi2"; 		//flex格線系統 
 // @import "mixins/_make-column"; 		//原生bs格線系統(沒有必要用不用匯入)
 
 // 客製化

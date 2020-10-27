@@ -1,0 +1,152 @@
+// 父層啟動flex： @extend %flex_setting;
+
+
+// 子層 - 平均欄寬
+@mixin flex-col-equal($col, $m-gutter, $p-gutter) {
+  // 啟動計算公式 ------
+  // 欄數（$col）、欄距（$m-gutter）
+  flex-basis: calc(100% / #{$col} - #{$m-gutter});
+  max-width: calc(100% / #{$col} - #{$m-gutter});
+  padding: 0 calc(#{$p-gutter}/2);
+
+  @if $col == 1 {
+    &:last-child{ margin-right: 0 !important; }
+  } @else if $col == 2 {
+    &:last-child{                     
+      &:nth-child(2n-1),
+      &:nth-child(11n-2){ margin-right: 0 !important; }
+    }
+  } @else if $col == 3 {
+    &:last-child{
+      &:nth-child(3n){ margin-right: 0; }
+      &:nth-child(3n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(3n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 4 {
+    &:last-child{
+      // &:nth-child(4n-4){ margin-right: 0; }
+      &:nth-child(4n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(4n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(4n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 5 {
+    &:last-child{
+      // &:nth-child(5n-5){ margin-right: 0; }
+      &:nth-child(5n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(5n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(5n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(5n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 6 {
+    &:last-child{
+      // &:nth-child(6n-6){ margin-right: 0; }
+      &:nth-child(6n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(6n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(6n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(6n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(6n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+
+    }
+  } @else if $col == 7 {
+    &:last-child{
+      // &:nth-child(7n-7){ margin-right: 0; }
+      &:nth-child(7n-6){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*6 + (#{$m-gutter}*#{$col})*6 / (#{$col} - 1) ); }
+      &:nth-child(7n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(7n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(7n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(7n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(7n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 8 {
+    &:last-child{
+      // &:nth-child(8n-8){ margin-right: 0; }
+      &:nth-child(8n-7){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*7 + (#{$m-gutter}*#{$col})*7 / (#{$col} - 1) ); }
+      &:nth-child(8n-6){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*6 + (#{$m-gutter}*#{$col})*6 / (#{$col} - 1) ); }
+      &:nth-child(8n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(8n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(8n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(8n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(8n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 9 {
+    &:last-child{
+      // &:nth-child(9n-9){ margin-right: 0; }
+      &:nth-child(9n-8){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*8 + (#{$m-gutter}*#{$col})*8 / (#{$col} - 1) ); }
+      &:nth-child(9n-7){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*7 + (#{$m-gutter}*#{$col})*7 / (#{$col} - 1) ); }
+      &:nth-child(9n-6){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*6 + (#{$m-gutter}*#{$col})*6 / (#{$col} - 1) ); }
+      &:nth-child(9n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(9n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(9n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(9n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(9n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 10 {
+    &:last-child{
+      // &:nth-child(10n-9){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*9 + (#{$m-gutter}*#{$col})*9 / (#{$col} - 1) ); }
+      &:nth-child(10n-8){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*8 + (#{$m-gutter}*#{$col})*8 / (#{$col} - 1) ); }
+      &:nth-child(10n-7){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*7 + (#{$m-gutter}*#{$col})*7 / (#{$col} - 1) ); }
+      &:nth-child(10n-6){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*6 + (#{$m-gutter}*#{$col})*6 / (#{$col} - 1) ); }
+      &:nth-child(10n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(10n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(10n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(10n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(10n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 11 {
+    &:last-child{
+      &:nth-child(11n){ margin-right: 0; }
+      &:nth-child(11n-10){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*10 + (#{$m-gutter}*#{$col})*10 / (#{$col} - 1) ); }
+      &:nth-child(11n-9){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*9 + (#{$m-gutter}*#{$col})*9 / (#{$col} - 1) ); }
+      &:nth-child(11n-8){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*8 + (#{$m-gutter}*#{$col})*8 / (#{$col} - 1) ); }
+      &:nth-child(11n-7){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*7 + (#{$m-gutter}*#{$col})*7 / (#{$col} - 1) ); }
+      &:nth-child(11n-6){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*6 + (#{$m-gutter}*#{$col})*6 / (#{$col} - 1) ); }
+      &:nth-child(11n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(11n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(11n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(11n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(11n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  } @else if $col == 12 {
+    &:last-child{
+      &:nth-child(12n){ margin-right: 0; }
+      &:nth-child(12n-11){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*11 + (#{$m-gutter}*#{$col})*11 / (#{$col} - 1) ); }
+      &:nth-child(12n-10){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*10 + (#{$m-gutter}*#{$col})*10 / (#{$col} - 1) ); }
+      &:nth-child(12n-9){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*9 + (#{$m-gutter}*#{$col})*9 / (#{$col} - 1) ); }
+      &:nth-child(12n-8){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*8 + (#{$m-gutter}*#{$col})*8 / (#{$col} - 1) ); }
+      &:nth-child(12n-7){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*7 + (#{$m-gutter}*#{$col})*7 / (#{$col} - 1) ); }
+      &:nth-child(12n-6){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*6 + (#{$m-gutter}*#{$col})*6 / (#{$col} - 1) ); }
+      &:nth-child(12n-5){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*5 + (#{$m-gutter}*#{$col})*5 / (#{$col} - 1) ); }
+      &:nth-child(12n-4){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*4 + (#{$m-gutter}*#{$col})*4 / (#{$col} - 1) ); }
+      &:nth-child(12n-3){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*3 + (#{$m-gutter}*#{$col})*3 / (#{$col} - 1) ); }
+      &:nth-child(12n-2){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*2 + (#{$m-gutter}*#{$col})*2 / (#{$col} - 1) ); }
+      &:nth-child(12n-1){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*1 + (#{$m-gutter}*#{$col})*1 / (#{$col} - 1) ); }
+    }
+  }
+}
+
+// 子層 - 自訂欄寬
+@mixin flex-col($col, $m-gutter, $p-gutter) {
+  // 啟動計算公式 ------
+  // 佔欄數（$col）、欄距（$m-gutter）
+  // width ＝ 100% / 12 * 佔幾欄 - 欄距
+  flex-basis: calc(100% / 12 * #{$col} - #{$m-gutter});
+  max-width: calc(100% / 12 * #{$col} - #{$m-gutter});
+  padding: 0 calc(#{$p-gutter}/2);
+}
+
+// 範例：
+// 子層 - 平均欄寬
+// .col{
+//   @include flex-col-equal(欄數, margin, padding);
+// }
+// 子層 - 自訂欄寬
+// .col{
+//   @include flex-col(欄數, margin, padding);
+// }
+
+
+
+
+
+
+
