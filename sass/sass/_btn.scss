@@ -1,5 +1,5 @@
 // 按鈕設定
-$btn-font-color:$color-word;
+$btn-font-color:$btn-word;
 $btn-border:darken($btn-font-color, 5);
 $btn-padding:.5em 1.5em;
 $btn-radius:.2em;
@@ -154,15 +154,13 @@ $btn-radius:.2em;
 }
 
 .disabled, [disabled] {
-    pointer-events: none;
     opacity: .5;
-    cursor: not-allowed;
+    cursor: not-allowed!important;
     text-shadow:none;
 }
 .readonly, [readonly] {
-    pointer-events: none;
     opacity: .5;
-    cursor: not-allowed;
+    cursor: not-allowed!important;
     text-shadow:none;
 }
 

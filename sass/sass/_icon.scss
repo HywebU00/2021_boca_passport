@@ -15,13 +15,7 @@
         margin-bottom: .1em;
     }
 }
-// 反轉
-.invert {
-    &:before {
-        -webkit-filter: invert(100%);
-        filter: invert(100%);
-    }
-}
+
 .i_add {
     @include hyui_icon('icon_add');
 }
@@ -165,4 +159,150 @@
 }
 .i_reflash{
     @include hyui_icon('icon_reflash');
+}
+
+//白色icon
+.i_add2 {
+    @include hyui_icon('icon_add2');
+}
+.i_apple2 {
+    @include hyui_icon('icon_apple2');
+}
+.i_arrow_left2 {
+    @include hyui_icon('icon_arrow_left2');
+}
+.i_arrow_right2 {
+    @include hyui_icon('icon_arrow_right2');
+}
+.i_arrow_up2 {
+    @include hyui_icon('icon_arrow_up2');
+}
+.i_arrow_down2 {
+    @include hyui_icon('icon_arrow_down2');
+}
+.i_bookmark2 {
+    @include hyui_icon('icon_bookmark2');
+}
+.i_chat2 {
+    @include hyui_icon('icon_chat2');
+}
+.i_check2 {
+    @include hyui_icon('icon_check2');
+}
+.i_clock2 {
+    @include hyui_icon('icon_clock2');
+}
+.i_close2 {
+    @include hyui_icon('icon_close2');
+}
+.i_edit2 {
+    @include hyui_icon('icon_edit2');
+}
+.i_facebook2 {
+    @include hyui_icon('icon_facebook2');
+}
+.i_googleplus2 {
+    @include hyui_icon('icon_googleplus2');
+}
+.i_grid2 {
+    @include hyui_icon('icon_grid2');
+}
+.i_heart2 {
+    @include hyui_icon('icon_heart2');
+}
+.i_home2 {
+    @include hyui_icon('icon_home2');
+}
+.i_info2 {
+    @include hyui_icon('icon_info2');
+}
+.i_link2 {
+    @include hyui_icon('icon_link2');
+}
+.i_linkedin2 {
+    @include hyui_icon('icon_linkedin2');
+}
+.i_lock2 {
+    @include hyui_icon('icon_lock2');
+}
+.i_mail2 {
+    @include hyui_icon('icon_mail2');
+}
+.i_rss2 {
+    @include hyui_icon('icon_rss2');
+}
+.i_setting2 {
+    @include hyui_icon('icon_setting2');
+}
+.i_star2 {
+    @include hyui_icon('icon_star2');
+}
+.i_twitter2 {
+    @include hyui_icon('icon_twitter2');
+}
+.i_video2 {
+    @include hyui_icon('icon_video2');
+}
+.i_vimeo2 {
+    @include hyui_icon('icon_vimeo2');
+}
+.i_youtube2 {
+    @include hyui_icon('icon_youtube2');
+}
+.i_global2 {
+    @include hyui_icon('icon_global2');
+}
+.i_trash2 {
+    @include hyui_icon('icon_trash2');
+}
+.i_sort2 {
+    @include hyui_icon('icon_sort2');
+}
+.i_move2 {
+    @include hyui_icon('icon_move2');
+}
+.i_layout2 {
+    @include hyui_icon('icon_layout2');
+}
+.i_copy2 {
+    @include hyui_icon('icon_copy2');
+}
+.i_view2 {
+    @include hyui_icon('icon_view2');
+}
+.i_man2 {
+    @include hyui_icon('icon_man2');
+}
+.i_calendar2 {
+    @include hyui_icon('icon_calendar2');
+}
+.i_search2 {
+    @include hyui_icon('icon_search2');
+}
+.i_pick2 {
+    @include hyui_icon('icon_pick2');
+}
+.i_calendar_color2 {
+    @include hyui_icon('icon_calendar_color2');
+}
+.i_dot2{
+    @include hyui_icon('icon_dot2');
+}
+.i_photo2{
+    @include hyui_icon('icon_photo2');
+}
+.i_order2{
+    @include hyui_icon('icon_order2');
+}
+.i_top2{
+    @include hyui_icon('icon_top2');
+}
+.i_minus2{
+    @include hyui_icon('icon_minus2');
+}
+.i_play2{
+    @include hyui_icon('icon_play2');
+}
+.i_reflash2{
+    @include hyui_icon('icon_reflash2');
 }

@@ -31,7 +31,8 @@
                 white-space: nowrap;
                 font-size: 1em;
                 color: $color-word;
-                @include gradient (#F7F7F7, #EAEAEA, vertical);
+                // @include gradient (#F7F7F7, #EAEAEA, vertical);
+                background: #eee;
                 border: #ccc solid 1px;
                 &:hover,
                 &:focus {

@@ -34,14 +34,9 @@ body {
   .main {
     position: relative;
     margin: 0 auto;
-    padding: 10em 0 0 0;
+    padding:  1em 0 0 0;
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
-    @include screen('tablet') {
-      padding: 12em 0 0 0;
-    }
-    @include screen('mobile') {
-      padding-top: 55px;
-    }
+
     h2 {
       line-height: 1.25em;
     }
@@ -49,10 +44,7 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-  padding-top: 12rem;
-  @include screen('mobile') {
-    padding-top: 5em;
-  }
+
   >.container {
         @include gutter(); //gutter 代表左右要留白
         display: flex;
