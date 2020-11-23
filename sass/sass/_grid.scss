@@ -258,7 +258,7 @@
         flex-flow: row wrap;
 
         .col{
-            @include flex-col-equal(3, 10px, 30px);
+            @include flex-col-equal(3, 10px, 20px);
             // 自定義 ----------------- start
             background: #af2333;
             color: #fff;
@@ -278,9 +278,10 @@
     }
     @include screen('tablet') {
         .Flex-set{
-            @include gutter(60px);
+            @include gutter(2em);
             .col{
-                @include flex-col-equal(2, 1%, 0px);
+                @include flex-col-equal(2, 10px, 0px);
+                &:nth-child(3n-2){ border: dashed 8px #222; }
             }
 
             .thumbnail{
@@ -317,7 +318,7 @@
     @include screen('tablet') {
         .Flex-set{
             .col{
-                @include flex-col-equal(2, 6px, 1em);
+                @include flex-col-equal(3, 6px, 1em);
             }
         }
     }
@@ -325,7 +326,7 @@
         .Flex-set{
             @include gutter(30px);
             .col{
-                @include flex-col-equal(1, 0px, 1em);
+                @include flex-col-equal(2, 4px, 1em);
             }
         }
     }
@@ -347,18 +348,18 @@
     }
     @include screen('tablet') {
         .Flex-set{
-            @include gutter(60px);
+            @include gutter(40px);
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                @include flex-col-equal(3, 10px, 20px);
+                @include flex-col-equal(4, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                @include flex-col-equal(1, 0px, 10px);
+                @include flex-col-equal(2, 4px, 10px);
             }
         }
     }
@@ -408,14 +409,14 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                @include flex-col-equal(3, 10px, 20px);
+                @include flex-col-equal(4, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                @include flex-col-equal(1, 0px, 20px);
+                @include flex-col-equal(2, 4px, 20px);
             }
         }
     }
@@ -487,14 +488,14 @@
             .col{
                 margin-top: .25em;
                 margin-bottom: .25em;
-                @include flex-col-equal(3, 10px, 20px);
+                @include flex-col-equal(4, 10px, 20px);
             }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             .col{
-                @include flex-col-equal(1, 0px, 20px);
+                @include flex-col-equal(3, 2px, 20px);
             }
         }
     }
@@ -735,7 +736,7 @@
     @include screen('mobile') {
         .Flex-set{
             .col{
-                @include flex-col-equal(1, 0px, 20px);
+                @include flex-col-equal(2, 2px, 20px);
             }
         }
     }
@@ -761,12 +762,12 @@
 .flex-equal-12{
     @include screen('tablet') {
         .Flex-set{
-            .col{ @include flex-col-equal(3, 10px, 20px); }
+            .col{ @include flex-col-equal(7, 10px, 20px); }
         }
     }
     @include screen('mobile') {
         .Flex-set{
-            .col{ @include flex-col-equal(1, 0px, 20px); }
+            .col{ @include flex-col-equal(5, 4px, 20px); }
         }
     }
 }
