@@ -19,11 +19,45 @@
     transition: .3s ease-out;
     &:hover, &:focus {
         border: none !important;
-        outline:none;
+        outline: none;
         box-shadow: 0px 0px 0px 1px $aHover inset;
     }
 }
-
+// slick dots 
+.slick-dots {
+    li {
+        button {
+            /* 點的原來顏色 */
+            &:before {
+                background: #666;
+            }
+            /* 點 hover,focus 的樣式 */
+            &:hover {
+                &:before {}
+            }
+            &:focus {
+                &:before {}
+            }
+        }
+        &.slick-active {
+            button {
+                /* 點 active 的樣子 */
+                &:before {
+                    background: $aHover;
+                }
+                /* 點 active : hover, focus的樣子 */
+                &:hover {
+                    &:before {}
+                }
+                &:focus {
+                    &:before {
+                        background: #ff3e4d;
+                    }
+                }
+            }
+        }
+    }
+}
 // slick._scss
 // 首頁大圖輪播 
 .mpSlider {
@@ -49,7 +83,6 @@
         }
     }
 }
-
 // slick._scss
 // adSlider
 .adSlider {
@@ -60,11 +93,11 @@
     }
     .slick-prev {
         left: -15px;
-        top:50%;
+        top: 50%;
     }
     .slick-next {
         right: -15px;
-        top:50%;
+        top: 50%;
     }
     .img-container {
         width: 165px;
@@ -75,39 +108,6 @@
             img {
                 margin: 0 auto;
                 object-fit: contain;
-            }
-        }
-    }
-}
-// slick dots
-.slick-dots {
-    li {
-        button {
-            &:hover,
-            &:focus {
-                border: none !important;
-                &:before {
-                    background: adjust_hue(saturate(lighten($aHover, 7), 18), -17);
-                    box-shadow: 0px 0px 0px 1px adjust_hue(saturate(lighten($aHover, 7), 18), -17);
-                }
-            }
-            &:before {
-                background: #666;
-            }
-        }
-        &.slick-active {
-            button {
-                &:before {
-                    background: $aHover;
-                }
-                &:hover,
-                &:focus {
-                    &:before {
-                        opacity: .9;
-                        color: black;
-                        background: adjust_hue(saturate(lighten($aHover, 7), 18), -17);
-                    }
-                }
             }
         }
     }
@@ -125,7 +125,6 @@
     clear: both;
     .cp_slider {
         @include gutter;
-
     }
     .img-container {
         margin: 0px 15px;
@@ -197,9 +196,8 @@
     background: #fff;
     padding: 1em 0;
     clear: both;
-    .cppic_slider{
+    .cppic_slider {
         @include gutter;
-
     }
     .img-container {
         margin: 0px 15px;

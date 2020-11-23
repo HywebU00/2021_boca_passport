@@ -59,15 +59,16 @@
                 display: block;
                 outline: none;
                 text-decoration: none;
-
             }
+            // 第二層選單樣式
             ul {
                 // display: none;
                 display: flex;
                 overflow: visible;
                 width: 100%;
-                background: rgba(0, 0, 0, 0.8);
-                padding: 20px;
+                background: rgba(0, 0, 0, .8);
+                padding: 15px;
+                margin: 0;
                 z-index: 999999;
                 position: absolute;
                 top: auto;
@@ -77,12 +78,11 @@
                 text-align: left;
                 align-items: flex-start;
                 flex-wrap: wrap;
-                // 第二層選單樣式
                 li {
                     flex: none;
                     flex-basis: 23%;
-                    margin:0 1%;
-
+                    margin: 0 1%;
+                    padding: 0;
                     a {
                         padding: .6em 1.2em;
                         color: #FFF;
@@ -90,6 +90,33 @@
                         box-sizing: border-box;
                         &:hover, &:focus {
                             background: $aHover;
+                        }
+                    }
+                    // 第三層選單樣式
+                    ul {
+                        margin: 0 0 20px;
+                        padding: 0!important;
+                         background: #fff;
+                        li {
+                            margin: 0;
+                            padding: 0;
+                            a{
+                                padding: .8em 1.2em;
+                                color:#000;
+                                &:hover, &:focus{
+                                    color:#fff;
+                                }
+                            }
+                            ul {
+                                margin: 0;
+                                padding: 0!important;
+                                li{
+                                    a{
+                                        padding: .8em 1.2em .8em 2.2em;
+                                    }
+                                    
+                                }
+                            }
                         }
                     }
                 }
@@ -137,7 +164,7 @@
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     box-sizing: border-box;
-    .megamenu  {
+    .megamenu {
         display: block;
     }
     >.menu_overlay {
@@ -234,10 +261,9 @@
                         display: none;
                         position: relative;
                         width: 100%;
-                        padding:0;
+                        padding: 0;
                         background-color: transparent;
                         font-size: 0.938em;
-
                         li {
                             a {
                                 display: block;

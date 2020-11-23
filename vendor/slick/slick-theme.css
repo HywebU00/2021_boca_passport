@@ -1,1 +1,151 @@
-@charset "utf-8"; .slick-loading .slick-list {background: #fff url('./ajax-loader.gif') center center no-repeat; } .slick-prev, .slick-next {font-size: 0em; line-height: 0em; position: absolute; top: 45%; display: block; width: 40px !important; height: 60px !important; padding: 0 !important; min-width: auto; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); z-index: 2; cursor: pointer; border: none; outline: none; border: none; background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .5); background-size: 30px 30px; box-shadow: none; } .slick-next {background: url(icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, .5); background-size: 30px 30px; } .slick-prev:hover, .slick-prev:focus {color: transparent; border: none; background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .8); background-size: 30px 30px; } .slick-next:hover, .slick-next:focus {color: transparent; border: none; background: url(icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, .8); background-size: 30px 30px; } .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {opacity: 1; } .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {opacity: .25; } .slick-prev:before, .slick-next:before {opacity: .75; } .slick-prev {left: 25px; } [dir='rtl'] .slick-prev {right: 0px; left: auto; } .slick-prev:before {content: ''; } [dir='rtl'] .slick-prev:before {content: ''; } .slick-next {right: 25px; } [dir='rtl'] .slick-next {right: auto; left: 0px; } .slick-next:before {content: ''; } [dir='rtl'] .slick-next:before {content: ''; } .slick-dotted.slick-slider {} .slick-dots {position: absolute; bottom: 5px; display: block; width: 100%; padding: 0 35px; margin: 0; z-index: 9; list-style: none; text-align: center; box-sizing: border-box; } @media screen and (max-width:767px) {.slick-dots {bottom: 15px; text-align: center; } } .slick-dots li {position: relative; display: inline-block; width: 15px; height: 15px; margin: 0 10px; padding: 0; cursor: pointer; } .slick-dots li button {font-size: 0em; line-height: 0em; display: block; width: 15px; height: 15px; cursor: pointer; color: transparent; border: 0; outline: none; background: transparent; box-shadow: none !important; } .slick-dots li button:hover, .slick-dots li button:focus {outline: none; } .slick-dots li button:hover:before, .slick-dots li button:focus:before {opacity: 1; background: #21baff; box-shadow: 0px 0px 0px 1px #21baff; } .slick-dots li button:before {font-size: 0em; position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-radius: 50%; background: #666; content: ''; text-align: center; opacity: .4; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } .slick-dots li.slick-active button:before {opacity: .9; color: black; background: #21baff; }
+@charset "utf-8";
+.slick-loading .slick-list {
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+/* ---箭頭的樣式--- */
+.slick-prev, .slick-next {
+    font-size: 0em;
+    line-height: 0em;
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 40px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    min-width: auto;
+    /* -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); */
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .5);
+    background-size: 30px 30px;
+    box-shadow: none;
+}
+/* 上一則 位置*/
+.slick-prev {
+    left: 25px;
+}
+/* 下一則 位置 圖片*/
+.slick-next {
+    right: 25px;
+    background: url(icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, .5);
+    background-size: 30px 30px;
+}
+/* 箭頭 hover及focus 樣式 */
+.slick-prev:hover, .slick-prev:focus {
+    background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .8);
+    background-size: 30px 30px;
+}
+.slick-next:hover, .slick-next:focus {
+    background: url(icon_arrow_right_inverse.png) center center no-repeat RGBA(255, 255, 255, .8);
+    background-size: 30px 30px;
+}
+/* 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉 */
+.slick-disabled {
+    opacity: .25;
+}
+/* .slick-prev:before {
+    content: '';
+}
+.slick-next:before {
+    content: '';
+}
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+    opacity: 1;
+} 
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: .25;
+}*/
+
+/* .slick-prev:before, .slick-next:before {
+    opacity: .75;
+} */
+/* ----------------------------- */
+/* [dir='rtl'] .slick-prev {
+    right: 0px;
+    left: auto;
+}
+
+[dir='rtl'] .slick-prev:before {
+    content: '';
+}
+[dir='rtl'] .slick-next {
+    right: auto;
+    left: 0px;
+}
+
+[dir='rtl'] .slick-next:before {
+    content: '';
+} */
+
+/* ---點的樣式--- */
+/* 點的位置 */
+.slick-dots {
+    position: absolute;
+    bottom: 20px;/* 位置距離 */
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 9;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* 點和點的距離 */
+.slick-dots li {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;/* 兩點距離 */
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0em;
+    line-height: 0em;
+    display: block;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+/* 點的原來樣式 */
+.slick-dots li button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #666;
+    opacity: .4;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+/* 點 hover,focus 的樣式 */
+/* .slick-dots li button:hover, .slick-dots li button:focus {
+} */
+/* hover 過去的點大一些 */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 1;
+    background: #21baff;
+    box-shadow: 0px 0px 0px 1px #21baff;/* 讓滑過去的點大一些 */
+    
+}
+/* focus 過去的點變色 */
+.slick-dots li button:focus:before {
+    opacity: 1;
+    background: #ff3e4d;
+    box-shadow: 0px 0px 0px 1px #ff3e4d;
+}
+/* 點 active 的樣子 */
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    background: #21baff;
+}
