@@ -23,6 +23,7 @@
     background: url(icon_arrow_left_inverse.png) center center no-repeat RGBA(255, 255, 255, .5);
     background-size: 30px 30px;
     box-shadow: none;
+     
 }
 /* 上一則 位置*/
 .slick-prev {

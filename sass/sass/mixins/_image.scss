@@ -25,6 +25,11 @@
         margin: auto;
     }
 }
+
+// 範例
+// @include aspect-ratio(4,3);                   // 圖片比例，4:3
+
+
 // 圖片列表mixin
 // @mixin make_col($pic_length,$m_pic_length) {
 //     $outer_W: 100%;

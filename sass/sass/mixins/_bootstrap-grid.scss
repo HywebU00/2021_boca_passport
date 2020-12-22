@@ -172,3 +172,11 @@ $container-lg: $container-large-desktop !default;
 }
 
 
+// 範例
+// .col{
+//     @include make-xs-column(12);              // xs_mobile
+//     @include make-sm-column(6);               // mobile
+//     @include make-md-column(3);               // tablet
+//     @include make-lg-column(3);               // desktop
+//     @include gutter();                        // 容器內距 padding
+// }

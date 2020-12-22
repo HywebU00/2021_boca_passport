@@ -51,6 +51,14 @@
 //   @include screen('xs_mobile') {
 //       width: 85%; } 
 // }
+
+// @include screen('desktop'){}            // min-width: 1400px
+// @include screen('notebook'){}           // max-width: 1399px
+// @include screen('tablet'){}             // max-width: 991px
+// @include screen('mobile'){}             // max-width: 767px
+// @include screen('xs_mobile'){}          // max-width: 575px
+
+
 //output
 // .wrapper {
 //   margin: 0 auto;

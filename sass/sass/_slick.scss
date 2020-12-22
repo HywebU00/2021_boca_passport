@@ -1,3 +1,90 @@
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: none;
+}
+.slick-list.dragging {
+    cursor: pointer;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+.slick-slide img {
+    display: block;
+}
+.slick-slide.slick-loading img {
+    display: none;
+}
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
 // 共用slick的a focus
 .slick-slide {
     a {
@@ -9,56 +96,132 @@
                 right: 0;
                 bottom: 0;
                 z-index: 99;
-                @include box-shadow(0px 0px 0px 1px $aHover inset);
+                @include box-shadow(0px 0px 0px 2px $aHover inset);
             }
         }
     }
 }
-// arrow
+/* ---箭頭的樣式--- */
 .slick-prev, .slick-next {
+    font-size: 0em;
+    line-height: 0em;
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 40px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    min-width: auto;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
     transition: .3s ease-out;
     &:hover, &:focus {
         border: none !important;
         outline: none;
-        box-shadow: 0px 0px 0px 1px $aHover inset;
+        box-shadow: 0px 0px 0px 2px $aHover inset;
     }
 }
+/* 上一則 位置 圖片*/
+.slick-prev {
+    left: 25px;
+    background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .5);
+    background-size: 30px 30px;
+    /* 箭頭 hover及focus 樣式 */
+    &:hover, &:focus {
+        background: url('../images/slick/icon_arrow_left_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
+        background-size: 30px 30px;
+    }
+}
+/* 下一則 位置 圖片*/
+.slick-next {
+    right: 25px;
+    background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .5);
+    background-size: 30px 30px;
+    /* 箭頭 hover及focus 樣式 */
+    &:hover, &:focus {
+        background: url('../images/slick/icon_arrow_right_inverse.png') center center no-repeat RGBA(255, 255, 255, .8);
+        background-size: 30px 30px;
+    }
+}
+/* 沒有無限輪播時，滑到最兩邊資料時，箭頭暗掉 */
+.slick-disabled {
+    opacity: .25;
+}
+/* ---點的樣式---*/
 // slick dots 
 .slick-dots {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 9;
+    list-style: none;
+    box-sizing: border-box;
     li {
+        position: relative;
+        padding: 0;
+        cursor: pointer;
         button {
-            /* 點的原來顏色 */
-            &:before {
-                background: #666;
-            }
-            /* 點 hover,focus 的樣式 */
-            &:hover {
-                &:before {}
+            font-size: 0em;
+            line-height: 0em;
+            display: block;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+        }
+    }
+}
+/* ---點的位置、大小、顏色---*/
+.slick-dots {
+    /* 位置距離 */
+    bottom: 20px;
+    li {
+        /* 兩點的距離 */
+        margin: 0 10px;
+        button {
+            /* 點的顏色 */
+            background: #666;
+            opacity: .4;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            &:hover, &:focus {
+                opacity: 1;
+                /* 點hover的顏色 */
+                background: #21baff;
             }
             &:focus {
-                &:before {}
+                opacity: 1;
+                /* 點focus的顏色 */
+                background: #ff3e4d;
+                // box-shadow: 0px 0px 0px 1px #ff3e4d; /* 讓focus過去的點大一些 */
             }
         }
         &.slick-active {
             button {
-                /* 點 active 的樣子 */
-                &:before {
-                    background: $aHover;
-                }
-                /* 點 active : hover, focus的樣子 */
+                opacity: 1;
+                /* 點 active 的顏色 */
+                background: $aHover;
                 &:hover {
-                    &:before {}
+                    /* 點 active  hover的顏色 */
+                    background: #ff3e4d;
                 }
                 &:focus {
-                    &:before {
-                        background: #ff3e4d;
-                    }
+                    /* 點 active  focus的顏色 */
+                    background: #ff3e4d;
                 }
             }
         }
     }
 }
-// slick._scss
+// ---------slick._scss
 // 首頁大圖輪播 
 .mpSlider {
     width: 100%;
@@ -92,12 +255,12 @@
         @include gutter();
     }
     .slick-prev {
-        left: -15px;
-        top: 50%;
+        left: 0;
+        top: 0;
     }
     .slick-next {
-        right: -15px;
-        top: 50%;
+        right: 0;
+        top: 0;
     }
     .img-container {
         width: 165px;
@@ -185,7 +348,7 @@
     }
 }
 // 
-//  slick燈箱
+// slick燈箱
 .lightbox_slider_block {
     h3 {
         font-size: 1.5em;
@@ -223,11 +386,7 @@
     }
     // dots
     .slick-dots {
-        bottom: -30px !important;
-        @include screen('mobile') {
-            bottom: -40px !important;
-            padding: 0;
-        }
+        bottom: -60px;
         li {
             width: 10px;
             height: 10px;
@@ -236,10 +395,14 @@
     }
     //Arrows
     .slick-prev {
-        left: -1 * $grid-gutter-width/2;
+        // left: -1 * $grid-gutter-width/2;
+        left: -10px;
+        top:35%;
     }
     .slick-next {
-        right: -1 * $grid-gutter-width/2;
+        // right: -1 * $grid-gutter-width/2;
+        right:-10px;
+        top:35%;
     }
     a {
         color: #555;

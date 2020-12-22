@@ -33,5 +33,5 @@
 //   @include text-overflow;
 // }
 // p{
-// 	@include text-overflow;
+// 	@include text-line(2,23px);                    // 多行（行數、行高）
 // }
