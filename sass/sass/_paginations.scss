@@ -5,6 +5,9 @@
     text-align: center;
     font-size: .938em;
     @extend %clearfix; // outline: 1px solid red;
+    .form_inline{
+        justify-content: center;
+    }
     span {
         color: $primaryColor;
         margin: 0px .5em;
