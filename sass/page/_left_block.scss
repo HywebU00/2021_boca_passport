@@ -2,12 +2,12 @@
     padding: 0 0 20px 0;
     .item {
         min-height: 100px;
-        color: #888;
+        color: #666;
         text-align: center;
         line-height: 100px;
         font-size: 1.5em;
         font-weight: bold;
-        background-color: #DEDEDE;
+        background-color: #eee;
         margin-bottom: 10px;
     }
 }
@@ -18,7 +18,7 @@
         padding: .5em;
         text-align: center;
         color: #fff;
-        background-color: #999;
+        background-color: #666;
         font-size: 1.25em;
     }
     ul {
@@ -36,7 +36,7 @@
             .dept {
                 display: inline-block;
                 padding: 0px 10px;
-                background-color: #999;
+                background-color: #666;
                 color: #fff;
                 font-size: .813em;
                 border-radius: 4px;
@@ -61,7 +61,7 @@
         padding: .5em;
         text-align: center;
         color: #fff;
-        background-color: #999;
+        background-color: #666;
         font-size: 1.25em;
     }
     ul {

@@ -7,7 +7,7 @@
         border: 1px solid $color-blue;
         background: lighten($color-blue, 30);
         min-height: 200px;
-        color: lighten($color-word, 40);
+        color: darken($color-word, 5);
         text-align: center;
         line-height: 200px;
         font-size: 1.5em;
@@ -18,7 +18,7 @@
         padding-top: 2em;
     }
     &+.bg {
-        background: lighten($primaryColor, 40);
+        background: lighten($primaryColor, 50);
     }
     &.full {
         .container {
@@ -214,7 +214,7 @@
         .left{
             @include flex-col(5, 2px, 40px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             // ---------------------- end
         }
@@ -340,7 +340,7 @@
         .col{
             @include flex-col-equal(5, 5px, 20px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             // ---------------------- end
@@ -371,7 +371,7 @@
         .col{
             @include flex-col-equal(5, 5px, 20px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             // ---------------------- end
@@ -509,7 +509,7 @@
         .col{
             @include flex-col-equal(8, 5px, 20px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             // ---------------------- end
@@ -541,7 +541,7 @@
         .col{
             @include flex-col-equal(8, 5px, 20px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             // ---------------------- end
@@ -682,7 +682,7 @@
         .col{
             @include flex-col-equal(10, 5px, 10px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             p{ word-break: break-all; }
@@ -751,7 +751,7 @@
         .col{
             @include flex-col-equal(12, 3px, 20px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             // ---------------------- end
@@ -907,7 +907,7 @@
         .col{
             @include flex-col-equal(4, 3px, 20px);
             // 自定義 ----------------- start
-            background: #00bcd4;
+            background: #027e98;
             color: #fff;
             margin: 4px 0;
             // ---------------------- end
@@ -1058,18 +1058,18 @@
 .flex-6-6{
     .col{
         @include flex-col(6, 4px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
-        // &:nth-child(2){ background: #00bcd4; }
+        // &:nth-child(2){ background: #027e98; }
     }
 }
 .flex-8-4{
     .col{
         @include flex-col(8, 4px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
         &:nth-child(2){
-            // background: #00bcd4;
+            // background: #027e98;
             @include flex-col(4, 4px, 40px);
         }
     }
@@ -1077,11 +1077,11 @@
 .flex-4-8{
     .col{
         @include flex-col(4, 4px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
 
         &:nth-child(2){
-            // background: #00bcd4;
+            // background: #027e98;
             @include flex-col(8, 4px, 40px);
         }
     }
@@ -1089,10 +1089,10 @@
 .flex-4-4-4{
     .col{
         @include flex-col(4, 4px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
         // &:nth-child(even){
-        //     background: #00bcd4;
+        //     background: #027e98;
         // }
 
         &:nth-child(2){
@@ -1110,7 +1110,7 @@
         background: #485b8a;
         color: #fff;
         &:nth-child(even){
-            background: #00bcd4;
+            background: #027e98;
         }
     }
 }
@@ -1120,7 +1120,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(3, 0px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
         margin: 4px;
     }
@@ -1129,7 +1129,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(4, 0px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
         margin: 4px;
     }
@@ -1138,7 +1138,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(5, 0px, 40px);
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
         margin: 4px;
     }
@@ -1149,7 +1149,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(7, 0px, 40px);   
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
     }
 }
@@ -1157,7 +1157,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(8, 0px, 40px);   
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
     }
 }
@@ -1165,7 +1165,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(9, 0px, 40px);   
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
     }
 }
@@ -1173,7 +1173,7 @@
     .Flex-set{ justify-content: center; }
     .col{
         @include flex-col(10, 0px, 40px);   
-        background: #00bcd4;
+        background: #027e98;
         color: #fff;
     }
 }

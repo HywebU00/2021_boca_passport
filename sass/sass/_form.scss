@@ -1246,7 +1246,7 @@ input[type="number"] {
 
 button,
 input[type="button"],
-    {
+{
     // @extend %btn;
     // @include btn_setting($form-focus, #FFF);
 }
@@ -1336,24 +1336,24 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 98%;
-    box-shadow: $form-focus 0 0 0 1px;
+    box-shadow: $form-focus 0 0 0 2px;
     border-radius: 2px;
 }
 
 input[type="radio"]:checked {
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
 }
 
 input[type="radio"]:focus {
     border-color: $form-focus;
     background-color: $form-focus;
-    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
 }
 
 input[type="checkbox"]:focus {
     border-color: $form-focus;
     background-color: $form-focus;
-    box-shadow: $form-focus 0 0 0 1px;
+    box-shadow: $form-focus 0 0 0 2px;
 }
 
 //---------------------------------------------readonly disable -------//

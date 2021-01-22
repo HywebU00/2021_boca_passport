@@ -46,7 +46,7 @@
 }
 *[class*="notice_info"] {
     color: #00529B;
-    background-color: #BDE5F8;
+    background-color: #ceecfa;
     &:before {
         background: url(../images/basic/icon_info.svg) no-repeat center center;
         background-size: 15px;
@@ -61,8 +61,8 @@
     }
 }
 *[class*="notice_warning"] {
-    color: #CE5605;
-    background-color: #FEEFB3;
+    color: #c74302;
+    background-color: #fdf6d9;
     &:before {
         background: url(../images/basic/icon_warning.svg) no-repeat center center;
         background-size: 15px;
@@ -70,7 +70,7 @@
 }
 *[class*="notice_error"] {
     color: #D8000C;
-    background-color: #FFD2D2;
+    background-color: #fff0e0;
     &:before {
         background: url(../images/basic/icon_error.svg) no-repeat center center;
         background-size: 15px;

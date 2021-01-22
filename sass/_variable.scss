@@ -3,30 +3,30 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #21baff; //主色
+$primaryColor: #0066cc; //主色
 $secondaryColor: #781f79; //輔色
-$lightColor: #fcc211; //點綴
-$linkColor: #21baff; //連結
-$importantColor: #ff3e4d; //重要
+$lightColor: #fec003; //點綴
+$linkColor: #0066cc; //連結
+$importantColor: #eb0202; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
-$color-blue: #21baff;
-$color-green: #5cb85c;
-$color-orange: #f77810;
-$color-red: #ff3e4d;
-$color-yellow: #fcc211;
-$color-purple: #aa5ac5;
+$color-blue: #0066cc;
+$color-green: #298729;
+$color-orange: #cd4502;
+$color-red: #eb0202;
+$color-yellow: #fec003;
+$color-purple: #781f79;
 $color-gray: #ccc;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
 $color-word: #222; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
-$aColor: #21baff;
-$aHover: lighten($aColor, 10);
-
+$aColor: #0066cc;
+$aHover: darken($aColor, 10);
+$aFocus:#ff3e4d;
 // 表單focus顏色
-$form-focus: #21baff; //表單
-$form-btn: #21baff; //表單
+$form-focus: #0066cc; //表單
+$form-btn: #0066cc; //表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定

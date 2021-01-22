@@ -10,7 +10,7 @@ $btn-radius:.2em;
 }
 
 // 按鈕的共用設定
-@mixin btn_setting($btn-bg:#f5f5f5, $btn-font-color:$btn-font-color) {
+@mixin btn_setting($btn-bg:#e0e0e0, $btn-font-color:$btn-font-color) {
     background: $btn-bg;
     border: 1px solid $btn-bg;
     color: $btn-font-color;
@@ -23,6 +23,7 @@ $btn-radius:.2em;
         cursor: pointer;
         color: #FFF;
         outline:none;
+        box-shadow: 0 0px 0px 2px $aFocus!important;
         // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
     &.active {
@@ -75,7 +76,7 @@ $btn-radius:.2em;
 }
 .btn-yellow {
     // @extend %btn;
-    @include btn_setting(lighten($color-yellow, 5), #FFF);
+    @include btn_setting(lighten($color-yellow, 5), #333);
 }
 .btn-orange {
     // @extend %btn;
