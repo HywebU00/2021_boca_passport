@@ -1,5 +1,7 @@
 $form_title_width :150px; // 表單title寬度
 
+
+
 @mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:$btn-radius) {
     color: $f_color;
     font-size: 1em;
@@ -7,7 +9,7 @@ $form_title_width :150px; // 表單title寬度
     padding: .5em;
     background: #fff;
     vertical-align: middle;
-    margin: 0 .3em .3em;
+    margin: .3em;
     box-sizing: border-box;
     border-radius: $f_radius;
     transition: all .3s ease-out;
@@ -95,6 +97,7 @@ select::-ms-expand {
             max-width: calc(100% - .6em);
             flex-basis: calc(100% - .6em);
             margin: 0 .3em .5em;
+            @include gutter(0);
         }
 
         +.form_content {
@@ -112,11 +115,14 @@ select::-ms-expand {
             &.form_col-8-4,
             &.form_col-2-2-8,
             &.form_col-8-2-2 {
-                flex-basis: calc(100% - .6em - #{$form_title_width});
-                max-width: calc(100% - .6em - #{$form_title_width});
+                flex-basis: calc(100% - #{$form_title_width});
+                max-width: calc(100%  - #{$form_title_width});
+                padding-top: 0;
+                @include gutter();
                 @include screen('mobile'){
                     flex-basis: 100%;
                     max-width: 100%;
+                    @include gutter(0);
                 }
             }
         }
@@ -124,7 +130,7 @@ select::-ms-expand {
 
     .form_content {
         display: flex;
-        padding-top: 3px;
+        //padding-top: 3px;
         max-width: calc(100% - #{$form_title_width});
         // flex:1 1 calc(100% - #{$form_title_width});
         flex: auto;
@@ -138,6 +144,7 @@ select::-ms-expand {
         @include screen('mobile') {
             max-width: 100%;
             flex-basis: 100%;
+            @include gutter(0);
         }
 
         *[class^="notice"] {
@@ -177,6 +184,7 @@ select::-ms-expand {
 
             >.form_grp {
                 border-bottom: 0;
+                padding-top: 0;
             }
             label{
                 @include gutter(.6em);
@@ -471,7 +479,7 @@ select::-ms-expand {
                     flex-basis: calc(100% / 12 * 8);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: 100% ;
                     }
                 }
             }
@@ -487,7 +495,7 @@ select::-ms-expand {
                     flex-basis: calc(50% - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
             }
@@ -500,7 +508,7 @@ select::-ms-expand {
                     flex-basis: calc(100% / 3 - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
             }
@@ -513,7 +521,7 @@ select::-ms-expand {
                     flex-basis: calc(25% - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
             }
@@ -526,7 +534,7 @@ select::-ms-expand {
                     flex-basis: calc(25% - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
 
@@ -537,7 +545,7 @@ select::-ms-expand {
                         flex-basis: calc(75% - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -551,7 +559,7 @@ select::-ms-expand {
                     flex-basis: calc(75% - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
 
@@ -562,7 +570,7 @@ select::-ms-expand {
                         flex-basis: calc(25% - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -587,7 +595,7 @@ select::-ms-expand {
                         flex-basis: calc(50% - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -612,7 +620,7 @@ select::-ms-expand {
                         flex-basis: calc(50% - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -626,7 +634,7 @@ select::-ms-expand {
                     flex-basis: calc(100% / 3 - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
 
@@ -637,7 +645,7 @@ select::-ms-expand {
                         flex-basis: calc(100% / 3 * 2 - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -651,7 +659,7 @@ select::-ms-expand {
                     flex-basis: calc(100% / 12 * 2 - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
 
@@ -662,7 +670,7 @@ select::-ms-expand {
                         flex-basis: calc(100% / 12 * 10 - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -676,7 +684,7 @@ select::-ms-expand {
                     flex-basis: calc(100% / 12 * 2 - .6em);
 
                     @include screen('xs_mobile') {
-                        flex-basis: 100%;
+                        flex-basis: calc(100% - .6em);
                     }
                 }
 
@@ -687,7 +695,7 @@ select::-ms-expand {
                         flex-basis: calc(100% / 12 * 10 - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -712,7 +720,7 @@ select::-ms-expand {
                         flex-basis: calc(100% / 12 * 8 - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -737,7 +745,7 @@ select::-ms-expand {
                         flex-basis: calc(100% / 12 * 8 - .6em);
 
                         @include screen('xs_mobile') {
-                            flex-basis: 100%;
+                            flex-basis: calc(100% - .6em);
                         }
                     }
                 }
@@ -763,7 +771,7 @@ select::-ms-expand {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                //@include gutter();
+                @include gutter(0);
 
                 @include screen('mobile') {
                     flex-basis: 100%;
@@ -786,15 +794,19 @@ select::-ms-expand {
                     }
                 }
 
+                .form_grp{
 
+                }
 
+            }
+             &:first-child{
+                padding-top: 0;
             }
 
             &:last-child {
                 border-bottom: none;
                 margin-bottom: 0;
             }
-
 
         }
 
@@ -966,7 +978,6 @@ select::-ms-expand {
     .upload_grp {
         display: flex;
         align-items: center;
-        margin: 0 5px 5px;
         flex-wrap: wrap;
         width: 100%;
 
@@ -1071,8 +1082,6 @@ select::-ms-expand {
         }
     }
 
-
-
     .form_grp,
     .upload_grp {
 
@@ -1109,9 +1118,8 @@ select::-ms-expand {
 
     label {
         vertical-align: middle;
-        margin-right: .5em;
+        margin:0 .5em 0 0;
         flex: 0 1 auto;
-        margin-right: 1em;
         display: flex;
         align-items: center;
 
@@ -1146,16 +1154,19 @@ select::-ms-expand {
         margin-right: .5em;
         width: auto;
         flex: 0 0 auto;
+        // @include screen('mobile'){
+        //     width: 100%;
+        // }
     }
 
     .btn_grp {
-
+        padding: 0;
         .btn,
         input[type="submit"],
         input[type="reset"],
         input[type="button"],
         input[type="search"] {
-            margin: 0 .3em .3em;
+            margin: .3em;
             padding: .45em 1em;
         }
     }
@@ -1283,7 +1294,6 @@ select:focus {
 //---------------------------------------------下拉選單--------//
 select {
     line-height: 2.4em;
-    height: 2.4em;
     padding: 0 24px 0 .5em;
     border: 1px solid $color-gray;
     background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
@@ -1453,7 +1463,7 @@ abbr[title] {
         position: absolute;
         padding: .2em 0 !important;
         left: .5em;
-        top: .27em;
+        top: .6em;
         background: none;
         border-right: 1px solid $color-gray;
         width: 2.4em;
@@ -1464,12 +1474,12 @@ abbr[title] {
             text-align: center;
         }
 
-        @include screen('mobile') {
-            left: .2em;
-        }
+        // @include screen('mobile') {
+        //     left: .2em;
+        // }
 
         &+input {
-            padding: .5em .5em .5em 3em;
+            padding:.5em .5em .5em 3em;
         }
     }
 
