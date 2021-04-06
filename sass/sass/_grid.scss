@@ -160,93 +160,101 @@
 // 子層欄寬（自由）: @include flex-col(欄數, margin , padding);
 
 // step 1、啟動 flex
-.flex-equal-2,
-.flex-equal-3,
-.flex-equal-4,
-.flex-equal-5,
-.flex-equal-5-3-1,
-.flex-equal-6,
-.flex-equal-6-4-2,
-.flex-equal-6-3-1,
-.flex-equal-6-2,
-.flex-equal-7,
-.flex-equal-8,
-.flex-equal-8-6-4,
-.flex-equal-8-5-3,
-.flex-equal-8-5-2,
-.flex-equal-9,
-.flex-equal-9-6-3,
-.flex-equal-9-5-4,
-.flex-equal-9-4-2,
-.flex-equal-10,
-.flex-equal-11,
-.flex-equal-12,
-.flex-5,
-.flex-6,
-.flex-7,
-.flex-8,
-.flex-9,
-.flex-10,
-.flex-11,
-.flex-3-3,
-.flex-4-4,
-.flex-5-5,
-.flex-5-7,
-.flex-6-6,
-.flex-8-4,
-.flex-4-8,
-.flex-4-4-4,
-.flex-3-3-3-3,
-.flex-equal-TT,
-.flex-equal-TT-11, .flex-equal-TT-10, .flex-equal-TT-9, .flex-equal-TT-8, .flex-equal-TT-7,
-.flex-equal-TT-6, .flex-equal-TT-5, .flex-equal-TT-4, .flex-equal-TT-3, .flex-equal-TT-2{
-    margin: 1em 0;
+// .flex-equal-2,
+// .flex-equal-3,
+// .flex-equal-4,
+// .flex-equal-5,
+// .flex-equal-5-3-1,
+// .flex-equal-6,
+// .flex-equal-6-4-2,
+// .flex-equal-6-3-1,
+// .flex-equal-6-2,
+// .flex-equal-7,
+// .flex-equal-8,
+// .flex-equal-8-6-4,
+// .flex-equal-8-5-3,
+// .flex-equal-8-5-2,
+// .flex-equal-9,
+// .flex-equal-9-6-3,
+// .flex-equal-9-5-4,
+// .flex-equal-9-4-2,
+// .flex-equal-10,
+// .flex-equal-11,
+// .flex-equal-12,
+// .flex-5,
+// .flex-6,
+// .flex-7,
+// .flex-8,
+// .flex-9,
+// .flex-10,
+// .flex-11,
+// .flex-3-3,
+// .flex-4-4,
+// .flex-5-5,
+// .flex-5-7,
+// .flex-6-6,
+// .flex-8-4,
+// .flex-4-8,
+// .flex-4-4-4,
+// .flex-3-3-3-3,
+// .flex-equal-TT,
+// .flex-equal-TT-11, .flex-equal-TT-10, .flex-equal-TT-9, .flex-equal-TT-8, .flex-equal-TT-7,
+// .flex-equal-TT-6, .flex-equal-TT-5, .flex-equal-TT-4, .flex-equal-TT-3, .flex-equal-TT-2{
+//     margin: 1em 0;
 
-    h2{ text-align: center; }
+//     // h2{ text-align: center; }
 
-    .Flex-set{
-        // 啟動flex
-        @extend %flex_set;
-        background: #eee;
-        .col{
-            p{ color: rgba(255,255,255,.5); }
-        }
-        .left{
-            @include flex-col(5, 2px, 40px);
-            // 自定義 ----------------- start
-            background: #027e98;
-            color: #fff;
-            // ---------------------- end
-        }
-        .right{
-            @include flex-col(7, 10px, 120px);
-            // 自定義 ----------------- start
-            background: deeppink;
-            color: #fff;
-            // ---------------------- end
-        }
+//     // .Flex-set{
+//     //     // 啟動flex
+//     //     @extend %flex_set;
+//     //     background: #eee;
+//     //     .col{
+//     //         p{ color: rgba(255,255,255,.5); }
+//     //     }
+//     //     .left{
+//     //         @include flex-col(5, 2px, 40px);
+//     //         // 自定義 ----------------- start
+//     //         background: #027e98;
+//     //         color: #fff;
+//     //         // ---------------------- end
+//     //     }
+//     //     .right{
+//     //         @include flex-col(7, 10px, 120px);
+//     //         // 自定義 ----------------- start
+//     //         background: deeppink;
+//     //         color: #fff;
+//     //         // ---------------------- end
+//     //     }
+//     // }
+// }
+
+$magin: 6px;
+$padding: 30px;
+
+h2{ text-align: center; }
+.Flex-set{
+    // 啟動flex
+    @extend %flex_set;
+    background: #eee;
+    .col{
+        background: #485b8a;
+        color: #fff;
+        margin: 4px 0;
+        p{ color: rgba(255,255,255,.5); }
     }
 }
 
 // step 2、子層設定欄寬
 // A - 均分（ equal ＝ 均等）
-
 .flex-equal-2{
     .Flex-set{
-        .col{
-            @include flex-col-equal(2, 4px, 30px);
-            // 自定義 ----------------- start
-            background: #485b8a;
-            color: #fff;
-            margin: 4px 0;
-            // ---------------------- end
-        }
+        .col{ @include flex-col-equal(2, $magin, $padding); }
     }
     @include screen('tablet') {
         .Flex-set{
-            @include gutter(30px);
+            justify-content: center;
             .col{
-                @include flex-col-equal(1, 0px, 16px);
+                @include flex-col-equal(1, 0px, $padding);
             }
         }
     }
@@ -257,47 +265,30 @@
         // 方向、是否斷點
         flex-flow: row wrap;
 
-        .col{
-            @include flex-col-equal(3, 10px, 20px);
-            // 自定義 ----------------- start
-            background: #af2333;
-            color: #fff;
-            margin: 4px 0;
-            // ---------------------- end
-        }
+        .col{ @include flex-col-equal(3, $magin, $padding); }
 
         .thumbnail{
-            @include flex-col-equal(3, 10px, 0px);
+            @include flex-col-equal(3, $magin, 0px);
             // 自定義 ----------------- start
             background: #fff;
             color: #222;
-            margin-top: .5em;
-            margin-bottom: .5em;
+            margin-bottom: .75em;
             // ---------------------- end
         }
     }
     @include screen('tablet') {
         .Flex-set{
             @include gutter(2em);
-            .col{
-                @include flex-col-equal(2, 10px, 0px);
-                &:nth-child(3n-2){ border: dashed 8px #222; }
-            }
+            .col{ @include flex-col-equal(2, $magin, $padding); }
 
-            .thumbnail{
-                @include flex-col-equal(2, 1%, 0px);
-            }
+            .thumbnail{ @include flex-col-equal(2, $magin, 0px); }
         }
     }
     @include screen('mobile') {
         .Flex-set{
             @include gutter(30px);
-            .col{
-                @include flex-col-equal(1, 0px, 10px);
-            }
-            .thumbnail{
-                @include flex-col-equal(1, 10px, 10px);
-            }
+            .col{ @include flex-col-equal(1, 0px, 10px); }
+            .thumbnail{ @include flex-col-equal(1, $magin, 0px); }
         }
     }
 }
@@ -893,164 +884,164 @@
 }
 
 // 測試：目前測試 11 欄，流動變化
-[class^="flex-equal-TT"]{
-    &:nth-child(odd){
-        .Flex-set .col{ background: #485b8a; }
-    }
-}
+// [class^="flex-equal-TT"]{
+//     &:nth-child(odd){
+//         .Flex-set .col{ background: #485b8a; }
+//     }
+// }
 
-.flex-equal-TT,
-.flex-equal-TT-11, .flex-equal-TT-10, .flex-equal-TT-9, .flex-equal-TT-8, .flex-equal-TT-7,
-.flex-equal-TT-6, .flex-equal-TT-5, .flex-equal-TT-4, .flex-equal-TT-3, .flex-equal-TT-2{
-    .Flex-set{
-        @include gutter(16px);
-        .col{
-            @include flex-col-equal(4, 3px, 20px);
-            // 自定義 ----------------- start
-            background: #027e98;
-            color: #fff;
-            margin: 4px 0;
-            // ---------------------- end
-        }
-    }
-}
-.flex-equal-TT{
-    // @include screen('tablet') {
-    //     .Flex-set{
-    //         .col{ @include flex-col-equal(3, 10px, 20px); }
-    //     }
-    // }
-    // @include screen('mobile') {
-    //     .Flex-set{
-    //         .col{ @include flex-col-equal(1, 0px, 20px); }
-    //     }
-    // }
-}
-.flex-equal-TT-11{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(11, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-10{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(10, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-9{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(9, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-8{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(8, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-7{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(7, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-6{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(6, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-5{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(5, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-4{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(4, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-3{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(3, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 2px, 20px); }
-        }
-    }
-    @include screen('xs_mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(1, 2px, 20px); }
-        }
-    }
-}
-.flex-equal-TT-2{
-    @include screen('tablet') {
-        .Flex-set{
-            .col{ @include flex-col-equal(2, 4px, 20px); }
-        }
-    }
-    @include screen('mobile') {
-        .Flex-set{
-            .col{ @include flex-col-equal(1, 2px, 20px); }
-        }
-    }
-}
+// .flex-equal-TT,
+// .flex-equal-TT-11, .flex-equal-TT-10, .flex-equal-TT-9, .flex-equal-TT-8, .flex-equal-TT-7,
+// .flex-equal-TT-6, .flex-equal-TT-5, .flex-equal-TT-4, .flex-equal-TT-3, .flex-equal-TT-2{
+//     .Flex-set{
+//         @include gutter(16px);
+//         .col{
+//             @include flex-col-equal(4, 3px, 20px);
+//             // 自定義 ----------------- start
+//             background: #027e98;
+//             color: #fff;
+//             margin: 4px 0;
+//             // ---------------------- end
+//         }
+//     }
+// }
+// .flex-equal-TT{
+//     // @include screen('tablet') {
+//     //     .Flex-set{
+//     //         .col{ @include flex-col-equal(3, 10px, 20px); }
+//     //     }
+//     // }
+//     // @include screen('mobile') {
+//     //     .Flex-set{
+//     //         .col{ @include flex-col-equal(1, 0px, 20px); }
+//     //     }
+//     // }
+// }
+// .flex-equal-TT-11{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(11, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-10{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(10, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-9{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(9, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-8{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(8, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-7{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(7, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-6{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(6, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-5{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(5, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-4{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(4, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-3{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(3, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 2px, 20px); }
+//         }
+//     }
+//     @include screen('xs_mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(1, 2px, 20px); }
+//         }
+//     }
+// }
+// .flex-equal-TT-2{
+//     @include screen('tablet') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(2, 4px, 20px); }
+//         }
+//     }
+//     @include screen('mobile') {
+//         .Flex-set{
+//             .col{ @include flex-col-equal(1, 2px, 20px); }
+//         }
+//     }
+// }
 
 
 // B - 自行設定
