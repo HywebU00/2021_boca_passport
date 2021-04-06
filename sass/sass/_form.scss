@@ -1,4 +1,5 @@
 $form_title_width :150px; // 表單title寬度
+$input_margin_gutter: .3em;
 
 
 
@@ -160,6 +161,9 @@ select::-ms-expand {
                 width: auto;
                 display: inline-flex;
                 align-items: center;
+                >label{
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -185,14 +189,15 @@ select::-ms-expand {
             >.form_grp {
                 border-bottom: 0;
                 padding-top: 0;
+                align-items: flex-end;
             }
             label{
                 @include gutter(.6em);
                 padding-top: 5px;
             }
-            @include screen('mobile'){
-                @include gutter();
-            }
+            // @include screen('mobile'){
+            //     @include gutter();
+            // }
         }
 
         &.form_col-6-6 {
@@ -771,7 +776,6 @@ select::-ms-expand {
                 // max-width:  calc(100% - #{$form_title_width});
                 display: flex;
                 flex-wrap: wrap;
-                align-items: center;
                 @include gutter(0);
 
                 @include screen('mobile') {
@@ -894,10 +898,11 @@ select::-ms-expand {
         // 日期專屬
         .datepick {
             position: relative;
+            display: flex;
+            align-items: center;
 
             @include screen('xs_mobile') {
                 width: 100%;
-                display: block;
                 padding-right: 0;
             }
 
@@ -905,6 +910,13 @@ select::-ms-expand {
                 margin-left: .3em;
                 margin-right: 0;
                 padding-right: 0;
+                
+                input{
+                    margin-left: .6em;
+                    @include screen('xs_mobile'){
+                        margin-left: .3em;
+                    }
+                }
 
                 &:before {
                     content: "~";
@@ -930,7 +942,7 @@ select::-ms-expand {
                 position: absolute;
                 padding: .37em .1em !important;
                 right: 1em;
-                top: .2em;
+                //top: .2em;
                 min-width: 1em;
                 background: none;
                 border: none;
@@ -961,6 +973,11 @@ select::-ms-expand {
 
     .btn_grp {
         justify-content: center;
+    }
+
+    button,
+    .btn{
+        margin: .3em;
     }
 
     .btn,
@@ -1061,7 +1078,8 @@ select::-ms-expand {
                             background: #54caff;
                             content: "";
                             left: .35em;
-                            top: .3em;
+                            top: 50%;
+                            margin-top: -.5em;
                             z-index: -1;
                             animation: ripple 0.35s linear;
                         }
@@ -1105,6 +1123,11 @@ select::-ms-expand {
             input[type="radio"] {
                 width: 1em;
             }
+        }
+    }
+    .upload_grp{
+        .upload_btn{
+            right: 8px;
         }
     }
 }
@@ -1175,7 +1198,8 @@ select::-ms-expand {
 
 //---------------------------------------------下拉選單--------//
 label,
-legend {
+legend,
+ .form_title{
     // white-space: nowrap;
     display: inline-block;
     margin: 0 0 .5em 0;
@@ -1389,6 +1413,7 @@ input[type="checkbox"]:focus {
 // https://codepen.io/shubhamc_007/pen/oZyodd
 .upload_grp {
     position: relative;
+    display: flex;
 
     input[readonly],
     input[disable] {
@@ -1399,7 +1424,7 @@ input[type="checkbox"]:focus {
     .upload_btn {
         position: absolute;
         overflow: hidden;
-        top: 1px;
+        //top: 1px;
         right: 3px;
         @extend %btn;
         @include btn_setting($form-focus, #FFF);
@@ -1430,7 +1455,7 @@ img.captcha {
     display: inline-block;
     vertical-align: middle;
     max-height: 2.5em;
-    margin: 0 .5em .3em .3em;
+    margin: .3em;
 
     &+input {
         display: inline-block;
@@ -1438,9 +1463,9 @@ img.captcha {
         vertical-align: middle;
     }
 
-    ~.btn {
-        margin-top: -1px;
-    }
+    // ~.btn {
+    //     margin-top: -1px;
+    // }
 
     ~img {
         display: inline-block;
@@ -1494,4 +1519,10 @@ abbr[title] {
             left: auto;
         }
     }
+}
+
+//----------------需要label，但又不要出現在畫面上時----------------//
+.label_hidden{
+    font-size: 0;
+    line-height: 1;
 }
