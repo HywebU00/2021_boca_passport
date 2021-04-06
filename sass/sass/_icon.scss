@@ -9,7 +9,7 @@
 }
 @mixin hyui_icon($icon_img) {
     &:before {
-        background: url(../images/icon/#{$icon_img}.svg)no-repeat center center;
+        background: url(../images/icon/#{$icon_img}.svg) center center no-repeat;
         background-size: contain;
         margin-top: -0.1em;
         margin-bottom: .1em;
