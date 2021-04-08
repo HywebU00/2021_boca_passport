@@ -1,0 +1,35 @@
+// IE tag 出現詭異方框，在使用網路字型時。
+br {
+    font-family: unset !important;
+    font: unset !important;
+}
+
+
+// google search 樣式修正
+.gsc-control-cse { padding: 1rem 0!important; }
+.gsc-control-cse.gsc-control-cse-zh-TW{
+	table{
+	td{
+		padding: 0 .5em!important;
+		&.gsib_a, &.gsib_b, &.gsc-search-button{ border:0!important; }
+		}
+	}
+}
+.gsc-input-box{ border:0!important; }
+.gsc-search-box.gsc-search-box-tools{ margin-bottom: 2rem!important; }
+.table.gsc-search-box table td{ border-bottom: 0!important; }
+.gs-result .gs-title, .gs-result .gs-title * { color: $primaryColor!important; }
+
+.gsst_a .gscb_a {
+	color: #ccc!important;
+	line-height: 2rem!important;
+}
+.gs-webResult div.gs-visibleUrl{ color: $secondaryColor!important; }
+.gsc-search-button.gsc-search-button-v2{ border: 0!important; }
+.gsc-search-button-v2, 
+.gsc-search-button-v2:hover, 
+.gsc-search-button-v2:focus { background-color: $primaryColor!important; }
+.gsc-tabHeader{ font-size: 1rem!important; }
+.gsc-search-button-v2 svg { vertical-align: middle; }
+.gsc-result-info-container,.gsc-orderby-container{ border:0!important; }
+.gsc-selected-option{ white-space: nowrap; }

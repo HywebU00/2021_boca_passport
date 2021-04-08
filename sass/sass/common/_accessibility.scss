@@ -1,4 +1,26 @@
 // 以下皆是設定 測試無障礙關閉js 的純css排版
+
+// tab的外框線
+a:focus {
+  outline: none;
+  box-shadow: 0 0px 0px 2px $aFocus inset;
+  @include screen('mobile') {
+    box-shadow: none;
+  }
+}
+// 導盲磚
+.accesskey {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 9;
+  color: $color-word;
+  font-size: $font-size;
+  @include screen("mobile") {
+    display: none;
+  }
+}
+
 a.goCenter {
     position: absolute;
     top: -2.2em;

@@ -1,68 +1,59 @@
 @charset "utf-8";
 
-// 共通
-@import "_variable";					//變數
-@import "sass/_normalize";				//reset
-@import "sass/_mixin";					//客製MIXIN
-@import "sass/_typography";				//CP文字排版
-@import "sass/_font";					//文字設定
+@import "_variable";							//變數
 
-// 元素
-@import "sass/_grid";					//格線
-@import "sass/_breadcrumb";				//麵包屑
-@import "sass/_divider";				//分隔線
-@import "sass/_btn";					//按鈕設定
-@import "sass/_hr";						//分隔線
-@import "sass/_image";					//圖片
-@import "sass/_tooltip";				//tooltip
-@import "sass/_tabs";					//頁籤
-@import "sass/_table";					//表格
-@import "sass/_form";					//表單
-@import "sass/_icon";					//圖示
-@import "sass/_element";				//小元素
+// 共通 common
+@import "sass/common/_mixin";					//客製MIXIN
+@import "sass/common/_grid";					//格線
+@import "sass/common/_normalize";				//reset
+@import "sass/common/_typography";				//CP文字排版
+@import "sass/common/_accessibility";					//無障礙關閉js設定
+@import "sass/common/_print";					//列印樣式
+@import "sass/common/_hack";					//瀏覽器修正
 
-// 模組
-@import "sass/_header";					//header
-@import "sass/_language";				//語言選單
-@import "sass/_menu";					//menu
-@import "sass/_megamenu";				//megamenu
-@import "sass/_footer";					//footer
-@import "sass/_fatfooter";				//fatfooter
-@import "sass/_fixed_sidebar";			//固定側邊欄
-@import "sass/_function";				//function功能區塊
-@import "sass/_modal";					//pop視窗
-@import "sass/_marquee";				//跑馬燈
-@import "sass/_paginations";			//分頁
-@import "sass/_thumbnail";				//縮圖
-@import "sass/_category";				//標籤
-@import "sass/_lightbox";				//燈箱
-@import "sass/_share";					//社群分享
-@import "sass/_tag";					//文章標籤
-@import "sass/_fontsize";				//控制文章字體大小
-@import "sass/_notice";					//提示
-@import "sass/_function_panel";			//內頁功能面板
+
+// 元件 element
+@import "sass/element/_font";					//文字設定
+@import "sass/element/_language";				//語言選單
+@import "sass/element/_btn";					//按鈕設定
+@import "sass/element/_breadcrumb";				//麵包屑
+@import "sass/element/_divider";				//分隔線
+@import "sass/element/_image";					//圖片
+@import "sass/element/_icon";					//圖示
+@import "sass/element/_tooltip";				//tooltip
+@import "sass/element/_category";				//資料大類
+@import "sass/element/_tag";					//文章標籤
+@import "sass/element/_element";				//小元素
+
+
+// 模組 modual
+@import "sass/modual/_header";					//header
+@import "sass/modual/_menu";					//menu
+@import "sass/modual/_megamenu";				//megamenu
+@import "sass/modual/_fixed_sidebar";			//固定側邊欄
+@import "sass/modual/_footer";					//footer
+@import "sass/modual/_fatfooter";				//fatfooter
+@import "sass/modual/_form";					//表單
+@import "sass/modual/_table";					//表格
+@import "sass/modual/_list";					//表單樣式
+@import "sass/modual/_link";					//連結樣式
+@import "sass/modual/_tabs";					//頁籤
+@import "sass/modual/_thumbnail";				//縮圖
+@import "sass/modual/_modal";					//pop視窗
+@import "sass/modual/_slick";					//slick
+@import "sass/modual/_function_panel";			//內頁功能面板
+@import "sass/modual/_marquee";					//跑馬燈
+@import "sass/modual/_paginations";				//分頁
+@import "sass/modual/_notice";					//提示
+// @import "sass/_lightbox";					//燈箱               買fancybox
+
 
 // 頁面
-@import "page/_template";				//版型初始設定
-@import "page/_mp";						//首頁
-@import "page/_lp";			  	        //LP
-@import "page/_np";						//NP
-@import "page/_cp";						//CP
-@import "page/_fp";						//Forward
-@import "page/_qp";						//QP
-@import "page/_sitemap";				//Sitemap
-@import "page/_left_block";				//左欄left_block
-
-// 外掛
-@import "sass/_slick";					//slick
-
-@import "sass/_gs_fix";	        		//google search 修正
-
-// 無障礙
-@import "sass/_nojs";					//無障礙關閉js設定
-
-// 列印
-@import "sass/_print";					//列印樣式
+@import "page/_template";						//版型初始設定
+@import "page/_mp";								//首頁
+@import "page/_cp";								//CP
+@import "page/_sitemap";						//Sitemap
+@import "page/_left_block";						//左欄left_block
 
 
 

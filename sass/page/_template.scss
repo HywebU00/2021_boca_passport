@@ -1,9 +1,6 @@
-* {
-  box-sizing: border-box;
+* { box-sizing: border-box; 
 }
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 body {
   &.noscroll {
     position: static !important;
@@ -48,29 +45,34 @@ body {
   >.container {
         @include gutter(); //gutter 代表左右要留白
         display: flex;
-        
       }
-      .left_block {
+      .center_block {
+        flex:auto;
+        max-width: 100%;
+        // overflow: hidden;
+      }
+     .left_block {
         flex:0 0 260px;
         max-width: 260px;
         // float: left;
         // width: 260px;
         margin-right: 40px;
+
+        &.hidden{
+          +.center_block { max-width: 100%; }
+        }
+
+        +.center_block {
+          max-width: calc(100% - 300px);
+        }
+
         @include screen('tablet') {
           display: none;
+          +.center_block { max-width: 100%; }
         }
       }
-      .center_block {
-       flex:auto;
-       max-width: 100%;
-       overflow: hidden;
-     }
-     &.small_size {
-      font-size: .938em;
-    }
-    &.large_size {
-      font-size: 1.125em;
-    }
+      &.small_size { font-size: .938em; }
+      &.large_size { font-size: 1.125em; }
   }
 
   .hidden{

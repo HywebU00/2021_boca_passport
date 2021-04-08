@@ -69,30 +69,31 @@
         }
     }
 }
-.album {
-    margin: 1em auto;
-    ul {
-        @include li-reset;
-        display:flex;
-        flex-direction:row;
-        justify-content:flex-start;
-        align-items:stretch;
-        flex-wrap:wrap;
-        li{
-            flex:0 0 30%;
-            margin:0 1.66% 3%;
-            display:flex;
-            flex-direction:row;
-            align-content: stretch;
-            @include screen('tablet'){
-                flex:0 0 46%;
-                margin:0 2% 3%;
-            }
-            @include screen('mobile'){
-                flex:0 0 96%;
-                margin:0 3% 5%;
-            }
+
+// .album {
+//     margin: 1em auto;
+//     ul {
+//         @include li-reset;
+//         display:flex;
+//         flex-direction:row;
+//         justify-content:flex-start;
+//         align-items:stretch;
+//         flex-wrap:wrap;
+//         li{
+//             flex:0 0 30%;
+//             margin:0 1.66% 3%;
+//             display:flex;
+//             flex-direction:row;
+//             align-content: stretch;
+//             @include screen('tablet'){
+//                 flex:0 0 46%;
+//                 margin:0 2% 3%;
+//             }
+//             @include screen('mobile'){
+//                 flex:0 0 96%;
+//                 margin:0 3% 5%;
+//             }
             
-        }
-    }
-}
+//         }
+//     }
+// }

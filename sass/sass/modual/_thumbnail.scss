@@ -1,7 +1,14 @@
 .thumbnail {
-    box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3em -1.5em rgba(0, 0, 0, 0.5);
     background: #FFF;
-     width: 100%;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all .3s ease;
+    &:hover{
+        box-shadow: 0 12px 3em -1em rgba(0, 0, 0, 0.5);
+    }
+
     a {
         display: block;
         @include aSetting(#555);
