@@ -709,6 +709,7 @@ $(function() {
                 $('.font_size').find('.large').addClass('active');
                 e.preventDefault();
             } else {
+                //這裡是預設宣告
                 //$('.font_size').find('.medium').click();
                 $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
                 $('.innerpage').removeClass('large_size small_size');
