@@ -509,7 +509,7 @@ $(function() {
         $('.tabs').each(function() {
             var _tab = $(this),
                 _tabItem = _tab.find('.tabItem'),
-                _tabItemA = _tabItem.children('a'),
+                // _tabItemA = _tabItem.children('a'), //改button後，這行沒有
                 _tabContent = _tab.find('.tabContent'),
                 tabwidth = _tab.width(),
                 tabItemHeight = _tabItem.outerHeight(),
@@ -530,11 +530,11 @@ $(function() {
                 _tabItem.width(tabwidth);
                 _tabItem.css('margin-left', 0).last().css('position', 'relative');
             }
-            _tabItemA.focus(tabs);
-            _tabItemA.click(tabs);
+            _tabItem.focus(tabs);//改button後，前面改_tabItem
+            _tabItem.click(tabs);//改button後，前面改_tabItem
 
             function tabs(e) {
-                var _tabItemNow = $(this).parent(),
+                var _tabItemNow = $(this), //改button後，原來$(this).parent(),改$(this)
                     tvp = _tab.offset().top,
                     tabIndex = _tabItemNow.index() / 2,
                     scollDistance = tvp + tabItemHeight * tabIndex - headerHeight;
@@ -571,6 +571,7 @@ $(function() {
     /*-----------------------------------*/
     $('.scrollToTop').click(function(e) {
         $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
+        $('a.goCenter').focus(); //加入這行
         e.preventDefault();
     });
     $('.scrollToTop').keydown(function(e) {

@@ -10,8 +10,45 @@
 }
 .tabs {
     position: relative;
+    // 原來h2
+    // &>.tabItem {
+    //     &.active>a {
+    //         background-color: $primaryColor;
+    //         color: #FFF;
+    //     }
+    //     float: left;
+    //     margin: 0;
+    //     padding: 0;
+    //     font-size:1em;
+    //     line-height: 1;
+    //     @include screen('mobile') {
+    //         float: none;
+    //         &>a {
+    //             width: 100% !important;
+    //             border-bottom: 1px solid #888;
+    //         }
+    //         &.active>a {
+    //             border-color: #bbb;
+    //         }
+    //     }
+    //     &>a {
+    //         display: block;
+    //         padding: 16px 0 14px;
+    //         text-align: center;
+    //         background-color: #aaa;
+    //         color: #fff;
+    //         font-weight: bold;
+    //         text-decoration: none;
+    //         @include text-overflow;
+    //         box-sizing: border-box;
+    //         &:hover {
+    //             background: $primaryColor;
+    //         }
+    //     }
+    // }
+    // 改button
     &>.tabItem {
-        &.active>a {
+        &.active {
             background-color: $primaryColor;
             color: #FFF;
         }
@@ -20,28 +57,24 @@
         padding: 0;
         font-size:1em;
         line-height: 1;
+        display: block;
+        padding: 16px 0 14px;
+        text-align: center;
+        background-color: #aaa;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        @include text-overflow;
+        box-sizing: border-box;
+        &:hover, &:focus {
+            background: $primaryColor;
+        }
         @include screen('mobile') {
             float: none;
-            &>a {
-                width: 100% !important;
-                border-bottom: 1px solid #888;
-            }
-            &.active>a {
+            width: 100% !important;
+            border-bottom: 1px solid #888;
+            &.active {
                 border-color: #bbb;
-            }
-        }
-        &>a {
-            display: block;
-            padding: 16px 0 14px;
-            text-align: center;
-            background-color: #aaa;
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
-            @include text-overflow;
-            box-sizing: border-box;
-            &:hover {
-                background: $primaryColor;
             }
         }
     }

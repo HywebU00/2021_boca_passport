@@ -11,7 +11,11 @@ $(function() {
         fade: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
-        ease: 'ease'
+        ease: 'ease',
+        customPaging: function(slider, i) {
+            var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+            return $('<button type="button" aria-label="' + title + '"/>').text(title);
+        }
     });
     // 廣告輪播
     $('.adSlider').slick({
@@ -33,14 +37,14 @@ $(function() {
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 768,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 575,
             settings: {
                 slidesToShow: 3,
@@ -97,7 +101,7 @@ $(function() {
         lazy: true
     });
     // 
-$('.cppic_slider').slick({
+    $('.cppic_slider').slick({
         dots: true,
         infinite: false,
         speed: 500,
@@ -136,8 +140,7 @@ $('.cppic_slider').slick({
             }
         }]
     });
-
-     // cp_photo
+    // cp_photo
     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
@@ -163,5 +166,4 @@ $('.cppic_slider').slick({
         focusOnSelect: true,
         infinite: true
     });
-    
 });

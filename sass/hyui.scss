@@ -8,7 +8,6 @@
 @import "sass/common/_normalize";				//reset
 @import "sass/common/_typography";				//CP文字排版
 @import "sass/common/_accessibility";					//無障礙關閉js設定
-@import "sass/common/_print";					//列印樣式
 @import "sass/common/_hack";					//瀏覽器修正
 
 
@@ -55,6 +54,7 @@
 @import "page/_sitemap";						//Sitemap
 @import "page/_left_block";						//左欄left_block
 
+@import "sass/common/_print";					//列印樣式
 
 
 

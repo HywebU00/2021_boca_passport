@@ -2,7 +2,6 @@
     %no-bg {
         background: none;
     }
-
     /* -------------------------------不需要列印的區塊，請放置於這----//*/
     header,
     .fatfooter,
@@ -11,7 +10,6 @@
     .submenu {
         display: none;
     }
-
     /* -------------------------------各別顯示設定----//*/
     body {
         background: transparent;
@@ -32,6 +30,16 @@
     }
     .innerpage {
         margin-top: 0 !important;
+        >.container {
+            display: block !important;
+            .center_block {
+                overflow: hidden;
+            }
+            .left_block {
+                float: left !important;
+                width: 260px !important;
+            }
+        }
     }
     .main,
     .content {
@@ -44,7 +52,6 @@
         @include clearfix;
         @extend %no-bg;
         padding-top: 0px !important;
-
         img {
             &.float_left {
                 float: right;
@@ -89,7 +96,6 @@
             content: "» ";
         }
     }
-
     /* 檔案下載*/
     .file_download {
         a {
@@ -126,17 +132,14 @@
         page-break-inside: avoid;
         overflow: hidden;
         height: 6cm;
-
         .cp_slider {
             text-align: center;
-
             .slick-slide {
                 width: 30%;
                 height: 4cm;
                 display: inline-block;
                 background: #DEDEDE;
                 position: relative;
-
                 &:before {
                     content: "";
                     position: absolute;

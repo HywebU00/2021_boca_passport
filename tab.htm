@@ -9,7 +9,7 @@
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->
+<![endif]-->
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
@@ -151,107 +151,87 @@
         </header>
         <!-- header End -->
         <!-- main Start -->
-        <div id="center" class="main">
+        <div id="center" class="main innerpage">
+            <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-            <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
-            <!-- //// class 都可以隨意命名 !!! ///// -->
-            <section class="demosection col-12 full">
-                <div class="container">
-                    <div class="col"> 1欄滿版 </div>
+            <div class="container">
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- breadcrumb路徑 -->
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="#">首頁</a></li>
+                            <li><a href="#">節點</a></li>
+                            <li>節點</li>
+                        </ul>
+                    </div>
+                    <!-- h2節點 -->
+                    <h2 class="title">頁籤</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                    <section>
+                        <div class="tabSet">
+                            <section class="tabs example-1">
+                                <button type="button" class="tabItem active">第一個頁籤</button>
+                               <!--  <h2 class="tabItem active"><a href="#">第一個頁籤</a></h2> -->
+                                <!--選到的頁籤項目-->
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">1第一則消息消息消息消息消息消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多</a></div>
+                                </div>
+                                 <button type="button" class="tabItem">第二個頁籤</button>
+                                <!-- <h2 class="tabItem"><a href="#">第二個頁籤</a></h2> -->
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">2第一則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多</a></div>
+                                </div>
+                                <button type="button" class="tabItem">第三個頁籤</button>
+                               <!--  <h2 class="tabItem"><a href="#">第三個頁籤</a></h2> -->
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">3第一則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多</a></div>
+                                </div>
+                                <button type="button" class="tabItem">第四個頁籤</button>
+                                <!-- <h2 class="tabItem"><a href="#">第四個頁籤</a></h2> -->
+                                <div class="tabContent">
+                                    <ul>
+                                        <li><a href="#">4第一則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第二則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第三則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第四則消息</a><time>107-01-01</time></li>
+                                        <li><a href="#">第五則消息</a><time>107-01-01</time></li>
+                                    </ul>
+                                    <div class="more"><a href="#">更多</a></div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
                 </div>
-            </section>
-            <section class="demosection col-12">
-                <div class="container">
-                     <div class="col"> 1欄 </div>
-                </div>
-            </section>
-            <!--  兩欄樣式 -->
-            <section class="demosection col-6-6">
-                <div class="container">
-                    <div class="col"> 2欄 </div>
-                    <div class="col"> 2欄 </div>
-                </div>
-            </section>
-            <!--  兩欄樣式 8-4 -->
-            <section class="demosection col-8-4">
-                <div class="container">
-                    <div class="col"> 2欄 </div>
-                    <div class="col"> 2欄 </div>
-                </div>
-            </section>
-            <!--  兩欄樣式 4-8 -->
-            <section class="demosection col-4-8">
-                <div class="container">
-                    <div class="col"> 2欄 </div>
-                    <div class="col"> 2欄 </div>
-                </div>
-            </section>
-            <!--  三欄樣式 -->
-            <section class="demosection col-4-4-4">
-                <div class="container">
-                    <div class="col">3欄</div>
-                    <div class="col">3欄</div>
-                    <div class="col">3欄</div>
-                </div>
-            </section>
-            <!--  四欄樣式 -->
-            <section class="demosection col-3-3-3-3">
-                <div class="container">
-                    <div class="col">4欄</div>
-                    <div class="col">4欄</div>
-                    <div class="col">4欄</div>
-                    <div class="col">4欄</div>
-                </div>
-            </section>
-            <!--  六欄樣式 -->
-            <section class="demosection col-2-2-2-2-2-2">
-                <div class="container">
-                    <div class="col">6欄</div>
-                    <div class="col">6欄</div>
-                    <div class="col">6欄</div>
-                    <div class="col">6欄</div>
-                    <div class="col">6欄</div>
-                    <div class="col">6欄</div>
-                </div>
-            </section>
-            <!--  四欄樣式 有底色 -->
-            <section class="demosection col-3-3-3-3 bg">
-                <h2>有底色</h2>
-                <div class="container">
-                    <div class="col">4欄</div>
-                    <div class="col">4欄</div>
-                    <div class="col">4欄</div>
-                    <div class="col">4欄</div>
-                </div>
-            </section>
-            <!-- 可用有意義名稱命名 -->
-            <section class="demosection cssname">
-                <h2>可用有意義語意classname</h2>
-                <div class="container">
-                    <div class="col news">News區塊- 8</div>
-                    <div class="col video">Video區塊 -4</div>
-                </div>
-            </section>
-            <!-- 進階設定，class名稱一樣可用nth-child 控制個別寬度 -->
-            <section class="demosection col-3-6-3">
-                <h2>可自由編輯大小順序</h2>
-                <div class="container">
-                    <div class="col">小欄-3</div>
-                    <div class="col">大欄-6</div>
-                    <div class="col">小欄-3</div>
-                </div>
-            </section>
-            <!-- 進階設定，class名稱一樣可用nth-child 控制個別寬度 -->
-            <section class="demosection col-5">
-                <h2>可利用offset，製作單數欄格線</h2>
-                <div class="container">
-                    <div class="col">5欄</div>
-                    <div class="col">5欄</div>
-                    <div class="col">5欄</div>
-                    <div class="col">5欄</div>
-                    <div class="col">5欄</div>
-                </div>
-            </section>
+            </div>
         </div>
         <!-- fatfooter Start -->
         <section class="fatfooter">

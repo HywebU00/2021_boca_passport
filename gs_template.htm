@@ -221,12 +221,34 @@
                             <li class="icon_forward"><a href="#">轉寄友人</a></li>
                         </ul>
                     </div>
-                    <!-- NP Start -->
-                    <section class="np">
-                        <script async src="https://cse.google.com/cse.js?cx=009127923470150809400:goht2yefqky"></script>
-                        <div class="gcse-search"></div>
+                    <!-- sP Start -->
+                    <section class="sp">
+                        <div id="gsresult">
+                            <script> function gcseCallback() {
+                        //if (document.readyState != 'complete')
+                        //    return google.setOnLoadCallback(gcseCallback, true);
+                        google.search.cse.element.render({ gname: 'gsearch', div: 'gsresult', tag: 'search', attributes: { as_sitesearch: "" } });
+                        var element = google.search.cse.element.getElement('gsearch');
+                        element.execute("法官");
+                    };
+                    window.__gcse = {
+                        parsetags: 'explicit',
+                        callback: gcseCallback
+                    };
+                    (function () {
+                        var cx = 'bbfb6b718fa6fa6f6';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+
+                </script>
+                        </div>
                     </section>
-                    <!-- NP End -->
+                    <!-- sP End -->
                 </div>
             </div>
         </div>
