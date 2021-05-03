@@ -1,0 +1,20 @@
+.accordion {
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 0.5em;
+      a {
+        display: block;
+        background-color: #21baff;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px;
+      }
+    }
+  }
+
+  .accordion-content {
+    line-height: 1.45em;
+    padding: 5px 0;
+  }
+}
