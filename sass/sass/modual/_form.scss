@@ -965,6 +965,15 @@ select::-ms-expand {
 
     .btn_grp {
         justify-content: center;
+        .btn,
+        .btn-reset,
+        .btn-submit,
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        input[type="search"] {
+            margin: .3em;
+        }
     }
 
     .btn,
@@ -1196,6 +1205,10 @@ legend {
             width: auto;
         }
     }
+    &.label_hidden{
+        font-size: 0;
+        line-height: 1;
+    }
 }
 
 fieldset {
@@ -1403,8 +1416,8 @@ input[type="checkbox"]:focus {
     .upload_btn {
         position: absolute;
         overflow: hidden;
-        top: 1px;
-        right: 3px;
+        top: auto;
+        right: .5em;
         @extend %btn;
         @include btn_setting($form-focus, #FFF);
         padding: .2em 1em !important;
