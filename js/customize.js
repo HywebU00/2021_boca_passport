@@ -167,9 +167,7 @@ $(function() {
         infinite: true
     });
 
-    /*-----------------------------------*/
-    //////// 語言模組 無障礙遊走設定  ////////
-    /*-----------------------------------*/
+   
     $('.language').find('ul').hide();
     var openLang = $('.language').children('a');
     openLang.off().click(function(e) {
