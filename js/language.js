@@ -1,4 +1,5 @@
-$('.language').find('ul').hide();
+$(function() {
+    $('.language').find('ul').hide();
     var openLang = $('.language').children('a');
     openLang.off().click(function(e) {
         $(this).next('ul').stop(true, true).slideToggle();
@@ -16,3 +17,4 @@ $('.language').find('ul').hide();
             $('.language').find('ul').hide();
         }
     });
+})
