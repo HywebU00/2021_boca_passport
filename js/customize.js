@@ -166,8 +166,8 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
-
-   
+});
+$(function() {
     $('.language').find('ul').hide();
     var openLang = $('.language').children('a');
     openLang.off().click(function(e) {
@@ -186,4 +186,4 @@ $(function() {
             $('.language').find('ul').hide();
         }
     });
-});
+})
