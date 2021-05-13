@@ -17,13 +17,21 @@ $btn-radius:.2em;
     // text-shadow:1px 1px 1px RGBA(0,0,0,.3);
     // border-radius: $btn-radius;
     // @include gradient(lighten($btn-bg, 5), darken($btn-bg, 15), vertical);
-    &:hover, &:focus {
+    &:hover{
         background: darken($btn-bg, 10); // Old browsers
         border: 1px solid darken($btn-bg, 20);
         cursor: pointer;
         color: #FFF;
         outline:none;
-        box-shadow: 0 0px 0px 2px $aFocus!important;
+        // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
+    }
+    &:focus {
+        background: darken($btn-bg, 10); // Old browsers
+        border: 1px solid darken($btn-bg, 20);
+        cursor: pointer;
+        color: #FFF;
+        outline:none;
+        box-shadow: 0 0px 0px 2px $aFocus !important;
         // @include gradient(lighten($btn-bg, 10), darken($btn-bg, 18), vertical);
     }
     &.active {
@@ -45,7 +53,7 @@ $btn-radius:.2em;
     width: auto;
     padding: $btn-padding;
     min-width: 4em;
-    margin: .25em .1em;
+    margin:.25em .1em;
     
     i {
         margin-right: .2em;
