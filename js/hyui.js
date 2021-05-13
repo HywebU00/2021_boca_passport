@@ -496,6 +496,7 @@ $(function() {
     /*-----------------------------------*/
     ////////////////多組Tab////////////////
     /*-----------------------------------*/
+    var tab_headerHeight = Math.floor($('.header').outerHeight(true));
     var resizeTimer1;
     _window.resize(function() {
         clearTimeout(resizeTimer1);
@@ -536,7 +537,7 @@ $(function() {
                 var _tabItemNow = $(this), //改button後，原來$(this).parent(),改$(this)
                     tvp = _tab.offset().top,
                     tabIndex = _tabItemNow.index() / 2,
-                    scollDistance = tvp + tabItemHeight * tabIndex - headerHeight;
+                    scollDistance = tvp + tabItemHeight * tabIndex - tab_headerHeight;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
                 if (ww <= wwSmall) {

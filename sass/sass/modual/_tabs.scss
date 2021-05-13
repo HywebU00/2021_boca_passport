@@ -81,10 +81,10 @@
 }
 //多組 可設定差異
 .example-2 {
-    .tabItem>a:hover {
+    .tabItem:hover {
         background: $secondaryColor;
     }
-    .tabItem.active>a {
+    .tabItem.active {
         background: $secondaryColor;
     }
 }
