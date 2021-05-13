@@ -62,7 +62,7 @@
 }
 *[class*="notice_warning"] {
     color: #c74302;
-    background-color: #fdf6d9;
+    background-color: #FEEFB3;
     &:before {
         background: url(../images/basic/icon_warning.svg) no-repeat center center;
         background-size: 15px;
@@ -70,7 +70,7 @@
 }
 *[class*="notice_error"] {
     color: #D8000C;
-    background-color: #fff0e0;
+    background-color: #FFD2D2;
     &:before {
         background: url(../images/basic/icon_error.svg) no-repeat center center;
         background-size: 15px;
