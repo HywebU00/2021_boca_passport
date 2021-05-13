@@ -93,8 +93,7 @@ select::-ms-expand {
         max-width: $form_title_width;
         flex: 0 0 $form_title_width;
         align-self: flex-start;
-        @include gutter();
-        padding-top: 5px;
+        padding: .3em 15px;
         //white-space: nowrap;
 
         @include screen('mobile') {
@@ -106,19 +105,20 @@ select::-ms-expand {
 
         +.form_content {
 
-            &.form_col-6-6,
-            &.form_col-4-4-4,
-            &.form_col-3-3-3-3,
-            &.form_col-3-9,
-            &.form_col-9-3,
-            &.form_col-3-3-6,
-            &.form_col-6-3-3,
-            &.form_col-2-10,
-            &.form_col-10-2,
-            &.form_col-4-8,
-            &.form_col-8-4,
-            &.form_col-2-2-8,
-            &.form_col-8-2-2 {
+            // &.form_col-6-6,
+            // &.form_col-4-4-4,
+            // &.form_col-3-3-3-3,
+            // &.form_col-3-9,
+            // &.form_col-9-3,
+            // &.form_col-3-3-6,
+            // &.form_col-6-3-3,
+            // &.form_col-2-10,
+            // &.form_col-10-2,
+            // &.form_col-4-8,
+            // &.form_col-8-4,
+            // &.form_col-2-2-8,
+            // &.form_col-8-2-2
+            &[class*="form_col"] {
                 flex-basis: calc(100% - #{$form_title_width});
                 max-width: calc(100%  - #{$form_title_width});
                 padding-top: 0;
@@ -164,24 +164,15 @@ select::-ms-expand {
                 width: auto;
                 display: inline-flex;
                 align-items: center;
+                label{
+                    margin-bottom: 0;
+                }
             }
         }
 
 
         //選單格線系統
-        &.form_col-6-6,
-        &.form_col-4-4-4,
-        &.form_col-3-3-3-3,
-        &.form_col-3-9,
-        &.form_col-9-3,
-        &.form_col-3-3-6,
-        &.form_col-6-3-3,
-        &.form_col-2-10,
-        &.form_col-10-2,
-        &.form_col-4-8,
-        &.form_col-8-4,
-        &.form_col-2-2-8,
-        &.form_col-8-2-2 {
+        &[class*="form_col"]{
             flex-basis: 100%;
             max-width: 100%;
             @include gutter(0);
@@ -246,6 +237,26 @@ select::-ms-expand {
                     flex-basis: 100%;
                     width: 100%;
                 }
+            }
+        }
+
+        &.form_col-2-2-2-2-2-2 {
+
+            >.form_grp,
+            >input[type="text"],
+            >select {
+                flex-basis: (100% / 6);
+                width: (100% / 6);
+
+                @include screen('mobile') {
+                    flex-basis: 50%;
+                    width: 100%;
+                }
+
+                // @include screen('xs_mobile') {
+                //     flex-basis: 100%;
+                //     width: 100%;
+                // }
             }
         }
 
@@ -994,6 +1005,7 @@ select::-ms-expand {
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
+        padding: .3em 0;
 
         @include screen('mobile') {
             flex-wrap: wrap;
@@ -1087,7 +1099,7 @@ select::-ms-expand {
         &.form_inline {
             label {
                 //display: inline-block;
-                margin: .2em .5em 0 0;
+                margin: 0 .5em 0 0;
                 flex-basis: auto;
                 margin-right: 1em;
                 display: inline-flex;
@@ -1192,6 +1204,7 @@ legend {
     // white-space: nowrap;
     display: inline-block;
     margin: 0 0 .5em 0;
+    @include gutter(.6em);
 
     @include screen('xs_mobile') {
         display: block;
@@ -1447,7 +1460,7 @@ img.captcha {
     display: inline-block;
     vertical-align: middle;
     max-height: 2.5em;
-    margin: 0 .5em .3em .3em;
+    margin: .3 .5em .3em .3em;
 
     &+input {
         display: inline-block;
@@ -1455,9 +1468,9 @@ img.captcha {
         vertical-align: middle;
     }
 
-    ~.btn {
-        margin-top: -1px;
-    }
+    // ~.btn {
+    //     margin-top: -1px;
+    // }
 
     ~img {
         display: inline-block;
