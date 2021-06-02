@@ -4,7 +4,7 @@ $(function() {
     $('.mpSlider').slick({
         mobileFirst: true,
         dots: true,
-        arrow: true,
+        arrows: true,
         infinite: true,
         speed: 500,
         autoplay: true,
