@@ -4,10 +4,11 @@
 
 // 共通 common
 @import "sass/common/_mixin";					//客製MIXIN
-@import "sass/common/_grid";					//格線
+@import "sass/common/_grid";					//格線 - bootstrap
+@import "sass/common/_grid-flex";			    //格線 - flex
 @import "sass/common/_normalize";				//reset
 @import "sass/common/_typography";				//CP文字排版
-@import "sass/common/_accessibility";		//無障礙關閉js設定
+@import "sass/common/_accessibility";		    //無障礙關閉js設定
 @import "sass/common/_hack";					//瀏覽器修正
 
 

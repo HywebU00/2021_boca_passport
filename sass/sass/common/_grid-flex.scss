@@ -1,0 +1,239 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+
+// flex 欄位均分
+// 父層啟動 flex : @extend %flex_set;
+// 子層欄寬（均分）: @include flex-瀏覽器寬度-equal(欄數, margin );
+// 子層欄寬（自由）: @include flex-瀏覽器寬度(欄數, margin);
+
+// step 0、設定 flex 的 margin gutter
+$m-gutter: 4px;
+
+////////////////////////////////////////////////////
+////////////////// 均分 equal ///////////////////////
+////////////////////////////////////////////////////
+
+/////////////////////// step 1、父層啟動 flex
+.Flex-set{
+    // 啟動flex
+    // 位置：sass/sass/common/_extend.scss
+    @extend %flex_set;
+
+    // sampl樣式設定
+    .col{
+        background: #485b8a;
+        color: #fff;
+        margin: 4px 0;
+        p{ color: rgba(255,255,255,.5); }
+    }
+}
+
+/////////////////////// step 2、子層設定欄寬
+.flex-equal-3, .flex-equal-5, .flex-equal-7,
+.flex-equal-9, .flex-equal-11{
+    .Flex-set{
+        .col{ background: #00b0c6; }
+    }
+}
+
+.flex-equal-2{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(2, $m-gutter);
+            @include flex-lg-equal(2, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-3{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(3, $m-gutter);
+            @include flex-lg-equal(3, $m-gutter);
+            @include gutter();
+        }
+        .thumbnail{
+            margin-bottom: 30px;
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(3, $m-gutter);
+            @include flex-lg-equal(3, $m-gutter);
+            @include screen('mobile') {
+                justify-content: center;
+            }
+        }
+    }
+}
+.flex-equal-4{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(4, $m-gutter);
+            @include flex-lg-equal(4, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-5{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(5, $m-gutter);
+            @include flex-lg-equal(5, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-6{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(6, $m-gutter);
+            @include flex-lg-equal(6, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-7{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(3, $m-gutter);
+            @include flex-md-equal(4, $m-gutter);
+            @include flex-lg-equal(7, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-8{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(2, 2px);
+            @include flex-sm-equal(4, $m-gutter);
+            @include flex-md-equal(6, $m-gutter);
+            @include flex-lg-equal(8, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-9{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(2, 2px);
+            @include flex-sm-equal(3, $m-gutter);
+            @include flex-md-equal(6, $m-gutter);
+            @include flex-lg-equal(9, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-10{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(4, 2px);
+            @include flex-sm-equal(6, $m-gutter);
+            @include flex-md-equal(8, $m-gutter);
+            @include flex-lg-equal(10, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-11{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(3, 2px);
+            @include flex-sm-equal(5, $m-gutter);
+            @include flex-md-equal(7, $m-gutter);
+            @include flex-lg-equal(11, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+.flex-equal-12{
+    .Flex-set{
+        .col{
+            @include flex-xs-equal(3, 2px);
+            @include flex-sm-equal(6, $m-gutter);
+            @include flex-md-equal(9, $m-gutter);
+            @include flex-lg-equal(12, $m-gutter);
+            @include gutter();
+        }
+    }
+}
+
+
+//////////////////////////////////////////////////
+////////////////// 自訂欄寬         ///////////////
+////////////////// 處理不均分的欄位  ///////////////
+//////////////////////////////////////////////////
+
+
+// 多欄 = 12
+.flex-3-6-3{
+    .col{
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, $m-gutter);
+        @include flex-md(3, $m-gutter);
+        @include flex-lg(3, $m-gutter);
+        @include gutter();
+
+        &:nth-child(2){
+            @include flex-xs(12, 0px);
+            @include flex-sm(12, $m-gutter);
+            @include flex-md(6, $m-gutter);
+            @include flex-lg(6, $m-gutter);
+        }
+    }
+}
+
+.flex-8-4{
+    .col{
+        @include flex-xs(12, 0px);
+        @include flex-sm(6, $m-gutter);
+        @include flex-md(8, $m-gutter);
+        @include flex-lg(8, $m-gutter);
+        @include gutter();
+
+        &:nth-child(2){
+            @include flex-xs(12, 0px);
+            @include flex-sm(6, $m-gutter);
+            @include flex-md(4, $m-gutter);
+            @include flex-lg(4, $m-gutter);
+        }
+    }
+}
+.flex-4-8{
+    .col{
+        @include flex-xs(12, 0px);
+        @include flex-sm(6, $m-gutter);
+        @include flex-md(4, $m-gutter);
+        @include flex-lg(4, $m-gutter);
+        @include gutter();
+
+        &:nth-child(2){
+            @include flex-xs(12, 0px);
+            @include flex-sm(6, $m-gutter);
+            @include flex-md(8, $m-gutter);
+            @include flex-lg(8, $m-gutter);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

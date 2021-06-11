@@ -1,0 +1,385 @@
+// 父層啟動flex： @extend %flex_set;
+// @for $i from 1 through 12 {}
+
+////////////////////////////////////////////////////
+////////////////// 均分 equal         //////////////
+////////////////// xs - lg min-weidth //////////////
+////////////////////////////////////////////////////
+
+// 極小尺寸
+// $screen-xs: 320px !default;
+// 預設情況：最多4欄
+@mixin flex-xs-equal($col, $m-gutter){
+  @media (min-width: $screen-xs) {
+    // 啟動計算公式 ------
+    // 欄數（$col）、欄距（$m-gutter）
+    flex-basis: calc(100% / #{$col} - #{$m-gutter});
+    max-width: calc(100% / #{$col} - #{$m-gutter});
+
+    @if $col == 4 {
+      @for $i from 1 through 3 {
+        &:last-child{
+          &:nth-child(4n){ margin-right: 0; }
+          &:nth-child(4n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 3 {
+      @for $i from 1 through 2 {
+        &:last-child{
+          &:nth-child(3n){ margin-right: 0; }
+          &:nth-child(3n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 2 {
+      &:last-child{  
+        @for $i12 from 1 through 12 {
+          &:nth-child(12n-#{$i12}){ margin-right: 0; }
+        }
+      }
+    } @else if $col == 1 {
+      &:last-child{ margin-right: 0; }
+    }
+  }
+}
+
+// 手機
+// $screen-sm: 768px !default;
+// 預設情況：1-12欄
+@mixin flex-sm-equal($col, $m-gutter){
+  @media (min-width: $screen-sm) {
+    // 啟動計算公式 ------
+    // 欄數（$col）、欄距（$m-gutter）
+    flex-basis: calc(100% / #{$col} - #{$m-gutter});
+    max-width: calc(100% / #{$col} - #{$m-gutter});
+
+    @if $col == 12 {
+      @for $i from 1 through 11 {
+        &:last-child{
+          &:nth-child(12n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(12n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 11 {
+      @for $i from 1 through 10 {
+        &:last-child{
+          &:nth-child(11n){ margin-right: 0; }
+          &:nth-child(11n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 10 {
+      @for $i from 1 through 9 {
+        &:last-child{
+          &:nth-child(10n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(10n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 9 {
+      @for $i from 1 through 8 {
+        &:last-child{
+          &:nth-child(9n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(9n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 8 {
+      @for $i from 1 through 7 {
+        &:last-child{
+          &:nth-child(8n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(8n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 7 {
+      @for $i from 1 through 6 {
+        &:last-child{
+          &:nth-child(7n){ margin-right: 0; }
+          &:nth-child(7n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 6 {
+      @for $i from 1 through 5 {
+        &:last-child{
+          &:nth-child(6n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(6n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 5 {
+      @for $i from 1 through 4 {
+        &:last-child{
+          &:nth-child(5n){ margin-right: 0; }
+          &:nth-child(5n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 4 {
+      @for $i from 1 through 3 {
+        &:last-child{
+          &:nth-child(4n){ margin-right: 0; }
+          &:nth-child(4n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 3 {
+      @for $i from 1 through 2 {
+        &:last-child{
+          &:nth-child(3n){ margin-right: 0; }
+          &:nth-child(3n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 2 {
+      &:last-child{  
+        @for $i12 from 1 through 12 {
+          &:nth-child(12n-#{$i12}){ margin-right: 0; }
+        }
+      }
+    } @else if $col == 1 {
+      &:last-child{ margin-right: 0; }
+    }
+  }
+}
+
+// 平板
+// $screen-md: 992px !default;
+// 預設情況：1-12欄
+@mixin flex-md-equal($col, $m-gutter){
+ @media (min-width: $screen-md) {
+    // 啟動計算公式 ------
+    // 欄數（$col）、欄距（$m-gutter）
+    flex-basis: calc(100% / #{$col} - #{$m-gutter});
+    max-width: calc(100% / #{$col} - #{$m-gutter});
+
+    @if $col == 12 {
+      @for $i from 1 through 11 {
+        &:last-child{
+          &:nth-child(12n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(12n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 11 {
+      @for $i from 1 through 10 {
+        &:last-child{
+          &:nth-child(11n){ margin-right: 0; }
+          &:nth-child(11n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 10 {
+      @for $i from 1 through 9 {
+        &:last-child{
+          &:nth-child(10n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(10n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 9 {
+      @for $i from 1 through 8 {
+        &:last-child{
+          &:nth-child(9n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(9n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 8 {
+      @for $i from 1 through 7 {
+        &:last-child{
+          &:nth-child(8n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(8n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 7 {
+      @for $i from 1 through 6 {
+        &:last-child{
+          &:nth-child(7n){ margin-right: 0; }
+          &:nth-child(7n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 6 {
+      @for $i from 1 through 5 {
+        &:last-child{
+          &:nth-child(6n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(6n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 5 {
+      @for $i from 1 through 4 {
+        &:last-child{
+          &:nth-child(5n){ margin-right: 0; }
+          &:nth-child(5n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 4 {
+      @for $i from 1 through 3 {
+        &:last-child{
+          &:nth-child(4n){ margin-right: 0; }
+          &:nth-child(4n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 3 {
+      @for $i from 1 through 2 {
+        &:last-child{
+          &:nth-child(3n){ margin-right: 0; }
+          &:nth-child(3n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 2 {
+      &:last-child{  
+        @for $i12 from 1 through 12 {
+          &:nth-child(12n-#{$i12}){ margin-right: 0; }
+        }
+      }
+    } @else if $col == 1 {
+      &:last-child{ margin-right: 0; }
+    }
+  }
+}
+
+// 電腦
+// $screen-lg: 1400px !default;
+// 預設情況：1-12欄
+@mixin flex-lg-equal($col, $m-gutter){
+  @media (min-width: $screen-lg) {
+    // 啟動計算公式 ------
+    // 欄數（$col）、欄距（$m-gutter）
+    flex-basis: calc(100% / #{$col} - #{$m-gutter});
+    max-width: calc(100% / #{$col} - #{$m-gutter});
+
+    @if $col == 12 {
+      @for $i from 1 through 11 {
+        &:last-child{
+          &:nth-child(12n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(12n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 11 {
+      @for $i from 1 through 10 {
+        &:last-child{
+          &:nth-child(11n){ margin-right: 0; }
+          &:nth-child(11n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 10 {
+      @for $i from 1 through 9 {
+        &:last-child{
+          &:nth-child(10n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(10n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 9 {
+      @for $i from 1 through 8 {
+        &:last-child{
+          &:nth-child(9n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(9n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 8 {
+      @for $i from 1 through 7 {
+        &:last-child{
+          &:nth-child(8n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(8n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 7 {
+      @for $i from 1 through 6 {
+        &:last-child{
+          &:nth-child(7n){ margin-right: 0; }
+          &:nth-child(7n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 6 {
+      @for $i from 1 through 5 {
+        &:last-child{
+          &:nth-child(6n){ margin-right: 0; }  // 測試，原本沒有的
+          &:nth-child(6n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 5 {
+      @for $i from 1 through 4 {
+        &:last-child{
+          &:nth-child(5n){ margin-right: 0; }
+          &:nth-child(5n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 4 {
+      @for $i from 1 through 3 {
+        &:last-child{
+          &:nth-child(4n){ margin-right: 0; }
+          &:nth-child(4n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 3 {
+      @for $i from 1 through 2 {
+        &:last-child{
+          &:nth-child(3n){ margin-right: 0; }
+          &:nth-child(3n-#{$i}){ margin-right: calc( (100% / #{$col} - #{$m-gutter})*#{$i} + (#{$m-gutter}*#{$col})*#{$i} / (#{$col} - 1) ); }
+        }
+      }
+    } @else if $col == 2 {
+      &:last-child{  
+        @for $i12 from 1 through 12 {
+          &:nth-child(12n-#{$i12}){ margin-right: 0; }
+        }
+      }
+    } @else if $col == 1 {
+      &:last-child{ margin-right: 0; }
+    }
+  }
+}
+
+// 範例：
+// 子層 - 自訂欄寬
+// .col{
+//   @include flex-xs-equal(1, 0px, $padding);
+//   @include flex-sm-equal(2, $margin, $padding);
+//   @include flex-md-equal(3, $margin, $padding);
+//   @include flex-lg-equal(3, $margin, $padding);
+// }
+
+
+/////////////////////////////////////////////
+////////////////// 自訂欄寬 //////////////////
+/////////////////////////////////////////////
+
+// 極小尺寸
+// $screen-xs: 320px !default;
+@mixin flex-xs($col, $m-gutter){
+  @media (min-width: $screen-xs) {
+    flex-basis: calc(100% / 12 * #{$col} - #{$m-gutter});
+    max-width: calc(100% / 12 * #{$col} - #{$m-gutter});
+  }
+}
+
+// 手機
+// $screen-sm: 768px !default;
+@mixin flex-sm($col, $m-gutter){
+  @media (min-width: $screen-sm) {
+    flex-basis: calc(100% / 12 * #{$col} - #{$m-gutter});
+    max-width: calc(100% / 12 * #{$col} - #{$m-gutter});
+  }
+}
+
+// 平板
+// $screen-md: 992px !default;
+@mixin flex-md($col, $m-gutter){
+  @media (min-width: $screen-md) {
+    flex-basis: calc(100% / 12 * #{$col} - #{$m-gutter});
+    max-width: calc(100% / 12 * #{$col} - #{$m-gutter});
+  }
+}
+
+// 電腦
+// $screen-lg: 1400px !default;
+@mixin flex-lg($col, $m-gutter){
+  @media (min-width: $screen-lg) {
+    // 啟動計算公式 ------
+    // 佔欄數（$col）、欄距（$m-gutter）
+    // width ＝ 100% / 12 * 佔幾欄 - 欄距
+    flex-basis: calc(100% / 12 * #{$col} - #{$m-gutter});
+    max-width: calc(100% / 12 * #{$col} - #{$m-gutter});
+  }
+}
+
+// 範例：
+// 子層 - 平均欄寬
+// .col{
+//   @include flex-xs(1, 0px);
+//   @include flex-sm(2, $m-gutter);
+//   @include flex-md(3, $m-gutter);
+//   @include flex-lg(3, $m-gutter);
+// }
+
+
+
+
