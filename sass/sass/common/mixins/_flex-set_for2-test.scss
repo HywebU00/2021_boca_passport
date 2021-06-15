@@ -7,10 +7,10 @@
 ////////////////////////////////////////////////////
 
 // 極小尺寸
-// $screen-xs: 320px !default;
+// $screen-xs-flex: 320px !default;
 // 預設情況：最多4欄
 @mixin flex-xs-equal($col, $m-gutter){
-  @media (min-width: $screen-xs) {
+  @media (min-width: $screen-xs-flex) {
     // 啟動計算公式 ------
     // 欄數（$col）、欄距（$m-gutter）
     flex-basis: calc(100% / #{$col} - #{$m-gutter});
@@ -333,9 +333,9 @@
 /////////////////////////////////////////////
 
 // 極小尺寸
-// $screen-xs: 320px !default;
+// $screen-xs-flex: 320px !default;
 @mixin flex-xs($col, $m-gutter){
-  @media (min-width: $screen-xs) {
+  @media (min-width: $screen-xs-flex) {
     flex-basis: calc(100% / 12 * #{$col} - #{$m-gutter});
     max-width: calc(100% / 12 * #{$col} - #{$m-gutter});
   }

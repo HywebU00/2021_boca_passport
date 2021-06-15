@@ -2,6 +2,10 @@
 $tooltop-font-size:$font-size;
 [tooltip] { position: relative; }
 
+em{
+    &[tooltip]{ @include aSetting; }
+}
+
 [tooltip]:before,
 [tooltip]:after {
     text-transform: none;
@@ -128,7 +132,7 @@ $tooltop-font-size:$font-size;
         text-align: center;
         padding: 10px;
         width: 100px;
-        height: 20px;
+        // height: 20px;
         line-height: 20px;
         vertical-align: baseline;
     }
