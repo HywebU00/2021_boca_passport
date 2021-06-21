@@ -151,21 +151,21 @@ div.function{
                 }
                 &.back {
                     a:before {
-                        background: url(../images/basic/icon_back.png) no-repeat center center;
+                        background: url(../images/basic/icon_back-style2.svg) no-repeat center center;
                         background-size: 100%;
                     }
                 }
 
                 &.print {
                     a:before {
-                        background: url(../images/basic/icon_printer.png) no-repeat center center;
+                        background: url(../images/basic/icon_print-style2.svg) no-repeat center center;
                         background-size: 100%;
                     }
                     @include screen('mobile') { display: none; }
                 }
                 &.forward {
                     a:before {
-                        background: url(../images/basic/icon_forward.png) no-repeat center center;
+                        background: url(../images/basic/icon_forward-style2.svg) no-repeat center center;
                         background-size: 100%;
                     }
                 }
@@ -224,7 +224,7 @@ div.function{
                 height: 60%;
                 top: 20%;
                 left: 20%;
-                background: url(../images/basic/icon_share.png) no-repeat center center  !important;
+                background: url(../images/basic/icon_share.svg) no-repeat center center  !important;
                 background-size: 24px !important;
             }
             // img {
