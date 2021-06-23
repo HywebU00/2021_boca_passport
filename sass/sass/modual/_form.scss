@@ -1242,7 +1242,7 @@ input,
 select,
 textarea,
 .input-i {
-    width: 100%;
+    width: calc(100% - .6em);
     -webkit-appearance: none; //清除 safari 的預設樣式
     -moz-appearance: none;
     appearance: none;
