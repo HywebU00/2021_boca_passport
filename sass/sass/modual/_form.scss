@@ -153,6 +153,7 @@ select::-ms-expand {
 
         *[class^="notice"] {
             margin: 0 .3em .3em .3em;
+            width: calc(100% - .6em);
         }
 
         //有條件式表單
@@ -1240,8 +1241,7 @@ button {
 
 input,
 select,
-textarea,
-.input-i {
+textarea{
     width: calc(100% - .6em);
     -webkit-appearance: none; //清除 safari 的預設樣式
     -moz-appearance: none;
@@ -1490,6 +1490,7 @@ abbr[title] {
 //---------------------------前面有icon的input------------------//
 .input-i {
     position: relative;
+    width: 100%;
 
     i {
         position: absolute;
