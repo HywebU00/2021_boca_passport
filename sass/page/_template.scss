@@ -53,7 +53,8 @@ body {
         max-width: 100%;
     }
     .left_block {
-        flex: 0 0 260px;
+        flex: none;
+        flex-basis: 260px;
         max-width: 260px;
         margin-right: 40px;
         &.hidden {
