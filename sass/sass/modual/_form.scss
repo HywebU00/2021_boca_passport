@@ -1179,10 +1179,8 @@ select::-ms-expand {
     .upload_grp {
         display: flex;
         margin-right: .5em;
-        flex: none;
-        flex-basis: auto;
-        width:auto;
-        
+        width: auto;
+        flex: 0 0 auto;
         // @include screen('mobile'){
         //     width: 100%;
         // }
@@ -1327,7 +1325,7 @@ select:focus {
 //
 //---------------------------------------------下拉選單--------//
 select {
-    line-height: 1.5em;
+    line-height: 1.35em;
     padding: 0.5em;
     border: 1px solid $color-gray;
     background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
