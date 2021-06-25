@@ -48,15 +48,15 @@ body {
         display: flex;
     }
     .center_block {
-        // flex: auto;
+        flex: auto;
         max-width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
     }
     .left_block {
-        // flex: 0 0 260px;
-        // max-width: 260px;
-        float: left;
-        width: 260px;
+        flex: 0 0 260px;
+        max-width: 260px;
+        // float: left;
+        // width: 260px;
         margin-right: 40px;
         &.hidden {
             +.center_block {
