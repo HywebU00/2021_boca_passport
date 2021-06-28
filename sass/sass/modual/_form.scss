@@ -1386,7 +1386,7 @@ input[type="checkbox"]:focus {
     .upload_btn {
         position: absolute;
         overflow: hidden;
-        top: auto;
+        top: 10px;
         right: .5em;
         @extend %btn;
         @include btn_setting($form-focus, #FFF);
