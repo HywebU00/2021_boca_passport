@@ -558,6 +558,15 @@ select::-ms-expand {
         >input,
         >select,
         >label {
+            width: calc(25% - .6em);
+            max-width: calc(25% - .6em);
+            flex-basis: calc(25% - .6em);
+
+            @include screen('xs_mobile') {
+                width: calc(25% - .6em);
+                max-width: calc(25% - .6em);
+                flex-basis: calc(100% - .6em);
+            }
             &:nth-child(2) {
                 width: calc(75% - .6em);
                 flex-basis: calc(75% - .6em);
@@ -600,15 +609,25 @@ select::-ms-expand {
         >input,
         >select,
         >label {
+            width: calc(75% - .6em);
+            max-width: calc(75% - .6em);
+            flex-basis: calc(75% - .6em);
+
+            @include screen('xs_mobile') {
+                width:  calc(100% - .6em);
+                max-width: calc(100% - .6em);
+                flex-basis: calc(100% - .6em);
+            }
+
             &:nth-child(2) {
-                flex-basis: calc(25% - .6em);
                 width: calc(25% - .6em);
                 max-width: calc(25% - .6em);
-
+                flex-basis: calc(25% - .6em);
+            
                 @include screen('xs_mobile') {
-                    flex-basis: calc(100% - .6em);
                     width: calc(100% - .6em);
                     max-width: calc(100% - .6em);
+                    flex-basis: calc(100% - .6em);           
                 }
             }
         }
