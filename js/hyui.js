@@ -744,7 +744,7 @@ $(function() {
             $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - 70 }, 800, 'easeOutExpo');
             $('.main').find('.accesskey').focus();
         }
-        // alt+B footer
+        // alt+Z footer
         if (e.altKey && e.keyCode == 90) {
             $('html, body').stop(true, true).animate({ scrollTop: $('footer').find('.accesskey').offset().top }, 800, 'easeOutExpo');
             $('footer').find('.accesskey').focus();
