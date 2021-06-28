@@ -453,9 +453,9 @@ select::-ms-expand {
     .form_col-4-4-4 {
 
         >.form_grp {
-            width: calc(100% / 3);
-            flex-basis: calc(100% / 3);
-            max-width: calc(100% / 3);
+            width: calc(100% * 0.33333);
+            flex-basis: calc(100% * 0.33333);
+            max-width: calc(100% * 0.33333);
 
             @include screen('xs_mobile') {
                 width: 100%;
@@ -466,9 +466,9 @@ select::-ms-expand {
         >input,
         >select,
         >label {
-            width: calc(100% / 3 - .6em);
-            flex-basis: calc(100% / 3 - .6em);
-            max-width: calc(100% / 3 - .6em);
+            width: calc(100% * 0.33333 - .6em);
+            flex-basis: calc(100% * 0.33333 - .6em);
+            max-width: calc(100% * 0.33333 - .6em);
 
             @include screen('xs_mobile') {
                 width: calc(100% - .6em);
