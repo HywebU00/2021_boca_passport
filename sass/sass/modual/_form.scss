@@ -81,7 +81,7 @@ select::-ms-expand {
             border-bottom: none;
 
             label {
-                float: left;
+                //float: left;
                 width: auto;
                 margin: 0 .5em .5em 0;
             }
@@ -1012,58 +1012,6 @@ select::-ms-expand {
             flex-wrap: wrap;
         }
 
-        // .form_content {
-        //     &.mix-2-col {
-        //         @extend %mix-col;
-
-        //         >.form_grp,
-        //         >input[type="text"],
-        //         >select {
-        //             flex: 1 1 50%;
-
-        //             // &.form_inline {
-
-        //             //     >input,
-        //             //     >select,
-        //             //     >.input-i {
-        //             //         flex: 1 1 auto;
-        //             //     }
-        //             //     >.input-i{
-        //             //         input{
-        //             //             width: calc(100% - .6em);
-        //             //         }
-        //             //     }
-        //             // }
-        //         }
-        //     }
-
-        //     &.mix-3-col {
-        //         @extend %mix-col;
-
-        //         .form_grp {
-        //             flex: 1 1 calc(100% / 3);
-
-        //             @include screen('mobile') {
-        //                 flex-basis: calc(100% / 3 - .6em);
-        //                 margin: 0 .3em;
-        //             }
-        //         }
-        //     }
-
-        //     &.mix-4-col {
-        //         @extend %mix-col;
-
-        //         .form_grp {
-        //             flex: 1 1 calc(100% / 4);
-
-        //             @include screen('mobile') {
-        //                 flex-basis: calc(100% / 2 - .6em);
-        //                 margin: 0 .3em;
-        //             }
-        //         }
-        //     }
-        // }
-
     }
 
     .check_grp,
@@ -1105,6 +1053,14 @@ select::-ms-expand {
                 margin-right: 1em;
                 display: inline-flex;
                 align-items: center;
+            }
+        }
+    }
+    &.form_inline, .form_inline{
+        .check_grp,
+        .radio_grp {
+            label {
+                flex-basis: auto;
             }
         }
     }
