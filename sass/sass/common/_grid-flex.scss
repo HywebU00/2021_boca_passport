@@ -226,6 +226,44 @@ $m-gutter: 4px;
 }
 
 
+// 綜合
+.mix-equal-2{
+    .Flex-set{
+        @extend %flex_set;
+        .col{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(2, $m-gutter);
+            @include flex-lg-equal(2, $m-gutter);
+            // @include gutter();
+            padding: 1em;
+
+            h3{ margin: 10px 0;}
+        }
+    }
+
+    .inner-4-8{
+        @extend %flex_set;
+        div{
+            @include flex-xs(12, 0px);
+            @include flex-sm(4, $m-gutter);
+            @include flex-md(4, $m-gutter);
+            @include flex-lg(4, $m-gutter);
+
+            &:last-child{
+                @include flex-xs(12, 0px);
+                @include flex-sm(8, $m-gutter);
+                @include flex-md(8, $m-gutter);
+                @include flex-lg(8, $m-gutter);
+            }
+
+            &.img{}
+            &.text{}
+        }
+    }
+}
+
+
 
 
 

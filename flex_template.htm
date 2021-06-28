@@ -156,7 +156,8 @@
             <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
             <!-- //// class 都可以隨意命名 !!! ///// -->
             <!-- flex start -->
-            <!-- free 自由組合 -->
+
+            <!-- type 1：自由分配 -->
             <!-- 多欄 = 12 -->
             <section class="flex-3-6-3">
                 <div class="container">
@@ -210,7 +211,7 @@
 
             <hr>
 
-            <!-- 各欄均分 -->
+            <!-- type 2：均分 -->
             <!-- 2、 -->
             <section class="flex-equal-2">
                 <div class="container">
@@ -607,6 +608,7 @@
                     </div>
                 </div>
             </section>
+
             <!-- 3 thumbnail、 -->
             <section class="flex-equal-3">
                 <div class="container">
@@ -668,6 +670,47 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio temporibus dolor repellendus unde, rem ducimus aut cupiditate amet beatae minus repellat laboriosam reiciendis libero dolorem quo, recusandae deserunt, omnis qui?</p>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- mix -->
+            <section class="mix-equal-2">
+                <div class="container">
+                    <h2>均分 併 自由分配</h2>
+                    <div class="Flex-set">
+                        <div class="col">
+                            <h3>次標題一</h3>
+                            <section class="inner-4-8">
+                                <div class="img-container">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/demo/01.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/demo/01.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/demo/01.jpg">
+                                        <img data-src="images/demo/01.jpg" class="cover lazy">
+                                        <noscript><img src="images/demo/01.jpg"></noscript>
+                                    </picture>
+                                </div>
+                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nam, aperiam error accusamus, distinctio laboriosam minus nesciunt cum labore voluptate consectetur magni, illum in recusandae. Optio, ab voluptatibus suscipit magnam.</div>
+                            </section>
+                        </div>
+                        <div class="col">
+                            <h3>次標題二</h3>
+                            <section class="inner-4-8">
+                                <div class="img-container">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
+                                        <source media="(min-width: 992px)" data-srcset="images/demo/01.jpg">
+                                        <source media="(min-width: 576px)" data-srcset="images/demo/01.jpg">
+                                        <source media="(max-width: 575px)" data-srcset="images/demo/01.jpg">
+                                        <img data-src="images/demo/01.jpg" class="cover lazy">
+                                        <noscript><img src="images/demo/01.jpg"></noscript>
+                                    </picture>
+                                </div>
+                                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nam, aperiam error accusamus, distinctio laboriosam minus nesciunt cum labore voluptate consectetur magni, illum in recusandae. Optio, ab voluptatibus suscipit magnam.</div>
+                            </section>
                         </div>
                     </div>
                 </div>
