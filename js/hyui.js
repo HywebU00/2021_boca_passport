@@ -310,12 +310,11 @@ $(function() {
     });
     // 固定版頭
     var headerHeight = Math.floor($('.header').outerHeight(true)),
-        customHeight = 176 - 40; // header高度 - menu高度，每個專案不同，請另外填寫。
+        menuH = Math.floor(_menu.outerHeight(true)),
+        customHeight = headerHeight - menuH;
     if ($('header .menu').length > 0) {
         var stickyMenuTop = Math.floor($('header .menu').offset().top);
         // console.log(stickyMenuTop);
-        headerHeight = Math.floor($('.header').outerHeight(true));
-        menuH = Math.floor(_menu.outerHeight(true));
         $(window).bind("load scroll resize", function(e) {
             ww = _window.outerWidth();
             if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
