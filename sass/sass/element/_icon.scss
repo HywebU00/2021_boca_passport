@@ -11,8 +11,7 @@
     &:before {
         background: url(../images/icon/#{$icon_img}.svg) center center no-repeat;
         background-size: contain;
-        margin-top: -0.1em;
-        margin-bottom: .1em;
+        margin: -0.1em 4px .1em;
     }
 }
 // 依英文字母排序
@@ -63,6 +62,7 @@
 
 // ---------------- H ----------------
 .i_heart { @include hyui_icon('icon_heart'); }
+.i_hide { @include hyui_icon('icon_hide'); }
 .i_home { @include hyui_icon('icon_home'); }
 
 
@@ -109,6 +109,7 @@
 .i_setting { @include hyui_icon('icon_setting'); }
 .i_sort { @include hyui_icon('icon_sort'); }
 .i_star { @include hyui_icon('icon_star'); }
+.i_show { @include hyui_icon('icon_show'); }
 
 
 // ---------------- T ----------------
