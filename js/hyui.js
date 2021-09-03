@@ -311,7 +311,8 @@ $(function() {
     // 固定版頭
     var headerHeight = Math.floor($('.header').outerHeight(true)),
         menuH = Math.floor(_menu.outerHeight(true)),
-        customHeight = headerHeight - menuH;
+        // customHeight = headerHeight - menuH;
+        customHeight = 178 - 40; // header高度 - menu高度，每個專案不同，請另外填寫。
     if ($('header .menu').length > 0) {
         var stickyMenuTop = Math.floor($('header .menu').offset().top);
         // console.log(stickyMenuTop);
@@ -320,7 +321,7 @@ $(function() {
             if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
                 $('.header').addClass('fixed');
                 $('.header').css('margin-top', -1 * customHeight);
-                // $('.main').css('margin-top', headerHeight);
+                $('.main').css('margin-top', headerHeight);
                 // $('.main').css('margin-top', 0);
             } else {
                 $('.header').removeClass('fixed');

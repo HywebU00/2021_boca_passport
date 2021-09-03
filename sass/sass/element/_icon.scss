@@ -11,7 +11,7 @@
     &:before {
         background: url(../images/icon/#{$icon_img}.svg) center center no-repeat;
         background-size: contain;
-        margin: -0.1em 4px .1em;
+        // margin: -0.1em 4px .1em;
     }
 }
 // 依英文字母排序
