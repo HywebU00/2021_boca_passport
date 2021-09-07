@@ -440,30 +440,14 @@ select::-ms-expand {
 
         +.form_content {
 
-            // 麥莉原始算式 ------------------------
-            // &.form_col-6-6,
-            // &.form_col-4-4-4,
-            // &.form_col-3-3-3-3,
-            // &.form_col-3-9,
-            // &.form_col-9-3,
-            // &.form_col-3-3-6,
-            // &.form_col-6-3-3,
-            // &.form_col-2-10,
-            // &.form_col-10-2,
-            // &.form_col-4-8,
-            // &.form_col-8-4,
-            // &.form_col-2-2-8,
-            // &.form_col-8-2-2
             &[class*="form_col"] {
                 flex-basis: calc(100% - #{$form_title_width});
                 max-width: calc(100% - #{$form_title_width});
                 padding-top: 0;
-                @include gutter();
-
+                
                 @include screen('mobile') {
                     flex-basis: 100%;
                     max-width: 100%;
-                    @include gutter(0);
                 }
             }
         }
