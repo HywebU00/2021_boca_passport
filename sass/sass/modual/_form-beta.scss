@@ -1283,8 +1283,8 @@ select::-ms-expand {
                             border-radius: 50%;
                             background: #54caff;
                             content: "";
-                            left: .35em;
-                            top: .3em;
+                            left: .6em;
+                            top: calc(50% - .5em);
                             z-index: -1;
                             animation: ripple 0.35s linear;
                         }
@@ -1513,7 +1513,6 @@ input[type="number"] {
 // input＋selectk 的下拉arrow
 input[type="text"]{
     &.complex{
-        height: 36px;
         padding-right: 1em;
         border: 1px solid #ccc;
         background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
@@ -1811,7 +1810,14 @@ abbr[title] {
             border-right: none;
             border-left: 1px solid $color-gray;
             right: .5em;
-            left: auto;
+            left: auto; 
         }
+    }
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(3.5);
     }
 }
