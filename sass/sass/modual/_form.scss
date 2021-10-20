@@ -1264,8 +1264,7 @@ input[type="number"] {
 }
 
 button,
-input[type="button"],
-    {
+input[type="button"]{
     // @extend %btn;
     // @include btn_setting($form-focus, #FFF);
 }

@@ -195,14 +195,15 @@
                             <div class="flex-form">
                                 <!-- input -->
                                 <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>input：</label>
+                                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>input：</label>
                                     <div class="form_content">
                                         <input type="text" id="" placeholder="請輸入文字">
                                     </div>
                                 </div>
                                 <!-- select -->
                                 <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>select：</label>
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>select：</label>
                                     <div class="form_content">
                                         <select name="" id="">
                                             <option value="">台北市</option>
@@ -215,7 +216,7 @@
                                 </div>
                                 <!-- radio -->
                                 <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>radio：</label>
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>radio：</label>
                                     <div class="form_content" id="fake-legend">
                                         <div class="radio_grp form_inline">
                                             <label><input type="radio" name="sampleRadio1" value="" checked="">新北市</label>
@@ -230,7 +231,7 @@
                                 </div>
                                 <!-- checkbox -->
                                 <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>checkbox：</label>
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>checkbox：</label>
                                     <div class="form_content" id="fake-legend">
                                         <div class="check_grp form_inline">
                                             <label><input type="checkbox" name="" value="" checked="">全部</label>
@@ -243,7 +244,7 @@
                                 </div>
                                 <!-- textarea -->
                                 <div class="form_grp">
-                                    <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>textarea：</label>
+                                    <label for="address" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>textarea：</label>
                                     <div class="form_content">
                                         <textarea name="" id="address" cols="30" rows="10"></textarea>
                                     </div>
@@ -254,14 +255,14 @@
                             <div class="flex-form form-column">
                                 <!-- input -->
                                 <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>input：</label>
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>input：</label>
                                     <div class="form_content">
                                         <input type="text" id="" placeholder="請輸入文字">
                                     </div>
                                 </div>
                                 <!-- select -->
                                 <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>select：</label>
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>select：</label>
                                     <div class="form_content">
                                         <select name="" id="">
                                             <option value="">台北市</option>
@@ -274,7 +275,7 @@
                                 </div>
                                 <!-- radio -->
                                 <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>radio：</label>
+                                    <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>radio：</label>
                                     <div class="form_content" id="fake-legend">
                                         <div class="radio_grp form_inline">
                                             <label><input type="radio" name="sampleRadio1" value="" checked="">新北市</label>
