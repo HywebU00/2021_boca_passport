@@ -56,93 +56,93 @@ $(function() {
     // });
 
     //燈箱slick+lightBox組合
-    // $('.cp_slider').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     autoplay: false,
-    //     autoplaySpeed: 1500,
-    //     pauseOnHover: true,
-    //     pauseOnFocus: true,
-    //     focusOnSelect: true,
-    //     accessibility: true,
-    //     lazyLoad: 'ondemand',
-    //     ease: 'ease',
-    //     responsive: [{
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //             infinite: true,
-    //             dots: true
-    //         }
-    //     }, {
-    //         breakpoint: 545,
-    //         settings: {
-    //             arrows: true,
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2
-    //         }
-    //     }, {
-    //         breakpoint: 480,
-    //         settings: {
-    //             arrows: true,
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             arrows: false
-    //         }
-    //     }]
-    // });
-    // $('.cp_slider').slickLightbox({
-    //     caption: 'caption',
-    //     lazyLoad: 'ondemand',
-    //     useHistoryApi: 'true',
-    //     ease: 'ease',
-    //     lazy: true
-    // });
+    $('.cp_slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1500,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        focusOnSelect: true,
+        accessibility: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
+    });
+    $('.cp_slider').slickLightbox({
+        caption: 'caption',
+        lazyLoad: 'ondemand',
+        useHistoryApi: 'true',
+        ease: 'ease',
+        lazy: true
+    });
 
-    // 
-    // $('.cppic_slider').slick({
-    //     dots: true,
-    //     infinite: false,
-    //     speed: 500,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     autoplay: false,
-    //     autoplaySpeed: 1500,
-    //     // pauseOnHover: true,
-    //     // pauseOnFocus: true,
-    //     // focusOnSelect: true,
-    //     // accessibility: true,
-    //     // lazyLoad: 'ondemand',
-    //     // ease: 'ease',
-    //     responsive: [{
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //             infinite: true,
-    //             dots: true
-    //         }
-    //     }, {
-    //         breakpoint: 545,
-    //         settings: {
-    //             arrows: true,
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2
-    //         }
-    //     }, {
-    //         breakpoint: 480,
-    //         settings: {
-    //             arrows: true,
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             arrows: false
-    //         }
-    //     }]
-    // });
+    
+    $('.cppic_slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1500,
+        // pauseOnHover: true,
+        // pauseOnFocus: true,
+        // focusOnSelect: true,
+        // accessibility: true,
+        // lazyLoad: 'ondemand',
+        // ease: 'ease',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
+    });
 
     // cp_photo
     // $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
