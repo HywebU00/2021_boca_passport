@@ -2,8 +2,8 @@
 .header {
     position: relative;
     z-index: 99;
-    background: #FFF;
-    box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
+    // background: #FFF;
+    // box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
     @extend %clearfix;
     @include screen('mobile') {
         position: fixed;
@@ -164,141 +164,141 @@
     }
 }
 //search
-.search {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap:wrap;
-    vertical-align: top;
-    font-size: .938em;
-    margin: 1em .5em;
-    box-sizing: border-box;
+// .search {
+//     display: flex;
+//     justify-content: flex-end;
+//     flex-wrap:wrap;
+//     vertical-align: top;
+//     font-size: .938em;
+//     margin: 1em .5em;
+//     box-sizing: border-box;
 
-    @include screen('mobile') {
-        display: none;
-    }
-    label {
-        font-size: 0em;
-    }
-    .form_grp {
-        flex:0 0 auto;
-        margin:0;
-        input {
-            margin: 0 0 0 .5em;
-            padding: .2em;
-            box-shadow: none;
-            width:auto;
+//     @include screen('mobile') {
+//         display: none;
+//     }
+//     label {
+//         font-size: 0em;
+//     }
+//     .form_grp {
+//         flex:0 0 auto;
+//         margin:0;
+//         input {
+//             margin: 0 0 0 .5em;
+//             padding: .2em;
+//             box-shadow: none;
+//             width:auto;
 
-            &[type="submit"] {
-                min-width: auto;
-                padding: .2em .8em;
-            }
-            &:focus{
-                box-shadow: 0 0px 0px 2px $aFocus;
-            }
-        }
-    }
-    .btn_grp {
-        flex:0 0 auto;
-        padding:0 .5em 0;
-        margin: 0;
-        input, input[type="submit"] {
-            min-width: auto;
-            padding: .2em .8em;
-            margin: 0;
-        }
-    }
-    .keywordHot {
-        flex:1 1 100%;
-        ul {
-            font-size: .813em;
-            line-height: 1.65em;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-            list-style-type: none;
-            &:before {
-            }
-            li {
-                margin: 0;
-                padding: .5em;
-                flex:0 0 auto;
-            }
-            a {
-                @include aSetting_nocolor;
-            }
-        }
-    }
-    // m_search
-    &.m_search {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: auto;
-        padding: .8em .3em;
-        display: block;
-        height: auto;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        z-index: 98;
-        background: #333;
-        display: none;
-        margin: 0;
+//             &[type="submit"] {
+//                 min-width: auto;
+//                 padding: .2em .8em;
+//             }
+//             &:focus{
+//                 box-shadow: 0 0px 0px 2px $aFocus;
+//             }
+//         }
+//     }
+//     .btn_grp {
+//         flex:0 0 auto;
+//         padding:0 .5em 0;
+//         margin: 0;
+//         input, input[type="submit"] {
+//             min-width: auto;
+//             padding: .2em .8em;
+//             margin: 0;
+//         }
+//     }
+//     .keywordHot {
+//         flex:1 1 100%;
+//         ul {
+//             font-size: .813em;
+//             line-height: 1.65em;
+//             margin: 0;
+//             padding: 0;
+//             display: flex;
+//             justify-content: flex-end;
+//             list-style-type: none;
+//             &:before {
+//             }
+//             li {
+//                 margin: 0;
+//                 padding: .5em;
+//                 flex:0 0 auto;
+//             }
+//             a {
+//                 @include aSetting_nocolor;
+//             }
+//         }
+//     }
+//     // m_search
+//     &.m_search {
+//         width: 100% !important;
+//         max-width: 100% !important;
+//         min-width: auto;
+//         padding: .8em .3em;
+//         display: block;
+//         height: auto;
+//         position: fixed;
+//         top: 60px;
+//         left: 0;
+//         z-index: 98;
+//         background: #333;
+//         display: none;
+//         margin: 0;
 
-        label {
-            font-size: 0em;
-            line-height: 0;
-        }
-        .form_grp {
-            display: flex;
+//         label {
+//             font-size: 0em;
+//             line-height: 0;
+//         }
+//         .form_grp {
+//             display: flex;
 
-            label {
-                display: none;
-                flex:0 0 0%;
+//             label {
+//                 display: none;
+//                 flex:0 0 0%;
 
-            }
-            input {
-                margin: .5em;
-                padding: .5em;
-                flex:1 1 50%;
+//             }
+//             input {
+//                 margin: .5em;
+//                 padding: .5em;
+//                 flex:1 1 50%;
 
-                &[type="submit"] {
-                    flex:0 1 15%;
-                    margin: .5em;
+//                 &[type="submit"] {
+//                     flex:0 1 15%;
+//                     margin: .5em;
 
-                    &:hover, &:focus {
-                    }
-                }
-            }
-        }
-        .btn_grp {
-            flex:1 1 auto;
-            padding:.5em;
-            margin-top: .5em;
-            border-top: dotted 1px #999;
+//                     &:hover, &:focus {
+//                     }
+//                 }
+//             }
+//         }
+//         .btn_grp {
+//             flex:1 1 auto;
+//             padding:.5em;
+//             margin-top: .5em;
+//             border-top: dotted 1px #999;
 
-            box-sizing: border-box;
-            input {
-                width: 100% !important;
-                padding: .6em .5em !important;
-                margin: 0;
-            }
-        }
-        .keywordHot {
-            @extend %clearfix;
-            ul{
-                justify-content:flex-start;
-            }
-            a {
-                color: #FFF;
-                &:hover,
-                &:focus {
-                    color: $primaryColor;
-                }
-            }
-        }
-    }
-}
+//             box-sizing: border-box;
+//             input {
+//                 width: 100% !important;
+//                 padding: .6em .5em !important;
+//                 margin: 0;
+//             }
+//         }
+//         .keywordHot {
+//             @extend %clearfix;
+//             ul{
+//                 justify-content:flex-start;
+//             }
+//             a {
+//                 color: #FFF;
+//                 &:hover,
+//                 &:focus {
+//                     color: $primaryColor;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // header fix
 .header.fixed {

@@ -1,3 +1,5 @@
+$m-gutter: 4px;
+
 * {
     box-sizing: border-box;
 }
@@ -40,6 +42,507 @@ body {
         line-height: 1.25em;
     }
 }
+
+//////////////////////////////////////////////////////////// 調整
+html,body{
+    &.Login, &.Page{
+        width: 100%;
+        height: 100%;
+        // background: #e2e8ee;
+        
+    }
+    &.Login{ background: url(../images/bg-blur-ball.png) 50% 0 no-repeat, #e2e8ee; }
+    &.Page{
+        background: url(../images/bg-hand.png) right 4% top -30px no-repeat, 
+                    url(../images/bg-blur-ball.png) 50% 0 no-repeat,
+                    #e2e8ee;
+        background-attachment: fixed;
+    }
+}
+// 定位點位置、gutter
+header, footer {
+    .container {
+        @include gutter;
+    }
+    .accesskey{
+        left: 0px;
+    }
+}
+
+footer {
+    .container {
+        position: relative;
+    }
+    .footer_icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include screen('mobile') {
+            position: static;
+        }
+    }
+}
+
+// 登入頁
+.Login{
+    .header {
+        h1{
+            // margin: initial;
+            height: inherit;
+            a{ padding: .5em 0 0; }
+        }
+        // 導覽列
+        .navigation {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            // background: antiquewhite;
+            .navlist{
+                ul{
+                    display: block;
+                    padding: .75em 0;
+                    li{
+                        a{
+                            color: #fff;
+                            padding: 0 8px 0 2.5em;
+                            line-height: 1.8;
+                            background: url(../images/icon-arrow.svg) 10px 50% no-repeat, transparent;
+                            background-size: 12px 12px;
+
+                            &:hover, &:focus{
+                                background: url(../images/icon-arrow.svg) 10px 50% no-repeat, #000;
+                                background-size: 12px 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+    }
+    .control_panle{
+        .container{
+            background: #fff;
+            padding: 2em 4em;
+            border-radius: 1.5em;
+
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 1420px;
+                height: 900px;
+                background: url(../images/bg-hero.png) right top no-repeat;
+                top: -124px;
+                left: 0
+            }
+
+            &:before{
+                content: '';
+                position: absolute;
+                width: 145px;
+                height: 152px;
+                background: url(../images/deco-been-1.png) 50% 50% no-repeat;
+                left: -100px;
+                top: 48%;
+            }
+        }
+        .col{
+
+            .login_title{
+                width: 100%;
+                padding-right: 30%;
+                .main-title{
+                    font-size: 2.4em;
+                    span{}
+                }
+                p{ line-height: 1.8;}
+            }
+
+            .pin_panel{
+                // height: 334px;
+                padding-top: 1.5em;
+                padding-bottom: 13em;
+                position: relative;
+                z-index: 3;
+
+                .flex-form.form_inline {
+                    border-bottom: 1px dashed transparent;
+                }
+
+                .form_grp{
+                    .form_title{
+                        color: #222;
+                        line-height: 3.5;
+                    }
+                    .form_content{
+                        max-width: 100%;
+                        input{
+                            width: 390px;
+                            border-radius: 40px;
+                            padding: .65em 1.75em;
+                            font-size: 1.25em;
+
+                            box-shadow: rgba(39, 174, 207, 1) 0px 7px 120px 0px;
+                        }
+                    }
+                }
+
+                .btn_grp{
+                    input{
+                        border-radius: 40px;
+                        padding: .65em 0;
+                        width: 180px;
+                        font-size: 1.25em;
+                    }
+                }
+            }
+
+            .tips{
+                background: $secondaryColor;
+                padding: 1em 1.75em;
+                border-radius: 6px;
+                position: relative;
+                z-index: 3;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 85px;
+                    height: 100px;
+                    background:  url(../images/deco-been-2.png) 50% 50% no-repeat;
+                    right: -120px;
+                    top: -160px;
+                }
+
+                .tips_title{
+                    color: darken($primaryColor, 50);
+                    span{
+                        padding-bottom: 4px;
+                        border-bottom: 3px solid darken($primaryColor, 50)
+                    }
+                }
+
+                ol{
+                    margin-top: 2.25em;
+                    li{
+                        line-height: 1.6;
+                        letter-spacing: 1px;
+                        margin: 8px 0;
+                        a{
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            text-decoration: underline;
+                            &:focus, &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 內頁
+.Page{
+    .header {
+        h1{
+            width: fit-content;
+            max-width: calc(100% - 300px);
+            float: initial;
+            height: inherit;
+            a{
+                padding: .5em 0 0;
+                display: flex;
+                flex-flow: row nowrap;
+                img{
+                    height: 44px;
+                }
+                span{
+                    color: $primaryColor;
+                    font-size: .68em;
+                    padding: 2px 0 0 6px;
+                    b{
+                        color: #0068b7;
+                    }
+                }
+            }
+        }
+        // 導覽列
+        .navigation {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: .5em;
+            z-index: 1;
+
+            a{
+                padding: .5em .5em .5em 1.5em !important;
+                background: url(../images/icon-arrow-innerpage.svg) 6px 50% no-repeat,transparent;
+                background-size: 12px 12px;
+            }
+
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+
+        // 使用者已登入
+        .user_login{
+            text-align: right;
+            margin-bottom: .75em;
+
+            @include screen('mobile') {
+                display: none;
+            }
+        }
+
+        @include screen('mobile') {
+            background: #fff;
+
+            h1{
+                max-width: 100%;
+                width: 100%;
+                a{
+                    padding: 2px 0;
+                    flex-flow: row wrap;
+                    img{
+                        height: 28px;
+                    }
+                    span{
+                        flex: 1 1 100%;
+                        font-size: .48em;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+    .header.fixed {
+        background: rgba(29, 144, 172, .95);
+
+        .menu{
+            background: transparent;
+        }
+    }
+    .menu{
+        background: #1d90ac;
+        border-radius: 30px;
+        overflow:  hidden;
+        >ul {
+            justify-content: center;
+            // 第一層選單樣式
+            >li {
+                flex: 0 1 auto;
+                a{
+                    color: #fff;
+                    text-align: center;
+                    line-height: 3.75em;
+                }
+            }
+        }
+
+        @include screen('mobile') {
+            background: transparent;
+            border-radius: 0;
+        }
+    }
+    footer {
+        .footer_icon {
+            right: 16px;
+        }
+    }
+
+    .innerpage{
+        >.container {
+            // background: #fff;
+            // padding: 2em 4em;
+            // border-radius: 1.5em;
+
+            .breadcrumb{
+                border-bottom: transparent;
+                padding: 10px 2em;
+                ul li{
+                    a{
+                        text-decoration: underline;
+                    }
+                    &:before{ color: #222; }
+                }
+            }
+
+            // 白色區域內
+            .white_zone{
+                background: #fff;
+                padding: 2em;
+                border-radius: 1.5em;
+
+                h2.title{
+                    text-align: center;
+                    padding: .5em 0;
+
+                    &:after{
+                        content:'';
+                        display: block;
+                        width: 36px;
+                        height: 3px;
+                        background: #b5b5b5;
+                        margin: 12px auto 0;
+                    }
+                }
+            }
+        }
+        @include screen('mobile') {
+            padding-top: 62px;
+            >.container {
+                .white_zone{
+                    padding: 2em 1.5em;
+                }
+            }
+        }
+    }
+}
+
+// 按鈕
+.btn-logout{
+    border-radius: 40px;
+    padding: 3px 20px;
+}
+.btn-check{
+    &.checked{
+        background: $primaryColor!important;
+        color: #fff !important;
+        border: solid 1px $primaryColor!important;
+
+        &:hover,
+        &:focus {
+            background: darken($primaryColor, 10)!important;
+            border: solid 1px $primaryColor!important;
+        }
+    }
+}
+
+// 表單
+.form_title{
+    font-size: 1.35em;
+    margin: 2px 0;
+    font-weight: bold;
+}
+
+// 共通模組
+.necessary{
+    background: #b70000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 70%;
+    line-height: initial;
+    display: inline-block;
+    padding: 1px 6px;
+    margin: 0 6px 0 0;
+    border-radius: 4px;
+}
+
+.gaze{
+    background: #f0f0f0;
+    display: block;
+    width: 100%;
+    padding: .75em .5em;
+}
+// 說明事項
+.caption{
+    background: #f0f0f0;
+    padding: 1.5em;
+    border-radius: 10px;
+    margin: 2em 0;
+
+    .title{
+        span{
+            padding-bottom: 4px;
+            border-bottom: 3px solid #aaa;
+        }
+    }
+}
+// 個資聲明
+.statement{
+    margin: 1em 0;
+    padding: 1.25em 2em;
+    border: 1px solid #ddd;
+
+    +.check_grp{
+        padding: 1em 0;
+    }
+}
+.edit_note{
+    width: 100%;
+    p{
+        border-bottom: 1px dotted #ddd;
+        margin: 0;
+        padding: .5em 0;
+
+        &:last-child{
+            border-bottom: none;
+            margin-bottom: -.3em;
+        }
+    }
+    time{
+        padding: 0 .5em;
+    }
+}
+// 按鈕的均分
+.flex-form{
+    .btn_grp.equal-2,
+    .btn_grp.equal-3,
+    .btn_grp.equal-4{
+        margin: 0;
+        @extend %flex_set;
+        .btn{
+            margin-left: 0;
+            margin-right: 0;
+            @include text-line(2,24px);
+            // white-space: inherit;
+        }
+    }
+
+    .btn_grp.equal-2{
+        .btn{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(1, $m-gutter);
+            @include flex-md-equal(2, $m-gutter);
+            @include flex-lg-equal(2, $m-gutter);
+        }
+    }
+    .btn_grp.equal-3{
+        .btn{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(1, $m-gutter);
+            @include flex-md-equal(3, $m-gutter);
+            @include flex-lg-equal(3, $m-gutter);
+        }
+    }
+    .btn_grp.equal-4{
+        .btn{
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(2, $m-gutter);
+            @include flex-md-equal(4, $m-gutter);
+            @include flex-lg-equal(4, $m-gutter);
+        }
+    }
+}
+
+p a,
+li a,
+b, b.R, b.B{
+    display: inline-block;
+    padding: .15em .25em;
+}
+
+
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
@@ -88,3 +591,5 @@ body {
 .hidden {
     display: none;
 }
+
+

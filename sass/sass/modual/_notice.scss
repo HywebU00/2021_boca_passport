@@ -25,6 +25,19 @@
             width: 100%;
         }
     }
+
+    a{
+        display: inline-block;
+        padding: 0 .25em;
+        margin: 0 .25em;
+        border: solid 1px #2196f3;
+        &:hover, &:focus {
+            border: solid 1px transparent;
+            color: #fff;
+            background: #2196f3;
+        }
+    }
+
     a.close {
         position: absolute;
         width: 12px;
@@ -33,6 +46,11 @@
         right: 1em;
         display: block;
         opacity: .5;
+        // -------------- 清除連結css設定
+        padding: 0;
+        background: none;
+        border: solid 1px transparent;
+        // --------------
         &:hover, &:focus {
             opacity: 1;
         }

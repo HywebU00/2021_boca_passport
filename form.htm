@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HyUI kit</title>
+    <title>外交部領事事務局護照預約申請</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -13,13 +13,46 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
 
-<body>
+<body class="Page">
+    <!-- 視窗 -->
+    <div id="modal1" class="modal">
+        <h2>標題</h2>
+        <div class="modal_content">
+            <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
+            <ol>
+                <li>有序清單</li>
+                <li>項目1</li>
+                <li>項目2</li>
+            </ol>
+            <ul>
+                <li>無序清單</li>
+                <li>項目1</li>
+                <li>項目2</li>
+            </ul>
+
+            <section class="center_box">
+                <p>送件地點</p>
+                <b>外交部領事事務局</b>
+                <p>預約日期/時段</p>
+                <b>10/15(五) 10:00~10:30</b>
+            </section>
+            <div class="btn_grp">
+                <button class="btn btn-reset">清除</button>
+                <button class="btn btn-submit">送出</button>
+                <!-- <button type="button" class="btn btn-primary">主要按鈕</button>
+                <button type="button" class="btn btn-secondary">次要按鈕</button>
+                <button type="button" class="btn btn-normal">一般按鈕</button> -->
+            </div>
+        </div>
+    </div>
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -34,129 +67,42 @@
                     <div class="navlist">
                         <ul>
                             <li><a href="#">回首頁</a></li>
-                            <li><a href="#">網站導覽</a></li>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">常見問答</a></li>
-                        </ul>
-                    </div>
-                    <!-- font_size -->
-                    <div class="font_size">
-                        <span>字型大小：</span>
-                        <!-- 英文用<span>font-size：</span> -->
-                        <ul>
-                            <li><a href="#" class="small">小</a></li>
-                            <li><a href="#" class="medium">中</a></li>
-                            <li><a href="#" class="large">大</a></li>
-                        </ul>
-                    </div>
-                    <!-- language -->
-                    <div class="language">
-                        <a href="#">語言選擇</a>
-                        <ul>
-                            <li><a href="#">繁體中文</a></li>
-                            <li><a href="#">简体中文</a></li>
-                            <li><a href="#">ENGLISH</a></li>
+                            <li><a href="#">外交部領事事務局</a></li>
                         </ul>
                     </div>
                 </nav>
                 <!-- navigation End -->
                 <h1>
-                    <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+                    <a href="index.htm"><img src="images/logo.png" alt="外交部領事事務局護照預約申請" /><span>旅行社團件<b>申辦護照系統</b></span></a>
                 </h1>
-                <!-- Search Start -->
-                <div class="search" role="search">
-                    <div class="form_grp">
-                        <label for="mustSameAsId">搜尋</label>
-                        <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容">
-                        <input name="" type="submit" value="查詢" class="btn btn-search" />
-                    </div>
-                    <div class="btn_grp">
-                        <input name="" type="submit" value="進階搜尋" class="btn" />
-                    </div>
-                    <div class="keywordHot">
-                        <ul>
-                            <li><a href="#">熱門熱門</a></li>
-                            <li><a href="#">查詢</a></li>
-                            <li><a href="#">字詞三</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Search End -->
                 <!-- noscript -->
                 <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
                 <nav class="menu" role="navigation" aria-label="About page">
                     <ul>
-                        <li><a href="#">第一層選單</a>
-                            <ul>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="http://www.google.com">第一層有連結</a></li>
-                        <li><a href="http://www.google.com">第一層有連結</a>
-                            <ul>
-                                <li><a href="http://www.google.com">第二層有連結</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">第一層選單</a>
-                            <ul>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="http://www.google.com">第二層有連結</a>
-                                    <ul>
-                                        <li><a href="http://www.google.com">第三層選單有下層</a>
-                                            <ul>
-                                                <li><a href="#">第四層選單</a></li>
-                                                <li><a href="#">第四層選單</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="http://www.google.com">第三層選單有連結</a></li>
-                                        <li><a href="#">第三層選單</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">第二層選單</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">第一層選單</a>
-                            <ul>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">第一層選單</a>
-                            <ul>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                                <li><a href="#">第二層選單</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">簡表資料填寫</a></li>
+                        <li><a href="#">簡表批次匯入</a></li>
+                        <li><a href="#">護照暫存清單</a></li>
+                        <li><a href="#">護照送件清單</a></li>
                     </ul>
                 </nav>
                 <!-- menu End -->
+                <!-- user -->
+                <section class="user_login">
+                    <span>XXX</span>，您好！登入時間：<span>2021/10/10</span>
+                    <button type="button" class="btn btn-primary btn-logout">登出</button>
+                </section>
             </div>
         </header>
         <!-- header End -->
         <!-- main Start -->
         <div id="center" class="main innerpage">
             <!-- 內頁新增一個classname-->
-            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
             <div class="container">
                 <!-- 主要內容區 -->
                 <div class="center_block">
+                    <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
                     <!-- breadcrumb路徑 -->
                     <div class="breadcrumb">
                         <ul>
@@ -165,1047 +111,675 @@
                             <li>節點</li>
                         </ul>
                     </div>
-                    <!-- h2節點 -->
-                    <h2 class="title">意見信箱</h2>
-                    <!-- function功能區塊 -->
-                    <div class="function">
-                        <ul>
-                            <li class="icon_back"><a href="#">回上一頁</a></li>
-                            <li class="icon_print"><a href="#">友善列印</a></li>
-                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
-                        </ul>
-                    </div>
-                    <section>
-                        <form action="">
-                            <label for="username">帳號:</label>
-                            <input type="text" id="username" placeholder="請輸入文字">
-                            <h3>一列式表單</h3>
-                            <div class="flex-form form_inline">
-                                <div class="form_grp">
-                                    <label for="username">帳號:</label>
-                                    <input name="username" type="text" placeholder="請輸入文字">
-                                </div>
-                                <div class="form_grp">
-                                    <label for="password">密碼:</label>
-                                    <div class="input-i">
-                                        <i class="i_lock"></i>
-                                        <input name="password" type="password" placeholder="請輸入密碼">
-                                    </div>
-                                </div>
-                                <div class="check_grp">
-                                    <label><input type="checkbox">記住我</label>
-                                </div>
-                                <div class="btn_grp">
-                                    <input name="" type="reset" value="清除" class="btn btn-reset" />
-                                    <input name="" type="submit" value="送出" class="btn btn-submit" />
-                                </div>
+                    <div class="white_zone">
+                        <h2 class="title">Form 表單</h2>
+                        <!-- Form Start -->
+                        <section class="">
+                            <!-- 說明事項 -->
+                            <div class="caption">
+                                <h3 class="title"><span>說明事項</span></h3>
+                                <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
+                                <ol>
+                                    <li>有序清單</li>
+                                    <li>項目1</li>
+                                    <li>項目2</li>
+                                </ol>
+                                <ul>
+                                    <li>無序清單</li>
+                                    <li>項目1</li>
+                                    <li>項目2</li>
+                                </ul>
                             </div>
-                            <h3>格線式表單</h3>
-                            <div class="flex-form form_grid">
-                                <div class="form_grp">
-                                    <label for="username" class="form_title">帳號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                    <div class="form_content">
-                                        <div class="input-i">
-                                            <i class="i_man"></i>
-                                            <input type="text" id="username" value="readonly or disable" readonly="">
-                                        </div>
-                                        <div class="help">說明文字</div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="password" class="form_title">密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                    <div class="form_content">
-                                        <div class="input-i">
-                                            <i class="i_lock"></i>
-                                            <input name="password" type="password" placeholder="請輸入密碼">
-                                        </div>
-                                        <div class="notice_error">您輸入的帳號密碼有誤！</div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="email" class="form_title">E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                    <div class="form_content">
-                                        <div class="input-i">
-                                            <input name="email" type="email" id="email">
-                                            <i class="i_mail"></i>
-                                        </div>
-                                        <div class="notice">這是一般提醒訊息區塊</div>
-                                        <div class="notice_warning">這似乎不是一個正常的Email格式 <a href="#" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="phone" class="form_title">手機號碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                    <div class="form_content">
-                                        <input name="phone" id="phone" type="tel">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">起始日期(type="date")</div>
-                                    <div class="form_content">
-                                        <div class="datepick">
-                                            <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                                        </div>
-                                        <div class="datepick">
-                                            <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="address" class="form_title">活動名稱</label>
-                                    <div class="form_content">
-                                        <input name="password" type="password">
-                                    </div>
-                                </div>
-                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <div for="" class="form_title">活動地點</div>
-                                    <div class="form_content" id="fake-legend">
-                                        <div class="radio_grp form_inline">
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="" checked="">新北市</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">臺北市</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">臺中市</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">臺南市</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">高雄市</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">宜蘭縣</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">新竹縣</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="address" class="form_title">詳細地址</label>
-                                    <div class="form_content">
-                                        <textarea name="" id="address" cols="30" rows="10"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label class="form_title">活動地點</label>
-                                    <div class="form_content" id="fake-legend">
-                                        <div class="check_grp form_inline">
-                                            <label>
-                                                <input type="checkbox" name="" value="" checked="">全部</label>
-                                            <label>
-                                                <input type="checkbox" name="" value="">展覽</label>
-                                            <label>
-                                                <input type="checkbox" name="" value="">表演與節慶</label>
-                                            <label>
-                                                <input type="checkbox" name="" value="">演講／講座／研討會</label>
-                                            <label>
-                                                <input type="checkbox" name="" value="">綜合</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="selectSample" class="form_title">選單 (inline)</label>
-                                    <div class="form_content form_inline">
-                                        <select id="selectSample" name="">
-                                            <option value="">全部</option>
-                                            <option value="">視覺藝術（藝術品與美術）</option>
-                                            <option value="">工藝（不含古物、古董）</option>
-                                            <option value="">設計</option>
-                                            <option value="">古典與傳統音樂</option>
-                                            <option value="">流行音樂</option>
-                                            <option value="">戲劇</option>
-                                            <option value="">舞蹈</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="selectSample" class="form_title">選單</label>
-                                    <div class="form_content">
-                                        <select id="selectSample" name="">
-                                            <option value="">全部</option>
-                                            <option value="">視覺藝術（藝術品與美術）</option>
-                                            <option value="">工藝（不含古物、古董）</option>
-                                            <option value="">設計</option>
-                                            <option value="">古典與傳統音樂</option>
-                                            <option value="">流行音樂</option>
-                                            <option value="">戲劇</option>
-                                            <option value="">舞蹈</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label class="form_title">是否售票</label>
-                                    <div class="form_content" id="fake-legend">
-                                        <div class="radio_grp form_inline">
-                                            <label>
-                                                <input type="radio" name="sampleRadio6" value="" checked="">售票</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio6" value="">免費索票</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio6" value="">自由入場</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">有條件式表單</label>
-                                    <div class="form_content additional">
-                                        <div class="checkbox">
-                                            <label><input name="checkSample" type="checkbox" value=""><span>同會員資訊</span></label>
-                                        </div>
-                                        <input type="text" name="">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">單檔上傳</label>
-                                    <div class="form_content">
-                                        <div class="upload_grp">
-                                            <input class="upload_file" type="text" readonly>
-                                            <div class="upload_btn">
-                                                <span>上傳檔案</span>
-                                                <input type="file" class="check_file" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">多檔上傳</label>
-                                    <div class="form_content">
-                                        <div class="upload_grp">
-                                            <input class="upload_file" type="text" readonly>
-                                            <div class="upload_btn">
-                                                <span>上傳多個檔案</span>
-                                                <input type="file" class="check_file" multiple />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn_grp form_inline">
-                                    <button class="btn btn-reset">清除</button>
-                                    <button class="btn btn-submit">送出</button>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <h3>格線式表單--多欄</h3>
-                            <div class="form_grid flex-form">
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-6-6</div>
-                                    <div class="form_content form_col-6-6">
-                                        <div class="form_grp">
-                                            <label for="inputSample" class="label_hidden">雙欄1</label>
-                                            <input name="username" id="inputSample" type="text">
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="inputSample2" class="label_hidden">雙欄2</label>
-                                            <input name="username" id="inputSample2" type="text">
-                                        </div>
-                                        <div class="notice">加上className "label_hidden" 隱藏label文字</div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-4-4-4</div>
-                                    <div class="form_content form_col-4-4-4">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <select id="selectSample" name="">
-                                            <option value="">全部</option>
-                                            <option value="">視覺藝術（藝術品與美術）</option>
-                                            <option value="">工藝（不含古物、古董）</option>
-                                            <option value="">設計</option>
-                                            <option value="">古典與傳統音樂</option>
-                                            <option value="">流行音樂</option>
-                                            <option value="">戲劇</option>
-                                            <option value="">舞蹈</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-3-3-3-3</div>
-                                    <div class="form_content form_col-3-3-3-3">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <label><input name="radioSample" type="radio" value=""><span>選項</span></label>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-2-2-2-2-2-2</div>
-                                    <div class="form_content form_col-2-2-2-2-2-2">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                        <label><input name="radioSample" type="radio" value=""><span>選項</span></label>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-3-9</div>
-                                    <div class="form_content form_col-3-9">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-3-3-6</div>
-                                    <div class="form_content form_col-3-3-6">
-                                        <select name="" id="">
-                                            <option value="">台北市</option>
-                                            <option value="">新北市</option>
-                                            <option value="">桃園市</option>
-                                            <option value="">新竹市</option>
-                                            <option value="">...</option>
-                                        </select>
-                                        <select name="" id="">
-                                            <option value="">中正區</option>
-                                            <option value="">大安區</option>
-                                            <option value="">信義區</option>
-                                            <option value="">北投區</option>
-                                            <option value="">...</option>
-                                        </select>
-                                        <input name="username" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-9-3</div>
-                                    <div class="form_content form_col-9-3">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-4-8</div>
-                                    <div class="form_content form_col-4-8">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-2-10</div>
-                                    <div class="form_content form_col-2-10">
-                                        <input name="username" type="text">
-                                        <input name="username" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">form_col-2-2-8</div>
-                                    <div class="form_content form_col-2-2-8">
-                                        <select name="" id="">
-                                            <option value="">台北市</option>
-                                            <option value="">新北市</option>
-                                            <option value="">桃園市</option>
-                                            <option value="">新竹市</option>
-                                            <option value="">...</option>
-                                        </select>
-                                        <select name="" id="">
-                                            <option value="">中正區</option>
-                                            <option value="">大安區</option>
-                                            <option value="">信義區</option>
-                                            <option value="">北投區</option>
-                                            <option value="">...</option>
-                                        </select>
-                                        <input name="username" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">第一層Title</div>
-                                    <div class="form_content">
-                                        <!-- 二欄 -->
-                                        <div class="form_grp">
-                                            <div class="form_content form_col-6-6">
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">雙欄 欄目Ａ：</label>
-                                                    <div class="input-i">
-                                                        <input name="username" type="text">
-                                                        <i class="i_lock"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">雙欄 欄目B：</label>
-                                                    <input name="username" type="text">
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">雙欄 欄目C：</label>
-                                                    <select name="" id="">
-                                                        <option value="">台北市</option>
-                                                        <option value="">新北市</option>
-                                                        <option value="">桃園市</option>
-                                                        <option value="">新竹市</option>
-                                                        <option value="">...</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">雙欄 欄目D：</label>
-                                                    <select name="" id="" disabled="">
-                                                        <option value="">台北市</option>
-                                                        <option value="">新北市</option>
-                                                        <option value="">桃園市</option>
-                                                        <option value="">新竹市</option>
-                                                        <option value="">...</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 三欄 -->
-                                        <div class="form_grp">
-                                            <div class="form_content form_col-4-4-4">
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">三欄 欄目A：</label>
-                                                    <input name="username" type="text">
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">三欄 欄目B：</label>
-                                                    <select name="" id="" disabled="">
-                                                        <option value="">台北市</option>
-                                                        <option value="">新北市</option>
-                                                        <option value="">桃園市</option>
-                                                        <option value="">新竹市</option>
-                                                        <option value="">...</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">三欄 欄目C：</label>
-                                                    <select name="" id="">
-                                                        <option value="">台北市</option>
-                                                        <option value="">新北市</option>
-                                                        <option value="">桃園市</option>
-                                                        <option value="">新竹市</option>
-                                                        <option value="">...</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 四欄 -->
-                                        <div class="form_grp">
-                                            <div class="form_content form_col-3-3-3-3">
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">四欄 欄目A：</label>
-                                                    <input name="username" type="text" placeholder="請輸入人數">
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">四欄 欄目B：</label>
-                                                    <select name="" id="" disabled="">
-                                                        <option value="">台北市</option>
-                                                        <option value="">新北市</option>
-                                                        <option value="">桃園市</option>
-                                                        <option value="">新竹市</option>
-                                                        <option value="">...</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">四欄 欄目C：</label>
-                                                    <select name="" id="">
-                                                        <option value="">台北市</option>
-                                                        <option value="">新北市</option>
-                                                        <option value="">桃園市</option>
-                                                        <option value="">新竹市</option>
-                                                        <option value="">...</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="username" class="form_title">四欄 欄目D：</label>
-                                                    <input name="username" type="text" value="0" placeholder="" readonly="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3>多層次表單</h3>
-                            <div class="flex-form form_grid">
-                                <div class="form_grp">
-                                    <div class="form_title">個人資料<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                                    <div class="form_content">
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                            <div class="form_content">
-                                                <input name="" type="text" value="">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                            <label class="form_title">性別<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="radio_grp form_inline">
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio5" value="" checked="">男</label>
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio5" value="">女</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">出生年月日<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                                            <div class="form_content form_inline birthday">
-                                                <select name="" id="">
-                                                    <option value="">2019</option>
-                                                    <option value="">2018</option>
-                                                    <option value="">2017</option>
-                                                    <option value="">2016</option>
-                                                    <option value="">...</option>
-                                                </select>年 <select name="" id="">
-                                                    <option value="">01</option>
-                                                    <option value="">02</option>
-                                                    <option value="">03</option>
-                                                    <option value="">04</option>
-                                                    <option value="">...</option>
-                                                </select>月 <select name="" id="">
-                                                    <option value="">01</option>
-                                                    <option value="">02</option>
-                                                    <option value="">03</option>
-                                                    <option value="">04</option>
-                                                    <option value="">...</option>
-                                                </select>日 </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">聯絡方式</div>
-                                    <div class="form_content">
-                                        <div class="form_grp">
-                                            <label for="selectSample" class="form_title">國家區域</label>
-                                            <div class="form_content form_inline">
-                                                <select id="selectSample" name="">
-                                                    <option value="">台灣</option>
-                                                    <option value="">日本</option>
-                                                    <option value="">美國</option>
-                                                    <option value="">澳洲</option>
-                                                    <option value="">新加坡</option>
-                                                    <option value="">中國大陸</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">手機號碼</label>
-                                            <div class="form_content form_inline ">
-                                                <input name="" type="tel" value="" placeholder="0912345678">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">電話號碼</label>
-                                            <div class="form_content form_inline tel">
-                                                <input name="" type="tel" value="" placeholder="886">
-                                                <input name="" type="tel" value="" placeholder="12345678">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">傳真號碼</label>
-                                            <div class="form_content form_inline tel">
-                                                <input name="" type="tel" value="" placeholder="886">
-                                                <input name="" type="tel" value="" placeholder="12345678">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">聯絡地址</label>
-                                            <div class="form_content form_inline address">
-                                                <select name="" id="">
-                                                    <option value="">台北市</option>
-                                                    <option value="">新北市</option>
-                                                    <option value="">桃園市</option>
-                                                    <option value="">新竹市</option>
-                                                    <option value="">...</option>
-                                                </select>
-                                                <select name="" id="">
-                                                    <option value="">中正區</option>
-                                                    <option value="">大安區</option>
-                                                    <option value="">信義區</option>
-                                                    <option value="">北投區</option>
-                                                    <option value="">...</option>
-                                                </select>
-                                                <input name="" type="text" value="">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div for="" class="form_title">寄送地址</div>
-                                            <div class="form_content form_inline address">
-                                                <label for="" class="label_hidden">縣市</label>
-                                                <select name="" id="">
-                                                    <option value="">台北市</option>
-                                                    <option value="">新北市</option>
-                                                    <option value="">桃園市</option>
-                                                    <option value="">新竹市</option>
-                                                    <option value="">...</option>
-                                                </select>
-                                                <label for="" class="label_hidden">行政區域</label>
-                                                <select name="" id="">
-                                                    <option value="">中正區</option>
-                                                    <option value="">大安區</option>
-                                                    <option value="">信義區</option>
-                                                    <option value="">北投區</option>
-                                                    <option value="">...</option>
-                                                </select>
-                                                <label for="" class="label_hidden">詳細地址</label>
-                                                <input name="" type="text" value="">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox">同上聯絡地址</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">公司網站</label>
-                                            <div class="form_content">
-                                                <input name="" type="text" value="">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">網站URL</label>
-                                            <div class="form_content form_inline">
-                                                <select id="selectSample" name="">
-                                                    <option value="">http</option>
-                                                    <option value="">https</option>
-                                                </select>
-                                                <input type="text" value="" placeholder="www.hyweb.com.tw">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">參加活動</div>
-                                    <div class="form_content">
-                                        <div class="form_grp">
-                                            <div class="form_title"> 起始日期 </div>
-                                            <div class="form_content">
-                                                <div class="datepick">
-                                                    <input name="" type="text" value="" class="calendar" placeholder="開始日期">
-                                                    <i class="i_calendar"></i>
-                                                </div>
-                                                <div class="datepick">
-                                                    <input name="" type="text" value="" class="calendar" placeholder="結束日期">
-                                                    <i class="i_calendar"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                            <label class="form_title">參加場次</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="check_grp form_inline">
-                                                    <label>
-                                                        <input type="checkbox" name="" value="" checked="">全部</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">展覽</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">表演與節慶</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">演講／講座／研討會</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">綜合</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">有微動態</div>
-                                            <div class="form_content">
-                                                <div class="radio_grp form_inline">
-                                                    <label><input name="radioSample" type="radio" value=""><span>選項一</span></label>
-                                                    <label><input name="radioSample" type="radio" value=""><span>選項二</span></label>
-                                                    <label><input name="radioSample" type="radio" value=""><span>其他</span><input type="text"></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <div class="form_title">有微動態</div>
-                                            <div class="form_content">
-                                                <div class="check_grp form_inline">
-                                                    <label><input name="" type="checkbox" value=""><span>選項一</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>選項二</span></label>
-                                                    <label><input name="" type="checkbox" value=""><span>選項三</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                            <label class="form_title">參加場次</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="check_grp">
-                                                    <label>
-                                                        <input type="checkbox" name="" value="" checked="">全部</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">展覽</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">表演與節慶</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">演講／講座／研討會</label>
-                                                    <label>
-                                                        <input type="checkbox" name="" value="">綜合</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                            <legend class="form_title">是否售票</legend>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="radio_grp form_inline">
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio6" value="" checked="">售票</label>
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio6" value="">免費索票</label>
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio6" value="">自由入場</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                            <label class="form_title">是否售票</label>
-                                            <div class="form_content" id="fake-legend">
-                                                <div class="radio_grp">
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio6" value="" checked="">售票</label>
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio6" value="">免費索票</label>
-                                                    <label>
-                                                        <input type="radio" name="sampleRadio6" value="">自由入場</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">第一層title<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                                    <div class="form_content">
-                                        <div class="form_grp">
-                                            <div class="form_title">第二層title<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></div>
-                                            <div class="form_content">
-                                                <div class="form_grp">
-                                                    <div class="form_title">第三層title</div>
-                                                    <div class="form_content form_inline ">
-                                                        <input name="" type="text" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <div class="form_title">第三層title</div>
-                                                    <div class="form_content" id="fake-legend">
-                                                        <div class="radio_grp form_inline">
-                                                            <label>
-                                                                <input type="radio" name="sampleRadio6" value="" checked="">A</label>
-                                                            <label>
-                                                                <input type="radio" name="sampleRadio6" value="">B</label>
-                                                            <label>
-                                                                <input type="radio" name="sampleRadio6" value="">C</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <div class="form_title">第三層title</div>
-                                                    <div class="form_content" id="fake-legend">
-                                                        <div class="radio_grp form_inline">
-                                                            <label>
-                                                                <input type="checkbox" name="sampleRadio6" value="" checked="">A</label>
-                                                            <label>
-                                                                <input type="checkbox" name="sampleRadio6" value="">B</label>
-                                                            <label>
-                                                                <input type="checkbox" name="sampleRadio6" value="">C</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form_grp">
-                                                    <label for="" class="form_title">第三層title</label>
-                                                    <div class="form_content form_inline address">
-                                                        <select name="" id="">
-                                                            <option value="">台北市</option>
-                                                            <option value="">新北市</option>
-                                                            <option value="">桃園市</option>
-                                                            <option value="">新竹市</option>
-                                                            <option value="">...</option>
-                                                        </select>
-                                                        <select name="" id="">
-                                                            <option value="">中正區</option>
-                                                            <option value="">大安區</option>
-                                                            <option value="">信義區</option>
-                                                            <option value="">北投區</option>
-                                                            <option value="">...</option>
-                                                        </select>
-                                                        <input name="" type="text" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title"> 備註 </div>
-                                    <div class="form_content">
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">驗證碼</div>
-                                    <div class="form_content form_inline">
-                                        <img src="images/basic/captcha.gif" alt="" class="captcha">
-                                        <input name="" type="text" value="">
-                                        <button class="btn"><i class="i_reflash"></i>重新整理</button>
-                                        <button class="btn"><i class="i_play"></i>語音播放</button>
-                                    </div>
-                                </div>
-                                <div class="form_grp agree">
-                                    <div class="form_title"></div>
-                                    <div class="form_content form_inline">
-                                        <div class="check_grp">
-                                            <label><input name="checkSample" type="checkbox" value="">我已經詳讀以上表單內容</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn_grp form_inline">
-                                    <button class="btn btn-reset">清除</button>
-                                    <button class="btn btn-submit">送出</button>
-                                </div>
-                            </div>
-                            <h3>多層次表單-多欄</h3>
-                            <div class="flex-form form_grid">
-                                <div class="form_grp">
-                                    <label for="" class="form_title">第一層 Title</label>
-                                    <div class="form_content">
-                                        <!-- 一欄 -->
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">第二層 Title</label>
-                                            <div class="form_content">
-                                                <div class="form_grp">
-                                                    <input name="" type="text" value="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 二欄 -->
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">第二層 Title</label>
-                                            <div class="form_content">
-                                                <div class="form_grp">
-                                                    <div class="form_content form_col-6-6">
-                                                        <div class="form_grp">
-                                                            <label for="username">雙欄 欄目Ａ：</label>
-                                                            <input name="username" type="text" placeholder="請輸入人數">
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="username">雙欄 欄目B：</label>
-                                                            <input name="username" type="text" placeholder="請輸入人數" readonly="">
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="username">雙欄 欄目C：</label>
-                                                            <select name="" id="">
-                                                                <option value="">台北市</option>
-                                                                <option value="">新北市</option>
-                                                                <option value="">桃園市</option>
-                                                                <option value="">新竹市</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="username">雙欄 欄目D：</label>
-                                                            <select name="" id="" disabled="">
-                                                                <option value="">台北市</option>
-                                                                <option value="">新北市</option>
-                                                                <option value="">桃園市</option>
-                                                                <option value="">新竹市</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 三欄 -->
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">第二層 Title</label>
-                                            <div class="form_content">
-                                                <div class="form_grp">
-                                                    <div class="form_content form_col-4-4-4">
-                                                        <div class="form_grp">
-                                                            <label for="username">三欄 欄目A：</label>
-                                                            <input name="username" type="text" placeholder="請輸入人數">
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="username">三欄 欄目B：</label>
-                                                            <select name="" id="" disabled="">
-                                                                <option value="">台北市</option>
-                                                                <option value="">新北市</option>
-                                                                <option value="">桃園市</option>
-                                                                <option value="">新竹市</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="username">三欄 欄目C：</label>
-                                                            <select name="" id="">
-                                                                <option value="">台北市</option>
-                                                                <option value="">新北市</option>
-                                                                <option value="">桃園市</option>
-                                                                <option value="">新竹市</option>
-                                                                <option value="">...</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="" class="form_title">第二層 Title</label>
-                                            <div class="form_content">
-                                                <div class="form_grp">
-                                                    <div class="form_content form_col-4-4-4">
-                                                        <input name="" type="text" value="" placeholder="單位">
-                                                        <input name="" type="text" value="" placeholder="職稱">
-                                                        <br>
-                                                        <input name="" type="text" value="" placeholder="姓名">
-                                                        <input name="" type="text" value="" placeholder="電話/手機號碼">
-                                                        <input name="" type="text" value="" placeholder="email">
-                                                        <div class="notice_info">這是一般提醒訊息區塊</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 四欄 -->
-                                        <div class="form_grp">
-                                            <label for="" class="form_title"><b>第二層 Title</b></label>
-                                            <div class="form_content">
-                                                <div class="form_content form_col-3-3-3-3">
-                                                    <div class="form_grp">
-                                                        <label for="username">四欄 欄目A：</label>
-                                                        <input name="username" type="text" placeholder="請輸入人數">
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <label for="username">四欄 欄目B：</label>
-                                                        <select name="" id="" disabled="">
-                                                            <option value="">台北市</option>
-                                                            <option value="">新北市</option>
-                                                            <option value="">桃園市</option>
-                                                            <option value="">新竹市</option>
-                                                            <option value="">...</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <label for="username">四欄 欄目C：</label>
-                                                        <select name="" id="">
-                                                            <option value="">台北市</option>
-                                                            <option value="">新北市</option>
-                                                            <option value="">桃園市</option>
-                                                            <option value="">新竹市</option>
-                                                            <option value="">...</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form_grp">
-                                                        <label for="username">四欄 欄目D：</label>
-                                                        <input name="username" type="text" value="0" placeholder="" readonly="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="flex-equal-2">
-                                <div class="Flex-set">
-                                    <div class="col">
-                                        <h3>信用卡表單</h3>
-                                        <div class="flex-form">
+                            <!-- 表單 -->
+                            <form action="">
+                                <div class="flex-form form-column">
+                                    <!-- input -->
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
                                             <div class="form_grp">
-                                                <label for="card_name">持卡人姓名</label>
-                                                <input name="card_name" id="card_name" type="text">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 1：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-2">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 2-1：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
                                             </div>
                                             <div class="form_grp">
-                                                <label for="card_number">卡號</label>
-                                                <input name="card_number" id="card_number" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 2-2：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-3">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 3-1：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                            <div class="form_grp warn">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 3-2：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字" class="error">
+                                                    <div class="notice_error">單ㄧ欄位的提示訊息，塞入『form_content』</div>
+                                                </div>
                                             </div>
                                             <div class="form_grp">
-                                                <div class="form_content form_col-6-6">
-                                                    <div class="form_grp">
-                                                        <label for="username">有效期限</label>
-                                                        <input name="username" type="text" placeholder="MM/YY">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 3-3：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-3">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 3-1：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                            <div class="form_grp warn">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 3-2：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字" class="error">
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 3-3：</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                            <div class="notice_error">多欄的提示訊息，放在最後一個『form_grp』後面</div>
+                                        </div>
+                                    </div>
+                                    <!-- select -->
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>select 1：</label>
+                                                <div class="form_content">
+                                                    <select name="" id="">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-2">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>select 2-1</label>
+                                                <div class="form_content">
+                                                    <select name="" id="">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="inputSample2" class="form_title">select 2-2</label>
+                                                <div class="form_content">
+                                                    <select name="" id="">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-3">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>select 3-1</label>
+                                                <div class="form_content">
+                                                    <select name="" id="">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp warn">
+                                                <label for="inputSample2" class="form_title">select 3-2</label>
+                                                <div class="form_content">
+                                                    <select name="" id="" class="error">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                    <div class="notice_error">錯誤</div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for="inputSample2" class="form_title">select 3-3</label>
+                                                <div class="form_content">
+                                                    <select name="" id="">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 多筆欄位 -->
+                                    <div class="form_grp">
+                                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>多筆欄位標題 1</div>
+                                        <div class="form_content">
+                                            <div class="flex-col-equal-2">
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title" aria-required="true">2-1 input</label>
+                                                    <div class="form_content">
+                                                        <input name="username" id="inputSample" type="text" placeholder="請輸入文字">
+                                                        <div class="notice">一般提醒訊息</div>
                                                     </div>
-                                                    <div class="form_grp">
-                                                        <label for="username">驗證碼</label>
-                                                        <input name="username" type="text" placeholder="CVC">
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="inputSample2" class="form_title">2-2 input</label>
+                                                    <div class="form_content">
+                                                        <input name="username" id="inputSample2" type="text" placeholder="請輸入文字">
+                                                        <div class="notice">一般提醒訊息</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title" aria-required="true">2-3 select</label>
+                                                    <div class="form_content">
+                                                        <select name="" id="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">項目1</option>
+                                                            <option value="">項目2</option>
+                                                            <option value="">項目3</option>
+                                                        </select>
+                                                        <div class="notice">一般提醒訊息</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="inputSample2" class="form_title">2-4 select</label>
+                                                    <div class="form_content">
+                                                        <select name="" id="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">項目1</option>
+                                                            <option value="">項目2</option>
+                                                            <option value="">項目3</option>
+                                                        </select>
+                                                        <div class="notice">一般提醒訊息</div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="notice_info">多欄的提示訊息，放在最後一個『form_grp』後面</div>
+                                            <div class="checkbox gaze">
+                                                <label><input type="checkbox"><span>同紙本簡表</span></label>
+                                                <label><input type="checkbox"><span>同戶籍地址</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>多筆欄位標題 2</div>
+                                        <div class="form_content">
+                                            <div class="flex-col-equal-3">
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title" aria-required="true">3-1 input</label>
+                                                    <div class="form_content">
+                                                        <input name="username" id="inputSample" type="text" placeholder="請輸入姓氏，範例：WANG">
+                                                        <div class="notice">一般提醒訊息</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp warn">
+                                                    <label for="inputSample2" class="form_title">3-2 input</label>
+                                                    <div class="form_content">
+                                                        <input name="username" id="inputSample2" type="text" placeholder="請輸入名，範例：HSIAO-MING" class="error">
+                                                        <div class="notice_error">錯誤</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title" aria-required="true">3-3 input</label>
+                                                    <div class="form_content">
+                                                        <select name="" id="">
+                                                            <option value="">請選擇</option>
+                                                            <option value="">項目1</option>
+                                                            <option value="">項目2</option>
+                                                            <option value="">項目3</option>
+                                                        </select>
+                                                        <div class="notice">一般提醒訊息</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="notice_info">多欄的提示訊息，放在最後一個『form_grp』後面</div>
+                                            <div class="checkbox gaze">
+                                                <label><input type="checkbox"><span>同紙本簡表</span></label>
+                                                <label><input type="checkbox"><span>同戶籍地址</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 應用 -->
+                                    <div class="form_grp">
+                                        <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>帳號</label>
+                                        <div class="form_content">
+                                            <input type="text" id="username" placeholder="請輸入帳號" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>密碼修改</label>
+                                        <div class="form_content">
                                             <div class="btn_grp">
-                                                <button class="btn btn-submit">送出</button>
+                                                <button type="button" class="btn btn-primary">重設密碼</button>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 地址 -->
+                                    <div class="form_grp">
+                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>地址 1</label>
+                                        <div class="form_content form_inline address">
+                                            <select name="" id="">
+                                                <option value="">台北市</option>
+                                                <option value="">新北市</option>
+                                                <option value="">桃園市</option>
+                                                <option value="">新竹市</option>
+                                                <option value="">...</option>
+                                            </select>
+                                            <select name="" id="">
+                                                <option value="">中正區</option>
+                                                <option value="">大安區</option>
+                                                <option value="">信義區</option>
+                                                <option value="">北投區</option>
+                                                <option value="">...</option>
+                                            </select>
+                                            <input name="username" type="text" class="user_typing" placeholder="請輸入詳細地址">
+                                            <label>郵遞區號</label>
+                                            <input name="username" type="text" value="" placeholder="系統判斷帶入">
+                                            <input name="username" type="text" value="" placeholder="請輸入後2碼">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"><span>同上聯絡地址</span></label>
+                                            </div>
+                                            <div class="notice_info">詳細地址：user_typing</div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>地址 2</label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                    <div class="notice">一般提醒訊息</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="checkbox gaze">
+                                            <label><input type="checkbox"><span>同紙本簡表</span></label>
+                                            <label><input type="checkbox"><span>同戶籍地址</span></label>
+                                        </div>
+                                    </div>
+                                    <!-- checkbox -->
+                                    <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                        <label class="form_title">checkbox 1</label>
+                                        <div class="form_content" id="fake-legend">
+                                            <div class="check_grp form_inline">
+                                                <label><input type="checkbox" name="" value="" checked="">全部</label>
+                                                <label><input type="checkbox" name="" value="">展覽</label>
+                                                <label><input type="checkbox" name="" value="">表演與節慶</label>
+                                                <label><input type="checkbox" name="" value="">演講／講座／研討會</label>
+                                                <label><input type="checkbox" name="" value="">綜合</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                        <label class="form_title">checkbox 2</label>
+                                        <div class="form_content" id="fake-legend">
+                                            <div class="check_grp">
+                                                <label><input type="checkbox" name="" value="" checked="">全部</label>
+                                                <label><input type="checkbox" name="" value="">展覽</label>
+                                                <label><input type="checkbox" name="" value="">表演與節慶</label>
+                                                <label><input type="checkbox" name="" value="">演講／講座／研討會</label>
+                                                <label><input type="checkbox" name="" value="">綜合</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                        <label class="form_title">checkbox 3</label>
+                                        <div class="form_content" id="">
+                                            <div class="check_grp">
+                                                <label><input type="checkbox" name="" value="" checked="">項目1<span>（備註文字）</span></label>
+                                                <label><input type="checkbox" name="" value="">項目2<span>（備註文字）</span></label>
+                                                <div class="form_content" id="fake-legend">
+                                                    <div class="radio_grp">
+                                                        <label><input type="radio" name="sampleRadio11" value="" checked="">radio 文字串1</label>
+                                                        <label><input type="radio" name="sampleRadio11" value="">radio 文字串2</label>
+                                                    </div>
+                                                </div>
+                                                <label><input type="checkbox" name="" value="">項目3<span>（備註文字）</span></label>
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                </div>
+                                                <label><input type="checkbox" name="" value="">項目4<span>（備註文字）</span></label>
+                                                <div class="form_content">
+                                                    <select name="" id="">
+                                                        <option value="">請選擇</option>
+                                                        <option value="">項目1</option>
+                                                        <option value="">項目2</option>
+                                                        <option value="">項目3</option>
+                                                    </select>
+                                                </div>
+                                                <label><input type="checkbox" name="" value="" checked="" disabled="">項目5<span>（備註文字）</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 日期 -->
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>日期 1（type="date"）</label>
+                                                <div class="form_content">
+                                                    <input type="date" id="" placeholder="請輸入出生日期">
+                                                    <div class="notice">請輸入8碼西元年出生日期(YYYYMMDD)，範例 ：1980/01/01</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>日期 2（type="date"）</div>
+                                        <div class="form_content form_inline">
+                                            <div class="datepick">
+                                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                                            </div>
+                                            <select id="selectSample" name="">
+                                                <option value="">請選擇</option>
+                                                <option value="">項目一</option>
+                                                <option value="">項目二</option>
+                                                <option value="">項目三</option>
+                                            </select>
+                                            <div class="notice_info">一般提醒訊息</div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="phone" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>標題 9</label>
+                                        <div class="form_content form_inline">
+                                            <input name="text" type="text" value="" placeholder="一般狀態">
+                                            <select id="selectSample" name="">
+                                                <option value="">請選擇</option>
+                                                <option value="">項目一</option>
+                                                <option value="">項目二</option>
+                                                <option value="">項目三</option>
+                                            </select>
+                                            <button type="button" class="btn btn-primary">button按鈕</button>
+                                            <div class="notice_info">一般提醒訊息</div>
+                                        </div>
+                                    </div>
+                                    <!-- 檔案上傳 -->
+                                    <div class="form_grp">
+                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>單檔上傳</label>
+                                        <div class="form_content">
+                                            <div class="upload_grp">
+                                                <input class="upload_file" type="text" placeholder="請上傳檔案" readonly="">
+                                                <div class="upload_btn">
+                                                    <span>上傳檔案</span>
+                                                    <input type="file" class="check_file">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>多檔上傳</label>
+                                        <div class="form_content">
+                                            <div class="upload_grp">
+                                                <input class="upload_file" type="text" placeholder="請上傳檔案" readonly="">
+                                                <div class="upload_btn">
+                                                    <span>上傳多個檔案</span>
+                                                    <input type="file" class="check_file" multiple="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- switch 啟用按鈕 -->
+                                    <div class="form_grp">
+                                        <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>啟用狀態</label>
+                                        <!-- <div class="form_title">開關格式</div> -->
+                                        <div class="form_content">
+                                            <div class="checkSwitch_wrap">
+                                                <div class="checkSwitch">
+                                                    <label>
+                                                        <input name="checkboxSample1" type="checkbox" value="">
+                                                        <div class="checkSwitch_switch"></div>
+                                                    </label>
+                                                </div>
+                                                <!-- 資訊文字 -->
+                                                <span>說明文字</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 驗證碼 -->
+                                    <div class="form_grp">
+                                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>驗證碼</div>
+                                        <div class="form_content form_inline">
+                                            <input name="" type="text" value="">
+                                            <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                            <button class="btn"><i class="i_reflash"></i>重新整理</button>
+                                            <button class="btn"><i class="i_play"></i>語音播放</button>
+                                        </div>
+                                    </div>
+                                    <!-- 選取項目 -->
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>選取項目 1</label>
+                                            <div class="form_content">
+                                                <div class="btn_grp">
+                                                    <input type="button" class="btn btn-check" value="項目1">
+                                                    <input type="button" class="btn btn-check checked" value="項目2（checked）">
+                                                    <input type="button" class="btn btn-check" value="項目3（disable）" disabled>
+                                                    <input type="button" class="btn btn-check" value="項目4">
+                                                    <input type="button" class="btn btn-check" value="項目5">
+                                                    <input type="button" class="btn btn-check" value="項目6">
+                                                </div>
+                                                <div class="notice_info">一般提醒訊息</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>選取項目 1</label>
+                                            <div class="form_content">
+                                                <div class="btn_grp">
+                                                    <input type="button" class="btn btn-check" value="項目1">
+                                                    <input type="button" class="btn btn-check checked" value="項目2（checked）">
+                                                </div>
+                                                <div class="notice_info">一般提醒訊息</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>選取項目 2（均分二欄）</label>
+                                            <div class="form_content">
+                                                <div class="btn_grp equal-2">
+                                                    <input type="button" class="btn btn-check" value="項目1 Lorem ipsum dolor sit amet, consectetur adipisicing elit">
+                                                    <input type="button" class="btn btn-check checked" value="項目2（checked）">
+                                                </div>
+                                                <div class="form_content">
+                                                    <div class="flex-col-equal-2">
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title" aria-required="true">2-1 input</label>
+                                                            <div class="form_content">
+                                                                <input name="username" id="inputSample" type="text" placeholder="請輸入文字">
+                                                                <div class="notice">一般提醒訊息</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title" aria-required="true">2-2 select</label>
+                                                            <div class="form_content">
+                                                                <select name="" id="">
+                                                                    <option value="">請選擇</option>
+                                                                    <option value="">項目1</option>
+                                                                    <option value="">項目2</option>
+                                                                    <option value="">項目3</option>
+                                                                </select>
+                                                                <div class="notice">一般提醒訊息</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="notice_info">請參考<a href="#">外文姓名譯音系統</a>，限輸入英文及符號「－」、「．」，建議外文姓氏與直系血親或兄弟姐妹拼法相同。外文姓名拼音如非中文姓名國家語言讀音音譯，請提供證明文件。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>選取項目 2（均分三欄）</label>
+                                            <div class="form_content">
+                                                <div class="btn_grp equal-3">
+                                                    <input type="button" class="btn btn-check" value="項目1 Lorem ipsum dolor sit amet, consectetur adipisicing elit">
+                                                    <input type="button" class="btn btn-check checked" value="項目2（checked）">
+                                                    <input type="button" class="btn btn-check" value="項目3">
+                                                </div>
+                                                <div class="form_content">
+                                                    <div class="flex-col-equal-2">
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title" aria-required="true">2-1 input</label>
+                                                            <div class="form_content">
+                                                                <input name="username" id="inputSample" type="text" placeholder="請輸入文字">
+                                                                <div class="notice">一般提醒訊息</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="inputSample2" class="form_title">2-2 input</label>
+                                                            <div class="form_content">
+                                                                <input name="username" id="inputSample2" type="text" placeholder="請輸入文字">
+                                                                <div class="notice">一般提醒訊息</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title" aria-required="true">2-3 select</label>
+                                                            <div class="form_content">
+                                                                <select name="" id="">
+                                                                    <option value="">請選擇</option>
+                                                                    <option value="">項目1</option>
+                                                                    <option value="">項目2</option>
+                                                                    <option value="">項目3</option>
+                                                                </select>
+                                                                <div class="notice">一般提醒訊息</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form_grp">
+                                                            <label for="inputSample2" class="form_title">2-4 select</label>
+                                                            <div class="form_content">
+                                                                <select name="" id="">
+                                                                    <option value="">請選擇</option>
+                                                                    <option value="">項目1</option>
+                                                                    <option value="">項目2</option>
+                                                                    <option value="">項目3</option>
+                                                                </select>
+                                                                <div class="notice">一般提醒訊息</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="notice_info">一般提醒訊息</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>選取項目 2（均分四欄）</label>
+                                            <div class="form_content">
+                                                <div class="btn_grp equal-4">
+                                                    <input type="button" class="btn btn-check" value="項目1 Lorem ipsum dolor sit amet, consectetur adipisicing accessibility">
+                                                    <input type="button" class="btn btn-check checked" value="項目2（checked）">
+                                                    <input type="button" class="btn btn-check" value="項目3">
+                                                    <input type="button" class="btn btn-check" value="項目4">
+                                                </div>
+                                                <!-- 相對應表單 -->
+                                                <div class="form_content">
+                                                    <input type="text" id="" placeholder="請輸入文字">
+                                                    <div class="notice_info">一般提醒訊息</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <div class="flex-col-equal-1">
+                                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>個資聲明</label>
+                                            <div class="form_content">
+                                                <div class="statement">
+                                                    <p>歡迎您使用「外交部領事事務局(以下稱本局)網路預約申辦護照服務」功能，在使用本功能之前，請您務必詳閱下列說明：</p>
+                                                    <ol>
+                                                        <li>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur</li>
+                                                        <li>fugit atque ea praesentium quo quidem itaque mag</li>
+                                                    </ol>
+                                                </div>
+                                                <div class="check_grp">
+                                                    <label><input name="checkSample" type="checkbox" value="">我已經詳讀以上表單內容</label>
+                                                </div>
+                                                <div class="edit_note">
+                                                    <p>建立人員：<b>張小花</b><time>2021/10/12&nbsp;&nbsp;13:59:59</time></p>
+                                                    <p>最後編修人員：<b>張小花</b><time>2021/10/12&nbsp;&nbsp;13:59:59</time></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 純按鈕 -->
+                                    <div class="btn_grp">
+                                        
+                                        <button class="btn btn-reset">清除</button>
+                                        <button class="btn btn-submit">送出</button>
+                                        <button type="button" class="btn btn-primary">主要按鈕</button>
+                                        <button type="button" class="btn btn-secondary">次要按鈕</button>
+                                        <button type="button" class="btn btn-normal">一般按鈕</button>
+
+                                        <button type="button" id="openModal" class="btn btn-primary">跳窗</button>
+                                    </div>
+                                    <div class="btn_grp form_inline">
+                                        <button class="btn btn-reset">清除</button>
+                                        <button class="btn btn-submit">送出</button>
+                                        <button type="button" class="btn btn-primary">主要按鈕</button>
+                                        <button type="button" class="btn btn-secondary">次要按鈕</button>
+                                        <button type="button" class="btn btn-normal">一般按鈕</button>
+                                    </div>
                                 </div>
-                            </div> -->
-                        </form>
-                    </section>
+                            </form>
+                        </section>
+                        <!-- Form End -->
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- fatfooter Start -->
-        <section class="fatfooter">
-            <div class="container">
-                <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
-                <nav>
-                    <ul>
-                        <li><a href="#">關於本局</a>
-                            <ul>
-                                <li><a href="#">本局沿革</a></li>
-                                <li><a href="#">本局願景</a></li>
-                                <li><a href="#">組織介紹</a></li>
-                                <li><a href="#">本局願景</a></li>
-                                <li><a href="#">局處執掌</a></li>
-                                <li><a href="#">重大政策</a></li>
-                                <li><a href="#">施政重點</a></li>
-                                <li><a href="#">本局位置</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">訊息公告</a>
-                            <ul>
-                                <li><a href="#">本局公告</a></li>
-                                <li><a href="#">環保署公告</a></li>
-                                <li><a href="#">環境用藥公告</a></li>
-                                <li><a href="#">環保專案成果報告</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">業務專區</a>
-                            <ul>
-                                <li><a href="#">化學物質</a></li>
-                                <li><a href="#">毒性化學物質</a></li>
-                                <li><a href="#">危害性化學物質災害防救</a></li>
-                                <li><a href="#">環境用藥</a></li>
-                                <li><a href="#">石綿危害資訊</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">便民服務</a>
-                            <ul>
-                                <li><a href="#">線上服務</a></li>
-                                <li><a href="#">教育宣導</a></li>
-                                <li><a href="#">影音專區</a></li>
-                                <li><a href="#">下載專區</a></li>
-                                <li><a href="#">常見問答</a></li>
-                                <li><a href="#">相關連結</a></li>
-                                <li><a href="#">訂閱電子報</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">政府資訊公開</a>
-                            <ul>
-                                <li><a href="#">行政院環境保護署資訊公開要點</a></li>
-                                <li><a href="#">預算及會計月報</a></li>
-                                <li><a href="#">性別平等專區</a></li>
-                                <li><a href="#">人權專區</a></li>
-                                <li><a href="#">環境統計資料庫</a></li>
-                                <li><a href="#">業務標準作業流程</a></li>
-                                <li><a href="#">行政院環保署Open Data資料集</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">法規專區</a>
-                            <ul>
-                                <li><a href="#">主管法規查詢系統</a></li>
-                                <li><a href="#">全國法規資料庫</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        <!-- fatfooter End -->
         <!-- footer Start-->
         <footer>
             <div class="container">
                 <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
-                <div class="footer_logo">
-                    <img src="images/logo.png" alt="" class="img-responsive">
-                </div>
                 <div class="footer_info">
                     <ul class="footer_link">
-                        <li><a href="javascript:;">隱私權政策</a></li>
-                        <li><a href="javascript:;">網站安全政策</a></li>
                         <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+                        <li><a href="javascript:;">隱私權及資訊安全政策</a></li>
                     </ul>
                     <p class="Copyright"> Hyweb Technology Co., Ltd.© 2015 All Rights Reserved</p>
-                    <p> 總公司：新竹縣竹北市台元一街8號5樓之6TEL：03-5601296 <br /> 台北分公司：台北市重慶南路二段51號5樓 TEL：02-2395-6966 <br /> 台中分公司：台中市西屯區臺灣大道三段658號6樓A1 TEL：04-2706-3968 <br /> 高雄分公司：高雄市新興區中正三路55號26樓之5 TEL：07-2223606 </p>
-                    <span class="update">更新日期:<em>2018/01/01</em></span>
-                    <span class="counter">累計瀏覽人次:<em>46476653</em></span>
+                    <p> 本局地址：100219 臺北市濟南路1段2之2號3~5樓(中央聯合辦公大樓北棟)<br />
+                        總機電話：(02)2343-2888<br />
+                        服務時間：申請護照、簽證及文件證明櫃檯受理時間為週一至週五 上午08：30 — 下午17：00 <span>中午不休息，另申辦護照櫃檯每週三延長辦公時間至20:00止，惟倘遇天災或停電等不可預期情況，本局得視狀況調整(或暫停)受理時間</span><br />
+                        聯絡我們：<a href="#" target="_blank">台北局本部</a><a href="#" target="_blank">中部辦事處</a><a href="#" target="_blank">雲嘉南辦事處</a><a href="#" target="_blank">南部辦事處</a><a href="#" target="_blank">東部辦事處</a><a href="#" target="_blank">旅外求助管道</a><a href="#" target="_blank">桃園機場辦事處</a>
+                    </p>
+                    <span class="counter">訪客人次：<em>39213358</em></span>
                 </div>
                 <div class="footer_icon">
                     <a target="_blank" href="javascript:;" title="另開視窗">
@@ -1229,10 +803,10 @@
     <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
     <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- 燈箱facybox -->
+    <script src="vendor/facybox/dist/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
 </body>
-
-</html>

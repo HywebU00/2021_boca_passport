@@ -41,17 +41,26 @@ $(function() {
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
+
+    // 1、左選單＋右search
+    // _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
+    // $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="searchCtrl">查詢</button>');
+
+    // 2、左選單 only
     _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
-    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="searchCtrl">查詢</button>');
+    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button>');
+
     var menu_status = false,
         _sidebar = $('.sidebar'),
         _search = $('.search'),
+        _userLogin = $('.user_login'),
         _nav = $('.navigation'),
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
     _mArea = $('.m_area');
     _sidebarCtrl.append('<span></span><span></span><span></span>');
+
     var search_mode = false;
     // 打開選單 function
     function showSidebar() {
@@ -112,6 +121,7 @@ $(function() {
         _menu.find('li ul').hide();
     });
     // 先複製過去
+    _userLogin.clone().prependTo(_mArea);
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
     _megamenu.clone().prependTo(_mArea);
@@ -312,7 +322,7 @@ $(function() {
     var headerHeight = Math.floor($('.header').outerHeight(true)),
         menuH = Math.floor(_menu.outerHeight(true)),
         // customHeight = headerHeight - menuH;
-        customHeight = 178 - 40; // header高度 - menu高度，每個專案不同，請另外填寫。
+        customHeight = 170 - 60; // header高度 - menu高度，每個專案不同，請另外填寫。
     if ($('header .menu').length > 0) {
         var stickyMenuTop = Math.floor($('header .menu').offset().top);
         // console.log(stickyMenuTop);

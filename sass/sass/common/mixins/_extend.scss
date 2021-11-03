@@ -59,6 +59,7 @@
     flex-flow: row wrap;  
     // 預設均分
     justify-content: space-between;
+    align-items: flex-start;  // 表單靠上
 }
 
 
