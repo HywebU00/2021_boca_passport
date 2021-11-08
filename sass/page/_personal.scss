@@ -1,0 +1,27 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 個人
+
+// 步驟流程
+.step-num{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #d6d6d6;
+    padding-top: .5em;
+}
+.step-flow{
+    display: block;
+    height: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #e8e8e8;
+
+    position: relative;
+    span{
+        position: absolute;
+        width: 30%;
+        height: 16px;
+        background: deeppink;
+    }
+}

@@ -22,8 +22,10 @@ table {
         text-align: left;
     }
     td{
-        border: #ddd 1px solid;
+        // border: #ddd 1px solid;
+        border-bottom: #ddd 1px solid;
         word-break: break-all;
+        text-align: center;
         a {
             word-break: break-all;
         }
@@ -31,7 +33,8 @@ table {
     th {
         background-color: #F3F3F3;
         color: #333;
-        border: #DDD 1px solid;
+        // border: #DDD 1px solid;
+        border-bottom: #ddd 1px solid;
         text-align: center;
         white-space: nowrap;
     }

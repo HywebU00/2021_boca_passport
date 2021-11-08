@@ -396,6 +396,23 @@ footer {
                         margin: 12px auto 0;
                     }
                 }
+
+                h3.subtitle{
+                    text-align: center;
+                    color: $primaryColor;
+                    span{
+                        display: inline-block;
+                        border: 1px solid $primaryColor;
+                        padding: .5em 2em;
+                    }
+
+                    &.warn{
+                        color: #b70000;
+                        span{
+                            border: 1px solid #b70000;
+                        }
+                    }
+                }
             }
         }
         @include screen('mobile') {
@@ -430,7 +447,7 @@ footer {
 
 // 表單
 .form_title{
-    font-size: 1.35em;
+    font-size: 1.25em;
     margin: 2px 0;
     font-weight: bold;
 }
@@ -456,9 +473,9 @@ footer {
 }
 // 說明事項
 .caption{
-    background: #f0f0f0;
-    padding: 1.5em;
-    border-radius: 10px;
+    background: #f6f6f6;
+    padding: 1.5em 2.5em;
+    border-radius: 4px;
     margin: 2em 0;
 
     .title{
@@ -467,6 +484,19 @@ footer {
             border-bottom: 3px solid #aaa;
         }
     }
+
+    &.announce{
+        .title{
+            text-align: center;
+            font-size: 160%;
+            line-height: 1.4;
+            margin: 1em 0 2em;
+            span{
+                border-bottom: none;
+            }
+        }
+    }
+
 }
 // 個資聲明
 .statement{
@@ -494,6 +524,280 @@ footer {
         padding: 0 .5em;
     }
 }
+// 篩選
+.filter{
+    padding: 1.25em 2.5em;
+    border: 1px solid #ddd;
+
+    .flex-form,
+    .form_grp{ margin: 0;}
+
+    .form_title{
+        text-align: right;
+        font-size: 110%;
+        padding-right: .5em;
+    }
+
+    @include screen('mobile') {
+        .form_title{
+            text-align: left;
+        }
+    }
+}
+// 篩選結果
+.result-title{
+    text-align: center;
+    font-size: 135%;
+    span{
+        background: #fff;
+        display: inline-block;
+        padding: .5em 1.5em;
+
+        position: relative;
+        &:before, &:after{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background: #222;
+            top: 50%;
+        }
+        &:before{
+            left: -60px;
+        }
+        &:after{
+            right: -60px;
+        }
+    }
+}
+// table 按鈕
+a{
+    &.tb-edit, &.tb-doc,
+    &.tb-print, &.tb-view{
+        font-size: 0;
+        display: block;
+        margin: auto;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #e4e4e4;
+        transition: all 600ms ease;
+    }
+
+    &.tb-edit{
+        background: url(../images/icon/icon_edit.svg) 50% 50% no-repeat, #e4e4e4;
+        background-size: 22px 22px;
+        &:hover, &:focus{
+            background: url(../images/icon/icon_edit2.svg) 50% 50% no-repeat, #1d90ac;
+            background-size: 22px 22px;
+        }
+    }
+    &.tb-doc{
+        background: url(../images/basic/icon_doc.svg) 50% 50% no-repeat, #e4e4e4;
+        background-size: 22px 22px;
+        &:hover, &:focus{
+            background: url(../images/basic/icon_doc2.svg) 50% 50% no-repeat, #1d90ac;
+            background-size: 22px 22px;
+        }
+    }
+    &.tb-print{
+        background: url(../images/basic/icon_print2.svg) 50% 50% no-repeat, #e4e4e4;
+        background-size: 22px 22px;
+        &:hover, &:focus{
+            background: url(../images/basic/icon_print.svg) 50% 50% no-repeat, #1d90ac;
+            background-size: 22px 22px;
+        }
+    }
+    &.tb-view{
+        background: url(../images/icon/icon_show.svg) 50% 50% no-repeat, #e4e4e4;
+        background-size: 22px 22px;
+        &:hover, &:focus{
+            background: url(../images/icon/icon_show2.svg) 50% 50% no-repeat, #1d90ac;
+            background-size: 22px 22px;
+        }
+    }
+}
+// table 操作 panel
+.table-flex-set{
+    @extend %flex_set;
+    align-items: center;
+    width: 100%;
+
+    .col{
+        &.panel{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            span{ padding: 0 .75em; }
+            .btn_grp{
+                padding: 6px 0;
+                text-align: right;
+            }
+
+            @include screen('mobile') {
+                span{ padding: 0 .75em 0 0; }
+            }
+        }
+    }
+}
+
+.title_tip{
+    font-size: 1.25em;
+    margin: 16px 0;
+}
+
+// 資料預覽
+.info-review{
+    background: #f8f8f8;
+    padding: 1em 2em;
+
+    // 第一層
+    >.grp{
+        margin: 1.25em 0;
+        // border-bottom: 1px dotted #aaa;
+
+        .content{
+            p{ margin: .25em 0; }
+            ol, ul{}
+            .caption{
+                margin: 0;
+                padding: 0 0 0 2.5em;
+                background: none;
+                font-size: 90%;
+            }
+        }
+
+        // 組合1 的html架構
+        >.content{
+            color: #4e4e4e;
+            padding: .75em 0;
+            // background: deeppink;
+
+            // 第二層
+            .grp{
+                padding: .75em 0;
+                border-bottom: 1px solid #c7c7c7;
+                .title{
+                    font-size: 112.5%;
+                    font-weight: bold;
+                    padding-top: .25em;
+                    color: darken($primaryColor, 5);
+                }
+                .content{
+                    padding: .25em 0;
+                    font-size: 112.5%;
+                }
+            }
+        }
+
+        // 組合2 的html架構
+        >.title{
+            font-size: 112.5%;
+            font-weight: bold;
+            color: darken($primaryColor, 5);
+
+            +.content{
+                color: #4e4e4e;
+                padding: .25em 0 .75em;
+                // background: deeppink;
+
+                // 第二層
+                .grp{
+                    padding: .75em 0;
+
+                    .title{
+                        font-size: 100%;
+                        font-weight: bold;
+                        color: #000;
+                        span{
+                            display: inline-block;
+                            // border-bottom: 2px solid #000;
+                            padding-bottom: 4px;
+                        }
+                    }
+                    .content{
+                        // padding: 0 0 .25em;
+                        font-size: 112.5%;
+                    }
+                }
+            }
+        }
+
+
+        // .content{
+        //     color: #4e4e4e;
+        //     padding: .75em 0;
+        // }
+
+        // // 第二層
+        // .grp{
+        //     padding: .25em 0;
+        //     .title{
+        //         font-size: 100%;
+        //         font-weight: bold;
+        //         color: #000;
+        //         span{
+        //             display: inline-block;
+        //             border-bottom: 2px solid #000;
+        //             padding-bottom: 4px;
+        //         }
+        //     }
+        //     .content{
+        //         padding: .25em 0;
+        //     }
+        // }
+    }
+}
+
+// 
+.loading{
+    text-align: center;
+    font-size: 125%;
+
+    svg{
+        // width: 100px;
+        // height: 100px;
+        margin: 40px;
+        display:inline-block;
+    }
+}
+// 
+$offset: 187;
+$duration: 1.4s;
+.spinner { animation: rotator $duration linear infinite; }
+
+@keyframes rotator {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+}
+.path {
+    stroke-dasharray: $offset;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation:
+        dash $duration ease-in-out infinite, 
+        colors ($duration*4) ease-in-out infinite;
+    }
+@keyframes colors {
+    0% { stroke: #4285F4; }
+    25% { stroke: #DE3E35; }
+    50% { stroke: #F7C223; }
+    75% { stroke: #1B9A59; }
+    100% { stroke: #4285F4; }
+}
+@keyframes dash {
+    0% { stroke-dashoffset: $offset; }
+    50% {
+        stroke-dashoffset: $offset/4;
+        transform:rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: $offset;
+        transform:rotate(450deg);
+    }
+}
+
 // 按鈕的均分
 .flex-form{
     .btn_grp.equal-2,
@@ -540,6 +844,37 @@ li a,
 b, b.R, b.B{
     display: inline-block;
     padding: .15em .25em;
+}
+
+// 照片上傳 
+.foto-upload{
+
+    &.warn{
+        background: #f6f6f6;
+        padding: 1.5em 2.5em;
+        border-radius: 4px;
+        margin: 2em 0;
+
+        @extend %flex_set;
+        .foto{
+            @include flex-xs(12, 0px);
+            @include flex-sm(4, $m-gutter);
+            @include flex-md(4, $m-gutter);
+            @include flex-lg(4, $m-gutter);
+            @include gutter();
+            text-align: center;
+        }
+        .info{
+            @include flex-xs(12, 0px);
+            @include flex-sm(8, $m-gutter);
+            @include flex-md(8, $m-gutter);
+            @include flex-lg(8, $m-gutter);
+
+            li{
+                padding: .25em 0;
+            }
+        }
+    }
 }
 
 
