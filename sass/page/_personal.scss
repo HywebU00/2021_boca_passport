@@ -96,16 +96,48 @@
 		}
 	}
 }
+// 內頁
+.Page{
+	.header {
+        h1{
+        	a{
+        		span{ color: #996c33; }
+        	}
+        }
+    }
+
+    .innerpage{
+    	>.container {
+    		// 白色區域內
+            .white_zone{
+            	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            }
+    	}
+    }
+}
 
 //////////////////////////////////////////////////////////// 調整
 html,body{
 	&.Login{ background: url(../images/bg-blur-ball-personal.png) 50% -4px no-repeat, #fff; }
     &.Page{
         background: url(../images/bg-hand.png) right 4% top -30px no-repeat, 
-                    url(../images/bg-blur-ball.png) 50% 0 no-repeat,
+                    url(../images/bg-blur-ball-personal.png) 50% 0 no-repeat,
                     #fff;
         background-attachment: fixed;
     }
 }
 
+footer{
+	a {
+        text-decoration: none;
+        color: $lightColor;
+        &:hover,
+        &:focus {
+            color: darken($lightColor, 10);
+        }
+    }
+}
 
+.btn-submit {
+    @include btn_setting(lighten($lightColor, 0), #FFF);
+}

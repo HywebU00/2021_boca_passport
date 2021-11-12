@@ -17,6 +17,7 @@ footer {
     a {
         text-decoration: none;
         color: $primaryColor;
+        padding: .25em .5em !important;
         &:hover,
         &:focus {
             color: darken($primaryColor, 10);
