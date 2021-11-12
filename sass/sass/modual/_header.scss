@@ -8,6 +8,8 @@
     @include screen('mobile') {
         position: fixed;
         width: 100%;
+        background: #FFF;
+        box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
     }
     // 虛擬底色 - navigation bg
     // &:before {

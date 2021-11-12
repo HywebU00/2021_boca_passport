@@ -1,11 +1,7 @@
 $m-gutter: 4px;
 
-* {
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
     &.noscroll {
         position: static !important;
@@ -41,6 +37,10 @@ body {
     h2 {
         line-height: 1.25em;
     }
+
+    @include screen('mobile') {
+        padding: 60px 0 0;
+    }
 }
 
 //////////////////////////////////////////////////////////// 調整
@@ -49,6 +49,7 @@ html,body{
         width: 100%;
         height: 100%;
         // background: #e2e8ee;
+        overflow-x: hidden;
         
     }
     &.Login{ background: url(../images/bg-blur-ball.png) 50% 0 no-repeat, #e2e8ee; }
@@ -62,7 +63,7 @@ html,body{
 // 定位點位置、gutter
 header, footer {
     .container {
-        @include gutter;
+        @include gutter(3em);
     }
     .accesskey{
         left: 0px;
@@ -125,6 +126,12 @@ footer {
                 display: none;
             }
         }
+
+        @include screen('mobile') {
+            h1{
+                a{ padding: 0; }
+            }
+        }
     }
     .control_panle{
         .container{
@@ -142,7 +149,6 @@ footer {
                 top: -124px;
                 left: 0
             }
-
             &:before{
                 content: '';
                 position: absolute;
@@ -154,13 +160,16 @@ footer {
             }
         }
         .col{
+            position: relative;
+            z-index: 1;
 
             .login_title{
                 width: 100%;
                 padding-right: 30%;
                 .main-title{
                     font-size: 2.4em;
-                    span{}
+                    color: darken($primaryColor, 5);
+                    span{ color: #0068b7; }
                 }
                 p{ line-height: 1.8;}
             }
@@ -207,6 +216,7 @@ footer {
             .tips{
                 background: $secondaryColor;
                 padding: 1em 1.75em;
+                margin: 0 -1.25em;
                 border-radius: 6px;
                 position: relative;
                 z-index: 3;
@@ -242,6 +252,70 @@ footer {
                             &:focus, &:hover{
                                 text-decoration: none;
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include screen('tablet') {
+            .container{
+                padding: 2em 2.5em 0;
+
+                &:after{
+                    left: auto;
+                    right: -45%;
+                }
+                &:before{
+                    display: none;
+                }
+            }
+
+            .col{
+                .login_title{
+                    padding-right: 0;
+                    text-align: center;
+                }
+                .pin_panel{
+                    padding-bottom: 6em;
+                    .form_inline{
+                        .form_grp,
+                        .btn_grp{
+                            flex: 1 1 100%;
+                            position: relative;
+                        }
+                    }
+
+                    .form_grp{
+                        .form_title{}
+                        .form_content{
+                            input{ width: 100%; }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include screen('mobile') {
+            .container{
+                border-radius: 0;
+                &:after{
+                    left: 0;
+                    right: auto;
+                }
+            }
+            .col{
+                .login_title{
+                    .main-title{
+                        span{ display: block; }
+                    }
+                }
+
+                .pin_panel{
+                    .form_grp{
+                        .form_title{
+                            line-height: normal;
+                            padding: .25em;
                         }
                     }
                 }
@@ -749,8 +823,7 @@ a{
         // }
     }
 }
-
-// 
+// loading
 .loading{
     text-align: center;
     font-size: 125%;
@@ -766,7 +839,6 @@ a{
 $offset: 187;
 $duration: 1.4s;
 .spinner { animation: rotator $duration linear infinite; }
-
 @keyframes rotator {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(270deg); }
@@ -849,11 +921,32 @@ b, b.R, b.B{
 // 照片上傳 
 .foto-upload{
 
+    background: #f6f6f6;
+    padding: 1.5em 2.5em;
+    border-radius: 4px;
+    margin: 2em 0;
+    .foto{
+        text-align: center;
+    }
+    .info{
+        ol{
+            border: 1px solid #d4d4d4;
+            padding: 1.125em 2em 1.125em 3em;
+
+            li{
+                padding: .25em 0;
+            }
+        }
+        .check_grp{
+            text-align: center;
+        }
+    }
+
     &.warn{
-        background: #f6f6f6;
-        padding: 1.5em 2.5em;
-        border-radius: 4px;
-        margin: 2em 0;
+        // background: #f6f6f6;
+        // padding: 1.5em 2.5em;
+        // border-radius: 4px;
+        // margin: 2em 0;
 
         @extend %flex_set;
         .foto{
@@ -869,13 +962,303 @@ b, b.R, b.B{
             @include flex-sm(8, $m-gutter);
             @include flex-md(8, $m-gutter);
             @include flex-lg(8, $m-gutter);
-
-            li{
-                padding: .25em 0;
+            ol{
+                margin: 0;
+                border: 1px solid transparent;
             }
         }
     }
 }
+
+// 流程
+.process{
+    @extend %flex_set;
+    align-items: stretch;
+    .col{
+        @include flex-xs-equal(1, 0px);
+        @include flex-sm-equal(3, $m-gutter);
+        @include flex-md-equal(3, $m-gutter);
+        @include flex-lg-equal(3, $m-gutter);
+
+        border: 1px solid #ddd;
+        padding: 1em 1.5em 2em;
+
+        h3.title{
+            font-size: 140%;
+            border-bottom: 1px solid #e6e6e6;
+            margin: 0 -1em;
+            padding: 1em;
+            color: #0068b7;
+        }
+        p{}
+
+        // 圓球寬度
+        $ball_weith: 56px;
+        .step{
+            section{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                padding: .75em 0;
+
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    background: #82c9c9;
+                    left: 28px;
+                }
+
+                &:first-child{
+                    &:before{
+                        height: 50%;
+                        bottom: 0;
+                    }
+                }
+                &:last-child{
+                    &:before{
+                        height: 50%;
+                        top: 0;
+                    }
+                }
+
+                span.num{
+                    flex: 0 0 $ball_weith;
+                    position: relative;
+
+                    text-align: center;
+                    display: block;
+                    font-size: 140%;
+                    height: 56px;
+                    line-height: 56px;
+                    font-weight: bold;
+                    color: #fff;
+                    background: #82c9c9;
+                    border-radius: 50%;
+                }
+                h4{
+                    flex: 1 1 auto;
+                    flex-basis: calc(100% - 56px);
+                    color: #222;
+
+                    margin: 0;
+                    padding: 0 .5em;
+                    font-size: 120%;
+                    span{
+                        display: block;
+                        font-size: 84%;
+                        font-weight: normal;
+                        color: #666;
+                        line-height: 1.3;
+                        padding-top: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////// 模組：個人頁面
+// 個人
+.table_title{
+    font-size: 130%;
+    margin: 2em 0 1em;
+}
+// table 樣式
+.table_box{
+    border: 1px solid #ddd;
+    th{
+        width: 120px
+    }
+    td{
+        text-align: left;
+    }
+}
+
+// 步驟流程
+.step-num{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #d6d6d6;
+    padding-top: .5em;
+}
+.step-flow{
+    display: block;
+    height: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+    // background: #e8e8e8;
+    border: solid 1px #f0f0f0;
+
+    position: relative;
+    span.mask{
+        position: absolute;
+        width: auto;
+        height: 100%;
+        overflow: hidden;
+
+        // span.belt{
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: rgb(0,104,183);
+        //     background: linear-gradient(90deg, rgba(0,104,183,1) 0%, rgba(0,158,150,1) 100%);
+        //     // animation: Belt 1s ease infinite;
+        // }
+    }
+
+    span.belt{
+        position: absolute;
+        width: 100%;
+        height: 16px;
+        background: rgb(0,104,183);
+        background: linear-gradient(90deg, rgba(0,104,183,1) 0%, rgba(0,158,150,1) 100%);
+    }
+}
+
+// 預約時段 
+.time_reserve{
+    .info{
+        padding: 1.5em 0;
+    }
+
+    .date,
+    .time_period .AM,
+    .time_period .PM{
+        .part{
+            @extend %flex_set;
+            .col{
+                text-align: center;
+                background: #fff;
+                border: 1px solid #ddd;
+                padding: 1em 0;
+                border-radius: 4px;
+                display: block;
+                font-size: 1.2em;
+                transition: all 200ms ease-in;
+
+                time{ display: block; }
+
+                &:hover, &:focus{
+                    cursor: pointer;
+                    // background: darken($linkColor, 2);
+                    background: adjust_hue(desaturate(lighten($linkColor, 18), 45), -15);
+                    color: #fff;
+                }
+
+                &.act{
+                    background: adjust_hue(desaturate(lighten($linkColor, 18), 45), -15);
+                    color: #fff;
+                }
+                &.occupied{
+                    background: darken($linkColor, 10);
+                    color: #fff;
+                }
+                &.full{
+                    background: #ddd;
+                    color: #666;
+                    &:hover, &:focus{
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+
+    // 日期
+    .date{
+        position: relative;
+        .part{
+            // @extend %flex_set;
+            margin: 0 3em;
+            .col{
+                @include flex-xs-equal(2, $m-gutter);
+                @include flex-sm-equal(5, $m-gutter);
+                @include flex-md-equal(10, $m-gutter);
+                @include flex-lg-equal(10, $m-gutter);
+                font-weight: bold;
+
+                time{}
+                span{ font-size: 80%; }
+
+                &:hover, &:focus{}
+            }
+        }
+
+        button{
+            position: absolute;
+            bottom: 0;
+
+            // 前一則、下一則
+            &.btn-pre, &.btn-next{
+                border: 0;
+            }
+
+            &.btn-pre{
+                background: url(../images/slick/icon_arrow_left_inverse.png) 70% 50% no-repeat;
+                background-size: 20px 20px;
+                transition: all 300ms ease;
+
+                &:hover,&:focus{
+                    background: url(../images/slick/icon_arrow_left_inverse.png) 40% 50% no-repeat;
+                    background-size: 20px 20px;
+                }
+            }
+            &.btn-next{
+                right: 0;
+                background: url(../images/slick/icon_arrow_right_inverse.png) 30% 50% no-repeat;
+                background-size: 20px 20px;
+                transition: all 300ms ease;
+
+                &:hover,&:focus{
+                    background: url(../images/slick/icon_arrow_right_inverse.png) 60% 50% no-repeat;
+                    background-size: 20px 20px;
+                }
+            }
+        }
+    }
+    // 時段
+    .time_period{
+        padding: 1em 3em;
+        margin-top: 1em;
+        background: #f8f8f8;
+        .AM, .PM{
+            margin: 30px 0;
+            h3{ margin: 8px 0; }
+            .part{
+                // @extend %flex_set;
+                .col{
+                    @include flex-xs-equal(2, $m-gutter);
+                    @include flex-sm-equal(4, $m-gutter);
+                    @include flex-md-equal(8, $m-gutter);
+                    @include flex-lg-equal(8, $m-gutter);
+
+                    time{}
+                    span{
+                        font-size: 90%;
+                        b{}
+                    }
+
+                    &:hover, &:focus{}
+                }
+            }
+        }
+    }
+}
+
+// ----------------Maichine---------------------
+// @keyframes Belt{
+//     0% {
+//         background: linear-gradient(90deg, rgba(0,104,183,1) 0%, rgba(0,158,150,1) 100%);
+//     }
+//     100% {
+//         background: linear-gradient(90deg, rgba(0,158,150,1) 0%, rgba(0,104,183,1) 100%);
+//     }
+// }
 
 
 ////////////////////////////////////////////////////////////
@@ -923,8 +1306,6 @@ b, b.R, b.B{
         font-size: 1.125em;
     }
 }
-.hidden {
-    display: none;
-}
+.hidden { display: none; }
 
 

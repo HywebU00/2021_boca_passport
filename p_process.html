@@ -16,7 +16,7 @@
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/boca.css">
+    <link rel="stylesheet" href="css/boca_personal.css">
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
@@ -79,20 +79,20 @@
                 <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
-                <nav class="menu" role="navigation" aria-label="About page">
+                <!-- <nav class="menu" role="navigation" aria-label="About page">
                     <ul>
                         <li><a href="#">簡表資料填寫</a></li>
                         <li><a href="#">簡表批次匯入</a></li>
                         <li><a href="#">護照暫存清單</a></li>
                         <li><a href="#">護照送件清單</a></li>
                     </ul>
-                </nav>
+                </nav> -->
                 <!-- menu End -->
                 <!-- user -->
-                <section class="user_login">
+                <!-- <section class="user_login">
                     <span>XXX</span>，您好！登入時間：<span>2021/10/10</span>
                     <button type="button" class="btn btn-primary btn-logout">登出</button>
-                </section>
+                </section> -->
             </div>
         </header>
         <!-- header End -->
@@ -112,76 +112,139 @@
                         </ul>
                     </div>
                     <div class="white_zone">
-                        <h2 class="title">管理者登入</h2>
-                        <!-- Form Start -->
+                        <h2 class="title">申辦流程</h2>
+                        <!-- Start -->
                         <section class="">
                             <!-- 說明事項 -->
                             <div class="caption">
-                                <h3 class="title"><span>說明事項</span></h3>
+                                <p>歡迎使用外交部領事事務局（以下稱本局）網路填表及預約申辦護照服務。使用本服務須先完成線上填表，再依預約日期攜帶相關人士（如申請人、代理人、監護人）的身分證正本（尚未請領身分證之申請人應出示含詳細記事之戶口名簿正本或最近3個月內辦理之戶籍謄本）及申辦護照應備文件，前往擬申辦之本局1樓或外交部中部、南部、東部或雲嘉南辦事處（以下簡稱外交部四辦）報到後即可遞件申請，屆時將以該時段之報到順序依序受理，您也可以在完成線上填表的次日起10個工作日內臨櫃送件，無須預約申辦日期。。</p>
+                                <h3 class="title"><span>注意事項</span></h3>
                                 <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
-                                <ol>
+                                <ol class="R">
                                     <li>有序清單</li>
-                                    <li>項目1</li>
+                                    <li>Lorem, ipsum dolor sit amet<a href="#">超連結</a>Lorem</li>
                                     <li>項目2</li>
                                 </ol>
                                 <ul>
                                     <li>無序清單</li>
-                                    <li>項目1</li>
+                                    <li class="R">項目1</li>
                                     <li>項目2</li>
                                 </ul>
                             </div>
-                            <!-- 表單 -->
-                            <form action="">
-                                <div class="flex-form form-column">
-                                    <div class="form_grp">
-                                        <div class="flex-col-equal-2">
-                                            <div class="form_grp">
-                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>帳號：</label>
-                                                <div class="form_content">
-                                                    <input type="text" id="" placeholder="請輸入文字">
-                                                </div>
-                                            </div>
-                                            <div class="form_grp">
-                                                <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>密碼：</label>
-                                                <div class="form_content">
-                                                    <div class="labelEffect password_toggle">
-                                                        <input name="password" type="password" placeholder="請輸入密碼" value="1234">
-                                                        <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 驗證碼 -->
-                                    <div class="form_grp">
-                                        <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>驗證碼</div>
-                                        <div class="form_content form_inline">
-                                            <input name="" type="text" value="">
-                                            <img src="images/basic/captcha.gif" alt="" class="captcha">
-                                            <button class="btn"><i class="i_reflash"></i>重新整理</button>
-                                            <button class="btn"><i class="i_play"></i>語音播放</button>
-                                        </div>
-                                    </div>
-                                    <!-- 純按鈕 -->
-                                    <div class="btn_grp">
-                                        <button class="btn btn-reset">清除</button>
-                                        <button class="btn btn-submit">送出</button>
-                                        <button type="button" class="btn btn-primary">主要按鈕</button>
-                                        <button type="button" class="btn btn-secondary">次要按鈕</button>
-                                        <button type="button" class="btn btn-normal">一般按鈕</button>
-                                        <button type="button" id="openModal" class="btn btn-primary">跳窗</button>
-                                    </div>
-                                    <div class="btn_grp form_inline">
-                                        <button class="btn btn-reset">清除</button>
-                                        <button class="btn btn-submit">送出</button>
-                                        <button type="button" class="btn btn-primary">主要按鈕</button>
-                                        <button type="button" class="btn btn-secondary">次要按鈕</button>
-                                        <button type="button" class="btn btn-normal">一般按鈕</button>
+                            <!-- 流程 -->
+                            <div class="process">
+                                <div class="col">
+                                    <h3 class="title">1. 網路預約填表流程</h3>
+                                    <p>點選「我要預約填表」，進入網路預約填表流程</p>
+                                    <div class="step">
+                                        <section>
+                                            <span class="num">01</span>
+                                            <h4>簽署個資聲明
+                                                <span>同意個資聲明</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">02</span>
+                                            <h4>身分認證
+                                                <span>輸入身分證字號、電子郵件</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">03</span>
+                                            <h4>申辦方式
+                                                <span>選擇送件地點及預約申辦日期</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">04</span>
+                                            <h4>網路填表
+                                                <span>填寫申辦護照資料</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">05</span>
+                                            <h4>辦理方式
+                                                <span>選擇本人親辦或委任代辦</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">06</span>
+                                            <h4>照片上傳
+                                                <span>上傳數位照片</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">07</span>
+                                            <h4>預約填表成功通知
+                                                <span>若已成功預約申辦日期，請務必準時報到</span>
+                                            </h4>
+                                        </section>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="col">
+                                    <h3 class="title">2. 報到流程</h3>
+                                    <p>若辦理方式為委任代辦，毋須至KIOSK報到，請備妥所需文件，直接送件</p>
+                                    <div class="step">
+                                        <section>
+                                            <span class="num">01</span>
+                                            <h4>至公共事務機(KIOSK)報到
+                                                <!-- <span>同意個資聲明</span> -->
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">02</span>
+                                            <h4>輸入身分證字號</h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">03</span>
+                                            <h4>套入資料</h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">04</span>
+                                            <h4>檢查檢視護照資料表資料</h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">05</span>
+                                            <h4>列印簡式護照資料表</h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">06</span>
+                                            <h4>取號及送件</h4>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="title">3. 送件流程</h3>
+                                    <p>如有上傳照片，請務必使用彩色墨水列印簡表</p>
+                                    <div class="step">
+                                        <section>
+                                            <span class="num">01</span>
+                                            <h4>黏貼照片及備妥所需文件正、影本
+                                                <span>未上傳照片者，須於簡表貼妥 2 張實體照片或於本局或四辦簽約廠商提供之快照機拍攝快照，並於簡表黏貼 1 張紙本照片含QR code後再臨櫃送件</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">02</span>
+                                            <h4>請依預約櫃台上方螢幕顯示之報到號碼依序送件
+                                                <span>未網路預約申辦日期者，請現場抽號後依序送件</span>
+                                            </h4>
+                                        </section>
+                                        <section>
+                                            <span class="num">03</span>
+                                            <h4>送件完成後，前往繳費櫃檯繳費
+                                                <!-- <span>若已成功預約申辦日期，請務必準時報到</span> -->
+                                            </h4>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 按鈕 -->
+                            <div class="btn_grp">
+                                <button type="button" class="btn btn-secondary">查詢/變更/取消</button>
+                                <button type="button" class="btn btn-primary">我要預約填表</button>
+                            </div>
                         </section>
-                        <!-- Form End -->
+                        <!-- End -->
                     </div>
                 </div>
             </div>

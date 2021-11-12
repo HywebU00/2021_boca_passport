@@ -16,7 +16,7 @@
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/boca.css">
+    <link rel="stylesheet" href="css/boca_personal.css">
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
@@ -79,20 +79,20 @@
                 <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
-                <nav class="menu" role="navigation" aria-label="About page">
+                <!-- <nav class="menu" role="navigation" aria-label="About page">
                     <ul>
                         <li><a href="#">簡表資料填寫</a></li>
                         <li><a href="#">簡表批次匯入</a></li>
                         <li><a href="#">護照暫存清單</a></li>
                         <li><a href="#">護照送件清單</a></li>
                     </ul>
-                </nav>
+                </nav> -->
                 <!-- menu End -->
                 <!-- user -->
-                <section class="user_login">
+                <!-- <section class="user_login">
                     <span>XXX</span>，您好！登入時間：<span>2021/10/10</span>
                     <button type="button" class="btn btn-primary btn-logout">登出</button>
-                </section>
+                </section> -->
             </div>
         </header>
         <!-- header End -->
@@ -112,17 +112,37 @@
                         </ul>
                     </div>
                     <div class="white_zone">
-                        <h2 class="title">照片上傳</h2>
-                        <!-- <h3 class="subtitle"><span>請再次確認輸入資料</span></h3> -->
+                        <div class="step-num">01</div>
+                        <h2 class="title">簽署個資聲明</h2>
+                        <!-- <h3 class="subtitle"><span>匯入總筆數<b>20</b>筆，成功筆數<b>16</b>筆，異常筆數<b>4</b>筆</span></h3> -->
+                        <!-- step 進度條 -->
+                        <div class="step-flow">
+                            <span class="belt" style="width: 30%;"></span>
+                        </div>
                         <!-- Start -->
                         <section class="">
-                            <!-- loading -->
-                            <div class="loading">
-                                <div></div>
-                                <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                                   <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-                                </svg>
-                                <p>照片檢核中...</p>
+                            <!-- 說明事項 -->
+                            <div class="caption announce">
+                                <h3 class="title"><span>外交部領事事務局「個人資料保護法」公開聲明</span></h3>
+                                <p>請務必詳閱以下內容，再進行預約：</p>
+                                <p>本系統會於您完成線上填表或預約申辦日期成功後寄送通知信，請務必確認您填具的電子郵件正確無誤，以確保可正常接收本局【網路預約申辦護照系統】寄送之信件。 因應民國101年10月1日個人資料保護法施行，本局將善盡個資保護職責，非因公務需要，不會在未經您同意之情況下，任意將您的個人資料提供他人使用。</p>
+                                <p>您於本系統填具之個人資料及上傳之護照用照片影像電子檔，本系統將自您完成填表之次日起保留10個工作日，逾期即自動刪除。如您未於10個工作日的保留期限內送件，可以用紙本的簡式護照資料表及2張照片送件，或是再使用本系統進行線上填表及預約申辦日期。</p>
+                                <!-- <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
+                                <ol>
+                                    <li>有序清單</li>
+                                    <li>項目1</li>
+                                    <li>項目2</li>
+                                </ol>
+                                <ul>
+                                    <li>無序清單</li>
+                                    <li>項目1</li>
+                                    <li>項目2</li>
+                                </ul> -->
+                            </div>
+                            <!-- 按鈕 -->
+                            <div class="btn_grp">
+                                <button type="button" class="btn btn-secondary">不同意</button>
+                                <button type="button" class="btn btn-primary">同意</button>
                             </div>
                         </section>
                         <!-- End -->

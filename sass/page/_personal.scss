@@ -1,27 +1,111 @@
 /////////////////////////////////////////////////////////以下為demo範例///
-// 個人
+// 登入頁
+.Login{
+	.header {
+		// 導覽列
+        .navigation {
+        	top: 16px;
+        	.navlist{
+        		ul{
+        			display: flex;
+        			li{
+        				a{
+        					color: #222;
+        					border-radius: 4px;
+        					background: url(../images/icon-arrow-black.svg) 10px 50% no-repeat, transparent;
+        					background-size: 12px 12px;
+        					&:hover, &:focus{
+        						color: #fff;
+                                background: url(../images/icon-arrow.svg) 10px 50% no-repeat, $primaryColor;
+                                background-size: 12px 12px;
+                            }
+        				}
+        			}
+        		}
+        	}
+        }
+	}
+	.control_panle{
+		.container{
+			background: url(../images/bg-hero-personal.png) 50% bottom no-repeat, #fff;
+			min-height: 683px;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-// 步驟流程
-.step-num{
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    letter-spacing: 4px;
-    color: #d6d6d6;
-    padding-top: .5em;
+			position: relative;
+			&:after{
+				width: 362px;
+                height: 396px;
+                background: url(../images/deco-been-2-personal.png) 50% 50% no-repeat;
+                left: auto;
+                top: auto;
+                right: -160px;
+                bottom: -200px;
+                z-index: -1;
+			}
+
+			&:before{
+                background: url(../images/deco-been-1-personal.png) 50% 50% no-repeat;
+            }
+		}
+		.col{
+			.login_title{
+				padding-right: 54%;
+				.main-title{
+					color: #996c33;
+				}
+			}
+
+			.pin_panel{
+				padding-right: 54%;
+				text-align: center;
+				button{
+					border-radius: 40px;
+                    padding: .75em 0;
+                    width: 260px;
+                    font-size: 1.25em;
+				}
+			}
+		}
+	}
+
+	@include screen('mobile') {
+		.control_panle{
+			.container{
+				background: url(../images/bg-hero-personal.png) 15% bottom no-repeat, #fff;
+				box-shadow: none;
+			}
+			.col{
+				.login_title,
+				.pin_panel{
+					padding-right: 34%;
+				}
+			}
+		}
+	}
+	@include screen('xs_mobile') {
+		.control_panle{
+			.container{
+				background: url(../images/bg-hero-personal.png) 0 bottom no-repeat, #fff;
+			}
+			.col{
+				.login_title,
+				.pin_panel{
+					padding-right: 0;
+				}
+			}
+		}
+	}
 }
-.step-flow{
-    display: block;
-    height: 16px;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #e8e8e8;
 
-    position: relative;
-    span{
-        position: absolute;
-        width: 30%;
-        height: 16px;
-        background: deeppink;
+//////////////////////////////////////////////////////////// 調整
+html,body{
+	&.Login{ background: url(../images/bg-blur-ball-personal.png) 50% -4px no-repeat, #fff; }
+    &.Page{
+        background: url(../images/bg-hand.png) right 4% top -30px no-repeat, 
+                    url(../images/bg-blur-ball.png) 50% 0 no-repeat,
+                    #fff;
+        background-attachment: fixed;
     }
 }
+
+

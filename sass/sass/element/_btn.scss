@@ -173,6 +173,15 @@ $btn-radius:.2em;
     text-shadow:none;
 }
 
+// 自訂
+// 前一則、下一則
+.btn-pre, .btn-next{
+    font-size: 0;
+    width: 42px;
+    height: 90px;
+}
+
+
 
 // 按鈕大小
 .btn-xl {

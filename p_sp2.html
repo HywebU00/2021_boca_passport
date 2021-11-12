@@ -16,7 +16,7 @@
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/boca.css">
+    <link rel="stylesheet" href="css/boca_personal.css">
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
@@ -79,20 +79,20 @@
                 <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
-                <nav class="menu" role="navigation" aria-label="About page">
+                <!-- <nav class="menu" role="navigation" aria-label="About page">
                     <ul>
                         <li><a href="#">簡表資料填寫</a></li>
                         <li><a href="#">簡表批次匯入</a></li>
                         <li><a href="#">護照暫存清單</a></li>
                         <li><a href="#">護照送件清單</a></li>
                     </ul>
-                </nav>
+                </nav> -->
                 <!-- menu End -->
                 <!-- user -->
-                <section class="user_login">
+                <!-- <section class="user_login">
                     <span>XXX</span>，您好！登入時間：<span>2021/10/10</span>
                     <button type="button" class="btn btn-primary btn-logout">登出</button>
-                </section>
+                </section> -->
             </div>
         </header>
         <!-- header End -->
@@ -112,115 +112,130 @@
                         </ul>
                     </div>
                     <div class="white_zone">
-                        <h2 class="title">表單＋table＋送件日期</h2>
+                        <div class="step-num">07</div>
+                        <h2 class="title">預約成功通知</h2>
                         <!-- <h3 class="subtitle"><span>匯入總筆數<b>20</b>筆，成功筆數<b>16</b>筆，異常筆數<b>4</b>筆</span></h3> -->
+                        <!-- step 進度條 -->
+                        <div class="step-flow">
+                            <span class="belt" style="width: 70%;"></span>
+                        </div>
                         <!-- Start -->
                         <section class="">
                             <!-- 說明事項 -->
                             <div class="caption">
                                 <h3 class="title"><span>說明事項</span></h3>
-                                <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
-                                <ol>
-                                    <li>有序清單</li>
-                                    <li>項目1</li>
-                                    <li>項目2</li>
-                                </ol>
                                 <ul>
-                                    <li>無序清單</li>
-                                    <li>項目1</li>
-                                    <li>項目2</li>
+                                    <li>您已成功網路預約申辦護照時間且系統已發送預約成功通知信至您的電子郵件信箱。此預約為當天有效，請務必於預約時間內辦理報到，以免影響您的權益</li>
+                                    <li>為確保國人旅外通關之便利，申請人數位照片雖已上傳成功，如果上傳的照片於臨櫃遞件時，經再次審查不符「晶片護照照片規格」相關規定，或經外交部領事事務局及四個辦事處護製系統處理後如影像品質未達國際民航組織標準或上傳不合格照片(例如：使用非6個月內近照等等…)不合格情形，仍可能再請護照申請人重新繳交合格的照片。</li>
+                                    <li>申辦過程中，請留意您的電話及電子信箱，以免漏接收申請案件之補正訊息通知，致您的權益受損。</li>
+                                    <li>如果申請人上網填寫的資料或上傳的照片有更改，請務必重新列印簡表，倘誤用舊簡表，因資料已遭覆蓋，外交部領事事務局及四個辦事處將無法帶出正確的數位照片及資料檔案，故無法受理您的申請。</li>
                                 </ul>
                             </div>
-                            <!-- 篩選 -->
-                            <div class="filter">
-                                <form action="">
-                                    <div class="flex-form">
-                                        <div class="form_grp">
-                                            <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>送件日期</div>
-                                            <div class="form_content form_inline">
-                                                <div class="datepick">
-                                                    <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                                                </div>
-                                                <select id="selectSample" name="">
-                                                    <option value="">請選擇</option>
-                                                    <option value="">項目一</option>
-                                                    <option value="">項目二</option>
-                                                    <option value="">項目三</option>
-                                                </select>
-                                                <div class="notice_info">一般提醒訊息</div>
-                                            </div>
-                                        </div>
-                                        <div class="btn_grp form_inline">
-                                            <button class="btn btn-reset">清除</button>
-                                            <button class="btn btn-submit">查詢</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- 篩選結果 -->
-                            <div class="result_content">
-                                <!-- 標題 -->
-                                <h4 class="result-title"><span>查詢結果</span></h4>
-                                <!-- table -->
-                                <h5 class="title_tip">請再次確認送件清單</h5>
-                                <table>
+                            <div>
+                                <h3 class="table_title">以下為您的預約資料：建議將此頁列印參考，以便辦理報到</h3>
+                                <table class="table_box">
                                     <tr>
-                                        <th>序號</th>
-                                        <th>建立日期</th>
-                                        <th>送件地點</th>
-                                        <th>送件類別</th>
-                                        <th>身分證字號</th>
-                                        <th>姓名</th>
+                                        <th>報到時段</th>
+                                        <td>
+                                            2021年10月26日(星期二) 12:00-12:30<br>
+                                            <b class="R">此為您的報到時間，當日需視現場人數報到情況，依序辦理申請案件</b>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
-                                        <td>2021/10/10</td>
-                                        <td>外交部領事事務局</td>
-                                        <td>NC</td>
-                                        <td>A123456789</td>
-                                        <td>王俞江</td>
+                                        <th>送件地點</th>
+                                        <td>
+                                            外交部領事事務局（100219臺北市中正區濟南路一段2之2號1樓）<br>
+                                            ＊網路預約申辦護照者，請先至1樓大廳後方之第①號公共事務機（KIOSK）報到、取號後，再搭乘電扶梯至3樓大廳送件。
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>護照申請人</th>
+                                        <td>王O明</td>
+                                    </tr>
+                                    <tr>
+                                        <th>辦理方式</th>
+                                        <td>親自辦理</td>
                                     </tr>
                                 </table>
 
-                                <!-- 按鈕 -->
-                                <div class="btn_grp">
-                                    <button class="btn btn-reset">清除</button>
-                                    <button class="btn btn-submit">送出</button>
-                                    <button type="button" class="btn btn-primary">主要按鈕</button>
-                                    <button type="button" class="btn btn-secondary">次要按鈕</button>
-                                    <button type="button" class="btn btn-normal">一般按鈕</button>
-                                </div>
-                            </div>
-                            <!-- Pagination -->
-                            <!-- <div class="pagination">
-                                <form action="">
-                                    <div class="form_inline">
-                                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="" aria-label="每頁顯示">
-                                                <option value="">10</option>
-                                                <option value="">20</option>
-                                                <option value="">30</option>
-                                                <option value="">40</option>
-                                            </select> 筆， <input type="button" value="確定" class="btn btn-submit">
-                                        </div>
-                                    </div>
-                                </form>
-                                <ul class="page">
-                                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#">7</a></li>
-                                    <li><a href="#">8</a></li>
-                                    <li><a href="#">9</a></li>
-                                    <li><a href="#">10</a></li>
-                                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                                </ul>
-                            </div> -->
+                                <h3 class="table_title">報到時請攜帶以下資料</h3>
+                                <table class="table_box">
+                                    <tr>
+                                        <th>※</th>
+                                        <td>新式國民身分證正本（未成年人或受監護宣告之人尚須攜帶其法定代理人之新式國民身分證正本）</td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td>白底彩色照片2張：須為最近6個月內拍攝之照片（直4.5公分且橫3.5公分，頭到下巴3.2公分），其他請參閱晶片護照相片規格</td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td>列印填妥之簡式護照資料表正本（已隨本確認信以附加檔案方式寄至您的電子郵件信箱）</td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td>變更護照外文姓名/外文別名，須繳付證明文件</td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td>尚有效期之舊護照</td>
+                                    </tr>
+                                </table>
 
+                                <h3 class="table_title">報到時請詳閱以下須知，並備妥應備文件</h3>
+                                <table class="table_box">
+                                    <tr>
+                                        <th>※</th>
+                                        <td><a href="#" target="_blank">在臺有戶籍國民在國內首次申請普通護照說明書</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td><a href="#" target="_blank">國內申辦護照相關資訊</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td><a href="#" target="_blank">晶片護照相片規格</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>※</th>
+                                        <td>晶片護照相片範例<br>
+                                            <img src="images/foto-sample.png" alt="" class="" style="height: 420px;">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <h3 class="table_title">外交部領事事務局局本部</h3>
+                                <table class="table_box">
+                                    <tr>
+                                        <th>地址</th>
+                                        <td>100219臺北市中正區濟南路一段2之2號1樓<br>
+                                        ＊網路預約申辦護照者，請先至1樓大廳後方之第①號公共事務機（KIOSK）報到、取號後，再搭乘電扶梯至3樓大廳送件。</td>
+                                    </tr>
+                                    <tr>
+                                        <th>電話</th>
+                                        <td>02-23432888</td>
+                                    </tr>
+                                    <tr>
+                                        <th>地圖</th>
+                                        <td><a href="#" target="_blank">GoogleMap</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>相關地址資訊</th>
+                                        <td>
+                                            <ul>
+                                                <li><a href="#" target="_blank">外交部領事事務局</a></li>
+                                                <li><a href="#" target="_blank">外交部中部辦事處</a></li>
+                                                <li><a href="#" target="_blank">外交部雲嘉南辦事處</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- 按鈕 -->
+                            <div class="btn_grp">
+                                <button type="button" class="btn btn-secondary">查詢/變更/取消</button>
+                                <button type="button" class="btn btn-primary">列印此頁</button>
+                            </div>
                         </section>
                         <!-- End -->
                     </div>
