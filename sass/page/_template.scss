@@ -713,12 +713,10 @@ a{
         }
     }
 }
-
 .title_tip{
     font-size: 1.25em;
     margin: 16px 0;
 }
-
 // 資料預覽
 .info-review{
     background: #f8f8f8;
@@ -1056,6 +1054,14 @@ b, b.R, b.B{
             }
         }
     }
+}
+
+// PDF 頁面設定
+.PDF{
+    width: 794px;
+    height: 1123px;
+    background: #fff;
+    margin: 0 auto;
 }
 
 //////////////////////////////////////////////////////////// 模組：個人頁面
