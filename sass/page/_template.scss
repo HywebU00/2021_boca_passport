@@ -966,6 +966,11 @@ b, b.R, b.B{
     }
 }
 
+// 照片調整
+.foto-adjust{
+    h3{ text-align: center;}
+}
+
 // 流程
 .process{
     @extend %flex_set;
