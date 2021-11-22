@@ -169,7 +169,10 @@ footer {
                 .main-title{
                     font-size: 2.4em;
                     color: darken($primaryColor, 5);
-                    span{ color: #0068b7; }
+                    span{
+                        color: #0068b7;
+                        display: block;
+                    }
                 }
                 p{ line-height: 1.8;}
             }
@@ -339,7 +342,7 @@ footer {
                 img{ height: 44px; }
                 span{
                     color: $primaryColor;
-                    font-size: .68em;
+                    font-size: .62em;
                     padding: 2px 0 0 6px;
                     b{
                         color: #0068b7;
@@ -524,6 +527,50 @@ footer {
     font-weight: bold;
 }
 
+// tel_type2
+.flex-3-6-3{
+    @extend %flex_set;
+
+    .form_grp{
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, 0px);
+        @include flex-md(3, 0px);
+        @include flex-lg(3, 0px);
+
+        &:nth-child(2){
+            @include flex-xs(12, 0px);
+            @include flex-sm(12, 0px);
+            @include flex-md(6, 0px);
+            @include flex-lg(6, 0px);
+        }
+    }
+}
+
+// 分機
+.extension{
+    position: relative;
+    input{
+        padding-left: 2em;
+    }
+    &:before{
+        content: '#';
+        position: absolute;
+        top: 13px;
+        left: 16px;
+    }
+}
+
+// 里、鄰
+.Vil{ width: 120px !important; }
+.Neighborhood{ width: 60px !important; }
+
+.address_type2{
+    > div{ width: 100%; }
+    .user_typing{
+        width: 100% !important;
+    }
+}
+
 // 共通模組
 .necessary{
     background: #b70000;
@@ -568,7 +615,6 @@ footer {
             }
         }
     }
-
 }
 // 個資聲明
 .statement{
