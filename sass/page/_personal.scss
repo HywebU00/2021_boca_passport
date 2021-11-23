@@ -104,6 +104,13 @@
         		span{ color: #996c33; }
         	}
         }
+        // 導覽列
+        .navigation {
+        	a{
+                background: url(../images/icon-arrow-black.svg) 6px 50% no-repeat,transparent;
+                background-size: 12px 12px;
+            }
+        }
     }
 
     .innerpage{
@@ -118,11 +125,11 @@
 
 //////////////////////////////////////////////////////////// 調整
 html,body{
-	&.Login{ background: url(../images/bg-blur-ball-personal.png) 50% -4px no-repeat, #fff; }
+	&.Login{ background: url(../images/bg-blur-ball-personal.png) 50% -4px no-repeat, #fdefdd; }
     &.Page{
         background: url(../images/bg-hand.png) right 4% top -30px no-repeat, 
                     url(../images/bg-blur-ball-personal.png) 50% 0 no-repeat,
-                    #fff;
+                    #fdefdd;
         background-attachment: fixed;
     }
 }
