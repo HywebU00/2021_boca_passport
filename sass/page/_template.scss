@@ -969,6 +969,9 @@ b, b.R, b.B{
     margin: 2em 0;
     .foto{
         text-align: center;
+        img{
+            height: 300px;
+        }
     }
     .info{
         ol{
