@@ -527,6 +527,15 @@ footer {
     font-weight: bold;
 }
 
+// 增減
+.incr_dec{
+    .item{
+        select{
+            width: 60%;
+        }
+    }
+}
+
 // tel_type2
 .flex-3-6-3{
     @extend %flex_set;
@@ -922,7 +931,8 @@ $duration: 1.4s;
         .btn{
             margin-left: 0;
             margin-right: 0;
-            @include text-line(2,24px);
+            @include text-line(1,40px);
+            line-height: inherit;
             // white-space: inherit;
         }
     }

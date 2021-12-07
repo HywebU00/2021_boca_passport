@@ -161,6 +161,19 @@ $btn-radius:.2em;
         border: 1px solid #ddd !important;
     }
 }
+// 刪除
+.btn-delete{
+    // background: #666;
+    // color: #fff;
+
+    .i_close{
+        &:before{
+            width: .85em;
+            height: .85em;
+            margin-top: -5px;
+        }
+    }
+}
 
 .disabled, [disabled] {
     opacity: .5;
