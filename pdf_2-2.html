@@ -18,16 +18,14 @@
 
 <body style="background: #ddd;">
     <section class="PDF">
-        <div class="flex-1-2">
-            <div class="col note">送件旅行社<br>請於本欄蓋章</div>
-            <div class="col flex-2-1">
-                <div class="col">
-                    <h2>簡式護照資料表</h2>
-                    <p>國內申請護照專用</p>
-                </div>
-                <div class="col note">備註欄</div>
-                <p class="note">(申請人應填寫資料，請以黑筆填寫)</p>
-            </div>
+        <div class="flex">
+            <time>填表日期：<span>110年10月10日</span><span>12:59:59</span></time>
+            <img src="images/bar_code.jpg" alt="">
+            <div class="">條碼的編號</div>
+        </div>
+        <div>
+            <h2 style="text-align: center;">簡式護照資料表（國內申請護照專用）</h2>
+            <p class="note" style="text-align: right;">(申請人應填寫資料，請以黑筆填寫)</p>
         </div>
         <section>
             <table>
@@ -44,13 +42,17 @@
                         <th>辦理方式</th>
                         <td colspan="3" class="">
                             <div class="col"><input type="checkbox" name="" value=""><b>本人親辦</b></div>
-                            <div class="col"><input type="checkbox" name="" value=""><b>委任代辦<span>(須另附委任書)</span></b></div>
+                            <div class="col"><input type="checkbox" name="" value=""><b>委任代辦<span>(須另附委任書或法定代理關係證明)</span></b></div>
                         </td>
                     </tr>
                     <tr>
                         <th width="20%">身分證字號</th>
-                        <td width="55%" colspan="2">A123456789</td>
-                        <td width="25%" rowspan="3" class="foto" height="220"><img src="images/foto-pass.jpg" alt=""></td>
+                        <td width="55%" colspan="2">A123456789<span class="focus">無戶籍國民：請填舊護照號碼，首次申辦請填寫居留許可證號</span></td>
+                        <td width="25%" rowspan="4" class="foto" height="220"><img src="images/foto-pass.jpg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th width="20%">出生日期</th>
+                        <td width="55%" colspan="2" class="birthday">民國<span>102</span>年<span>&nbsp;</span>月<span>&nbsp;</span>日</td>
                     </tr>
                     <tr>
                         <th width="20%">姓    名</th>
@@ -61,7 +63,7 @@
                         <td width="55%" colspan="2" class="foreign_name">123<span class="focus">倘外文姓名有特別需求，請於備註欄敘明原因，並簽名具結</span></td>
                     </tr>
                     <tr>
-                        <th width="20%">外文別名<span>(非必要填寫)</span></th>
+                        <th width="20%">外文別名<span class="focus">(無則免填)</span></th>
                         <td width="55%" colspan="4">123</td>
                     </tr>
                 </tbody>
@@ -83,7 +85,10 @@
                 </tr>
                 <tr>
                     <td rowspan="2" align="right">地址</td>
-                    <td colspan="4"><input type="checkbox" name="" value="">同戶籍地址（勾選本欄者，免填）</td>
+                    <td colspan="4">
+                        <input type="checkbox" name="" value="">同戶籍地址（勾選本欄者，免填）
+                        <div class="fill_box">123</div>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="4"><input type="checkbox" name="" value="">如右：<span class="field">123</span></td>
@@ -101,6 +106,10 @@
                     <td width="12%" align="right">手機</td>
                     <td>123</td>
                 </tr>
+                <tr>
+                    <th colspan="2" rowspan="2">備註欄</th>
+                    <td colspan="4">123</td>
+                </tr>
             </table>
         </section>
         <h3>茲聲明本資料表所填資料，所附證件及照片俱確實無訛，如有不實，願負法律責任。</h3>
@@ -112,7 +121,7 @@
                 <b>日期：</b><span class="sign"><b>&nbsp;</b>年<b>&nbsp;</b>月<b>&nbsp;</b>日</span>
             </div>
         </div>
-        <h4 class="note focus">除未成年人可代簽外，申請人應於「護照申請人」簽名處親簽。</h4>
+        <h4 class="note focus">除法定代理人代為或代理申請者，可由法定代理人代為簽名外，申請人均應親自簽名。</h4>
         <span class="sign">&nbsp;</span>
         <!-- 同意書 -->
         <div class="consent">
@@ -126,10 +135,6 @@
                     <b>日期：</b><span class="sign"><b>&nbsp;</b>年<b>&nbsp;</b>月<b>&nbsp;</b>日</span>
                 </div>
             </div>
-        </div>
-        <div class="flex">
-            <time>填表日期：<span>110年10月10日</span><span>12:59:59</span></time>
-            <img src="images/bar_code.jpg" alt="">
         </div>
     </section>
 </body>
