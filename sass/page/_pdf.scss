@@ -63,7 +63,7 @@ html { scroll-behavior: smooth; }
     }
 
     h3{
-        margin: 6px 0;
+        margin: 12px 0;
     }
     h4{
         font-weight: normal;
@@ -111,7 +111,7 @@ html { scroll-behavior: smooth; }
                     // display: block;
                     font-size: 85%;
                     font-weight: normal;
-                    padding-top: .5em;
+                    padding-top: .25em;
                     display: inline-block;
                     vertical-align: inherit;
 
@@ -133,8 +133,10 @@ html { scroll-behavior: smooth; }
             }
             th{
                 font-weight: bold;
+                font-size: 120%;
                 span{
                     display: block;
+                    font-size: 70%;
                 }
             }
             td{}
