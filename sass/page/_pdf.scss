@@ -1,6 +1,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
 // body {
 //     &.noscroll {
 //         position: static !important;
@@ -16,6 +17,9 @@ html { scroll-behavior: smooth; }
 .PDF{
     width: 794px;
     height: 1110px;
+    // height:297mm;
+    // width:210mm;
+    page-break-after: always;
     background: #fff;
     margin: 20px auto;
     padding: 1.5em 2em;
@@ -373,4 +377,12 @@ html { scroll-behavior: smooth; }
     }
 }
 
+
+@media print {
+    .PDF{
+        input[type="checkbox"]:checked {
+            box-shadow: inset $form-focus 0 0 0 16px;
+        }
+    }
+}
 
