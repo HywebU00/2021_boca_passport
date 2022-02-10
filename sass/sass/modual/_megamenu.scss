@@ -316,8 +316,8 @@
             border-bottom: none;
             border-right: none;
             li {
-                float: left;
-                width: 50%;
+                // float: left;
+                width: 100%;
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
@@ -403,6 +403,18 @@
             transform: rotate(45deg);
             border-right: none;
             border-top: none;
+        }
+    }
+
+    .user_login{
+        margin: 1em;
+
+        .btn-primary{
+            border: 1px solid #fff !important;
+
+            &:hover, &:focus{
+                border: 1px solid transparent !important;
+            }
         }
     }
 }

@@ -7,9 +7,18 @@
     .fatfooter,
     footer,
     .accesskey,
-    .submenu {
+    .submenuㄝ{
         display: none;
     }
+
+    // 白色區域內
+    .white_zone{
+        .step-num,
+        .step-flow{
+            display: none;
+        }
+    }
+
     /* -------------------------------各別顯示設定----//*/
     body {
         background: transparent;
@@ -160,6 +169,16 @@
                     vertical-align: middle;
                 }
             }
+        }
+    }
+
+    // 白色區域內
+    .white_zone{
+        h2.title,
+        .caption,
+        table th, table td{
+            margin: 0 !important;
+            padding: 0 !important;
         }
     }
 }

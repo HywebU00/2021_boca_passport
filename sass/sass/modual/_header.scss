@@ -96,16 +96,15 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        a {
-            display: inline-block;
-        }
+        a { display: inline-block; }
+        b { padding: 0; padding-left: 2px;}
         img {
             display: block;
             max-width: 300px;
             max-height: 75px;
         }
         @include screen('mobile') {
-            padding: 2px 60px;
+            padding: 2px 16px 2px 0;
             width: 100%;
             text-align: center;
             height: 60px;
@@ -116,6 +115,8 @@
                 margin: 0px auto;
                 transform: scale(.8);
             }
+
+            b{ padding: 0;}
         }
     }
     // 導覽列

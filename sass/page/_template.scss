@@ -70,6 +70,15 @@ header, footer {
     }
 }
 
+header{
+    @include screen('mobile') {
+        .container {
+            padding-left: 60px;
+            padding-right: 0;
+        }
+    }
+}
+
 footer {
     .container {
         position: relative;
@@ -395,6 +404,7 @@ footer {
                         flex: 1 1 100%;
                         font-size: .48em;
                         margin: auto;
+                        line-height: 1.2;
                     }
                 }
             }
@@ -494,7 +504,7 @@ footer {
             padding-top: 62px;
             >.container {
                 .white_zone{
-                    padding: 2em 1.5em;
+                    padding: 1em 1.25em;
                 }
             }
         }
@@ -623,6 +633,11 @@ footer {
                 border-bottom: none;
             }
         }
+    }
+
+    @include screen('mobile') {
+        padding: 1.5em 2.5em;
+        margin: 1em 0;
     }
 }
 // 個資聲明
@@ -1058,8 +1073,8 @@ b, b.R, b.B{
             section{
                 display: flex;
                 flex-flow: row nowrap;
-                align-items: center;
-                padding: .75em 0;
+                align-items: flex-start;
+                padding: 0 0 .75em;
 
                 position: relative;
                 &:before{
@@ -1073,7 +1088,8 @@ b, b.R, b.B{
 
                 &:first-child{
                     &:before{
-                        height: 50%;
+                        // height: 50%;
+                        height: calc(100% - .75em);
                         bottom: 0;
                     }
                 }
@@ -1104,7 +1120,7 @@ b, b.R, b.B{
                     color: #222;
 
                     margin: 0;
-                    padding: 0 .5em;
+                    padding: .95em .5em;
                     font-size: 120%;
                     span{
                         display: block;

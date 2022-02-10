@@ -1295,7 +1295,10 @@ select::-ms-expand {
             z-index: 1;
             flex-basis: 100%;
             display: flex;
-            align-items: center;
+            // align-items: center;
+
+            align-items: flex-start;
+            padding: .2em 0;
 
             input {
                 &:checked {
@@ -1682,11 +1685,13 @@ input[type="reset"] {
 input[type="checkbox"],
 input[type="radio"] {
     font-size: 1em;
-    margin: .3em;
+    // margin: .3em;
+    margin: .1em .3em;
     width: 1.35em;
+    min-width: 1.35em;
     height: 1.35em;
     background-color: #f7f6ee;
-    border: 2px solid $color-gray;
+    border: 2px solid #858585;
 }
 
 input[type="radio"] {

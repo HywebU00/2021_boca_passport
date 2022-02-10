@@ -96,6 +96,13 @@
             cursor: pointer;
         }
     }
+
+    li a{ display: inherit; }
+
+    @include screen('mobile') {
+        width: 90%;
+        margin-left: -45%;
+    }
 }
 @keyframes scaleUp {
     0% {
