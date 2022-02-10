@@ -827,6 +827,9 @@ a{
                 .content{
                     padding: .25em 0;
                     font-size: 112.5%;
+
+                    // 當 content 沒有文字時
+                    min-height: 33px;
                 }
             }
         }
