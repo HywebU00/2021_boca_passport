@@ -42,7 +42,10 @@ table {
     td{
         // border: #ddd 1px solid;
         // border-bottom: #ddd 1px solid;   // 微軟瀏覽器不論edge、chrome 都會產生亂數項目變粗問題，改用其他寫法
-        background: url(../images/bg-table-border.jpg) left bottom repeat-x;
+
+        // background: url(../images/bg-table-border.jpg) left bottom repeat-x;
+        box-shadow: 0 1px 1px -1px #666 inset;
+
         word-break: break-all;
         text-align: center;
         a {
