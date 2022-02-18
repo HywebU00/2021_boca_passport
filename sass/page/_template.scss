@@ -342,6 +342,7 @@ footer {
 .Page{
     .header {
         h1{
+            width: -moz-fit-content;  // firefox
             width: fit-content;
             max-width: calc(100% - 300px);
             float: initial;
