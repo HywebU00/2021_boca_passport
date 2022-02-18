@@ -8,19 +8,19 @@ table {
 
 
     // 修正 微軟各瀏覽器 border-bottom 會亂數變粗的問題
-    overflow: hidden;
-    tr{ position: relative;}
-    td{
-        &:after{
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #ddd;
-            bottom: 0;
-        }
-    }
+    // overflow: hidden;
+    // tr{ position: relative;}
+    // td{
+    //     &:after{
+    //         content: "";
+    //         position: absolute;
+    //         display: block;
+    //         width: 100%;
+    //         height: 1px;
+    //         background: #ddd;
+    //         bottom: 0;
+    //     }
+    // }
     // --------------------------------------------
 
     th,
@@ -42,6 +42,7 @@ table {
     td{
         // border: #ddd 1px solid;
         // border-bottom: #ddd 1px solid;   // 微軟瀏覽器不論edge、chrome 都會產生亂數項目變粗問題，改用其他寫法
+        background: url(../images/bg-table-border.jpg) left bottom repeat-x;
         word-break: break-all;
         text-align: center;
         a {
