@@ -23,6 +23,11 @@ table {
     // }
     // --------------------------------------------
 
+    tr:last-child{
+        td{ background: none !important; }
+        th{ background: #F3F3F3 !important; }
+    }
+
     th,
     // td:not(.gsib_b,.gsc-search-button) {
     //     padding: .5em;
@@ -53,10 +58,10 @@ table {
         }
     }
     th {
-        background-color: #F3F3F3;
+        background: url(../images/bg-table-border.jpg) left bottom repeat-x, #F3F3F3;
         color: #333;
         // border: #DDD 1px solid;
-        border-bottom: #ddd 1px solid;
+        // border-bottom: #ddd 1px solid;
         text-align: center;
         white-space: nowrap;
     }
