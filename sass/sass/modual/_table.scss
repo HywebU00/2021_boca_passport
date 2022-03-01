@@ -6,7 +6,6 @@ table {
         width: 100%;
     }
 
-
     // 修正 微軟各瀏覽器 border-bottom 會亂數變粗的問題
     // overflow: hidden;
     // tr{ position: relative;}
@@ -22,11 +21,6 @@ table {
     //     }
     // }
     // --------------------------------------------
-
-    tr:last-child{
-        td{ background: none !important; }
-        th{ background: #F3F3F3 !important; }
-    }
 
     th,
     // td:not(.gsib_b,.gsc-search-button) {
@@ -74,6 +68,11 @@ table {
         tr:nth-child(even) {
             background: #F5F5F5;
         }
+    }
+
+    tr:last-child{
+        td{ background: none !important; }
+        th{ background: #F3F3F3 !important; }
     }
 }
 .table_list {
