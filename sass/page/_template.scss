@@ -987,7 +987,8 @@ $duration: 1.4s;
 p a,
 li a,
 b, b.R, b.B{
-    display: inline-block;
+    // display: inline-block;
+    display: initial;
     padding: .15em .25em;
 }
 

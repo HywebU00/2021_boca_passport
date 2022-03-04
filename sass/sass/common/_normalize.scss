@@ -215,6 +215,23 @@ button[disabled],
 html input[disabled] {
     cursor: default;
 }
+
+// checkbox：checked ＋ disabled
+input[type="checkbox"][disabled]{
+    opacity: .45 !important;
+}
+input[type="checkbox"][disabled]:checked{
+    opacity: .45 !important;
+
+    &:hover, &:focus{
+        background-color: $form-focus !important;
+        background-image: url(../images/basic/icon_checked.svg) !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: 98% !important;
+    }
+}
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;

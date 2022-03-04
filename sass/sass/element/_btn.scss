@@ -48,7 +48,7 @@ $btn-radius:.2em;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    white-space: nowrap;
+    // white-space: nowrap;
     line-height: normal;
     width: auto;
     padding: $btn-padding;
@@ -176,9 +176,14 @@ $btn-radius:.2em;
 }
 
 .disabled, [disabled] {
-    opacity: .25;
+    // opacity: .75;
     cursor: not-allowed!important;
     text-shadow:none;
+    background: rgba(224, 224, 224, .25);
+
+    &:hover, &:focus{
+        background: rgba(224, 224, 224, .25) !important;
+    }
 }
 .readonly, [readonly] {
     // opacity: .5;
