@@ -1321,6 +1321,37 @@ select::-ms-expand {
             }
         }
 
+        // 修正 hover 範圍不要太大
+        div{
+            flex-basis: 100%;
+            // width: 100%;
+            margin: 0;
+            padding: 0.2em 0;
+
+            // display: flex;  用flex設定，會讓整條都能被click
+            input, label{ float: left; }
+            input{
+                margin-right: 8px;
+                +label{
+                    padding: 0 0;
+                    max-width: calc(100% - 42px);
+                    >span{
+                        color: darken($primaryColor, 5);
+                        display: contents;
+                    }
+                }
+            }
+
+            +.form_content{
+                padding-left: 2.2em;
+                input{
+                    +label{
+                        padding: .2em 0;
+                    }
+                }
+            }
+        }
+
         // radio與check個別行內設定
         &.form_inline {
             label {
@@ -1338,6 +1369,7 @@ select::-ms-expand {
         label{
             input+span{
                 color: darken($primaryColor, 5);
+                display: contents;
             }
 
             +.form_content{
