@@ -96,6 +96,21 @@ footer {
     }
 }
 
+// 工程師燈箱
+.ui-dialog{
+    padding: 1.25em 0 !important;
+    .ui-dialog-content{
+        padding: 0.5em 2em !important;
+    }
+    #confirmDialog{
+        p{
+            line-height: 1.6;
+            text-align: center;
+        }
+    }
+    
+}
+
 // 登入頁
 .Login{
     .header {
