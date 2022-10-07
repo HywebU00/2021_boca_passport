@@ -98,7 +98,7 @@
         }
     }
 
-    li a{ display: inherit; }
+    li a{  display: initial; }
 
     @include screen('mobile') {
         width: 90%;

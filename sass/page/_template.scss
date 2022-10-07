@@ -1088,7 +1088,39 @@ b, b.R, b.B{
 
 // 照片調整
 .foto-adjust{
-    h3{ text-align: center;}
+    // h3{ text-align: center;}
+
+    .flex{
+        position: relative;
+        @extend %flex_set;
+
+        #croppie{
+            @include flex-xs(12, 0px);
+            @include flex-sm(12, 0px);
+            @include flex-md(9, $m-gutter);
+            @include flex-lg(9, $m-gutter);
+            // background: pink;
+            text-align: center;
+            h3{
+                max-width: 488px;
+                margin: .5em auto 2em;
+                text-align: left;
+            }
+        }
+        .demo_MugShot{
+            @include flex-xs(12, 0px);
+            @include flex-sm(12, 0px);
+            @include flex-md(3, $m-gutter);
+            @include flex-lg(3, $m-gutter);
+            text-align: center;
+            border: 1px solid #ddd;
+            padding-bottom: .5em;
+            img{
+                max-width: 220px;
+            }
+            b{ display: block; }
+        }
+    }
 }
 
 // 流程
