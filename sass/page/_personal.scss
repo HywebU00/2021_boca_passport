@@ -3,49 +3,49 @@
 .Login{
 	.header {
 		// 導覽列
-        .navigation {
-        	top: 16px;
-        	.navlist{
-        		ul{
-        			display: flex;
-        			li{
-        				a{
-        					color: #222;
-        					border-radius: 4px;
-        					background: url(../images/icon-arrow-black.svg) 10px 50% no-repeat, transparent;
-        					background-size: 12px 12px;
-        					&:hover, &:focus{
-        						color: #fff;
-                                background: url(../images/icon-arrow.svg) 10px 50% no-repeat, $primaryColor;
-                                background-size: 12px 12px;
-                            }
-        				}
-        			}
-        		}
-        	}
-        }
+		.navigation {
+			top: 16px;
+			.navlist{
+				ul{
+					display: flex;
+					li{
+						a{
+							color: #222;
+							border-radius: 4px;
+							background: url(../images/icon-arrow-black.svg) 10px 50% no-repeat, transparent;
+							background-size: 12px 12px;
+							&:hover, &:focus{
+								color: #fff;
+								background: url(../images/icon-arrow.svg) 10px 50% no-repeat, $primaryColor;
+								background-size: 12px 12px;
+							}	
+						}
+					}
+				}
+			}
+		}
 	}
 	.control_panle{
 		.container{
-			background: url(../images/bg-hero-personal.png) 50% bottom no-repeat, #fff;
+			background: url(../images/bg-hero-personal.png) 50% 50% no-repeat, #fff;
 			min-height: 683px;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 			position: relative;
 			&:after{
 				width: 362px;
-                height: 396px;
-                background: url(../images/deco-been-2-personal.png) 50% 50% no-repeat;
-                left: auto;
-                top: auto;
-                right: -160px;
-                bottom: -200px;
-                z-index: -1;
+				height: 396px;
+				background: url(../images/deco-been-2-personal.png) 50% 50% no-repeat;
+				left: auto;
+				top: auto;
+				right: -160px;
+				bottom: -200px;
+				z-index: -1;
 			}
 
 			&:before{
-                background: url(../images/deco-been-1-personal.png) 50% 50% no-repeat;
-            }
+				background: url(../images/deco-been-1-personal.png) 50% 50% no-repeat;
+			}
 		}
 		.col{
 			.login_title{
@@ -54,7 +54,6 @@
 					color: #996c33;
 				}
 			}
-
 			.pin_panel{
 				padding-right: 54%;
 				text-align: center;
@@ -63,6 +62,31 @@
                     padding: .75em 0;
                     width: 260px;
                     font-size: 1.25em;
+				}
+			}
+			.tips {
+				// background: #ffffffba;
+				// backdrop-filter: blur(5px);
+				// box-shadow: rgba(0, 0, 0, .1) 0px -80px 90px;
+				// box-shadow: rgba(255, 255, 255, 0.1) 0px -1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px -50px 100px -20px, rgba(0, 0, 0, 0.3) 0px -30px 60px -30px;
+				
+				&:after{
+					display: none;
+				}
+				.tips_title {
+					// color: darken($primaryColor, 50);
+				}
+				ol {
+					li {
+						a {
+							padding: 0;
+							color: #ce491d;
+							&:focus,
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -142,6 +166,17 @@ footer{
         &:focus {
             color: darken($lightColor, 10);
         }
+    }
+    // 版權連結
+    .footer_link {
+    	li{
+    		a{
+    			&:hover,
+                &:focus {
+                	background: #222;
+                }
+    		}
+    	}
     }
 }
 

@@ -270,7 +270,7 @@ footer {
             .pin_panel {
                 // height: 334px;
                 padding-top: 1.5em;
-                padding-bottom: 13em;
+                padding-bottom: 10em;
                 position: relative;
                 z-index: 3;
 
@@ -309,7 +309,10 @@ footer {
             }
 
             .tips {
-                background: $secondaryColor;
+                // background: $secondaryColor;
+                background: #ffffffba;
+                backdrop-filter: blur(5px);
+                box-shadow: rgba(0, 0, 0, .1) 0px -80px 90px;
                 padding: 1em 1.75em;
                 margin: 0 -1.25em;
                 border-radius: 6px;
