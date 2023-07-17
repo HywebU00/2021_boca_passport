@@ -131,22 +131,22 @@ $btn-radius:.2em;
     text-shadow: none !important;
     &:hover,
     &:focus {
-        color: darken($primaryColor, 30)!important;
-        background: #b5deff!important;
-        border: solid 1px #b5deff!important;
+        color: #fff!important;
+        background: darken($primaryColor, 15)!important;
+        border: darken($primaryColor, 15)!important;
     }
 }
 // 一般按鈕
 .btn-normal{
-    background: #f1f1f1!important;
-    color: #65656E !important;
-    border: solid 1px #c3c3c3!important;
+    background: #474747!important;
+    color: #fff !important;
+    border: solid 1px #65656E!important;
     text-shadow: none!important;
     &:hover,
     &:focus{
-        color: darken(#65656E, 15)!important;
-        background: #c3c3c3!important;
-        border: solid 1px #c3c3c3!important;
+        color: #fff !important;
+        background: #222!important;
+        border: solid 1px #65656E!important;
     }
 }
 

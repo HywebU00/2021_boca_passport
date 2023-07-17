@@ -23,7 +23,7 @@
 <body class="Login">
 
     <!-- 讀卡檢測中 -->
-    <div class="infoBox">
+    <div class="infoBox" style="display: none;">
         <div class="content">
             <!-- 樣式１：讀卡檢測中 -->
             <!-- loading -->
@@ -54,9 +54,11 @@
                     <!-- 新增div navlist -->
                     <div class="navlist">
                         <ul>
-                            <li><a href="#">回首頁</a></li>
                             <li><a href="#">外交部領事事務局</a></li>
+                            <li><a href="#">常見問答</a></li>
+                            <li><a href="#">重要訊息通知</a></li>
                             <li><a href="#">管理者登入</a></li>
+                            <li><a href="#">系統教學及檔案下載</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -143,31 +145,78 @@
                             <h2 class="main-title">旅行社團件申辦護照<span>網路填表及照片上傳系統</span></h2>
                             <p>歡迎使用外交部領事事務局旅行社團件申辦護照系統，<br>本服務提供旅行社使用自然人憑證登入，<br>並依指定格式批次上傳簡式護照資料及上傳數位照片。</p>
                         </div>
-                        <!-- 憑證PIN碼 -->
-                        <div class="pin_panel">
-                            <form action="">
-                                <div class="flex-form form_inline">
-                                    <div class="form_grp">
-                                        <label for="username" class="form_title">憑證PIN碼</label>
-                                        <div class="form_content">
-                                            <input name="username" type="text" placeholder="請輸入憑證PIN碼">
-                                        </div>
-                                    </div>
-                                    <div class="btn_grp">
-                                        <!-- <input name="" type="reset" value="清除" class="btn btn-reset"> -->
-                                        <input name="" type="submit" value="登入" class="btn btn-submit">
+                        <!-- 2023-07 驗證方式 -->
+                        <div class="tabSet">
+                            <b>請選擇驗證方式：</b>
+                            <section class="tabs verify">
+                                <h2 class="tabItem active"><a href="#">自然人憑證（插卡驗證）</a></h2>
+                                <!--選到的頁籤項目-->
+                                <div class="tabContent">
+                                    <!-- 自然人憑證 -->
+                                    <!-- 憑證PIN碼 -->
+                                    <div class="pin_panel">
+                                        <form action="">
+                                            <div class="flex-form form_inline">
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title">憑證PIN碼</label>
+                                                    <div class="form_content">
+                                                        <input name="username" type="text" placeholder="請輸入憑證PIN碼">
+                                                    </div>
+                                                </div>
+                                                <div class="btn_grp">
+                                                    <!-- <input name="" type="reset" value="清除" class="btn btn-reset"> -->
+                                                    <input name="" type="submit" value="登入" class="btn btn-submit">
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                            </form>
+                                <h2 class="tabItem"><a href="#">行動自然人憑證（免插卡驗證）</a></h2>
+                                <div class="tabContent">
+                                    <!-- 行動自然人憑證 -->
+                                    <!-- 憑證PIN碼 -->
+                                    <div class="pin_panel">
+                                        <form action="">
+                                            <div class="flex-form form_inline">
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title"><span>步驟ㄧ</span>輸入身分證字號</label>
+                                                    <div class="form_content">
+                                                        <input name="username" type="text" placeholder="請輸入身分證字號">
+                                                    </div>
+                                                </div>
+                                                <div class="btn_grp">
+                                                    <input name="" type="submit" value="產生QRcode" class="btn btn-submit">
+                                                </div>
+                                            </div>
+                                            <div class="flex-form w100">
+                                                <div class="form_grp">
+                                                    <label for="username" class="form_title"><span>步驟二</span>請掃描 / 點擊您的行動自然人憑證驗證QRcode</label>
+                                                    <div class="qrcode">
+                                                        <div class="img-container"><img src="images/QRcode.png" class="contain" alt="外交部領事事務局護照預約申請"></div>
+                                                        <div class="btn_grp">
+                                                            <button class="btn btn-normal">重新產生QRcode</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                         <!-- 說明事項 -->
                         <div class="tips">
                             <h3 class="tips_title"><span>說明事項</span></h3>
                             <ol>
-                                <li>初次使用自然人憑證登入，請先安裝<a href="#" target="_blank">HiCOS卡片管理工具</a>（Windows）或<a href="#" target="_blank">跨平台網頁讀卡元件</a>（macOS），才能使用憑證登入。</li>
-                                <li><a href="#" target="_blank">檢視目前已安裝版本及IC卡自我檢測</a>，如出現連線錯誤訊息，請確認憑證元件服務是否已啟動，若使用讀卡元件發生問題，請解除安裝現有版本，重開機後，下載最新版讀卡元件。</li>
+                                <li>初次使用自然人憑證登入，請先安裝<a href="#" target="_blank">CGServiSign(環境自我檢測)</a>，才能使用憑證登入</li>
+                                <li>系統環境設定完成，請將您的自然人憑證插入讀卡機後，輸入憑證PIN碼進行登入。</li>
+                            </ol>
+                            <h3 class="tips_title"><span>移民署宣導事項</span></h3>
+                            <ol>
+                                <li><a href="#" target="_blank">年滿12歲以上有戶籍國民申請中華民國晶片護照者，即可至內政部移民署自動查驗通關系統(e-Gate)閘道註冊及使用入出境。</a></li>
                             </ol>
                         </div>
+                    </div>
                     </div>
                 </div>
             </section>

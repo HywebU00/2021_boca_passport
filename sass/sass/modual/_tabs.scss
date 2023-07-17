@@ -48,17 +48,34 @@
     // }
     // 改button
     &>.tabItem {
+        a{
+            display: block;
+            padding: 16px 0 14px;
+            color: #222;
+            font-size: 112.5%;
+            &:hover {
+                // background: $primaryColor;
+                background-color: #353535;
+                color: #fff;
+            }
+            &:focus{
+                background-color: $primaryColor;
+                color: #fff;
+            }
+        }
         &.active {
             background-color: $primaryColor;
+            // background-color: #666;
             color: #FFF;
+            
         }
         float: left;
         margin: 0;
-        padding: 0;
+        // padding: 16px 0 14px;
+        border-radius: 4px;
         font-size:1em;
         line-height: 1;
         display: block;
-        padding: 16px 0 14px;
         text-align: center;
         background-color: #aaa;
         color: #fff;
@@ -66,9 +83,11 @@
         text-decoration: none;
         @include text-overflow;
         box-sizing: border-box;
-        &:hover, &:focus {
-            background: $primaryColor;
-        }
+        // &:hover, &:focus {
+        //     // background: $primaryColor;
+        //     background-color: #666;
+        //     color: #fff;
+        // }
         @include screen('mobile') {
             float: none;
             width: 100% !important;
@@ -80,14 +99,30 @@
     }
 }
 //多組 可設定差異
-.example-2 {
-    .tabItem:hover {
-        background: $secondaryColor;
-    }
-    .tabItem.active {
-        background: $secondaryColor;
+// .example-2 {
+//     .tabItem:hover {
+//         background: $secondaryColor;
+//     }
+//     .tabItem.active {
+//         background: $secondaryColor;
+//     }
+// }
+
+// 頁籤
+.verify{
+    // 改button
+    &>.tabItem {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        border: 0;
+        &.active {
+            a{
+                color: #FFF !important;
+            }
+        }
+        background-color: #fff;
     }
 }
+
 // 顯示content
 .active+.tabContent {
     display: block;

@@ -159,6 +159,9 @@ footer {
 
 // 登入頁
 .Login {
+    .container {
+        max-width: 1000px;
+    }
     .header {
         h1 {
             // margin: initial;
@@ -223,6 +226,7 @@ footer {
 
             position: relative;
 
+            // 主圖
             &:after {
                 content: '';
                 position: absolute;
@@ -233,6 +237,7 @@ footer {
                 left: 0
             }
 
+            // 左方裝飾
             &:before {
                 content: '';
                 position: absolute;
@@ -240,13 +245,25 @@ footer {
                 height: 152px;
                 background: url(../images/deco-been-1.png) 50% 50% no-repeat;
                 left: -100px;
-                top: 48%;
+                // top: 48%;
+                top: 500px;
             }
         }
 
         .col {
             position: relative;
             z-index: 1;
+
+            // 右上角裝飾
+            &:after {
+                content: '';
+                position: absolute;
+                width: 85px;
+                height: 100px;
+                background: url(../images/deco-been-2.png) 50% 50% no-repeat;
+                right: -120px;
+                top: 420px;
+            }
 
             .login_title {
                 width: 100%;
@@ -269,19 +286,35 @@ footer {
 
             .pin_panel {
                 // height: 334px;
-                padding-top: 1.5em;
-                padding-bottom: 10em;
-                position: relative;
-                z-index: 3;
+                // padding-top: 1.5em;
+                // padding-bottom: 1.5em;
+                // padding-bottom: 10em;
+                // position: relative;
+                // z-index: 3;
 
                 .flex-form.form_inline {
                     border-bottom: 1px dashed transparent;
                 }
 
                 .form_grp {
+                    border: 0;
+                    flex-wrap: nowrap;
                     .form_title {
                         color: #222;
-                        line-height: 3.5;
+                        line-height: 3;
+                        padding: .5em 0;
+                        position: relative;
+                        span{
+                            position: absolute;
+                            left: 0;
+                            top: -10px;
+                            font-size: 80%;
+                            background: #222;
+                            color: #fff;
+                            border-radius: 20px;
+                            line-height: normal;
+                            padding: 4px 10px;
+                        }
                     }
 
                     .form_content {
@@ -291,9 +324,9 @@ footer {
                             width: 390px;
                             border-radius: 40px;
                             padding: .65em 1.75em;
-                            font-size: 1.25em;
+                            font-size: 112.5%;
 
-                            box-shadow: rgba(39, 174, 207, 1) 0px 7px 120px 0px;
+                            // box-shadow: rgba(39, 174, 207, 1) 0px 7px 120px 0px;
                         }
                     }
                 }
@@ -303,7 +336,7 @@ footer {
                         border-radius: 40px;
                         padding: .65em 0;
                         width: 180px;
-                        font-size: 1.25em;
+                        font-size: 112.5%;
                     }
                 }
             }
@@ -311,23 +344,25 @@ footer {
             .tips {
                 // background: $secondaryColor;
                 background: #ffffffba;
-                backdrop-filter: blur(5px);
-                box-shadow: rgba(0, 0, 0, .1) 0px -80px 90px;
+                // box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+                // background: #f2f2f2;
+                // backdrop-filter: blur(5px);
+                box-shadow: rgba(232, 242 ,246, 1) 0px -80px 90px;
                 padding: 1em 1.75em;
-                margin: 0 -1.25em;
+                // margin: 0 -1.25em;
                 border-radius: 6px;
                 position: relative;
-                z-index: 3;
+                z-index: -1;
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 85px;
-                    height: 100px;
-                    background: url(../images/deco-been-2.png) 50% 50% no-repeat;
-                    right: -120px;
-                    top: -160px;
-                }
+                // &:after {
+                //     content: '';
+                //     position: absolute;
+                //     width: 85px;
+                //     height: 100px;
+                //     background: url(../images/deco-been-2.png) 50% 50% no-repeat;
+                //     right: -120px;
+                //     top: -160px;
+                // }
 
                 .tips_title {
                     color: darken($primaryColor, 50);
@@ -350,6 +385,7 @@ footer {
                             padding-left: 0;
                             padding-right: 0;
                             text-decoration: underline;
+                            color: #06c;
 
                             &:focus,
                             &:hover {
@@ -359,11 +395,53 @@ footer {
                     }
                 }
             }
+
+            .btn_grp{
+                text-align: left;
+            }
+        }
+
+        // 頁籤
+        .tabSet{
+            margin: 4em 0 0;
+            // max-width: 94%;
+            overflow: visible;
+            b{
+                display: block;
+                font-size: 125%;
+                padding: 0 0 1em;
+            }
+            .tabContent{
+                background: #ffffff75;
+                backdrop-filter: blur(4px);
+                .w100{
+                    .form_grp {
+                        flex-wrap: wrap;
+                    }
+                    .form_title{
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                    }
+                    .qrcode{
+                        display: flex;
+                        flex-wrap: nowrap;
+
+                        .img-container{
+                            min-width: 200px;
+                            height: 200px;
+                            background: transparent;
+                        }
+                        .btn_grp{
+                            padding: 0 12px;
+                        }
+                    }
+                }
+            }
         }
 
         @include screen('tablet') {
             .container {
-                padding: 2em 2.5em 0;
+                padding: 2em 1.5em 0;
 
                 &:after {
                     left: auto;
@@ -382,12 +460,13 @@ footer {
                 }
 
                 .pin_panel {
-                    padding-bottom: 6em;
+                    // padding-bottom: 6em;
 
                     .form_inline {
 
                         .form_grp,
                         .btn_grp {
+                            flex-wrap: wrap;
                             flex: 1 1 100%;
                             position: relative;
                         }
@@ -404,6 +483,9 @@ footer {
                     }
                 }
             }
+
+            // 頁籤
+            .tabSet{}
         }
 
         @include screen('mobile') {
@@ -414,6 +496,10 @@ footer {
                     left: 0;
                     right: auto;
                 }
+            }
+
+            .tabContent{
+                padding: 10px 0 30px;
             }
 
             .col {
@@ -428,8 +514,26 @@ footer {
                 .pin_panel {
                     .form_grp {
                         .form_title {
+                            padding: .25em 0;
                             line-height: normal;
-                            padding: .25em;
+                            span{
+                                position: static;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 頁籤
+            .tabSet{
+                margin-bottom: 2em;
+                .tabContent{
+                    .w100{
+                        .qrcode{
+                            margin-top: 20px;
+                            flex-wrap: wrap;
+                            width: 100%;
                         }
                     }
                 }
@@ -660,7 +764,7 @@ footer {
 
 // 表單
 .form_title {
-    font-size: 1.25em;
+    font-size: 112.5%;
     margin: 2px 0;
     font-weight: bold;
 }
@@ -959,7 +1063,7 @@ a {
 }
 
 .title_tip {
-    font-size: 1.25em;
+    font-size: 112.5%;
     margin: 16px 0;
 }
 
@@ -1168,8 +1272,7 @@ $duration: 1.4s;
         .btn {
             margin-left: 0;
             margin-right: 0;
-            @include text-line(1, 40px);
-            line-height: inherit;
+            line-height: 1.4;
             // white-space: inherit;
         }
     }
