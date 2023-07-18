@@ -223,6 +223,7 @@ footer {
             background: #fff;
             padding: 2em 4em;
             border-radius: 1.5em;
+            min-height: 700px;
 
             position: relative;
 
@@ -341,6 +342,11 @@ footer {
                 }
             }
 
+            form{
+                position: relative;
+                z-index: 4;
+            }
+
             .tips {
                 // background: $secondaryColor;
                 background: #ffffffba;
@@ -353,7 +359,7 @@ footer {
                 margin-top: 2em;
                 border-radius: 6px;
                 position: relative;
-                z-index: -1;
+                z-index: 3;
 
                 // &:after {
                 //     content: '';
