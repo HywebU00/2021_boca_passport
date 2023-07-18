@@ -350,6 +350,7 @@ footer {
                 box-shadow: rgba(232, 242 ,246, 1) 0px -80px 90px;
                 padding: 1em 1.75em;
                 // margin: 0 -1.25em;
+                margin-top: 2em;
                 border-radius: 6px;
                 position: relative;
                 z-index: -1;
@@ -433,6 +434,15 @@ footer {
                         }
                         .btn_grp{
                             padding: 0 12px;
+                            align-content: center;
+                            b{
+                                padding: 1em 0 0;
+                                color: #cf0000;
+                                font-size: 100%;
+                            }
+                            button{
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -1389,6 +1399,8 @@ b.B {
 
     .flex {
         position: relative;
+        max-width: 900px;
+        margin: auto;
         @extend %flex_set;
 
         #croppieWNote {
