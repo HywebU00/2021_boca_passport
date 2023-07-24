@@ -321,10 +321,18 @@ footer {
                     .form_content {
                         max-width: 100%;
 
+                        &.labelEffect{
+                            .btn-icon{
+                                right: 16px;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                        }
+
                         input {
                             width: 390px;
                             border-radius: 40px;
-                            padding: .65em 1.75em;
+                            padding: .65em 2.5em .65em 1.75em;
                             font-size: 112.5%;
 
                             // box-shadow: rgba(39, 174, 207, 1) 0px 7px 120px 0px;
