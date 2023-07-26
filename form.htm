@@ -38,10 +38,9 @@
                 <li>項目1</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti dolorum iure magni quia <a href="#">ratione cupiditate</a> fugit molestias perspiciatis quaerat a sequi modi qui consequuntur atque praesentium, odit quibusdam. Ab.</li>
                 <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti dolorum iure magni quia ratione cupiditate fugit molestias perspiciatis quaerat a sequi modi qui consequuntur atque praesentium, odit quibusdam. Ab.</a></li>
-
             </ul>
 
-            <div class="flex-form">
+            <div class="flex-form form-column">
                 <!-- radio -->
                 <div class="form_grp" role="group" aria-labelledby="fake-legend">
                     <div class="radio_grp ">
@@ -64,6 +63,21 @@
                         <label><input type="checkbox" name="" value="">表演與節慶</label>
                     </div>
                 </div>
+                <!--  -->
+                <div class="form_grp">
+                    <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件</label>
+                    <div class="form_content">
+                        <input name="email" type="email" id="email" placeholder="請輸入e-mail">
+                        <div class="notice_info">一般提醒訊息</div>
+                    </div>
+                </div>
+                <div class="form_grp warn">
+                    <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>再次確認電子郵件</label>
+                    <div class="form_content">
+                        <input name="email" type="email" id="email" placeholder="請輸入e-mail" class="error">
+                        <div class="notice_error">錯誤</div>
+                    </div>
+                </div>
             </div>
 
             <section class="center_box">
@@ -72,6 +86,21 @@
                 <p>預約日期/時段</p>
                 <b>10/15(五) 10:00~10:30</b>
             </section>
+
+            <!-- 2023/07電子郵件 -->
+            <!-- <div class="flex-form">
+                <div class="form_grp">
+                    <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件</label>
+                    <div class="form_content">
+                        <input name="email" type="email" id="email" placeholder="請輸入e-mail">
+                </div>
+                <div class="form_grp">
+                    <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>再次確認電子郵件</label>
+                    <div class="form_content">
+                        <input name="email" type="email" id="email" placeholder="請輸入e-mail">
+                </div>
+            </div> -->
+
             <div class="btn_grp">
                 <button class="btn btn-reset">清除</button>
                 <button class="btn btn-submit">送出</button>
@@ -143,6 +172,16 @@
                         <h2 class="title">Form 表單</h2>
                         <!-- Form Start -->
                         <section class="">
+                            <!-- 202307 新增申請人 -->
+                            <div class="applicant">
+                                申請人 1<b>張大毛</b>
+                            </div>
+                            <!-- 202307 填表步驟 -->
+                            <div class="fill_steps">
+                                <a href="#" class="active"><b>1</b>簡表資料</a>
+                                <a href="#"><b>2</b>辦理方式</a>
+                                <a href="#"><b>3</b>上傳照片</a>
+                            </div>
                             <!-- 說明事項 -->
                             <div class="caption">
                                 <h3 class="title"><span>說明事項</span></h3>
@@ -181,7 +220,7 @@
                                     <div class="form_grp">
                                         <div class="flex-col-equal-1">
                                             <div class="form_grp">
-                                                <label for="" class="form_title" aria-required="true">必填</abbr>input 1：</label>
+                                                <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>input 1：</label>
                                                 <div class="form_content">
                                                     <input type="text" id="" placeholder="請輸入文字" value="這裡有輸入文字">
                                                 </div>
@@ -206,6 +245,20 @@
                                                     <input type="text" id="" placeholder="請輸入文字" value="這裡有輸入文字但 disabled" disabled>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件</label>
+                                        <div class="form_content form_inline">
+                                            <input name="email" type="email" id="email" placeholder="請輸入e-mail">
+                                            <button type="button" class="btn btn-primary">編修</button>
+                                        </div>
+                                    </div>
+                                    <div class="form_grp">
+                                        <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件</label>
+                                        <div class="form_content form_inline">
+                                            <input name="email" type="email" id="email" placeholder="請輸入e-mail" value="123@gmail.com" disabled>
+                                            <button type="button" class="btn btn-primary">編修</button>
                                         </div>
                                     </div>
                                     <div class="form_grp">

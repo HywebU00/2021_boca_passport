@@ -27,7 +27,7 @@
 	}
 	.control_panle{
 		.container{
-			background: url(../images/bg-hero-personal.png) 50% 50% no-repeat, #fff;
+			background: url(../images/bg-hero-personal.png) 50% 20% no-repeat, #fff;
 			min-height: 683px;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -60,15 +60,24 @@
 				}
 			}
 			.pin_panel{
-				padding-right: 54%;
+				padding-right: 40%;
 				text-align: center;
 				padding-top: 1.5em;
-    			padding-bottom: 10em;
+    			padding-bottom: 2em;
 				button{
 					border-radius: 40px;
                     padding: .75em 0;
-                    width: 260px;
+                    width: 100%;
                     font-size: 1.25em;
+				}
+
+				.btn_grp{
+					display: flex;
+					flex-wrap: nowrap;
+					button{
+						width: auto;
+						flex: 1 1 auto;
+					}
 				}
 			}
 			.tips {
@@ -102,13 +111,20 @@
 	@include screen('mobile') {
 		.control_panle{
 			.container{
-				background: url(../images/bg-hero-personal.png) 15% bottom no-repeat, #fff;
+				background: url(../images/bg-hero-personal.png) 15% 20% no-repeat, #fff;
 				box-shadow: none;
 			}
 			.col{
 				.login_title,
 				.pin_panel{
 					padding-right: 34%;
+
+					.btn_grp{
+						flex-wrap: wrap;
+						button{
+							width: 100%;
+						}
+					}
 				}
 			}
 		}
@@ -116,7 +132,7 @@
 	@include screen('xs_mobile') {
 		.control_panle{
 			.container{
-				background: url(../images/bg-hero-personal.png) 0 bottom no-repeat, #fff;
+				background: url(../images/bg-hero-personal.png) 0 20% no-repeat, #fff;
 			}
 			.col{
 				.login_title,
@@ -152,6 +168,35 @@
             }
     	}
     }
+
+    // 申請者
+	// .applicant{
+	// 	// border-bottom: 2px solid darken($lightColor, 5);
+	// 	background: url(../images/icon/icon_user.svg) 20px 50% no-repeat, $lightColor;
+	// 	background-size: 32px 32px;
+	// 	&:after{
+	// 		background: darken($lightColor, 10);
+	// 	}
+	// }
+
+    .fill_steps{
+	    a{
+	        b{
+	            background: #333;
+	        }
+
+	        transition: .1s;
+
+	        &:hover, &:focus,
+	        &.active{
+	            background: darken($lightColor, 5);
+	            b{
+	            	background: transparent;
+	            }
+
+	        }
+	    }
+	}
 }
 
 //////////////////////////////////////////////////////////// 調整

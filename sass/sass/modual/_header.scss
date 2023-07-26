@@ -54,7 +54,8 @@
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
-                background: $primaryColor;
+                // background: $primaryColor;
+                background: #666;
                 width: 50%;
                 height: 3px;
                 top: 20px;

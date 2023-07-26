@@ -1505,9 +1505,19 @@ select::-ms-expand {
     input[type="reset"],
     input[type="button"],
     input[type="search"],
+    input[type="email"],
     .input-i {
         width: auto;
         flex: 0 0 auto;
+    }
+
+    input[type="email"]{
+        width: 60%;
+        min-width: 400px;
+
+        @include screen('mobile') {
+            width: 100%;
+        }
     }
 
     .form_grp,

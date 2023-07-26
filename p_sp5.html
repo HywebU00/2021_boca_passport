@@ -17,7 +17,7 @@
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/boca.css">
+    <link rel="stylesheet" href="css/boca_personal.css">
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
@@ -74,26 +74,26 @@
                 </nav>
                 <!-- navigation End -->
                 <h1>
-                    <a href="index.htm"><img src="images/logo.png" alt="外交部領事事務局護照預約申請" /><span>旅行社團件<b>申辦護照系統</b></span></a>
+                    <a href="index.htm"><img src="images/logo.png" alt="外交部領事事務局護照預約申請" /><span>個人申請護照網路填表及預約申辦系統</span></a>
                 </h1>
                 <!-- noscript -->
                 <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
-                <nav class="menu" role="navigation" aria-label="About page">
+                <!-- <nav class="menu" role="navigation" aria-label="About page">
                     <ul>
                         <li><a href="#">簡表資料填寫</a></li>
                         <li><a href="#">簡表批次匯入</a></li>
                         <li><a href="#">護照暫存清單</a></li>
                         <li><a href="#">護照送件清單</a></li>
                     </ul>
-                </nav>
+                </nav> -->
                 <!-- menu End -->
                 <!-- user -->
-                <section class="user_login">
+                <!-- <section class="user_login">
                     <span>XXX</span>，您好！登入時間：<span>2021/10/10</span>
                     <button type="button" class="btn btn-primary btn-logout">登出</button>
-                </section>
+                </section> -->
             </div>
         </header>
         <!-- header End -->
@@ -113,9 +113,13 @@
                         </ul>
                     </div>
                     <div class="white_zone">
-                        <h2 class="title">照片上傳</h2>
-                        <h3 class="subtitle"><span>您上傳的照片通過初步檢核，請再次確認照片</span></h3>
-                        <h3 class="subtitle warn"><span>您上傳的照片未能通過檢核</span></h3>
+                        <div class="step-num">04</div>
+                        <h2 class="title">網路填表</h2>
+                        <!-- <h3 class="subtitle"><span>匯入總筆數<b>20</b>筆，成功筆數<b>16</b>筆，異常筆數<b>4</b>筆</span></h3> -->
+                        <!-- step 進度條 -->
+                        <div class="step-flow">
+                            <span class="belt" style="width: 30%;"></span>
+                        </div>
                         <!-- Start -->
                         <section class="">
                             <!-- 202307 新增申請人 -->
@@ -124,45 +128,106 @@
                             </div>
                             <!-- 202307 填表步驟 -->
                             <div class="fill_steps">
-                                <a href="#"><b>1</b>簡表資料</a>
+                                <a href="#" class="active"><b>1</b>簡表資料</a>
                                 <a href="#"><b>2</b>辦理方式</a>
-                                <a href="#" class="active"><b>3</b>上傳照片</a>
-                            </div>
-                            <!-- 照片上傳 - 通過 -->
-                            <div class="foto-upload">
-                                <div class="foto">
-                                    <img src="images/foto-pass.jpg" alt="">
-                                </div>
-                                <div class="info">
-                                    <ol>
-                                        <li>此僅就照片格式初審通過，實際情況仍以送件當日受理單位審核意見為準。</li>
-                                        <li>犯法冒用身分提出護照申請、冒名使用他人護照、將護照交付他人或謊報遺失以供他人冒名使用等，可處五年至7年以下有期徒刑，得併科新臺幣五十萬元至七十萬元以下罰金，切勿以身試法。</li>
-                                    </ol>
-                                    <div class="check_grp">
-                                        <label><input name="checkSample" type="checkbox" value="">本人已詳閱瞭解並同意遵守相關規範。</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 照片上傳 - 錯誤 -->
-                            <div class="foto-upload warn">
-                                <div class="foto">
-                                    <img src="images/foto-error.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <ol>
-                                        <li>照片無留白（即頭頂與頭部兩色距離相片的邊緣無保留部分距離）。</li>
-                                        <li>照片背景太暗（背景80% 的像素RGB值需大於200以上），請確保背景沒有其他物品或線條干擾，保持單純的白色。</li>
-                                        <li>頭像占比（頭部相對於整張照片之比例）需大於比例75%以上。</li>
-                                        <li>您的嘴巴可能是張開的。</li>
-                                    </ol>
-                                </div>
+                                <a href="#"><b>3</b>上傳照片</a>
                             </div>
                             <!-- 按鈕 -->
                             <div class="btn_grp">
-                                <button class="btn btn-reset">重新上傳</button>
-                                <button class="btn btn-submit">確認</button>
                                 <button type="button" class="btn btn-secondary">回到填表儀表板</button>
                                 <button type="button" class="btn btn-primary">儲存本頁，下一步：辦理方式</button>
+                            </div>
+                            <!-- 儀表板 -->
+                            <p class="note">目前預約人數設定為<b class="R">4</b>筆申請人，請依序填寫申請人資料與上傳照片</p>
+                            <div class="btn_grp">
+                                <button class="btn btn-preview">確認所有申請人已填寫完成，進行資料預覽</button>
+                            </div>
+                            <div class="ID_cards">
+                                <div class="col complete">
+                                    <div class="state">填表狀態：已完成</div>
+                                    <div class="ID_info">
+                                        <div class="content">
+                                            <b>申請人 1</b>
+                                            <ul>
+                                                <li>張大毛</li>
+                                                <li>A1234556789</li>
+                                                <li>050/01/01</li>
+                                            </ul>
+                                        </div>
+                                        <div class="foto passed">
+                                            <span>已上傳照片</span>
+                                            <img src="images/foto-pass.jpg" alt="張大毛">
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-primary">編輯申請人資料</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="state">填表狀態：未完成</div>
+                                    <div class="ID_info">
+                                        <div class="content">
+                                            <b>申請人 2</b>
+                                            <ul>
+                                                <li>請填寫內容</li>
+                                            </ul>
+                                        </div>
+                                        <div class="foto passed">
+                                            <span>已上傳照片</span>
+                                            <img src="images/foto-pass.jpg" alt="張大毛">
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-primary">編輯申請人資料</button>
+                                        <button type="button" class="btn btn-secondary">刪除名額</button>
+                                    </div>
+                                </div>
+                                <div class="col complete">
+                                    <div class="state">填表狀態：已完成</div>
+                                    <div class="ID_info">
+                                        <div class="content">
+                                            <b>申請人 3</b>
+                                            <ul>
+                                                <li>張三毛</li>
+                                                <li>A1234556789</li>
+                                                <li>050/01/01</li>
+                                            </ul>
+                                        </div>
+                                        <div class="foto">
+                                            <span>現場繳交照片</span>
+                                            <img src="images/foto-defailt.jpg" alt="預設大頭照">
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-primary">編輯申請人資料</button>
+                                        <button type="button" class="btn btn-secondary">刪除名額</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="state">填表狀態：未完成</div>
+                                    <div class="ID_info">
+                                        <div class="content">
+                                            <b>申請人 4</b>
+                                            <ul>
+                                                <li>請填寫內容</li>
+                                            </ul>
+                                        </div>
+                                        <div class="foto">
+                                            <span>未上傳照片</span>
+                                            <img src="images/foto-defailt.jpg" alt="預設大頭照">
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-primary">編輯申請人資料</button>
+                                        <button type="button" class="btn btn-secondary">刪除名額</button>
+                                    </div>
+                                </div>
+                                <div class="col addBack">
+                                    <b><span><img src="images/icon/icon_add3.svg" alt=""></span>增加名額</b>
+                                </div>
+                            </div>
+                            <div class="btn_grp">
+                                <button class="btn btn-preview">確認所有申請人已填寫完成，進行資料預覽</button>
                             </div>
                         </section>
                         <!-- End -->

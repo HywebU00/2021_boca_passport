@@ -108,7 +108,7 @@
 //     }
 // }
 
-// 頁籤
+// 頁籤 - 旅行社代辦
 .verify{
     // 改button
     &>.tabItem {
@@ -121,6 +121,29 @@
         }
         background-color: #fff;
     }
+}
+// 頁籤 - 個人辦理
+.personal_process{
+    // 改button
+    &>.tabItem {
+        background: #eee;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        border: 0;
+        a{
+            &:hover, &:focus{
+                color: #FFF;
+                background: darken($primaryColor, 5);
+            }
+        }
+
+        &.active {
+            background: darken($primaryColor, 5);
+            a{
+                color: #FFF;
+            }
+        }
+    }
+    .tabContent{}
 }
 
 // 顯示content
