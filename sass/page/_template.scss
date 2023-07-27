@@ -795,6 +795,8 @@ footer {
 .btn-logout {
     border-radius: 40px;
     padding: 3px 20px;
+    background: #474747 !important;
+    border: solid 1px #65656E !important;
 }
 
 .btn-check {
@@ -1121,10 +1123,51 @@ a {
     background: #f8f8f8;
     padding: 1em 2em;
 
+    b.applicant{
+        display: block;
+        margin-bottom: 0;
+        border: none;
+        padding: 26px 0 26px 70px;
+        color: #fff;
+        background: url(../images/icon/icon_user2.svg) 26px 50% no-repeat,#dc4e32;
+        background-size: 32px 32px;
+        border-radius: 8px 8px 0 0;
+        &:after{
+            display: none;
+        }
+    }
     // 第一層
-    >.grp {
+    > .grp {
         margin: 1.25em 0;
         // border-bottom: 1px dotted #aaa;
+
+        // 申請人 info card
+        &.cardInfo{
+            border: solid 1px #bbb;
+            margin: 0;
+            padding: 1.5em 3em;
+            background: #fff;
+
+            > .content{
+                > section:last-child{
+                    // border-bottom: 1px solid red;
+                    position: relative;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 10px;
+                        background: #fff;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            @include screen('tablet') {
+                padding: 1.5em 2em;
+            }
+        }
 
         .content {
             p {
@@ -1143,7 +1186,7 @@ a {
         }
 
         // 組合1 的html架構
-        >.content {
+        > .content {
             color: #4e4e4e;
             padding: .75em 0;
             // background: deeppink;
@@ -1152,6 +1195,31 @@ a {
             .grp {
                 padding: .75em 0;
                 border-bottom: 1px solid #c7c7c7;
+
+                &.foto{
+                    border-bottom: 0;
+                    text-align: center;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        width: 160px;
+                        text-align: center;
+                        left: 50%;
+                        top: 50%;
+                        padding: 2px 4px;
+                        color: #fff;
+                        background: #000;
+                        transform: translate(-50%, -50%);
+                        color: #222;
+                        border: 1px solid #222;
+                        background: #fff;
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                    }
+                    img{
+                        width: 60%;
+                        border: 1px solid #c7c7c7;
+                    }
+                }
 
                 .title {
                     font-size: 112.5%;
@@ -1165,13 +1233,24 @@ a {
                     font-size: 112.5%;
 
                     // 當 content 沒有文字時
-                    min-height: 33px;
+                    min-height: 37px;
                 }
+
+                // 第三層
+                // .grp {
+                //     &:first-child{
+                //         // padding-top: 0;
+                //     }
+                //     &:last-child{
+                //         border-bottom: none;
+                //         // padding-bottom: 0;
+                //     }
+                // }
             }
         }
 
         // 組合2 的html架構
-        >.title {
+        > .title {
             font-size: 112.5%;
             font-weight: bold;
             color: darken($primaryColor, 5);
@@ -1205,6 +1284,34 @@ a {
             }
         }
 
+        .flex-col-equal-1{
+            // 第二層
+            .grp{
+                .title {}
+                .content{
+                    .title{
+                        font-size: 90%;
+                        color: #000;
+                    }
+                    .content{
+                        font-size: 100%;
+                    }
+                }
+            }
+        }
+        .flex-col-equal-2{
+            .grp{
+                .grp{
+                    &:first-child{
+                        padding-top: 0;
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
 
         // .content{
         //     color: #4e4e4e;
@@ -1643,7 +1750,7 @@ b.B {
         position: absolute;
         width: 100%;
         height: 16px;
-        background: rgb(0, 104, 183);
+        // background: rgb(0, 104, 183);
         background: linear-gradient(90deg, rgba(0, 104, 183, 1) 0%, rgba(0, 158, 150, 1) 100%);
     }
 }
@@ -1837,17 +1944,18 @@ b.B {
     font-size: 125%;
     margin: 20px 0;
     padding: 10px 0 10px 60px;
-    background: url(../images/icon/icon_user.svg) 20px 50% no-repeat, #f6f6f6;
+    background: url(../images/icon/icon_user.svg) 20px 50% no-repeat, #fff;
     background-size: 32px 32px;
     // border-radius: 6px 6px 0 0;
-    border-top: 1px solid darken($primaryColor, 5);
-    border-bottom: 1px solid darken($primaryColor, 5);
+    border-top: 1px solid #bcbcbc;
+    border-bottom: 1px solid #bcbcbc;
     font-weight: bold;
-    color: darken($primaryColor, 5);
+    // color: darken($primaryColor, 5);
+    color: #333;
     overflow: hidden;
 
     b{
-        color: #fff;
+        color: #222;
         display: inline-block;
         margin-left: 30px;
         padding: 6px 30px;
@@ -1861,7 +1969,7 @@ b.B {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: $primaryColor;
+        background: #f4f4f4;
         right: -180px;
         top: 0;
         z-index: 1;
@@ -1935,6 +2043,7 @@ b.B {
         // border: 1px solid #cbcbcb;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
         border-radius: 1em;
+        border: solid 1px #bf0000;
         margin: 1em 0;
         padding-bottom: 2em;
         overflow: hidden;
@@ -1953,6 +2062,7 @@ b.B {
             justify-content: center;
             align-items: center;
             padding-bottom: 0;
+            border: 0;
             b{
                 font-size: 150%;
                 text-align: center;
@@ -1988,6 +2098,7 @@ b.B {
     }
     .ID_info{
         display:flex;
+        justify-content: space-between;
         padding: 2.2em 1.5em 1em;
         .foto{
             flex: 0 0 40%;
@@ -2014,7 +2125,7 @@ b.B {
             }
         }
         .content{
-            flex: 1 1 55%;
+            flex: 0 0 55%;
             b{
                 font-size: 150%;
                 line-height: 2;
@@ -2022,7 +2133,13 @@ b.B {
                 background: url(../images/icon/icon_user.svg) 10px 50% no-repeat;
                 background-size: 36px 36px;
             }
-            ul{}
+            ul{
+                font-size: 112.5%;
+                li{
+                    padding: 6px 0;
+                    border-bottom: dotted 1px #acacac;
+                }
+            }
         }
     }
     .btn_grp{
@@ -2035,9 +2152,10 @@ b.B {
     }
     // 填寫完成
     .col.complete{
+        border: 0;
         .state{
             background: #eee;
-            color: darken($primaryColor, 10);
+            color: #333;
         }
         .foto{
             span{

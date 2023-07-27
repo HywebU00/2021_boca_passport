@@ -148,7 +148,12 @@
 	.header {
         h1{
         	a{
-        		span{ color: #996c33; }
+        		span{
+        			color: #dc4e32;
+        			b {
+                        color: #333;
+                    }
+        		}
         	}
         }
         // 導覽列
@@ -158,6 +163,12 @@
                 background-size: 12px 12px;
             }
         }
+        &.fixed{
+        	background: adjust_hue(desaturate(darken(#7a5238, 7), 12), 0);
+        }
+    }
+    .menu{
+    	background: adjust_hue(desaturate(darken(#7a5238, 7), 12), 0);
     }
 
     .innerpage{
@@ -169,16 +180,6 @@
     	}
     }
 
-    // 申請者
-	// .applicant{
-	// 	// border-bottom: 2px solid darken($lightColor, 5);
-	// 	background: url(../images/icon/icon_user.svg) 20px 50% no-repeat, $lightColor;
-	// 	background-size: 32px 32px;
-	// 	&:after{
-	// 		background: darken($lightColor, 10);
-	// 	}
-	// }
-
     .fill_steps{
 	    a{
 	        b{
@@ -189,7 +190,7 @@
 
 	        &:hover, &:focus,
 	        &.active{
-	            background: darken($lightColor, 5);
+	            background: #dc4e32;
 	            b{
 	            	background: transparent;
 	            }
@@ -197,8 +198,21 @@
 	        }
 	    }
 	}
-}
 
+	// 表單
+	.flex-form .form_content .form_grp .form_title{
+		color: #222;
+		background: url(../images/icon-arrow-innerpage2.svg) 2px 45% no-repeat;
+    	background-size: 10px 10px;
+	}
+}
+// 步驟流程
+.step-flow {
+	span.belt {
+		background-image: linear-gradient(to right, #f43b47 0%, #453a94 100%);
+		// background: linear-gradient(90deg, rgba(0, 104, 183, 1) 0%, rgba(0, 158, 150, 1) 100%);
+	}
+}
 //////////////////////////////////////////////////////////// 調整
 html,body{
 	&.Login{ background: url(../images/bg-blur-ball-personal.png) 50% -4px no-repeat, #fdefdd; }

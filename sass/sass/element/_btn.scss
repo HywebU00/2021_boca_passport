@@ -133,7 +133,19 @@ $btn-radius:.2em;
     &:focus {
         color: #fff!important;
         background: darken($primaryColor, 15)!important;
-        border: darken($primaryColor, 15)!important;
+        border-color: darken($primaryColor, 15)!important;
+    }
+}
+.btn-secondary2{
+    background: #fff !important;
+    color: darken(#dc4e32, 5)!important;
+    border: solid 1px #dc4e32!important;
+    text-shadow: none !important;
+    &:hover,
+    &:focus {
+        color: #fff!important;
+        background: #dc4e32!important;
+        border-color: darken(#dc4e32, 5)!important;
     }
 }
 
@@ -150,7 +162,7 @@ $btn-radius:.2em;
         border: solid 1px #65656E!important;
     }
 }
-.btn-normal_P{
+.btn-normal2{
     background: #fff!important;
     color: #474747 !important;
     border: solid 1px #acacac!important;
@@ -192,7 +204,18 @@ $btn-radius:.2em;
     font-size: 112.5%;
     border-radius: 50px;
     padding: .75em 2em;
-    @include btn_setting(darken(#996c33, 0), #FFF);
+    width: 100%;
+
+    background: #666!important;
+    color: #fff !important;
+    border: solid 1px #acacac!important;
+    text-shadow: none!important;
+    &:hover,
+    &:focus{
+        color: #fff !important;
+        background: #dc4e32!important;
+        border: solid 1px #acacac!important;
+    }
 }
 
 .disabled, [disabled] {
