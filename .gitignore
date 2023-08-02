@@ -3,13 +3,19 @@
 *.sass
 sass/
 .sass-cache/
+
 # 忽略所有附檔名是 .map 的檔案
 *.map
+*.yml
+*.gitignore
 
 # 字型資料夾
 fonts/
 
-#vscode setting
+# 暫存資料夾
+_stand/
+
+# vscode setting
 *.json
 
 .DS_Store
