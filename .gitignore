@@ -1,4 +1,15 @@
+# 忽略所有附檔名是 .sass 的檔案
+*.scss
+*.sass
+sass/
 .sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+# 忽略所有附檔名是 .map 的檔案
+*.map
+
+# 字型資料夾
+fonts/
+
+#vscode setting
+*.json
+
+.DS_Store

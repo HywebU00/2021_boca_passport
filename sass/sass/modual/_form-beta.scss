@@ -774,9 +774,9 @@ select::-ms-expand {
     .form_col-2-2-2-2-2-2 {
 
         >.form_grp {
-            width: (100% / 6);
-            flex-basis: (100% / 6);
-            max-width: (100% / 6);
+            width: calc(100% / 6);
+            flex-basis: calc(100% / 6);
+            max-width: calc(100% / 6);
 
             @include screen('mobile') {
                 width: 50%;
@@ -1517,6 +1517,7 @@ select::-ms-expand {
 
         @include screen('mobile') {
             width: 100%;
+            min-width: auto;
         }
     }
 
