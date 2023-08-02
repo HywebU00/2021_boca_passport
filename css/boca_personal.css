@@ -9235,11 +9235,11 @@ a.tb-view:hover, a.tb-view:focus {
   word-break: break-all;
 }
 .info-review > .grp.cardInfo > .content > section:last-child,
-.info-review > .grp.cardInfo > .content > section:last-child > .grp:nth-last-child(2) {
+.info-review > .grp.cardInfo > .content > section:last-child > .grp:nth-last-child(3) {
   position: relative;
 }
 .info-review > .grp.cardInfo > .content > section:last-child:after,
-.info-review > .grp.cardInfo > .content > section:last-child > .grp:nth-last-child(2):after {
+.info-review > .grp.cardInfo > .content > section:last-child > .grp:nth-last-child(3):after {
   content: "";
   position: absolute;
   width: 100%;
