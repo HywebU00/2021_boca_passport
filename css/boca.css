@@ -9696,6 +9696,9 @@ b.B {
     height: auto;
   }
 }
+.foto-upload .info {
+  line-height: 1.85;
+}
 .foto-upload .info ol {
   border: 1px solid #d4d4d4;
   padding: 1.125em 2em 1.125em 3em;
@@ -10024,6 +10027,7 @@ b.B {
 
 .time_reserve .info {
   padding: 1.5em 0;
+  line-height: 1.85;
 }
 .time_reserve .date .part .col,
 .time_reserve .time_period .AM .part .col,
