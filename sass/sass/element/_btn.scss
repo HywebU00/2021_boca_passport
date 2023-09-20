@@ -150,7 +150,9 @@ $btn-radius:.2em;
 }
 
 // 一般按鈕
-.btn-normal{
+.btn-normal,
+.btn-reduce,
+.btn-increase{
     background: #474747!important;
     color: #fff !important;
     border: solid 1px #65656E!important;
@@ -174,7 +176,35 @@ $btn-radius:.2em;
         border: solid 1px #acacac!important;
     }
 }
-
+.btn-reduce,
+.btn-increase{
+    min-width: 45px;
+    height: 45px;
+    font-size: 0;
+    border-radius: 5px;
+    border-radius: 50%;
+}
+.btn-reduce{
+    background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #474747 !important;
+    background-size: 16px 16px !important;
+    &:hover,
+    &:focus{
+        background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #222 !important;
+        background-size: 16px 16px !important;
+    }
+    +input{
+        width: 120px !important;
+    }
+}
+.btn-increase{
+    background: url(../images/icon/icon_add2.svg) 50% 50% no-repeat #474747 !important;
+    background-size: 16px 16px !important;
+    &:hover,
+    &:focus{
+        background: url(../images/icon/icon_add2.svg) 50% 50% no-repeat #222 !important;
+        background-size: 16px 16px !important;
+    }
+}
 // 返回
 .btn-back{
     background: #555 !important;
@@ -236,6 +266,10 @@ $btn-radius:.2em;
     // opacity: .5;
     cursor: not-allowed!important;
     text-shadow:none;
+    &:hover, &:focus{
+        border: 1px solid #ccc !important;
+        box-shadow: 0px 0px 0px 2px transparent !important;
+    }
 }
 
 // 自訂

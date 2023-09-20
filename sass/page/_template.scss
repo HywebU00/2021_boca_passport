@@ -2000,6 +2000,10 @@ b.B {
                 }
             }
         }
+        @include screen('mobile') {
+            padding: 1em;
+        }
+        
     }
 }
 
@@ -2070,6 +2074,17 @@ b.B {
         margin-bottom: 3em;
         .slick-dots{
             bottom: -32px;
+        }
+    }
+    @media screen and (max-width: 765px){
+        .col{
+            padding: 0;
+        }
+        .slick-prev{
+            left: -20px;
+        }
+        .slick-next{
+            right: -20px;
         }
     }
 }

@@ -1834,13 +1834,19 @@ kbd kbd {
   border-color: #d14024 !important;
 }
 
-.btn-normal {
+.btn-normal,
+.btn-reduce,
+.btn-increase {
   background: #474747 !important;
   color: #fff !important;
   border: solid 1px #65656E !important;
   text-shadow: none !important;
 }
-.btn-normal:hover, .btn-normal:focus {
+.btn-normal:hover, .btn-normal:focus,
+.btn-reduce:hover,
+.btn-reduce:focus,
+.btn-increase:hover,
+.btn-increase:focus {
   color: #fff !important;
   background: #222 !important;
   border: solid 1px #65656E !important;
@@ -1856,6 +1862,36 @@ kbd kbd {
   color: #fff !important;
   background: #474747 !important;
   border: solid 1px #acacac !important;
+}
+
+.btn-reduce,
+.btn-increase {
+  min-width: 45px;
+  height: 45px;
+  font-size: 0;
+  border-radius: 5px;
+  border-radius: 50%;
+}
+
+.btn-reduce {
+  background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #474747 !important;
+  background-size: 16px 16px !important;
+}
+.btn-reduce:hover, .btn-reduce:focus {
+  background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #222 !important;
+  background-size: 16px 16px !important;
+}
+.btn-reduce + input {
+  width: 120px !important;
+}
+
+.btn-increase {
+  background: url(../images/icon/icon_add2.svg) 50% 50% no-repeat #474747 !important;
+  background-size: 16px 16px !important;
+}
+.btn-increase:hover, .btn-increase:focus {
+  background: url(../images/icon/icon_add2.svg) 50% 50% no-repeat #222 !important;
+  background-size: 16px 16px !important;
 }
 
 .btn-back {
@@ -1906,6 +1942,10 @@ kbd kbd {
 .readonly, [readonly] {
   cursor: not-allowed !important;
   text-shadow: none;
+}
+.readonly:hover, .readonly:focus, [readonly]:hover, [readonly]:focus {
+  border: 1px solid #ccc !important;
+  box-shadow: 0px 0px 0px 2px transparent !important;
 }
 
 .btn-pre, .btn-next {
@@ -10611,6 +10651,12 @@ b.B {
 .time_reserve .time_period .PM .part .col span {
   font-size: 90%;
 }
+@media screen and (max-width: 767px) {
+  .time_reserve .time_period {
+    padding: 1em;
+  }
+}
+
 .multipleSlider .col {
   padding: 0 1em;
 }
@@ -10670,6 +10716,17 @@ b.B {
   }
   .multipleSlider .slick-dots {
     bottom: -32px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .multipleSlider .col {
+    padding: 0;
+  }
+  .multipleSlider .slick-prev {
+    left: -20px;
+  }
+  .multipleSlider .slick-next {
+    right: -20px;
   }
 }
 
