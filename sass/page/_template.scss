@@ -3,6 +3,9 @@ $m-gutter: 4px;
 * {
     box-sizing: border-box;
 }
+::-ms-reveal {
+    display: none; // 隱藏 edge password 預設眼睛
+}
 
 html {
     scroll-behavior: smooth;
@@ -21,23 +24,23 @@ body {
 }
 // scroll 樣式統一
 body {
-  overflow-y: auto;
-  scrollbar-color: #000 rgba(0, 0, 0, 0.2);
-  scrollbar-width: thin;
+    overflow-y: auto;
+    scrollbar-color: #000 rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
 }
 body::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+    width: 5px;
+    height: 5px;
 }
 body::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  background: #000;
+    border-radius: 100px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #000;
 }
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 0;
-  background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 // 最外圍預設為100%
@@ -174,8 +177,6 @@ footer {
         }
     }
 }
-
-
 
 // 登入頁
 .Login {
@@ -663,7 +664,7 @@ footer {
 
                     span {
                         flex: 1 1 100%;
-                        font-size: .48em;
+                        font-size: .46em;
                         margin: auto;
                         line-height: 1.2;
                     }
@@ -729,6 +730,15 @@ footer {
 
                     &:before {
                         color: #222;
+                    }
+                }
+
+                &.act{
+                    width: 50%;
+                    margin: 0 0 5px;
+                    // background: pink;
+                    @media screen and (max-width: 1200px){
+                        width: 100%;
                     }
                 }
             }
@@ -884,7 +894,7 @@ footer {
     }
 }
 
-// 共通模組
+// 共通模組 --------------------
 .necessary {
     background: #b70000;
     color: #fff;
@@ -902,6 +912,38 @@ footer {
     display: block;
     width: 100%;
     padding: .75em .5em;
+}
+
+// 登入倒數
+.timer{
+    position: absolute;
+    color: #fff;
+    background: rgb(50 50 50 / 70%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    backdrop-filter: blur(6px);
+    border: solid 1px #fff;
+    right: calc((100% - 1170px) / 2 );
+    top: -5px;
+    padding: 0.65em 2em;
+    border-radius: 50px;
+    z-index: 999;
+    span{
+        padding-left: 2.2em;
+        background: url(../images/icon_clock.svg) 8px 50% no-repeat;
+        background-size: 25px 25px;
+    }
+    @media screen and (max-width: 1200px) {
+        position: relative;
+        width: 90%;
+        right: 0;
+        margin: 0 auto 10px;
+        text-align: center;
+    }
+    // @include screen('tablet') {
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     width: 90%;
+    // }
 }
 
 // 說明事項
@@ -929,6 +971,9 @@ footer {
             span {
                 border-bottom: none;
             }
+        }
+        .check_grp{
+            text-align: center;
         }
     }
 
@@ -1127,23 +1172,23 @@ a {
     margin-top: 2em;
 
     .cardInfo{
-      border: solid 1px #bbb;
-      background: #fff;
-      padding: 1.25em;
-      .caption{
-        margin: 0;
-      }
-      table th{
-        background: url(../images/bg-table-border.jpg) left bottom repeat-x, #535353;
-        color: #fff;
-      }
-      table tr:last-child th{
-        background: #535353 !important;
-      }
+        border: solid 1px #bbb;
+        background: #fff;
+        padding: 1.25em;
+        .caption{
+            margin: 0;
+        }
+        table th{
+            background: url(../images/bg-table-border.jpg) left bottom repeat-x, #535353;
+            color: #fff;
+        }
+        table tr:last-child th{
+            background: #535353 !important;
+        }
     }
 
     @include screen('mobile') {
-      padding: 1em;
+        padding: 1em;
     }
 
     b.applicant{
@@ -1440,7 +1485,6 @@ $duration: 1.4s;
 
 // 按鈕的均分
 .flex-form {
-
     .btn_grp.equal-2,
     .btn_grp.equal-3,
     .btn_grp.equal-4 {
@@ -1495,7 +1539,6 @@ b.B {
 
 // 照片上傳 
 .foto-upload {
-
     background: #f6f6f6;
     padding: 1.5em 2.5em;
     border-radius: 4px;
@@ -1875,21 +1918,17 @@ b.B {
                 @include flex-md-equal(10, $m-gutter);
                 @include flex-lg-equal(10, $m-gutter);
                 font-weight: bold;
-
-                time {}
-
-                span {
-                    font-size: 80%;
-                }
-
-                &:hover,
-                &:focus {}
+                // time {}
+                span { font-size: 80%; }
+                // &:hover,
+                // &:focus {}
             }
         }
 
         button {
             position: absolute;
-            bottom: 0;
+            top: 50%;
+            transform: translateY(-25%);
 
             // 前一則、下一則
             &.btn-pre,
@@ -1960,6 +1999,77 @@ b.B {
                     &:focus {}
                 }
             }
+        }
+    }
+}
+
+// 90日內預約
+.multipleSlider{
+    .col{
+        padding: 0 1em;
+        time{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: 0 0 0.5em;
+        }
+    }
+    .scroltable{
+        min-width: 100% !important;
+    }
+    table{
+        th{
+            background: #333;
+            color: #fff;
+        }
+        td{
+            padding: 0;
+            background: none !important;
+            border: solid 1px #ddd;
+            span{
+                display: block;
+                height: 45px;
+                padding: .5em;
+                opacity: .45;
+                background: #fff;
+            }
+
+            &.Unclick{
+                a{
+                    opacity: 0.45;
+                    color: #222;
+                    background: #ddd;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        a{
+            display: block;
+            background: #fff;
+            &:hover,
+            &:focus,
+            &.act{
+                color: #fff;
+                background: #59B1D0;
+            }
+            span{
+                opacity: 1;
+                background: transparent;
+            }
+            
+        }
+    }
+    .slick-prev{
+        left: 0;
+    }
+    .slick-next{
+        right: 0;
+    }
+    @media screen and (max-width: 1099px){
+        margin-bottom: 3em;
+        .slick-dots{
+            bottom: -32px;
         }
     }
 }
@@ -2130,7 +2240,8 @@ b.B {
     }
 
     .state{
-        background: #bf0000;
+        // background: #bf0000;
+        background: linear-gradient(to left in oklab, oklch(0.51 0.21 29.53) 0%, #f1401c 100%);
         color: #fff;
         padding: .5em 1.5em;
         text-align: right;

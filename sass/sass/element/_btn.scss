@@ -222,9 +222,13 @@ $btn-radius:.2em;
     // opacity: .75;
     cursor: not-allowed!important;
     text-shadow:none;
-    background: rgba(224, 224, 224, .25);
+    color: #222 !important;
+    border: 1px solid #e0e0e0 !important;
+    background: rgba(224, 224, 224, .25) !important;
 
     &:hover, &:focus{
+        color: #222 !important;
+        border: 1px solid #e0e0e0 !important;
         background: rgba(224, 224, 224, .25) !important;
     }
 }

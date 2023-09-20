@@ -41,13 +41,13 @@
 .modal {
     position: fixed;
     display: none;
-    width: 600px;
-    height: 400px;
+    width: 60%;
+    height: 590px;
     background: #FFF;
     z-index: 99999999;
     top: 12%;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -30%;
     padding: 3em 1.5em 6em;
     box-sizing: border-box;
     border-radius:8px;
@@ -63,6 +63,7 @@
 
     .modal_content{
         height: 100%;
+        overflow-x: hidden;
         overflow-y: scroll;
         .center_box{
             text-align: center;

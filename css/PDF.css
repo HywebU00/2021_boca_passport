@@ -1717,9 +1717,13 @@ br {
 .disabled, [disabled] {
   cursor: not-allowed !important;
   text-shadow: none;
-  background: rgba(224, 224, 224, 0.25);
+  color: #222 !important;
+  border: 1px solid #e0e0e0 !important;
+  background: rgba(224, 224, 224, 0.25) !important;
 }
 .disabled:hover, .disabled:focus, [disabled]:hover, [disabled]:focus {
+  color: #222 !important;
+  border: 1px solid #e0e0e0 !important;
   background: rgba(224, 224, 224, 0.25) !important;
 }
 

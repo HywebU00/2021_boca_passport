@@ -27,9 +27,9 @@
 <body class="Page">
     <!-- 視窗 -->
     <div id="modal1" class="modal">
-        <h2>標題</h2>
+        <h2>異動電子郵件須重新驗證</h2>
         <div class="modal_content">
-            <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
+            <!-- <p>Lorem, ipsum dolor sit amet <a href="#">超連結</a><b>一般粗體</b><b class="R">紅字</b><b class="B">藍字</b>consectetur elit. Blanditiis optio quasi consequatur repellendus, qui nisi itaque. Libero, fugit atque ea praesentium quo quidem itaque magnam eius, repudiandae? Vero, voluptate.</p>
             <ol>
                 <li>有序清單</li>
                 <li>項目1</li>
@@ -40,7 +40,33 @@
                 <li>項目1</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti dolorum iure magni quia <a href="#">ratione cupiditate</a> fugit molestias perspiciatis quaerat a sequi modi qui consequuntur atque praesentium, odit quibusdam. Ab.</li>
                 <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti dolorum iure magni quia ratione cupiditate fugit molestias perspiciatis quaerat a sequi modi qui consequuntur atque praesentium, odit quibusdam. Ab.</a></li>
-            </ul>
+            </ul> -->
+
+            <div class="flex-form form-column">
+                <div class="form_grp">
+                    <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件</label>
+                    <div class="form_content">
+                        <input name="email" type="email" id="email" placeholder="請輸入e-mail" value="readonly@hyweb.com.tw">
+                        <div class="notice_info">包含.cn/163.com/qq.com等郵件網域無法正常發送，請改⽤其他信箱。</div>
+                        <div class="notice_info">如未收到「驗證信」，請檢查垃圾信箱或確認電郵信箱是否輸入錯誤。如果仍無法排除問題，請洽客服專線(02)2343-2951。</div>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <div class="flex-col-equal-1">
+                        <div class="form_grp">
+                            <label for="" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件驗證碼：</label>
+                            <div class="form_content">
+                                <input type="text" id="" placeholder="請輸入電子郵件驗證碼">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_grp">
+                <button class="btn btn-reset">取消</button>
+                <button class="btn btn-submit">驗證送出</button>
+            </div>
 
             <div class="flex-form form-column">
                 <!-- radio -->
@@ -1118,6 +1144,14 @@
                                         <button type="button" class="btn btn-secondary">次要按鈕</button>
                                         <button type="button" class="btn btn-secondary2">次要按鈕2</button>
                                         <button type="button" class="btn btn-normal">一般按鈕</button>
+                                    </div>
+                                    <div class="btn_grp form_inline">
+                                        <button class="btn btn-reset" disabled>清除 disabled</button>
+                                        <button class="btn btn-submit" disabled>送出 disabled</button>
+                                        <button type="button" class="btn btn-primary" disabled>主要按鈕 disabled</button>
+                                        <button type="button" class="btn btn-secondary" disabled>次要按鈕 disabled</button>
+                                        <button type="button" class="btn btn-secondary2" disabled>次要按鈕2 disabled</button>
+                                        <button type="button" class="btn btn-normal" disabled>一般按鈕 disabled</button>
                                     </div>
                                 </div>
                             </form>

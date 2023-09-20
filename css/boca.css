@@ -1893,9 +1893,13 @@ kbd kbd {
 .disabled, [disabled] {
   cursor: not-allowed !important;
   text-shadow: none;
-  background: rgba(224, 224, 224, 0.25);
+  color: #222 !important;
+  border: 1px solid #e0e0e0 !important;
+  background: rgba(224, 224, 224, 0.25) !important;
 }
 .disabled:hover, .disabled:focus, [disabled]:hover, [disabled]:focus {
+  color: #222 !important;
+  border: 1px solid #e0e0e0 !important;
   background: rgba(224, 224, 224, 0.25) !important;
 }
 
@@ -6846,13 +6850,13 @@ table tr:last-child th {
 .modal {
   position: fixed;
   display: none;
-  width: 600px;
-  height: 400px;
+  width: 60%;
+  height: 590px;
   background: #FFF;
   z-index: 99999999;
   top: 12%;
   left: 50%;
-  margin-left: -300px;
+  margin-left: -30%;
   padding: 3em 1.5em 6em;
   box-sizing: border-box;
   border-radius: 8px;
@@ -6868,6 +6872,7 @@ table tr:last-child th {
 }
 .modal .modal_content {
   height: 100%;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 .modal .modal_content .center_box {
@@ -8316,6 +8321,10 @@ div.function ul li.icon_forward a:before {
   box-sizing: border-box;
 }
 
+::-ms-reveal {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -8803,7 +8812,7 @@ footer .footer_icon {
   }
   .Page .header h1 a span {
     flex: 1 1 100%;
-    font-size: 0.48em;
+    font-size: 0.46em;
     margin: auto;
     line-height: 1.2;
   }
@@ -8848,6 +8857,15 @@ footer .footer_icon {
 }
 .Page .innerpage > .container .breadcrumb ul li:before {
   color: #222;
+}
+.Page .innerpage > .container .breadcrumb.act {
+  width: 50%;
+  margin: 0 0 5px;
+}
+@media screen and (max-width: 1200px) {
+  .Page .innerpage > .container .breadcrumb.act {
+    width: 100%;
+  }
 }
 .Page .innerpage > .container .white_zone {
   background: #fff;
@@ -9018,6 +9036,35 @@ footer .footer_icon {
   padding: 0.75em 0.5em;
 }
 
+.timer {
+  position: absolute;
+  color: #fff;
+  background: rgba(50, 50, 50, 0.7);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border: solid 1px #fff;
+  right: calc((100% - 1170px) / 2);
+  top: -5px;
+  padding: 0.65em 2em;
+  border-radius: 50px;
+  z-index: 999;
+}
+.timer span {
+  padding-left: 2.2em;
+  background: url(../images/icon_clock.svg) 8px 50% no-repeat;
+  background-size: 25px 25px;
+}
+@media screen and (max-width: 1200px) {
+  .timer {
+    position: relative;
+    width: 90%;
+    right: 0;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+}
+
 .caption {
   background: #f6f6f6;
   padding: 1.5em 2.5em;
@@ -9037,6 +9084,9 @@ footer .footer_icon {
 }
 .caption.announce .title span {
   border-bottom: none;
+}
+.caption.announce .check_grp {
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .caption {
@@ -10303,7 +10353,8 @@ b.B {
 }
 .time_reserve .date button {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-25%);
 }
 .time_reserve .date button.btn-pre, .time_reserve .date button.btn-next {
   border: 0;
@@ -10560,6 +10611,68 @@ b.B {
 .time_reserve .time_period .PM .part .col span {
   font-size: 90%;
 }
+.multipleSlider .col {
+  padding: 0 1em;
+}
+.multipleSlider .col time {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+  padding: 0 0 0.5em;
+}
+.multipleSlider .scroltable {
+  min-width: 100% !important;
+}
+.multipleSlider table th {
+  background: #333;
+  color: #fff;
+}
+.multipleSlider table td {
+  padding: 0;
+  background: none !important;
+  border: solid 1px #ddd;
+}
+.multipleSlider table td span {
+  display: block;
+  height: 45px;
+  padding: 0.5em;
+  opacity: 0.45;
+  background: #fff;
+}
+.multipleSlider table td.Unclick a {
+  opacity: 0.45;
+  color: #222;
+  background: #ddd;
+  cursor: not-allowed;
+}
+.multipleSlider table a {
+  display: block;
+  background: #fff;
+}
+.multipleSlider table a:hover, .multipleSlider table a:focus, .multipleSlider table a.act {
+  color: #fff;
+  background: #59B1D0;
+}
+.multipleSlider table a span {
+  opacity: 1;
+  background: transparent;
+}
+.multipleSlider .slick-prev {
+  left: 0;
+}
+.multipleSlider .slick-next {
+  right: 0;
+}
+@media screen and (max-width: 1099px) {
+  .multipleSlider {
+    margin-bottom: 3em;
+  }
+  .multipleSlider .slick-dots {
+    bottom: -32px;
+  }
+}
+
 .applicant {
   font-size: 125%;
   margin: 20px 0;
@@ -10712,7 +10825,7 @@ b.B {
   filter: invert(1);
 }
 .ID_cards .state {
-  background: #bf0000;
+  background: linear-gradient(to left in oklab, oklch(0.51 0.21 29.53) 0%, #f1401c 100%);
   color: #fff;
   padding: 0.5em 1.5em;
   text-align: right;

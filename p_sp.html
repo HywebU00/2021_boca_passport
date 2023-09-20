@@ -139,11 +139,25 @@
                                     <li>項目1</li>
                                     <li>項目2</li>
                                 </ul> -->
+                                <div class="check_grp">
+                                    <label><input name="checkSample" type="checkbox" value="">本人已詳閱瞭解並同意遵守相關規範。</label>
+                                </div>
+                            </div>
+                            <div class="flex-form form-column">
+                                <div class="form_grp">
+                                    <label for="email" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>電子郵件</label>
+                                    <div class="form_content">
+                                        <input name="email" type="email" id="email" placeholder="請輸入e-mail" value="readonly@hyweb.com.tw">
+                                        <div class="notice_info">包含.cn/163.com/qq.com等郵件網域無法正常發送，請改⽤其他信箱。</div>
+                                        <div class="notice_info">如未收到「驗證信」，請檢查垃圾信箱或確認電郵信箱是否輸入錯誤。如果仍無法排除問題，請洽客服專線(02)2343-2951。</div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- 按鈕 -->
                             <div class="btn_grp">
-                                <button type="button" class="btn btn-secondary">不同意</button>
-                                <button type="button" class="btn btn-primary">同意</button>
+                                <!-- <button type="button" class="btn btn-secondary">不同意</button>
+                                <button type="button" class="btn btn-primary">同意</button> -->
+                                <button type="button" class="btn btn-normal">寄送電子郵件驗證信</button>
                             </div>
                         </section>
                         <!-- End -->
