@@ -193,7 +193,7 @@
                                                 <li>網路填表的資料及數位照片檔，同一申請案每日以變更3次為限，僅保留最後一次上傳的資料，並請於上傳次日起10個工作天內至領務局或外交部中部、雲嘉南、南部、東部辦事處申請護照，否則資料將自動刪除。</li>
                                             </ol>
                                         </div>
-                                        <!-- <div class="date">
+                                        <div class="date">
                                             <h3>選擇日期</h3>
                                             <div class="part">
                                                 <div class="col">
@@ -239,7 +239,7 @@
                                             </div>
                                             <button type="button" class="btn btn-pre">上一則</button>
                                             <button type="button" class="btn btn-next">下一則</button>
-                                        </div> -->
+                                        </div>
                                         <div class="date">
                                             <h3>選擇日期 slider</h3>
                                             <!-- 圖片輪播 start -->
@@ -280,7 +280,7 @@
                                                                 <td><a href="#" title=""><span>10</span></a></td>
                                                                 <td><a href="#" title=""><span>11</span></a></td>
                                                                 <td><a href="#" title="" class="act"><span>12</span></a></td>
-                                                                <td><a href="#" title=""><span>13</span></a></td>
+                                                                <td><a href="#" title="" class="occupied"><span>13</span></a></td>
                                                                 <td><a href="#" title=""><span>14</span></a></td>
                                                                 <td class="Unclick"><a href="#" title=""><span>15</span></a></td>
                                                             </tr>
@@ -455,18 +455,23 @@
                                                     </table>
                                                 </div>
                                             </div>
+                                            <div class="tips">
+                                                <b class="ordering">預約中</b>
+                                                <b class="ordered">已預約</b>
+                                            </div>
                                         </div>
                                         <div class="time_period">
+                                            <b>您的預約日期：2023/10/12</b>
                                             <div class="AM">
                                                 <h3>上午時段</h3>
                                                 <div class="part">
                                                     <div class="col">
                                                         <time>08:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col act">
                                                         <time>09:00</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col occupied">
                                                         <time>09:30</time>
@@ -478,19 +483,19 @@
                                                     </div>
                                                     <div class="col">
                                                         <time>10:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col">
                                                         <time>11:00</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col">
                                                         <time>11:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col">
                                                         <time>12:00</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -499,31 +504,31 @@
                                                 <div class="part">
                                                     <div class="col">
                                                         <time>13:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col full">
                                                         <time>14:00</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>已額滿</b></span>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col full">
                                                         <time>14:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>已額滿</b></span>
                                                     </div>
-                                                    <div class="col">
+                                                    <div class="col full">
                                                         <time>15:00</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>已額滿</b></span>
                                                     </div>
                                                     <div class="col">
                                                         <time>15:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col">
                                                         <time>16:00</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                     <div class="col">
                                                         <time>16:30</time>
-                                                        <span>餘<b>18</b>人</span>
+                                                        <span><b>可預約</b></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -531,8 +536,8 @@
                                     </div>
 
                                     <!-- 預約時段 readonly -->
-                                    <div class="time_reserve readonly">
-                                        <!-- <div class="info">
+                                    <!-- <div class="time_reserve readonly">
+                                        <div class="info">
                                             <h3>預約日期及時段：</h3>
                                             <ol>
                                                 <li>提供未來10個工作天不同時段的預約，請務必依預約日期及時段至現場辦理。</li>
@@ -586,8 +591,9 @@
                                             </div>
                                             <button type="button" class="btn btn-pre">上一則</button>
                                             <button type="button" class="btn btn-next">下一則</button>
-                                        </div> -->
+                                        </div>
                                         <div class="time_period">
+                                            <b>您的預約日期：2023/10/12（readonly）</b>
                                             <div class="AM">
                                                 <h3>上午時段</h3>
                                                 <div class="part">
@@ -659,7 +665,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </form>
                         </section>

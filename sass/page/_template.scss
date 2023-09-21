@@ -1833,7 +1833,6 @@ b.B {
     .time_period .PM {
         .part {
             @extend %flex_set;
-
             .col {
                 text-align: center;
                 background: #fff;
@@ -1843,33 +1842,26 @@ b.B {
                 display: block;
                 font-size: 1.2em;
                 transition: all 200ms ease-in;
-
                 time {
                     display: block;
                 }
-
                 &:hover,
                 &:focus {
                     cursor: pointer;
-                    // background: darken($linkColor, 2);
                     background: adjust_hue(desaturate(lighten($linkColor, 18), 45), -15);
                     color: #fff;
                 }
-
-                &.act {
-                    background: adjust_hue(desaturate(lighten($linkColor, 18), 45), -15);
-                    color: #fff;
-                }
-
-                &.occupied {
-                    background: darken($linkColor, 10);
-                    color: #fff;
-                }
-
+                // &.act {
+                //     background: adjust_hue(desaturate(lighten($linkColor, 18), 45), -15);
+                //     color: #fff;
+                // }
+                // &.occupied {
+                //     background: darken($linkColor, 10);
+                //     color: #fff;
+                // }
                 &.full {
                     background: #ddd;
                     color: #666;
-
                     &:hover,
                     &:focus {
                         cursor: not-allowed;
@@ -1901,6 +1893,10 @@ b.B {
                     }
                 }
             }
+        }
+
+        &:hover, &:focus{
+            border: none !important;
         }
     }
 
@@ -1969,6 +1965,15 @@ b.B {
         margin-top: 1em;
         background: #f8f8f8;
 
+        > b{
+            // color: $primaryColor;
+            color: #1b4d99;
+            font-size: 1.5em;
+            padding: 0.5em 0;
+            display: block;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
         .AM,
         .PM {
             margin: 30px 0;
@@ -2006,7 +2011,44 @@ b.B {
         
     }
 }
-
+.act {
+    background: adjust_hue(desaturate(lighten($linkColor, 18), 45), -15) !important;
+    color: #fff;
+}
+.occupied {
+    background: darken($linkColor, 10) !important;
+    color: #fff;
+}
+.tips{
+    padding: 1em 1em 0;
+    b{
+        position: relative;
+        margin-right: 10px;
+        &.ordering, &.ordered{
+            padding-left: 1.25em;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+            }
+        }
+        &.ordering{
+            &::before{
+                background: #59b1cf;
+            }
+        }
+        &.ordered{
+            &::before{
+                background: #004d99;
+            }
+        }
+    }
+}
 // 90日內預約
 .multipleSlider{
     .col{
