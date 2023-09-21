@@ -178,31 +178,44 @@ $btn-radius:.2em;
 }
 .btn-reduce,
 .btn-increase{
-    min-width: 45px;
-    height: 45px;
+    min-width: 30px;
+    height: 30px;
     font-size: 0;
     border-radius: 5px;
     border-radius: 50%;
+
+    &.disable,{
+        opacity: .2;
+        &:hover,
+        &:focus{
+            cursor: not-allowed;
+            background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #474747 !important;
+            background-size: 14px 14px !important;
+            box-shadow: none !important;
+        }
+    }
 }
 .btn-reduce{
     background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #474747 !important;
-    background-size: 16px 16px !important;
+    background-size: 14px 14px !important;
     &:hover,
     &:focus{
         background: url(../images/icon/icon_minus2.svg) 50% 50% no-repeat #222 !important;
-        background-size: 16px 16px !important;
+        background-size: 14px 14px!important;
     }
     +input{
         width: 120px !important;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 .btn-increase{
     background: url(../images/icon/icon_add2.svg) 50% 50% no-repeat #474747 !important;
-    background-size: 16px 16px !important;
+    background-size: 14px 14px !important;
     &:hover,
     &:focus{
         background: url(../images/icon/icon_add2.svg) 50% 50% no-repeat #222 !important;
-        background-size: 16px 16px !important;
+        background-size: 14px 14px!important;
     }
 }
 // 返回
