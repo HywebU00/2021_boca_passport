@@ -8912,12 +8912,12 @@ footer .footer_icon {
 .Page .innerpage > .container .breadcrumb ul li:before {
   color: #222;
 }
-.Page .innerpage > .container .breadcrumb.act {
+.Page .innerpage > .container .breadcrumb.hasTimer {
   width: 50%;
   margin: 0 0 5px;
 }
 @media screen and (max-width: 1200px) {
-  .Page .innerpage > .container .breadcrumb.act {
+  .Page .innerpage > .container .breadcrumb.hasTimer {
     width: 100%;
   }
 }

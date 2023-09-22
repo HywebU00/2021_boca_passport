@@ -1,7 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     // timer
-    $('.timer').siblings('.breadcrumb').addClass('act');
+    $('.timer').siblings('.breadcrumb').addClass('hasTimer');
 
     // 月份輪播
     $('.multipleSlider').slick({
