@@ -706,7 +706,7 @@ footer {
         margin-top: -1em;
         &::before{
             right: 50%;
-            transform: translateX(-6px);
+            transform: translateX(50%);
         }
     }
     @include screen('mobile') {
