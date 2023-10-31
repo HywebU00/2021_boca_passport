@@ -181,7 +181,7 @@ footer {
 // 登入頁
 .Login {
     .container {
-        max-width: 1000px;
+        // max-width: 1000px;
     }
     .header {
         h1 {
@@ -276,16 +276,16 @@ footer {
             position: relative;
             z-index: 1;
 
-            // 右上角裝飾
-            &:after {
-                content: '';
-                position: absolute;
-                width: 85px;
-                height: 100px;
-                background: url(../images/deco-been-2.png) 50% 50% no-repeat;
-                right: -120px;
-                top: 420px;
-            }
+            // // 右上角裝飾
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     width: 85px;
+            //     height: 100px;
+            //     background: url(../images/deco-been-2.png) 50% 50% no-repeat;
+            //     right: -120px;
+            //     top: 420px;
+            // }
 
             .login_title {
                 width: 100%;
@@ -320,7 +320,7 @@ footer {
 
                 .form_grp {
                     border: 0;
-                    flex-wrap: nowrap;
+                    // flex-wrap: nowrap;
                     .form_title {
                         color: #222;
                         line-height: 3;
@@ -351,7 +351,7 @@ footer {
                         }
 
                         input {
-                            width: 390px;
+                            // width: 390px;
                             border-radius: 40px;
                             padding: .65em 2.5em .65em 1.75em;
                             font-size: 112.5%;
@@ -376,65 +376,9 @@ footer {
                 z-index: 4;
             }
 
-            .tips {
-                // background: $secondaryColor;
-                background: #ffffffba;
-                // box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-                // background: #f2f2f2;
-                // backdrop-filter: blur(5px);
-                box-shadow: rgba(232, 242 ,246, 1) 0px -80px 90px;
-                padding: 1em 1.75em;
-                // margin: 0 -1.25em;
-                margin-top: 2em;
-                border-radius: 6px;
-                position: relative;
-                z-index: 3;
-
-                // &:after {
-                //     content: '';
-                //     position: absolute;
-                //     width: 85px;
-                //     height: 100px;
-                //     background: url(../images/deco-been-2.png) 50% 50% no-repeat;
-                //     right: -120px;
-                //     top: -160px;
-                // }
-
-                .tips_title {
-                    color: darken($primaryColor, 50);
-
-                    span {
-                        padding-bottom: 4px;
-                        border-bottom: 3px solid darken($primaryColor, 50)
-                    }
-                }
-
-                ol {
-                    margin-top: 2.25em;
-
-                    li {
-                        line-height: 1.6;
-                        letter-spacing: 1px;
-                        margin: 8px 0;
-
-                        a {
-                            padding-left: 0;
-                            padding-right: 0;
-                            text-decoration: underline;
-                            color: #06c;
-
-                            &:focus,
-                            &:hover {
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .btn_grp{
-                text-align: left;
-            }
+            // .btn_grp{
+            //     text-align: left;
+            // }
         }
 
         // 頁籤
@@ -458,28 +402,28 @@ footer {
                         max-width: 100%;
                         flex: 0 0 100%;
                     }
-                    .qrcode{
-                        display: flex;
-                        flex-wrap: nowrap;
+                    // .qrcode{
+                    //     display: flex;
+                    //     flex-wrap: nowrap;
 
-                        .img-container{
-                            min-width: 200px;
-                            height: 200px;
-                            background: transparent;
-                        }
-                        .btn_grp{
-                            padding: 0 12px;
-                            align-content: center;
-                            b{
-                                padding: 1em 0 0;
-                                color: #cf0000;
-                                font-size: 100%;
-                            }
-                            button{
-                                width: 100%;
-                            }
-                        }
-                    }
+                    //     .img-container{
+                    //         min-width: 200px;
+                    //         height: 200px;
+                    //         background: transparent;
+                    //     }
+                    //     .btn_grp{
+                    //         padding: 0 12px;
+                    //         align-content: center;
+                    //         b{
+                    //             padding: 1em 0 0;
+                    //             color: #cf0000;
+                    //             font-size: 100%;
+                    //         }
+                    //         button{
+                    //             width: 100%;
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
@@ -573,17 +517,217 @@ footer {
             // 頁籤
             .tabSet{
                 margin-bottom: 2em;
-                .tabContent{
-                    .w100{
-                        .qrcode{
-                            margin-top: 20px;
-                            flex-wrap: wrap;
-                            width: 100%;
+                // .tabContent{
+                //     .w100{
+                //         .qrcode{
+                //             margin-top: 20px;
+                //             flex-wrap: wrap;
+                //             width: 100%;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+
+    .loginInfo{
+        margin-top: 12em;
+
+        // 最外面的 tips
+        .tips {
+            background: #ffffffba;
+            // box-shadow: rgba(232, 242 ,246, 1) 0px -80px 90px;
+            backdrop-filter:blur(5px);
+            padding: 1em 1.75em;
+            margin-top: 2em;
+            border-radius: 6px;
+            position: relative;
+            // z-index: 3;
+
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     width: 85px;
+            //     height: 100px;
+            //     background: url(../images/deco-been-2.png) 50% 50% no-repeat;
+            //     right: -120px;
+            //     top: -160px;
+            // }
+
+            .tips_title {
+                color: darken($primaryColor, 50);
+                span {
+                    padding-bottom: 4px;
+                    border-bottom: 3px solid darken($primaryColor, 50)
+                }
+            }
+
+            ol {
+                margin-top: 2.25em;
+                li {
+                    line-height: 1.6;
+                    letter-spacing: 1px;
+                    margin: 8px 0;
+                    a {
+                        padding-left: 0;
+                        padding-right: 0;
+                        text-decoration: underline;
+                        color: #06c;
+                        &:focus,
+                        &:hover {
+                            text-decoration: none;
                         }
                     }
                 }
             }
         }
+
+        // 20231031 驗證方式2
+        .verify{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            .col{
+                flex: 1 1 auto;
+                max-width: calc(50% - 20px);
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                transition: .1s;
+                // padding: 2em 3em;
+
+                // &:hover{
+                //     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+                // }
+
+                &.goPIN{
+                    .verifyTitle{
+                        color: #fff;
+                        background: $primaryColor;
+                    }
+                }
+                &.goID{
+                    .verifyTitle{
+                        color: #fff;
+                        background: #ee7700; 
+                    }
+                }
+
+                .verifyTitle{
+                    text-align: center;
+                    display: block;
+                    padding: 1em 0;
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                    margin: 0;
+                }
+                // a.verifyTitle{
+                //     border-radius: 12px;
+                // }
+                .pin_panel{
+                    padding: 1em 3em 2em;
+                }
+            }
+            // tips in verify
+            // .tips {
+            //     background: transparent;
+            //     box-shadow: none;
+            //     padding: 0;
+            // }
+
+            @include screen('tablet') {
+                flex-wrap: wrap;
+
+                .col{
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    margin-bottom: 1em;
+                    a.verifyTitle{
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+.innerTitle{
+    display: block;
+    font-size: 112.5%;
+    margin: 20px 0;
+}
+.styleBox{
+    background: #fff;
+    padding: 1em 1.75em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        // right: 25%;
+        right: calc((50% - 20px) / 2 );
+        transform: translateX(6px);
+        border-top: 20px solid #ee7700;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+    }
+
+    .qrcode{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-top: 2em;
+
+        .img-container{
+            flex: 0 0 50%;
+            min-width: 200px;
+            height: 240px;
+            background: transparent;
+        }
+        .btn_grp{
+            flex: 1 1 auto;
+            padding: 0 12px;
+            align-content: center;
+            b{
+                // padding: 1em 0 0;
+                display: block;
+                margin: 0.5em 0;
+                color: #cf0000;
+                font-size: 100%;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+
+    @include screen('tablet') {
+        margin-top: -1em;
+        &::before{
+            right: 50%;
+            transform: translateX(-6px);
+        }
+    }
+    @include screen('mobile') {
+        .qrcode{
+            flex-wrap: wrap;
+            .img-container,
+            .btn_grp{
+                flex: 1 1 100%;
+                min-width: auto;
+            }
+        }
+    }
+}
+
+.styleBox,
+.verify{
+    // tips in verify
+    .tips {
+        background: transparent !important;
+        box-shadow: none;
+        padding: 0 !important;
     }
 }
 

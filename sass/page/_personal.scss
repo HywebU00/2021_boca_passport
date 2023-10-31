@@ -64,7 +64,7 @@
 				padding-right: 40%;
 				text-align: center;
 				padding-top: 1.5em;
-    			padding-bottom: 2em;
+    		padding-bottom: 2em;
 				button{
 					border-radius: 40px;
                     padding: .75em 0;
@@ -83,6 +83,10 @@
 			}
 			.tips {
 				box-shadow: rgba(0,0,0,0.1) 0px -80px 90px;
+				backdrop-filter:blur(5px);
+				padding: 1em 1.75em;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
 				// background: #ffffffba;
 				// backdrop-filter: blur(5px);
 				// box-shadow: rgba(0, 0, 0, .1) 0px -80px 90px;

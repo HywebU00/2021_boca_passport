@@ -1771,6 +1771,31 @@ kbd kbd {
   cursor: pointer;
 }
 
+.btn-submit2 {
+  background: #ff8409;
+  border: 1px solid #ff8409;
+  color: #FFF;
+}
+.btn-submit2:hover {
+  background: #d56a00;
+  border: 1px solid #a25100;
+  cursor: pointer;
+  color: #FFF;
+  outline: none;
+}
+.btn-submit2:focus {
+  background: #d56a00;
+  border: 1px solid #a25100;
+  cursor: pointer;
+  color: #FFF;
+  outline: none;
+  box-shadow: 0 0px 0px 2px #ff3e4d !important;
+}
+.btn-submit2.active {
+  background: #ff9122;
+  cursor: pointer;
+}
+
 .btn-reset {
   color: #484848;
 }
@@ -8523,9 +8548,6 @@ footer .footer_icon {
   line-height: 1.6;
 }
 
-.Login .container {
-  max-width: 1000px;
-}
 .Login .header h1 {
   height: inherit;
 }
@@ -8593,15 +8615,6 @@ footer .footer_icon {
   position: relative;
   z-index: 1;
 }
-.Login .control_panle .col:after {
-  content: "";
-  position: absolute;
-  width: 85px;
-  height: 100px;
-  background: url(../images/deco-been-2.png) 50% 50% no-repeat;
-  right: -120px;
-  top: 420px;
-}
 .Login .control_panle .col .login_title {
   width: 100%;
   padding-right: 30%;
@@ -8622,7 +8635,6 @@ footer .footer_icon {
 }
 .Login .control_panle .col .pin_panel .form_grp {
   border: 0;
-  flex-wrap: nowrap;
 }
 .Login .control_panle .col .pin_panel .form_grp .form_title {
   color: #222;
@@ -8650,7 +8662,6 @@ footer .footer_icon {
   transform: translate(0, -50%);
 }
 .Login .control_panle .col .pin_panel .form_grp .form_content input {
-  width: 390px;
   border-radius: 40px;
   padding: 0.65em 2.5em 0.65em 1.75em;
   font-size: 112.5%;
@@ -8664,42 +8675,6 @@ footer .footer_icon {
 .Login .control_panle .col form {
   position: relative;
   z-index: 4;
-}
-.Login .control_panle .col .tips {
-  background: rgba(255, 255, 255, 0.7294117647);
-  box-shadow: rgb(232, 242, 246) 0px -80px 90px;
-  padding: 1em 1.75em;
-  margin-top: 2em;
-  border-radius: 6px;
-  position: relative;
-  z-index: 3;
-}
-.Login .control_panle .col .tips .tips_title {
-  color: black;
-}
-.Login .control_panle .col .tips .tips_title span {
-  padding-bottom: 4px;
-  border-bottom: 3px solid black;
-}
-.Login .control_panle .col .tips ol {
-  margin-top: 2.25em;
-}
-.Login .control_panle .col .tips ol li {
-  line-height: 1.6;
-  letter-spacing: 1px;
-  margin: 8px 0;
-}
-.Login .control_panle .col .tips ol li a {
-  padding-left: 0;
-  padding-right: 0;
-  text-decoration: underline;
-  color: #06c;
-}
-.Login .control_panle .col .tips ol li a:focus, .Login .control_panle .col .tips ol li a:hover {
-  text-decoration: none;
-}
-.Login .control_panle .col .btn_grp {
-  text-align: left;
 }
 .Login .control_panle .tabSet {
   margin: 4em 0 0;
@@ -8721,27 +8696,6 @@ footer .footer_icon {
 .Login .control_panle .tabSet .tabContent .w100 .form_title {
   max-width: 100%;
   flex: 0 0 100%;
-}
-.Login .control_panle .tabSet .tabContent .w100 .qrcode {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.Login .control_panle .tabSet .tabContent .w100 .qrcode .img-container {
-  min-width: 200px;
-  height: 200px;
-  background: transparent;
-}
-.Login .control_panle .tabSet .tabContent .w100 .qrcode .btn_grp {
-  padding: 0 12px;
-  align-content: center;
-}
-.Login .control_panle .tabSet .tabContent .w100 .qrcode .btn_grp b {
-  padding: 1em 0 0;
-  color: #cf0000;
-  font-size: 100%;
-}
-.Login .control_panle .tabSet .tabContent .w100 .qrcode .btn_grp button {
-  width: 100%;
 }
 @media screen and (max-width: 991px) {
   .Login .control_panle .container {
@@ -8793,11 +8747,163 @@ footer .footer_icon {
   .Login .control_panle .tabSet {
     margin-bottom: 2em;
   }
-  .Login .control_panle .tabSet .tabContent .w100 .qrcode {
-    margin-top: 20px;
+}
+.Login .loginInfo {
+  margin-top: 12em;
+}
+.Login .loginInfo .tips {
+  background: rgba(255, 255, 255, 0.7294117647);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 1em 1.75em;
+  margin-top: 2em;
+  border-radius: 6px;
+  position: relative;
+}
+.Login .loginInfo .tips .tips_title {
+  color: black;
+}
+.Login .loginInfo .tips .tips_title span {
+  padding-bottom: 4px;
+  border-bottom: 3px solid black;
+}
+.Login .loginInfo .tips ol {
+  margin-top: 2.25em;
+}
+.Login .loginInfo .tips ol li {
+  line-height: 1.6;
+  letter-spacing: 1px;
+  margin: 8px 0;
+}
+.Login .loginInfo .tips ol li a {
+  padding-left: 0;
+  padding-right: 0;
+  text-decoration: underline;
+  color: #06c;
+}
+.Login .loginInfo .tips ol li a:focus, .Login .loginInfo .tips ol li a:hover {
+  text-decoration: none;
+}
+.Login .loginInfo .verify {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.Login .loginInfo .verify .col {
+  flex: 1 1 auto;
+  max-width: calc(50% - 20px);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: 0.1s;
+}
+.Login .loginInfo .verify .col.goPIN .verifyTitle {
+  color: #fff;
+  background: #7a5238;
+}
+.Login .loginInfo .verify .col.goID .verifyTitle {
+  color: #fff;
+  background: #ee7700;
+}
+.Login .loginInfo .verify .col .verifyTitle {
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin: 0;
+}
+.Login .loginInfo .verify .col .pin_panel {
+  padding: 1em 3em 2em;
+}
+@media screen and (max-width: 991px) {
+  .Login .loginInfo .verify {
     flex-wrap: wrap;
-    width: 100%;
   }
+  .Login .loginInfo .verify .col {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  .Login .loginInfo .verify .col a.verifyTitle {
+    border-radius: 12px;
+  }
+}
+
+.innerTitle {
+  display: block;
+  font-size: 112.5%;
+  margin: 20px 0;
+}
+
+.styleBox {
+  background: #fff;
+  padding: 1em 1.75em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+}
+.styleBox::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: calc((50% - 20px) / 2);
+  transform: translateX(6px);
+  border-top: 20px solid #ee7700;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+.styleBox .qrcode {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 2em;
+}
+.styleBox .qrcode .img-container {
+  flex: 0 0 50%;
+  min-width: 200px;
+  height: 240px;
+  background: transparent;
+}
+.styleBox .qrcode .btn_grp {
+  flex: 1 1 auto;
+  padding: 0 12px;
+  align-content: center;
+}
+.styleBox .qrcode .btn_grp b {
+  display: block;
+  margin: 0.5em 0;
+  color: #cf0000;
+  font-size: 100%;
+}
+.styleBox .qrcode .btn_grp button {
+  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .styleBox {
+    margin-top: -1em;
+  }
+  .styleBox::before {
+    right: 50%;
+    transform: translateX(-6px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .styleBox .qrcode {
+    flex-wrap: wrap;
+  }
+  .styleBox .qrcode .img-container,
+  .styleBox .qrcode .btn_grp {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+}
+
+.styleBox .tips,
+.verify .tips {
+  background: transparent !important;
+  box-shadow: none;
+  padding: 0 !important;
 }
 
 .Page .header h1 {
@@ -11810,6 +11916,11 @@ h1.title, h2.title {
 }
 .Login .control_panle .col .tips {
   box-shadow: rgba(0, 0, 0, 0.1) 0px -80px 90px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 1em 1.75em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .Login .control_panle .col .tips:after {
   display: none;

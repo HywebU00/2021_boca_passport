@@ -1595,6 +1595,31 @@ br {
   cursor: pointer;
 }
 
+.btn-submit2 {
+  background: #ff8409;
+  border: 1px solid #ff8409;
+  color: #FFF;
+}
+.btn-submit2:hover {
+  background: #d56a00;
+  border: 1px solid #a25100;
+  cursor: pointer;
+  color: #FFF;
+  outline: none;
+}
+.btn-submit2:focus {
+  background: #d56a00;
+  border: 1px solid #a25100;
+  cursor: pointer;
+  color: #FFF;
+  outline: none;
+  box-shadow: 0 0px 0px 2px #ff3e4d !important;
+}
+.btn-submit2.active {
+  background: #ff9122;
+  cursor: pointer;
+}
+
 .btn-reset {
   color: #484848;
 }

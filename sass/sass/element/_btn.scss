@@ -102,6 +102,10 @@ $btn-radius:.2em;
     // @extend %btn;
     @include btn_setting(lighten($primaryColor, 5), #FFF);
 }
+.btn-submit2 {
+    // @extend %btn;
+    @include btn_setting(lighten(#ee7700, 5), #FFF);
+}
 .btn-reset {
     // @extend %btn;
     color:lighten($color-word,15);
