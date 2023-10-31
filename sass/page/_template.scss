@@ -531,7 +531,7 @@ footer {
     }
 
     .loginInfo{
-        margin-top: 12em;
+        margin-top: 10em;
 
         // 最外面的 tips
         .tips {
@@ -539,7 +539,7 @@ footer {
             // box-shadow: rgba(232, 242 ,246, 1) 0px -80px 90px;
             backdrop-filter:blur(5px);
             padding: 1em 1.75em;
-            margin-top: 2em;
+            margin-top: 10px;
             border-radius: 6px;
             position: relative;
             // z-index: 3;
@@ -728,6 +728,9 @@ footer {
         background: transparent !important;
         box-shadow: none;
         padding: 0 !important;
+        ol, ul{
+            margin: 1em 0 !important;
+        }
     }
 }
 
