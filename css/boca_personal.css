@@ -11886,7 +11886,7 @@ h1.title, h2.title {
   z-index: -1;
 }
 .Login .control_panle .container:before {
-  background: url(../images/deco-been-1-personal.png) 50% 50% no-repeat;
+  background: url(../images/deco-been-1-personal.png) left top no-repeat;
   top: 420px;
 }
 .Login .control_panle .col:after {
