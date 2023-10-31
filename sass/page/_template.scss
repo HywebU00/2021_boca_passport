@@ -263,9 +263,10 @@ footer {
             &:before {
                 content: '';
                 position: absolute;
-                width: 145px;
-                height: 152px;
-                background: url(../images/deco-been-1.png) 50% 50% no-repeat;
+                width: 1340px;
+                height: 300px;
+                background: url(../images/deco-been-1.png) left top no-repeat,
+                            url(../images/deco-been-2.png) right bottom no-repeat;
                 left: -100px;
                 // top: 48%;
                 top: 500px;
