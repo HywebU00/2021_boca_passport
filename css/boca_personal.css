@@ -11870,7 +11870,7 @@ h1.title, h2.title {
   background-size: 12px 12px;
 }
 .Login .control_panle .container {
-  background: url(../images/bg-hero-personal.jpg) 80% 20px no-repeat, #fff;
+  background: url(../images/bg-hero-personal.jpg) 80% 30px no-repeat, #fff;
   min-height: 683px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   position: relative;
