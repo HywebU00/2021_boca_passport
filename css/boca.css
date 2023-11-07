@@ -6118,6 +6118,13 @@ input[type=checkbox]:checked {
   border-radius: 2px;
 }
 
+input[type=checkbox]:checked:disabled {
+  background-image: url(../images/basic/icon_checked.svg) !important;
+  border-color: #0066cc !important;
+  background-color: #0066cc !important;
+  background-size: 98% !important;
+}
+
 input[type=radio]:checked {
   box-shadow: #fff 0 0 0 3px inset, #0066cc 0 0 0 2px;
 }
@@ -8801,9 +8808,36 @@ footer .footer_icon {
   color: #fff;
   background: #009e96;
 }
+.Login .loginInfo .verify .col.goPIN a.verifyTitle {
+  transition: 0.3s;
+}
+.Login .loginInfo .verify .col.goPIN a.verifyTitle:hover, .Login .loginInfo .verify .col.goPIN a.verifyTitle:focus-visible {
+  background: #00756f;
+}
 .Login .loginInfo .verify .col.goID .verifyTitle {
   color: #fff;
   background: #ee7700;
+}
+.Login .loginInfo .verify .col.goID a.verifyTitle {
+  position: relative;
+  transition: 0.1s;
+}
+.Login .loginInfo .verify .col.goID a.verifyTitle:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 20px solid #ee7700;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+.Login .loginInfo .verify .col.goID a.verifyTitle:hover, .Login .loginInfo .verify .col.goID a.verifyTitle:focus-visible {
+  background: #c56300;
+}
+.Login .loginInfo .verify .col.goID a.verifyTitle:hover:after, .Login .loginInfo .verify .col.goID a.verifyTitle:focus-visible:after {
+  border-top-color: #c56300;
 }
 .Login .loginInfo .verify .col .verifyTitle {
   text-align: center;
@@ -8840,18 +8874,6 @@ footer .footer_icon {
   background: #fff;
   padding: 1em 1.75em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  position: relative;
-}
-.styleBox::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: calc((50% - 20px) / 2);
-  transform: translateX(6px);
-  border-top: 20px solid #ee7700;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
 }
 .styleBox .qrcode {
   display: flex;

@@ -3774,6 +3774,13 @@ input[type=checkbox]:checked {
   border-radius: 2px;
 }
 
+input[type=checkbox]:checked:disabled {
+  background-image: url(../images/basic/icon_checked.svg) !important;
+  border-color: #0066cc !important;
+  background-color: #0066cc !important;
+  background-size: 98% !important;
+}
+
 input[type=radio]:checked {
   box-shadow: #fff 0 0 0 3px inset, #0066cc 0 0 0 2px;
 }

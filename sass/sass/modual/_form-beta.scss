@@ -1759,6 +1759,13 @@ input[type="checkbox"]:checked {
     box-shadow: $form-focus 0 0 0 2px;
     border-radius: 2px;
 }
+// 已選取又disabled
+input[type="checkbox"]:checked:disabled{
+    background-image: url(../images/basic/icon_checked.svg) !important;
+    border-color: $form-focus !important;
+    background-color: $form-focus !important;
+    background-size: 98% !important;
+}
 
 input[type="radio"]:checked {
     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;

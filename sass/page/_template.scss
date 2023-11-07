@@ -596,21 +596,44 @@ footer {
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
                 transition: .1s;
                 // padding: 2em 3em;
-
-                // &:hover{
-                //     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-                // }
-
                 &.goPIN{
                     .verifyTitle{
                         color: #fff;
                         background: $primaryColor;
                     }
+                    a.verifyTitle{
+                        transition: .3s;
+                        &:hover, &:focus-visible{
+                            background: darken($primaryColor, 8);
+                        }
+                    }
                 }
                 &.goID{
                     .verifyTitle{
                         color: #fff;
-                        background: #ee7700; 
+                        background: #ee7700;
+
+                    }
+                    a.verifyTitle{
+                        position: relative;
+                        transition: .1s;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            z-index: 1;
+                            bottom: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-top: 20px solid #ee7700;
+                            border-left: 20px solid transparent;
+                            border-right: 20px solid transparent;
+                        }
+                        &:hover, &:focus-visible{
+                            background: darken(#ee7700, 8);
+                            &:after{
+                                border-top-color: darken(#ee7700, 8);
+                            }
+                        }
                     }
                 }
 
@@ -660,19 +683,19 @@ footer {
     background: #fff;
     padding: 1em 1.75em;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    position: relative;
-    &::before{
-        content: '';
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        // right: 25%;
-        right: calc((50% - 20px) / 2 );
-        transform: translateX(6px);
-        border-top: 20px solid #ee7700;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-    }
+    // position: relative;
+    // &::before{
+    //     content: '';
+    //     position: absolute;
+    //     z-index: 1;
+    //     top: 0;
+    //     // right: 25%;
+    //     right: calc((50% - 20px) / 2 );
+    //     transform: translateX(6px);
+    //     border-top: 20px solid #ee7700;
+    //     border-left: 20px solid transparent;
+    //     border-right: 20px solid transparent;
+    // }
 
     .qrcode{
         display: flex;
