@@ -6112,7 +6112,7 @@ input[type=radio]:focus {
 input[type=checkbox]:checked {
   background-image: url(../images/basic/icon_checked.svg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 50% 50%;
   background-size: 98%;
   box-shadow: #0066cc 0 0 0 2px;
   border-radius: 2px;
@@ -6120,9 +6120,12 @@ input[type=checkbox]:checked {
 
 input[type=checkbox]:checked:disabled {
   background-image: url(../images/basic/icon_checked.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% 50% !important;
   border-color: #0066cc !important;
   background-color: #0066cc !important;
   background-size: 98% !important;
+  border-width: 2px !important;
 }
 
 input[type=radio]:checked {
