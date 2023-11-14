@@ -326,6 +326,7 @@ footer {
                         color: #222;
                         line-height: 3;
                         padding: .5em 0;
+                        text-align: center;
                         position: relative;
                         span{
                             position: absolute;
@@ -644,12 +645,13 @@ footer {
                     border-top-left-radius: 12px;
                     border-top-right-radius: 12px;
                     margin: 0;
+                    font-weight: bold;
                 }
                 // a.verifyTitle{
                 //     border-radius: 12px;
                 // }
                 .pin_panel{
-                    padding: 1em 3em 2em;
+                    padding: 1em 2em 2em;
                 }
             }
             // tips in verify

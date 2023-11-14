@@ -8650,6 +8650,7 @@ footer .footer_icon {
   color: #222;
   line-height: 3;
   padding: 0.5em 0;
+  text-align: center;
   position: relative;
 }
 .Login .control_panle .col .pin_panel .form_grp .form_title span {
@@ -8849,9 +8850,10 @@ footer .footer_icon {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   margin: 0;
+  font-weight: bold;
 }
 .Login .loginInfo .verify .col .pin_panel {
-  padding: 1em 3em 2em;
+  padding: 1em 2em 2em;
 }
 @media screen and (max-width: 991px) {
   .Login .loginInfo .verify {
