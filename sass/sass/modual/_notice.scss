@@ -28,13 +28,26 @@
 
     a{
         display: inline-block;
-        padding: 0 .25em;
+        padding: 0 .5em;
         margin: 0 .25em;
         border: solid 1px #2196f3;
+        border-radius: .25em;
         &:hover, &:focus {
             border: solid 1px transparent;
             color: #fff;
             background: #2196f3;
+        }
+
+        &.remail{
+            background: red;
+            color: #fff;
+            font-weight: bold;
+            background: #7a5238;
+            border-color: #7a5238;
+            &:hover, &:focus-visible{
+                background: #573b28;
+                border-color: #7a5238;
+            }
         }
     }
 
