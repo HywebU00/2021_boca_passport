@@ -11039,7 +11039,7 @@ b.B {
   flex: 0 0 48%;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   border-radius: 1em;
-  border: solid 1px #bf0000;
+  border: solid 2px #bf0000;
   margin: 1em 0;
   padding-bottom: 2em;
   overflow: hidden;
@@ -11084,11 +11084,14 @@ b.B {
   background: linear-gradient(to left in oklab, oklch(0.51 0.21 29.53) 0%, #f1401c 100%);
   color: #fff;
   padding: 0.5em 1.5em;
-  text-align: right;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125em;
 }
 .ID_cards .ID_info {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 2.2em 1.5em 1em;
 }
 .ID_cards .ID_info .foto {
@@ -11123,6 +11126,16 @@ b.B {
   background: url(../images/icon/icon_user.svg) 10px 50% no-repeat;
   background-size: 36px 36px;
 }
+.ID_cards .ID_info .content .note {
+  display: block;
+  padding: 0.25em 1em;
+  color: #bf0000;
+  border: 1px solid #bf0000;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  margin: 0 0.75em;
+}
 .ID_cards .ID_info .content ul {
   font-size: 112.5%;
 }
@@ -11144,6 +11157,11 @@ b.B {
 .ID_cards .col.complete .state {
   background: #eee;
   color: #333;
+}
+.ID_cards .col.complete .note {
+  color: #222;
+  background: #eee;
+  border: 1px solid #eee;
 }
 .ID_cards .col.complete .foto span {
   color: #222;
