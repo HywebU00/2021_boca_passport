@@ -11084,9 +11084,7 @@ b.B {
   background: linear-gradient(to left in oklab, oklch(0.51 0.21 29.53) 0%, #f1401c 100%);
   color: #fff;
   padding: 0.5em 1.5em;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.125em;
+  text-align: right;
 }
 .ID_cards .ID_info {
   display: flex;
@@ -11096,8 +11094,10 @@ b.B {
 }
 .ID_cards .ID_info .foto {
   flex: 0 0 40%;
-  border: solid 1px #ddd;
+  box-shadow: 0 0 0 1px #ddd;
   position: relative;
+  background: red;
+  line-height: 0;
 }
 .ID_cards .ID_info .foto img {
   height: 100%;
@@ -11112,6 +11112,7 @@ b.B {
   color: #fff;
   background: #000;
   transform: translate(-50%, -50%);
+  line-height: 1.5;
 }
 .ID_cards .ID_info .foto.passed span {
   display: none;
@@ -11128,13 +11129,12 @@ b.B {
 }
 .ID_cards .ID_info .content .note {
   display: block;
-  padding: 0.25em 1em;
+  padding: 0.25em 0;
   color: #bf0000;
-  border: 1px solid #bf0000;
   text-align: center;
   font-weight: bold;
-  border-radius: 2em;
-  margin: 0 0.75em;
+  font-size: 2.75em;
+  letter-spacing: 6px;
 }
 .ID_cards .ID_info .content ul {
   font-size: 112.5%;
@@ -11160,8 +11160,6 @@ b.B {
 }
 .ID_cards .col.complete .note {
   color: #222;
-  background: #eee;
-  border: 1px solid #eee;
 }
 .ID_cards .col.complete .foto span {
   color: #222;

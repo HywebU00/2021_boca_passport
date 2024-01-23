@@ -2474,9 +2474,7 @@ b.B {
         background: linear-gradient(to left in oklab, oklch(0.51 0.21 29.53) 0%, #f1401c 100%);
         color: #fff;
         padding: .5em 1.5em;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.125em;
+        text-align: right;
     }
     .ID_info{
         display:flex;
@@ -2485,8 +2483,11 @@ b.B {
         padding: 2.2em 1.5em 1em;
         .foto{
             flex: 0 0 40%;
-            border: solid 1px #ddd;
+            // border: solid 1px #ddd;
+            box-shadow: 0 0 0 1px #ddd;
             position: relative;
+            background: red;
+            line-height: 0;
             img{
                 height: 100%;
             }
@@ -2500,6 +2501,7 @@ b.B {
                 color: #fff;
                 background: #000;
                 transform: translate(-50%, -50%);
+                line-height: 1.5;
             }
             &.passed{
                 span{
@@ -2518,13 +2520,15 @@ b.B {
             }
             .note{
                 display: block;
-                padding: .25em 1em;
+                padding: .25em 0;
                 color: #bf0000;
-                border: 1px solid #bf0000;
+                // border: 1px solid #bf0000;
                 text-align: center;
                 font-weight: bold;
-                border-radius: 2em;
-                margin: 0 .75em;
+                font-size: 2.75em;
+                letter-spacing: 6px;
+                // border-radius: 2em;
+                // margin: 0 .75em;
             }
             ul{
                 font-size: 112.5%;
@@ -2552,8 +2556,8 @@ b.B {
         }
         .note{
             color: #222;
-            background: #eee;
-            border: 1px solid #eee;
+            // background: #eee;
+            // border: 1px solid #eee;
         }
         .foto{
             span{
