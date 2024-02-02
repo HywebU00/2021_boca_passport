@@ -11081,7 +11081,7 @@ b.B {
   filter: invert(1);
 }
 .ID_cards .state {
-  background: linear-gradient(to left in oklab, oklch(0.51 0.21 29.53) 0%, #f1401c 100%);
+  background-image: linear-gradient(to right, #de3a1a 0%, #c40500 100%);
   color: #fff;
   padding: 0.5em 1.5em;
   text-align: right;
@@ -11098,9 +11098,6 @@ b.B {
   position: relative;
   background: red;
   line-height: 0;
-}
-.ID_cards .ID_info .foto img {
-  height: 100%;
 }
 .ID_cards .ID_info .foto span {
   position: absolute;
