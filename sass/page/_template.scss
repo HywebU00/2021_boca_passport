@@ -2570,6 +2570,18 @@ b.B {
             }
         }
     }
+    // 填寫完成，資料修改
+    &.Revise{
+        .btn_grp{
+            flex-flow: row wrap;
+            justify-content: space-between;
+            .btn{
+                flex: 1 1 50%;
+                max-width: 49%;
+                padding: .5em !important;
+            }
+        }
+    }
 
     @include screen('tablet') {
         .col{
@@ -2587,6 +2599,15 @@ b.B {
             flex-flow: row wrap;
             .btn{
                 flex: 1 1 100%;
+            }
+        }
+        // 填寫完成，資料修改
+        &.Revise{
+            .btn_grp{
+                .btn{
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
             }
         }
     }

@@ -11164,6 +11164,15 @@ b.B {
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+.ID_cards.Revise .btn_grp {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.ID_cards.Revise .btn_grp .btn {
+  flex: 1 1 50%;
+  max-width: 49%;
+  padding: 0.5em !important;
+}
 @media screen and (max-width: 991px) {
   .ID_cards .col {
     flex: 1 1 100%;
@@ -11181,6 +11190,10 @@ b.B {
   }
   .ID_cards .btn_grp .btn {
     flex: 1 1 100%;
+  }
+  .ID_cards.Revise .btn_grp .btn {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
