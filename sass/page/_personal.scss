@@ -151,39 +151,43 @@
 // 內頁
 .Page{
 	.header {
-        h1{
-        	a{
-        		span{
-        			color: #dc4e32;
-        			b {
-                        color: #333;
-                    }
-        		}
-        	}
-        }
-        // 導覽列
-        .navigation {
-        	a{
-                background: url(../images/icon-arrow-black.svg) 6px 50% no-repeat,transparent;
-                background-size: 12px 12px;
-            }
-        }
-        &.fixed{
-        	background: adjust_hue(desaturate(darken(#7a5238, 7), 12), 0);
-        }
-    }
-    .menu{
-    	background: adjust_hue(desaturate(darken(#7a5238, 7), 12), 0);
-    }
+			h1{
+				a{
+					span{
+						color: #dc4e32;
+						b {
+								color: #333;
+						}
+					}
+				}
+			}
+			// 導覽列
+			.navigation {
+				a{
+							background: url(../images/icon-arrow-black.svg) 6px 50% no-repeat,transparent;
+							background-size: 12px 12px;
+					}
+			}
+			&.fixed{
+				background: adjust_hue(desaturate(darken(#7a5238, 7), 12), 0);
+			}
+	}
+	.menu{
+		background: adjust_hue(desaturate(darken(#7a5238, 7), 12), 0);
+	}
 
-    .innerpage{
-    	>.container {
-    		// 白色區域內
-            .white_zone{
-            	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            }
-    	}
-    }
+	.innerpage{
+		>.container {
+			// 白色區域內
+					.white_zone{
+						box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+						.check_grp{
+							text-align: center;
+							margin: 2em 0;
+						}
+					}
+		}
+	}
 
     .fill_steps{
 	    a{
@@ -208,7 +212,7 @@
 	.flex-form .form_content .form_grp .form_title{
 		color: #222;
 		background: url(../images/icon-arrow-innerpage2.svg) 2px 45% no-repeat;
-    	background-size: 10px 10px;
+    background-size: 10px 10px;
 	}
 }
 // 步驟流程

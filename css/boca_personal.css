@@ -9925,6 +9925,7 @@ a.tb-view:hover, a.tb-view:focus {
 }
 
 p a,
+span a,
 li a,
 b,
 b.R,
@@ -10225,6 +10226,10 @@ b.B {
   color: #666;
   line-height: 1.3;
   padding-top: 6px;
+}
+.process .col .step section h4 span a:first-child,
+.process .col .step section h4 span b:first-child {
+  padding-left: 0;
 }
 
 .PDF {
@@ -11169,9 +11174,13 @@ b.B {
   justify-content: space-between;
 }
 .ID_cards.Revise .btn_grp .btn {
-  flex: 1 1 50%;
-  max-width: 49%;
+  flex: 1 1 32%;
+  max-width: 32%;
   padding: 0.5em !important;
+}
+.ID_cards.Revise .btn_grp .btn._stretch {
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 @media screen and (max-width: 991px) {
   .ID_cards .col {
@@ -12046,6 +12055,10 @@ h1.title, h2.title {
 }
 .Page .innerpage > .container .white_zone {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.Page .innerpage > .container .white_zone .check_grp {
+  text-align: center;
+  margin: 2em 0;
 }
 .Page .fill_steps a {
   transition: 0.1s;
