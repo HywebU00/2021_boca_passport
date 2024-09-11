@@ -64,12 +64,12 @@
 				padding-right: 40%;
 				text-align: center;
 				padding-top: 1.5em;
-    		padding-bottom: 2em;
+				padding-bottom: 2em;
 				button{
 					border-radius: 40px;
-                    padding: .75em 0;
-                    width: 100%;
-                    font-size: 1.25em;
+					padding: .75em 0;
+					width: 100%;
+					font-size: 1.25em;
 				}
 
 				.btn_grp{
@@ -126,6 +126,7 @@
 
 					.btn_grp{
 						flex-wrap: wrap;
+						margin-top: 1em;
 						button{
 							width: 100%;
 						}

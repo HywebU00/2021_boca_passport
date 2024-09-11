@@ -101,6 +101,10 @@ $btn-radius:.2em;
 .btn-submit {
     // @extend %btn;
     @include btn_setting(lighten($primaryColor, 5), #FFF);
+    &:hover{
+        background: darken($lightColor, 15) !important;
+        border: 1px solid darken($lightColor, 20);
+    }
 }
 .btn-submit2 {
     // @extend %btn;
@@ -177,6 +181,18 @@ $btn-radius:.2em;
     &:focus{
         color: #fff !important;
         background: #474747!important;
+        border: solid 1px #acacac!important;
+    }
+}
+.btn-normal3{
+    color: #fff !important;
+    background: #474747!important;
+    border: solid 1px #acacac!important;
+    text-shadow: none!important;
+    &:hover,
+    &:focus{
+        color: #474747!important;
+        background: #fff!important;
         border: solid 1px #acacac!important;
     }
 }

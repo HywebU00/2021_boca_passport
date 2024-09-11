@@ -1770,6 +1770,10 @@ kbd kbd {
   background: #00d1c6;
   cursor: pointer;
 }
+.btn-submit:hover {
+  background: #b48801 !important;
+  border: 1px solid #9a7401;
+}
 
 .btn-submit2 {
   background: #ff8409;
@@ -1886,6 +1890,18 @@ kbd kbd {
 .btn-normal2:hover, .btn-normal2:focus {
   color: #fff !important;
   background: #474747 !important;
+  border: solid 1px #acacac !important;
+}
+
+.btn-normal3 {
+  color: #fff !important;
+  background: #474747 !important;
+  border: solid 1px #acacac !important;
+  text-shadow: none !important;
+}
+.btn-normal3:hover, .btn-normal3:focus {
+  color: #474747 !important;
+  background: #fff !important;
   border: solid 1px #acacac !important;
 }
 
